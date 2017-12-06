@@ -25,6 +25,7 @@
     font-size: if-map-get($h1-font-size, $type);
     font-style: $h1-font-style;
     font-weight: $h1-font-weight;
+    line-height: $h1-line-height;
     text-align: $h1-align;
     text-transform: $h1-text-transform;
   }
@@ -36,6 +37,7 @@
     font-size: if-map-get($h2-font-size, $type);
     font-style: $h2-font-style;
     font-weight: $h2-font-weight;
+    line-height: $h2-line-height;
     text-align: $h2-align;
     text-transform: $h2-text-transform;
   }
@@ -47,6 +49,7 @@
     font-size: if-map-get($h3-font-size, $type);
     font-style: $h3-font-style;
     font-weight: $h3-font-weight;
+    line-height: $h3-line-height;
     text-align: $h3-align;
     text-transform: $h3-text-transform;
   }
@@ -58,6 +61,7 @@
     font-size: if-map-get($h4-font-size, $type);
     font-style: $h4-font-style;
     font-weight: $h4-font-weight;
+    line-height: $h4-line-height;
     text-align: $h4-align;
     text-transform: $h4-text-transform;
   }
@@ -69,6 +73,7 @@
     font-size: if-map-get($h5-font-size, $type);
     font-style: $h5-font-style;
     font-weight: $h5-font-weight;
+    line-height: $h5-line-height;
     text-align: $h5-align;
     text-transform: $h5-text-transform;
   }
@@ -80,6 +85,7 @@
     font-size: if-map-get($h6-font-size, $type);
     font-style: $h6-font-style;
     font-weight: $h6-font-weight;
+    line-height: $h6-line-height;
     text-align: $h6-align;
     text-transform: $h6-text-transform;
   }
@@ -182,6 +188,7 @@
       font-size: if-map-get($h1-font-size, $type);
       font-style: $h1-font-style;
       font-weight: $h1-font-weight;
+      line-height: $h1-line-height;
       text-align: $h1-align;
       text-transform: $h1-text-transform;
     }
@@ -193,6 +200,7 @@
       font-size: if-map-get($h2-font-size, $type);
       font-style: $h2-font-style;
       font-weight: $h2-font-weight;
+      line-height: $h2-line-height;
       text-align: $h2-align;
       text-transform: $h2-text-transform;
     }
@@ -204,6 +212,7 @@
       font-size: if-map-get($h3-font-size, $type);
       font-style: $h3-font-style;
       font-weight: $h3-font-weight;
+      line-height: $h3-line-height;
       text-align: $h3-align;
       text-transform: $h3-text-transform;
     }
@@ -215,6 +224,7 @@
       font-size: if-map-get($h4-font-size, $type);
       font-style: $h4-font-style;
       font-weight: $h4-font-weight;
+      line-height: $h4-line-height;
       text-align: $h4-align;
       text-transform: $h4-text-transform;
     }
@@ -226,6 +236,7 @@
       font-size: if-map-get($h5-font-size, $type);
       font-style: $h5-font-style;
       font-weight: $h5-font-weight;
+      line-height: $h5-line-height;
       text-align: $h5-align;
       text-transform: $h5-text-transform;
     }
@@ -237,6 +248,7 @@
       font-size: if-map-get($h6-font-size, $type);
       font-style: $h6-font-style;
       font-weight: $h6-font-weight;
+      line-height: $h6-line-height;
       text-align: $h6-align;
       text-transform: $h6-text-transform;
     }
