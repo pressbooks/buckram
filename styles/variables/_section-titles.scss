@@ -1,6 +1,6 @@
-//============================================================================//
-//                      Variables | Section Titles                            //
-//============================================================================//
+////
+/// @group section-titles
+////
 
 // $section-title-block margins control the vertical spacing of the section
 // title, subtitle, author and aphorism with respect to the top of the page and
@@ -28,22 +28,30 @@
 // SECTIONS TITLES
 // default styling for front matter, chapter, back matter
 
-// Section title wrap
 
-$section-title-block-margin-top:(
-  epub: 3em,
-  prince: 3cm,
-  web: 3em
-) !default;
-$section-title-block-margin-bottom:(
-  epub: 2em,
-  prince: 2cm,
-  web: 2em
-) !default;
-$section-title-block-margin-left: 0 !default;
-$section-title-block-margin-right: 0 !default;
+  // Section Header
+  /// Top margin for section header element.
+  /// @type String
+  $section-title-block-margin-top:(
+    epub: 3em,
+    prince: 3cm,
+    web: 3em
+  ) !default;
+  /// Bottom margin for section header element.
+  /// @type String
+  $section-title-block-margin-bottom:(
+    epub: 2em,
+    prince: 2cm,
+    web: 2em
+  ) !default;
+  /// Left margin for section header element.
+  /// @type String
+  $section-title-block-margin-left: 0 !default;
+  /// Right margin for section header element.
+  /// @type String
+  $section-title-block-margin-right: 0 !default;
 
-// Section title
+// Section Sitle
 
 $section-title-margin-top: 0;
 $section-title-margin-bottom:(

@@ -1,6 +1,6 @@
-//============================================================================//
-//                          Chapter Section Titles                            //
-//============================================================================//
+////
+/// @group section-titles
+////
 
 @import '../utilities';
 
@@ -45,7 +45,10 @@ h2 {
 // Web markup for chapters (above) is different than EPUB and PDF (below)
 
 .chapter-title-wrap {
-  margin: if-map-get($section-title-block-margin-top, $type) $section-title-block-margin-right if-map-get($section-title-block-margin-bottom, $type) $section-title-block-margin-left;
+  margin-top: if-map-get($section-title-block-margin-top, $type);
+  margin-right: $section-title-block-margin-right;
+  margin-bottom: if-map-get($section-title-block-margin-bottom, $type);
+  margin-left: $section-title-block-margin-left;
 
   .chapter-number {
     display: $chapter-number-display;
@@ -82,7 +85,7 @@ h2 {
   content: '';
 }
 
-// Subtitle (outside .chapter-title-wrap)
+// Subtitle
 h2.chapter-subtitle,
 h2.chapter_subtitle,
 [data-type='subtitle'] { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?
@@ -107,7 +110,7 @@ h2.chapter_subtitle,
   column-span: all;
 }
 
-// Author (outside .chapter-title-wrap)
+// Author
 h2.chapter-author,
 h2.chapter_author,
 [data-type='author'] { //ned, in web the markup is with a underscore, in xhtml it's a hyphen, whats up with that?

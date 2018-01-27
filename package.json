@@ -6,7 +6,7 @@
     "test": "npm run lint",
     "lint": "npm run lint:styles",
     "lint:styles": "node_modules/stylelint/bin/stylelint.js '**/*.scss'",
-    "document": "node_modules/sassdoc/bin/sassdoc styles -d docs"
+    "document": "node_modules/sassdoc/bin/sassdoc styles --config sassdoc.json"
   },
   "repository": {
     "type": "git",
