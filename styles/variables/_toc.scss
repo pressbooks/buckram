@@ -27,91 +27,156 @@ $toc-center-margin-right: 0.5cm !default;
 /// @type String
 $toc-center-margin-left: 0.5cm !default;
 
-
+/// @type String
 $toc-block-margin-top: 1.5em !default;
+/// @type String
 $toc-section-margin-top: 0.5em !default;
+/// @type String
 $toc-subsection-margin-top: 0 !default;
+/// @type String
 $toc-chapter-margin-top: 0.3em !default;
+/// @type String
 $toc-title-width: 80% !default;
+/// @type String
 $toc-sub-width: 75% !default;
-
+/// @type String
 $toc-base-line-height: 1.2em !default;
 
 /// 
 /// @type String
 $toc-front-matter-title-font-family: $font-1 !default;
+/// @type String
 $toc-front-matter-title-font-size: 0.9em !default;
+/// @type String
 $toc-front-matter-title-font-style: normal !default;
+/// @type String
 $toc-front-matter-title-font-weight: normal !default;
+/// @type String
 $toc-front-matter-title-text-transform: none !default;
 
+/// @type String
 $toc-front-matter-subtitle-font-family: $font-1 !default;
+/// @type String
 $toc-front-matter-subtitle-font-size: 0.9em !default;
+/// @type String
 $toc-front-matter-subtitle-font-style: italic !default;
+/// @type String
 $toc-front-matter-subtitle-font-weight: normal !default;
+/// @type String
 $toc-front-matter-subtitle-text-transform: none !default;
 
+/// @type String
 $toc-front-matter-author-font-family: $font-1 !default;
+/// @type String
 $toc-front-matter-author-font-size: 0.9em !default;
+/// @type String
 $toc-front-matter-author-font-style: normal !default;
+/// @type String
 $toc-front-matter-author-font-weight: normal !default;
+/// @type String
 $toc-front-matter-author-text-transform: none !default;
 
+/// @type String
 $toc-part-number-display: inline-block !default;
+/// @type String
 $toc-part-number-font-family: $font-3 !default;
+/// @type String
 $toc-part-number-font-size: 1em !default;
+/// @type String
 $toc-part-number-font-style: normal !default;
+/// @type String
 $toc-part-number-font-weight: normal !default;
+/// @type String
 $toc-part-number-text-transform: none !default;
 
+/// @type String
 $toc-part-title-font-family: $font-3 !default;
+/// @type String | Map
 $toc-part-title-font-size: (
   epub: 1.2em,
   prince: 1em,
   web: 1em
 ) !default;
+/// @type String
 $toc-part-title-font-style: normal !default;
+/// @type String
 $toc-part-title-font-weight: normal !default;
+/// @type String
 $toc-part-title-text-transform: none !default;
 
+/// @type String
 $toc-chapter-number-display: inline-block !default;
+/// @type String
 $toc-chapter-number-font-family: $font-1 !default;
+/// @type String
 $toc-chapter-number-font-size: 1em !default;
+/// @type String
 $toc-chapter-number-font-style: normal !default;
+/// @type String
 $toc-chapter-number-font-weight: normal !default;
+/// @type String
 $toc-chapter-number-text-transform: none !default;
 
+/// @type String
 $toc-chapter-title-font-family: $font-1 !default;
+/// @type String
 $toc-chapter-title-font-size: 1em !default;
+/// @type String
 $toc-chapter-title-font-style: normal !default;
+/// @type String
 $toc-chapter-title-font-weight: normal !default;
+/// @type String
 $toc-chapter-title-text-transform: none !default;
 
+/// @type String
 $toc-chapter-subtitle-font-family: $font-1 !default;
+/// @type String
 $toc-chapter-subtitle-font-size: 0.9em !default;
+/// @type String
 $toc-chapter-subtitle-font-style: normal !default;
+/// @type String
 $toc-chapter-subtitle-font-weight: normal !default;
+/// @type String
 $toc-chapter-subtitle-text-transform: none !default;
 
+/// @type String
 $toc-chapter-author-font-family: $font-1 !default;
+/// @type String
 $toc-chapter-author-font-size: 0.9em !default;
+/// @type String
 $toc-chapter-author-font-style: normal !default;
+/// @type String
 $toc-chapter-author-font-weight: normal !default;
+/// @type String
 $toc-chapter-author-text-transform: none !default;
 
+/// @type String
 $toc-page-number-font-family: $font-1 !default;
+/// @type String
 $toc-page-number-font-size: 1em !default;
+/// @type String
 $toc-page-number-font-style: normal !default;
+/// @type String
 $toc-page-number-font-weight: normal !default;
+/// @type String
 $toc-page-number-text-transform: none !default;
+/// @type String
 $toc-page-number-text-decoration: none !default;
 
+/// @type String
 $toc-front-matter-page-number-font-size: 0.9em !default;
+/// @type String
 $toc-front-matter-page-number-font-style: normal !default;
+/// @type String
 $toc-front-matter-page-number-font-weight: normal !default;
+/// @type String
 $toc-front-matter-page-number-text-transform: none !default;
 
+/// @type String
 $toc-section-title-font-size: 1em !default;
+/// @type String
 $toc-section-title-font-style: italic !default;
+/// @type String
 $toc-section-title-font-weight: normal !default;
+/// @type String
 $toc-section-title-text-transform: none !default;
