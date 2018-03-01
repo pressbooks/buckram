@@ -6,8 +6,8 @@
     "test": "npm run lint && npm run build",
     "build": "cross-env webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "lint": "npm run lint:styles",
-    "lint:styles": "node_modules/stylelint/bin/stylelint.js '**/*.scss'",
-    "docs": "node_modules/sassdoc/bin/sassdoc styles --config sassdoc.json"
+    "lint:styles": "node_modules/stylelint/bin/stylelint.js 'assets/styles/**/*.scss'",
+    "docs": "node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json"
   },
   "repository": {
     "type": "git",
