@@ -124,4 +124,8 @@ $interactive-icon-margin-left: 0 !default;
 /// Background size property for interactive content icon
 /// @type String | Map
 /// @since 0.7.0
-$interactive-icon-background-size: cover !default;
+$interactive-icon-background-size: (
+  prince: cover,
+  epub: $interactive-icon-width $interactive-icon-height,
+  web: cover
+) !default;
