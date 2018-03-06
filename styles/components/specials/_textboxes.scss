@@ -57,6 +57,12 @@
   border-radius: if-map-get($textbox-border-radius, $type);
   page-break-inside: avoid;
 
+  h2 {
+    font-size: $textbox-header-font-size;
+    margin-top: $textbox-header-margin-top;
+    margin-bottom: $textbox-header-margin-bottom;
+  }
+
   p {
     margin-top: if-map-get($textbox-para-margin-top, $type);
     margin-bottom: if-map-get($textbox-para-margin-bottom, $type);
