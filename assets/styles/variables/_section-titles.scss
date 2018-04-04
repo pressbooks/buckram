@@ -600,6 +600,14 @@ $chapter-number-before-content: '' !default;
 /// @type String
 $chapter-number-after-content: '.\00A0' !default;
 
+/// Defines letter spacing property on chapter numbers
+/// @type String
+$chapter-number-letter-spacing: normal !default;
+
+/// Defines the word spacing property on chapter numbers
+/// @type String
+$chapter-number-word-spacing: normal !default;
+
 /// Defines the chapter title display propert.
 /// @type String
 $chapter-title-display: $section-title-display !default;
@@ -636,6 +644,14 @@ $chapter-title-align: $section-title-align !default;
 /// Defines the chapter title text transform.
 /// @type String
 $chapter-title-text-transform: $section-title-text-transform !default;
+
+/// Defines letter spacing property on chapter titles
+/// @type String
+$chapter-title-letter-spacing: normal !default;
+
+/// Defines the word spacing title on chapter titles
+/// @type String
+$chapter-title-word-spacing: normal !default;
 
 /// Defines the back matter title display property.
 /// @type String

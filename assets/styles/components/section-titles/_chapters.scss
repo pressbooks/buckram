@@ -19,6 +19,9 @@
       hyphens: none;
       text-align: $chapter-title-align;
       text-transform: $chapter-title-text-transform;
+      letter-spacing: $chapter-title-letter-spacing;
+      word-spacing: $chapter-title-word-spacing;
+
     }
 
     .chapter-number {
@@ -32,6 +35,8 @@
       line-height: if-map-get($chapter-number-line-height, $type);
       text-align: $chapter-number-align;
       text-transform: $chapter-number-text-transform;
+      letter-spacing: $chapter-number-letter-spacing;
+      word-spacing: $chapter-number-word-spacing;
 
       &:before {
         content: $chapter-number-before-content;
