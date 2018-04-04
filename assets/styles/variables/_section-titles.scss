@@ -456,6 +456,14 @@ $part-title-align: center !default;
 /// @type String
 $part-title-text-transform: uppercase !default;
 
+/// Defines letter spacing property on part titles
+/// @type String
+$part-title-letter-spacing: normal !default;
+
+/// Defines the word spacing title on part titles
+/// @type String
+$part-title-word-spacing: normal !default;
+
 /// Defines the front matter title display property.
 /// @type String
 /// @since 0.3.0
