@@ -41,8 +41,8 @@
       text-align: $part-title-align;
       text-transform: $part-title-text-transform;
       page-break-after: avoid;
-      letter-spacing: $part-title-letter-spacing;
-      word-spacing: $part-title-word-spacing;
+      letter-spacing: if-map-get($part-title-letter-spacing, $type);
+      word-spacing: if-map-get($part-title-word-spacing, $type);
     }
   }
 }

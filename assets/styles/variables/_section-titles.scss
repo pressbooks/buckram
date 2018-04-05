@@ -459,12 +459,21 @@ $part-title-text-transform: uppercase !default;
 /// Defines letter spacing property on part titles
 /// @type String
 /// @since 1.0.0
-$part-title-letter-spacing: normal !default;
+$part-title-letter-spacing:  (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
+
 
 /// Defines the word spacing title on part titles
 /// @type String
 /// @since 1.0.0
-$part-title-word-spacing: normal !default;
+$part-title-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
 
 /// Defines the front matter title display property.
 /// @type String
@@ -613,12 +622,20 @@ $chapter-number-after-content: '.\00A0' !default;
 /// Defines letter spacing property on chapter numbers
 /// @type String
 /// @since 1.0.0
-$chapter-number-letter-spacing: normal !default;
+$chapter-number-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
 
 /// Defines the word spacing property on chapter numbers
 /// @type String
 /// @since 1.0.0
-$chapter-number-word-spacing: normal !default;
+$chapter-number-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
 
 /// Defines the chapter title display propert.
 /// @type String
@@ -660,12 +677,20 @@ $chapter-title-text-transform: $section-title-text-transform !default;
 /// Defines letter spacing property on chapter titles
 /// @type String
 /// @since 1.0.0
-$chapter-title-letter-spacing: normal !default;
+$chapter-title-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
 
 /// Defines the word spacing title on chapter titles
 /// @type String
 /// @since 1.0.0
-$chapter-title-word-spacing: normal !default;
+$chapter-title-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default;
 
 /// Defines the back matter title display property.
 /// @type String
