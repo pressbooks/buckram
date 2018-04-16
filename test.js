@@ -5,8 +5,8 @@ const { startServer } = require( 'polyserve' );
 const fs = require( 'fs' );
 const PNG = require( 'pngjs' ).PNG;
 const pixelmatch = require( 'pixelmatch' );
-const testDir = 'tests/output/images';
-const goldenDir = 'tests/source/images/golden';
+const testDir = './tests/output/images';
+const goldenDir = './tests/source/images/golden';
 
 describe( 'Compare screenshots.', function () {
 	let polyserve, browser, page;
