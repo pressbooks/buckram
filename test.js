@@ -28,6 +28,7 @@ describe( 'Compare screenshots.', function () {
 		this.timeout( 2500 );
 
 		beforeEach( async function () {
+			this.timeout( 2500 );
 			return page.setViewport( { width: 600, height: 6000 } );
 		} );
 		it( 'Images (small).', async function () {
