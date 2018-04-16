@@ -48,7 +48,8 @@ describe( 'Compare screenshots.', function () {
 
 async function takeAndCompareScreenshot( page, route, feature ) {
 	let fileName = feature + '/' + ( route ? route : 'index' );
-	if ( ! fs.existsSync( `${testDir}/feature` ) ) fs.mkdirSync( `${testDir}/feature` );
+	if ( ! fs.existsSync( `${testDir}/${feature}` ) )
+		fs.mkdirSync( `${testDir}/${feature}` );
 	await page.goto( `http://127.0.0.1:4000/features/${feature}/${route}` );
 	await page.screenshot( { path: `${testDir}/${fileName}.png` } );
 	return compareScreenshots( fileName );
