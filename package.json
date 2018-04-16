@@ -11,7 +11,7 @@
 		"lint:scripts": "node_modules/eslint/bin/eslint.js 'assets/scripts/*.js'",
 		"lint:styles":
 			"node_modules/stylelint/bin/stylelint.js 'assets/styles/**/*.scss'",
-		"test": "npm run -s lint && npm run -s build && npm run -s diff"
+		"test": "npm run -s lint && npm run -s build"
 	},
 	"repository": {
 		"type": "git",

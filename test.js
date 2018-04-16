@@ -25,7 +25,7 @@ describe( 'Compare screenshots.', function () {
 	afterEach( () => browser.close() );
 
 	describe( 'Image layouts.', function () {
-		this.timeout( 2500 );
+		this.timeout( 5000 );
 
 		beforeEach( async function () {
 			this.timeout( 2500 );
