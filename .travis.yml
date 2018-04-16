@@ -29,4 +29,3 @@ install:
 - composer install
 script:
 - yarn run test
-- composer test
