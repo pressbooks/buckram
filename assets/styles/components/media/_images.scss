@@ -2,84 +2,122 @@
 /// @group media
 ////
 
+%img {
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  page-break-inside: avoid;
+}
+
+%caption {
+  font-family: $image-caption-font-family;
+  font-size: if-map-get($image-caption-font-size, $type);
+  font-style: $image-caption-font-style;
+  font-weight: $image-caption-font-weight;
+  hyphens: none;
+  line-height: if-map-get($image-caption-line-height, $type);
+  padding-bottom: if-map-get($image-caption-padding-bottom, $type);
+  text-align: $image-caption-text-align;
+  text-transform: $image-caption-text-transform;
+}
+
+@mixin caption-text-align($align) {
+  figcaption,
+  .wp-caption-text {
+    text-align: map-get($_image-caption-text-align, $align);
+  }
+}
+
+%image-wrapper {
+  height: auto;
+  max-width: 100%;
+  page-break-inside: avoid;
+}
+
+%image-wrapper-float {
+  max-width: 50%;
+  width: 50% !important;
+
+  img {
+    width: 100%;
+  }
+}
+
+%image-wrapper-center {
+  margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
+  text-align: center;
+
+  @include caption-text-align(center);
+}
+
+%image-wrapper-alignnone {
+  margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
+
+  img {
+    max-width: if-map-get($image-alignnone-image-maxwidth, $type) !important;
+  }
+
+  figcaption,
+  .wp-caption-text {
+    box-sizing: border-box;
+    float: $image-alignnone-caption-float;
+    padding-left: if-map-get($image-alignnone-caption-left-padding, $type);
+    width: if-map-get($image-alignnone-caption-width, $type);
+  }
+}
+
 @if $type != 'web' {
-  figure,
-  .wp-caption,
-  .wp-nocaption {
-    height: auto;
-    margin-bottom: if-map-get($image-wrapper-margin-bottom, $type);
-    margin-top: if-map-get($image-wrapper-margin-top, $type);
-    page-break-inside: avoid;
-    max-width: 100%;
-    width: auto;
-
-    &.aligncenter {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    &.alignleft {
-      float: left;
-      width: 50%;
-      margin: if-map-get($floated-image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
-      padding-left: 0;
-    }
-
-    &.alignnone {
-      margin-left: 0;
-      margin-right: 0;
-      text-align: left;
-    }
-
-    &.alignright {
-      float: right;
-      width: 50%;
-      margin: if-map-get($floated-image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
-      padding-right: 0;
+  img {
+    @extend %img;
+    @if $type == 'prince' {
+      prince-image-resolution: $prince-image-resolution;
     }
   }
 
   figcaption,
   .wp-caption-text {
-    font-family: $image-caption-font-family;
-    font-size: if-map-get($image-caption-font-size, $type);
-    font-style: $image-caption-font-style;
-    font-weight: $image-caption-font-weight;
-    hyphens: none;
-    line-height: if-map-get($image-caption-line-height, $type);
-    padding-bottom: if-map-get($image-caption-padding-bottom, $type);
-    text-align: $image-caption-text-align;
-    text-transform: $image-caption-text-transform;
+    @extend %caption;
   }
 
-  img {
-    display: inline-block;
-    height: auto;
-    margin: 0;
-    max-width: 100%;
-    padding: 0;
-    page-break-inside: avoid;
+  .wp-caption,
+  .wp-nocaption {
+    @extend %image-wrapper;
   }
 
-  .wp-caption.alignnone {
-    img {
-      max-width: if-map-get($image-alignnone-image-maxwidth, $type);
-    }
+  .wp-caption.alignleft,
+  .wp-nocaption.alignleft {
+    @extend %image-wrapper-float;
+    float: left;
+    margin: if-map-get($floated-image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+    padding-left: 0;
 
-    figcaption,
-    .wp-caption-text {
-      box-sizing: border-box;
-      float: $image-alignnone-caption-float;
-      padding-left: if-map-get($image-alignnone-caption-left-padding, $type);
-      width: if-map-get($image-alignnone-caption-width, $type);
-    }
+    @include caption-text-align(left);
   }
-}
 
-@if $type == 'prince' {
-  img {
-    prince-image-resolution: $prince-image-resolution;
+  .wp-caption.alignright,
+  .wp-nocaption.alignright {
+    @extend %image-wrapper-float;
+    float: right;
+    margin: if-map-get($floated-image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+    padding-right: 0;
+
+    @include caption-text-align(right);
+  }
+
+  .wp-caption.aligncenter {
+    @extend %image-wrapper-center;
+  }
+
+  .wp-nocaption.aligncenter {
+    @extend %image-wrapper-center;
+    width: 100% !important;
+  }
+
+  .wp-caption.alignnone,
+  .wp-nocaption.alignnone {
+    @extend %image-wrapper-alignnone;
   }
 }
 
@@ -88,64 +126,52 @@
   .part,
   .chapter,
   .back-matter {
-    figure,
-    .wp-caption,
-    .wp-nocaption {
-      height: auto;
-      margin-bottom: if-map-get($image-wrapper-margin-bottom, $type);
-      margin-top: if-map-get($image-wrapper-margin-top, $type);
-      page-break-inside: avoid;
-      max-width: 100%;
-
-      &.aligncenter {
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-      }
-
-      &.alignleft {
-        float: left;
-        width: 50%;
-        margin: if-map-get($floated-image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
-        padding-left: 0;
-      }
-
-      &.alignnone {
-        margin-left: 0;
-        margin-right: 0;
-        text-align: left;
-        width: 100%;
-      }
-
-      &.alignright {
-        float: right;
-        width: 50%;
-        margin: if-map-get($floated-image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
-        padding-right: 0;
-      }
+    img {
+      @extend %img;
     }
 
     figcaption,
     .wp-caption-text {
-      font-family: $image-caption-font-family;
-      font-size: if-map-get($image-caption-font-size, $type);
-      font-style: $image-caption-font-style;
-      font-weight: $image-caption-font-weight;
-      hyphens: none;
-      line-height: if-map-get($image-caption-line-height, $type);
-      padding-bottom: if-map-get($image-caption-padding-bottom, $type);
-      text-align: $image-caption-text-align;
-      text-transform: $image-caption-text-transform;
+      @extend %caption;
     }
 
-    img {
-      display: inline-block;
-      height: auto;
-      margin: 0;
-      max-width: 100%;
-      padding: 0;
-      page-break-inside: avoid;
-      width: auto;
+    .wp-caption,
+    .wp-nocaption {
+      @extend %image-wrapper;
+    }
+
+    .wp-caption.alignleft,
+    .wp-nocaption.alignleft {
+      @extend %image-wrapper-float;
+      float: left;
+      margin: if-map-get($floated-image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+      padding-left: 0;
+
+      @include caption-text-align(left);
+    }
+
+    .wp-caption.alignright,
+    .wp-nocaption.alignright {
+      @extend %image-wrapper-float;
+      float: right;
+      margin: if-map-get($floated-image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+      padding-right: 0;
+
+      @include caption-text-align(right);
+    }
+
+    .wp-caption.aligncenter {
+      @extend %image-wrapper-center;
+    }
+
+    .wp-nocaption-aligncenter {
+      @extend %image-wrapper-center;
+      width: 100% !important;
+    }
+
+    .wp-caption.alignnone,
+    .wp-nocaption.alignnone {
+      @extend %image-wrapper-alignnone;
     }
   }
 }

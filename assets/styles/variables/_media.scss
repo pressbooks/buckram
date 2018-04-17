@@ -66,27 +66,53 @@ $image-alignright-margin-left: 1em !default;
 
 /// Image resolution for PrinceXML PDF outputs.
 /// @type String
-$prince-image-resolution: auto,normal !default;
+$prince-image-resolution: auto, normal !default;
 
 /// Caption float for alignnone images.
 /// @type String
 /// @since 1.0.0
-$image-alignnone-caption-float: none !default;
+// $image-alignnone-caption-float: none !default;
+$image-alignnone-caption-float: right !default;
 
 /// Left padding for captions on alignnone images.
 /// @type String | Map
 /// @since 1.0.0
-$image-alignnone-caption-left-padding: 0 !default;
+// $image-alignnone-caption-left-padding: 0 !default;
+$image-alignnone-caption-left-padding: 1.5em !default;
 
 /// Width for captions on alignnone images.
 /// @type String | Map
 /// @since 1.0.0
-$image-alignnone-caption-width: 100% !default;
+//$image-alignnone-caption-width: 100% !default;
+$image-alignnone-caption-width: 25% !default;
 
 /// Max width for captioned alignnone images.
 /// @type String | Map
 /// @since 1.0.0
-$image-alignnone-image-maxwidth: 100% !default;
+// $image-alignnone-image-maxwidth: 100% !default;
+$image-alignnone-image-maxwidth: 75% !default;
+
+/// Caption text alignment for aligncenter images.
+/// @type String
+/// @since 1.0.0
+$image-aligncenter-caption-text-align: $image-caption-text-align !default;
+
+/// Caption text alignment for alignleft images.
+/// @type String
+/// @since 1.0.0
+$image-alignleft-caption-text-align: $image-caption-text-align !default;
+
+/// Caption text alignment for alignright images.
+/// @type String
+/// @since 1.0.0
+$image-alignright-caption-text-align: $image-caption-text-align !default;
+
+// Secret!
+$_image-caption-text-align: (
+  center: $image-aligncenter-caption-text-align,
+  left: $image-alignleft-caption-text-align,
+  right: $image-alignright-caption-text-align
+);
 
 /// Icon image URL for generic interactive content
 /// @type String | Map
