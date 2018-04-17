@@ -68,22 +68,27 @@ $image-alignright-margin-left: 1em !default;
 /// @type String
 $prince-image-resolution: auto, normal !default;
 
-/// Caption float for alignnone images.
+/// Image float for alignnone images (Prince only).
+/// @type String
+/// @since 1.0.0
+$image-alignnone-image-float: none !default;
+
+/// Caption float for alignnone images (Prince only).
 /// @type String
 /// @since 1.0.0
 $image-alignnone-caption-float: none !default;
 
-/// Left padding for captions on alignnone images.
+/// Left padding for captions on alignnone images (Prince only).
 /// @type String | Map
 /// @since 1.0.0
 $image-alignnone-caption-left-padding: 0 !default;
 
-/// Width for captions on alignnone images.
+/// Width for captions on alignnone images (Prince only).
 /// @type String | Map
 /// @since 1.0.0
 $image-alignnone-caption-width: 100% !default;
 
-/// Max width for captioned alignnone images.
+/// Max width for captioned alignnone images (Prince only).
 /// @type String | Map
 /// @since 1.0.0
 $image-alignnone-image-maxwidth: 100% !default;

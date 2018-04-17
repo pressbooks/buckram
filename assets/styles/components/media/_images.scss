@@ -54,8 +54,13 @@
 
 %image-wrapper-alignnone {
   margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
+  width: 100% !important;
+}
 
+%image-wrapper-alignnone-captioned {
   img {
+    float: $image-alignnone-image-float;
+    margin-right: 0;
     max-width: if-map-get($image-alignnone-image-maxwidth, $type) !important;
   }
 
@@ -64,7 +69,13 @@
     box-sizing: border-box;
     float: $image-alignnone-caption-float;
     padding-left: if-map-get($image-alignnone-caption-left-padding, $type);
-    width: if-map-get($image-alignnone-caption-width, $type);
+    width: if-map-get($image-alignnone-caption-width, $type) !important;
+  }
+
+  &:after {
+      content: "";
+      display: table;
+      clear: both;
   }
 }
 
@@ -115,7 +126,14 @@
     width: 100% !important;
   }
 
-  .wp-caption.alignnone,
+  .wp-caption.alignnone {
+    @extend %image-wrapper-alignnone;
+
+    @if $type == 'prince' {
+      @extend %image-wrapper-alignnone-captioned;
+    }
+  }
+
   .wp-nocaption.alignnone {
     @extend %image-wrapper-alignnone;
   }
@@ -169,7 +187,11 @@
       width: 100% !important;
     }
 
-    .wp-caption.alignnone,
+    .wp-caption.alignnone {
+      @extend %image-wrapper-alignnone;
+      @extend %image-wrapper-alignnone-captioned;
+    }
+
     .wp-nocaption.alignnone {
       @extend %image-wrapper-alignnone;
     }
