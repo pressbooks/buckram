@@ -51,6 +51,7 @@
   font-style: $toc-part-number-font-style;
   font-weight: $toc-part-number-font-weight;
   text-transform: $toc-part-number-text-transform;
+  line-height: $toc-part-number-line-height;
   hyphens: none;
   content: $toc-part-number-before-content $toc-part-number-content $toc-part-number-after-content;
   counter-increment: part;
