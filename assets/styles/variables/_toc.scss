@@ -133,9 +133,8 @@ $toc-part-number-text-transform: none !default;
 /// Part number line height for Table of Contents
 /// @type String
 /// @since 1.0.0
-@if $type != 'epub' {
-  $toc-part-number-line-height: $toc-base-line-height !default;
-}
+$toc-part-number-line-height: $toc-base-line-height !default;
+
 
 
 /// Part title font stack for Table of Contents
