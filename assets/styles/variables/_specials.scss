@@ -230,6 +230,11 @@ $aside-border-left: 0 !default;
 /// Pullquote font family.
 /// @type String
 
+/// Width for pullquotes on elements with classes of `pullquote`.
+/// @type String
+/// @since 1.0.0
+$pullquote-width: 65% !default;
+
 /// Border top for pullquotes on elements with classes of `pullquote`, `pullquote-left`, and `pullquote-right`.
 /// @type String
 /// @since 1.0.0
@@ -359,6 +364,11 @@ $sidebar-font-weight: normal !default;
 /// Alignment for Sidebar on `<p>` elements that are children of elements with a class of `sidebar`.
 /// @type String
 $sidebar-align: left !default;
+/// Line Height for Sidebar on `<p>` elements that are children of elements with a class of `sidebar`.
+/// @type String
+/// @since 1.0.0
+$sidebar-line-height: 1.2em !default;
+
 
 
 // Separators
