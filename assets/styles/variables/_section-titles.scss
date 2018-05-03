@@ -900,13 +900,45 @@ $chapter-title-letter-spacing: (
 ) !default;
 
 /// Defines the word spacing title on chapter titles
-/// @type String | MAp
+/// @type String | Map
 /// @since 1.0.0
 $chapter-title-word-spacing: (
   epub: normal,
   prince: normal,
   web: normal
 ) !default;
+
+/// Font family for chapter title decoration.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-font-family: $font-3 !default;
+/// Content for chapter title decoration.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-content: "\a P" !default;
+/// Display for chapter title decoration. Too make chapter title decoration visible, set value to 'display: block;'
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-display: none !default;
+/// Font size for chapter title decoration.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-font-size: 1.3em !default;
+/// Font weight for chapter title decoration.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-font-weight: normal !default;
+/// Bottom margin for chapter title decoration.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-margin-bottom: 0.5em !default;
+/// Top margin for chapter title decoration.
+/// @type String
+/// @since 1.0.0
+$chapter-title-decoration-margin-top: 1em !default;
+
+
+
 
 /// Defines the back matter title display property.
 /// @type String
