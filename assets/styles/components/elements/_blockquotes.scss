@@ -14,6 +14,7 @@
     font-size: $blockquote-font-size;
     font-style: $blockquote-font-style;
     font-weight: $blockquote-font-weight;
+    padding: if-map-get($blockquote-padding-top, $type) if-map-get($blockquote-padding-right, $type) if-map-get($blockquote-padding-bottom, $type) if-map-get($blockquote-padding-left, $type);
     @if $type == 'prince' {
       line-height: $blockquote-line-height;
     }
