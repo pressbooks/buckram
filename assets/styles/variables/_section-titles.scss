@@ -203,6 +203,16 @@ $section-subtitle-align: center !default;
 /// @type String
 $section-subtitle-text-transform: none !default;
 
+/// Defines letter spacing property on section subtitle
+/// @type String | Map
+/// @since 1.0.0
+$section-subtitle-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines word spacing property on section subtitle
+/// @type String | Map
+/// @since 1.0.0
+$section-subtitle-word-spacing: $section-title-word-spacing !default;
+
 /// Defines spacing between section author and the bottom border of the section header.
 /// @type String | Map
 $section-author-margin-bottom: (
@@ -238,6 +248,16 @@ $section-author-align: center !default;
 /// Defines the section author text transform.
 /// @type String
 $section-author-text-transform: uppercase !default;
+
+/// Defines letter spacing property on section author
+/// @type String | Map
+/// @since 1.0.0
+$section-author-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines word spacing property on section author
+/// @type String | Map
+/// @since 1.0.0
+$section-author-word-spacing: $section-title-word-spacing !default;
 
 /// Defines aphorism block-width.
 /// @type String | Map
@@ -828,20 +848,12 @@ $chapter-number-after-content: '.\00A0' !default;
 /// Defines letter spacing property on chapter numbers
 /// @type String | Map
 /// @since 1.0.0
-$chapter-number-letter-spacing: (
-  epub: normal,
-  prince: normal,
-  web: normal
-) !default;
+$chapter-number-letter-spacing: $section-title-letter-spacing !default;
 
 /// Defines the word spacing property on chapter numbers
 /// @type String | Map
 /// @since 1.0.0
-$chapter-number-word-spacing: (
-  epub: normal,
-  prince: normal,
-  web: normal
-) !default;
+$chapter-number-word-spacing: $section-title-word-spacing !default;
 
 /// Defines the chapter title display propert.
 /// @type String
