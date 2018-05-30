@@ -605,6 +605,24 @@ $front-matter-title-margin-right: $section-title-margin-right !default;
 /// @since 1.0.0
 $front-matter-title-margin-left: $section-title-margin-left !default;
 
+/// Defines the front matter title letter spacing.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default; 
+
+/// Defines the front matter title word spacing.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default; 
+
 /// Defines the front matter title font family.
 /// @type String
 $front-matter-title-font-family: $section-title-font-family !default;
