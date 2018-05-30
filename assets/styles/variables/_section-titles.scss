@@ -635,6 +635,25 @@ $front-matter-title-text-transform: $section-title-text-transform !default;
 /// @since 1.0.0
 $front-matter-title-line-height: $section-title-line-height !default;
 
+/// Defines the front matter title bottom border style.
+/// @type String
+/// @since 1.0.0
+$front-matter-title-border-bottom-style: none !default; 
+
+/// Defines the front matter title bottom border width.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-border-bottom-width: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the front matter bottom border color.
+/// @type String | Map
+/// @since 1.0.0
+$front-matter-title-border-bottom-color: $color-3 !default;
+
 /// Defines the table of contents title display property.
 /// @type String
 /// @since 0.3.0
