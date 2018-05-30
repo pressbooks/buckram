@@ -639,6 +639,21 @@ $blockquote-word-spacing: (
   web: normal
 ) !default;
 
+/// Left border width for `<blockquote>` elements.
+/// @type String | Map
+/// @since 1.0.0
+$blockquote-border-left-width: (epub: 0em, prince: 0em, web: 0) !default;
+
+/// Left border style for `<blockquote>` elements.
+/// @type String
+/// @since 1.0.0
+$blockquote-border-left-style: none !default;
+
+/// Left border color for `<blockquote>` elements.
+/// @type String
+/// @since 1.0.0
+$blockquote-border-left-color: initial !default;
+
 /// Top margin for `<ol>` elements.
 /// @type String
 $ol-margin-top: 1em !default;
