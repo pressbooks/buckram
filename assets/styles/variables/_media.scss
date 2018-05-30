@@ -196,7 +196,7 @@ $interactive-icon-background-size: (
 /// @since 1.0.0
 $interactive-content-line-height: $body-line-height !default;
 
-/// Line bottom property for interactive content box
+/// Bottom margin property for interactive content box
 /// @type String | Map
 /// @since 1.0.0
 $interactive-content-margin-bottom: (prince: 1.5em, epub: 1em, web: 1em) !default;
