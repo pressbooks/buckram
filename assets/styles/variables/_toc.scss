@@ -261,6 +261,18 @@ $toc-part-number-font-weight: normal !default;
 /// Part number text transform for Table of Contents
 /// @type String
 $toc-part-number-text-transform: none !default;
+/// Part number line height for Table of Contents
+/// @type String | Map
+/// @since 1.0.0
+$toc-part-number-line-height: $toc-base-line-height !default;
+
+/// Part title margin bottom for Table of Contents
+/// @type String | Map
+/// @since 1.0.0
+$toc-part-title-margin-bottom: (
+  epub: 0em,
+  prince: 0em
+) !default;
 
 /// Part title font stack for Table of Contents
 /// @type String
