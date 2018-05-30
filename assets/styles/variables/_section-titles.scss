@@ -140,6 +140,24 @@ $section-title-text-transform: none !default;
 /// @since 1.0.0
 $section-title-line-height: $h1-line-height !default;
 
+/// Defines the section title letter spacing.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-letter-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default; 
+
+/// Defines the section title word spacing.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-word-spacing: (
+  epub: normal,
+  prince: normal,
+  web: normal
+) !default; 
+
 /// Defines spacing between section subtitle and the bottom of the section header when the section does not have an author.
 /// @type String | Map
 $section-subtitle-margin-bottom: (
@@ -565,20 +583,12 @@ $part-title-line-height: $h1-line-height !default;
 /// Defines letter spacing property on part titles
 /// @type String | Map
 /// @since 1.0.0
-$part-title-letter-spacing:  (
-  epub: normal,
-  prince: normal,
-  web: normal
-) !default;
+$part-title-letter-spacing: $section-title-letter-spacing !default;
 
 /// Defines the word spacing title on part titles
 /// @type String | Map
 /// @since 1.0.0
-$part-title-word-spacing: (
-  epub: normal,
-  prince: normal,
-  web: normal
-) !default;
+$part-title-word-spacing: $section-title-word-spacing !default;
 
 /// Defines the front matter title display property.
 /// @type String
@@ -608,20 +618,12 @@ $front-matter-title-margin-left: $section-title-margin-left !default;
 /// Defines the front matter title letter spacing.
 /// @type String | Map
 /// @since 1.0.0
-$front-matter-title-letter-spacing: (
-  epub: normal,
-  prince: normal,
-  web: normal
-) !default; 
+$front-matter-title-letter-spacing: $section-title-letter-spacing !default;
 
 /// Defines the front matter title word spacing.
 /// @type String | Map
 /// @since 1.0.0
-$front-matter-title-word-spacing: (
-  epub: normal,
-  prince: normal,
-  web: normal
-) !default; 
+$front-matter-title-word-spacing: $section-title-word-spacing !default;
 
 /// Defines the front matter title font family.
 /// @type String
@@ -896,20 +898,12 @@ $chapter-title-line-height: $section-title-line-height !default;
 /// Defines letter spacing property on chapter titles
 /// @type String | Map
 /// @since 1.0.0
-$chapter-title-letter-spacing: (
-  epub: normal,
-  prince: normal,
-  web: normal
-) !default;
+$chapter-title-letter-spacing: $section-title-letter-spacing !default;
 
 /// Defines the word spacing title on chapter titles
-/// @type String | MAp
+/// @type String | Map
 /// @since 1.0.0
-$chapter-title-word-spacing: (
-  epub: normal,
-  prince: normal,
-  web: normal
-) !default;
+$chapter-title-word-spacing:  $section-title-word-spacing !default;
 
 /// Defines the back matter title display property.
 /// @type String
@@ -965,3 +959,13 @@ $back-matter-title-text-transform: $section-title-text-transform !default;
 /// @type String | Map
 /// @since 1.0.0
 $back-matter-title-line-height: $section-title-line-height !default;
+
+/// Defines letter spacing property on back matter titles
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-letter-spacing: $section-title-letter-spacing !default;
+
+/// Defines the word spacing title on back matter titles
+/// @type String | Map
+/// @since 1.0.0
+$back-matter-title-word-spacing:  $section-title-word-spacing !default;

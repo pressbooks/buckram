@@ -20,8 +20,8 @@
       font-size: if-map-get($front-matter-title-font-size, $type);
       font-style: $front-matter-title-font-style;
       font-weight: $front-matter-title-font-weight;
-      letter-spacing: $front-matter-title-letter-spacing;
-      word-spacing: $front-matter-title-word-spacing;
+      letter-spacing: if-map-get($front-matter-title-letter-spacing, $type);
+      word-spacing: if-map-get($front-matter-title-word-spacing, $type);
       hyphens: none;
       @if $type != 'epub' {
         line-height: if-map-get($front-matter-title-line-height, $type);
