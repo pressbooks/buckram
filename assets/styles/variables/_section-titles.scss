@@ -739,6 +739,43 @@ $toc-title-text-transform: $section-title-text-transform !default;
 /// @since 1.0.0
 $toc-title-line-height: $section-title-line-height !default;
 
+/// Defines the bottom border width for the Table of Contents header.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-border-bottom-width: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
+/// Defines the bottom border style for the Table of Contents header.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-border-bottom-width: (
+  epub: none,
+  prince: none,
+  web: none
+) !default;
+
+/// Defines the bottom border style for the Table of Contents header.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-border-bottom-color: (
+  epub: initial,
+  prince: initial,
+  web: initial
+) !default;
+
+/// Defines the bottom padding for the Table of Contents header.
+/// @type String | Map
+/// @since 1.0.0
+$toc-title-padding-bottom: (
+  epub: 0em,
+  prince: 0em,
+  web: 0em
+) !default;
+
+
 /// Defines the chapter number display property.
 /// @type String
 $chapter-number-display: block !default;
