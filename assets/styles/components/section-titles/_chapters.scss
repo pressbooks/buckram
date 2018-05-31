@@ -74,6 +74,8 @@
       @if $type != 'epub' {
         column-span: all;
       }
+      letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
+      word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
     h2.chapter-author {
@@ -86,6 +88,8 @@
       hyphens: none;
       text-align: $section-author-align;
       text-transform: $section-author-text-transform;
+      letter-spacing: if-map-get($section-author-letter-spacing, $type);
+      word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
     h2.chapter-title + h2.chapter-subtitle {
@@ -117,6 +121,7 @@ blockquote.aphorism {
   font-family: $aphorism-font-family;
   font-size: if-map-get($aphorism-font-size, $type);
   font-style: $aphorism-font-style;
+  font-weight: $aphorism-font-weight;
   @if $type != 'epub' {
     line-height: if-map-get($aphorism-line-height, $type);
   }
@@ -130,6 +135,7 @@ blockquote.aphorism {
     font-size: if-map-get($aphorism-cite-font-size, $type);
     font-style: $aphorism-cite-font-style;
     font-variant: $aphorism-cite-font-variant;
+    font-weight: $aphorism-cite-font-weight;
     text-transform: $aphorism-cite-text-transform;
     text-align: $aphorism-cite-align;
 

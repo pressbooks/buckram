@@ -28,6 +28,8 @@
       text-transform: $back-matter-title-text-transform;
       border-bottom: if-map-get($back-matter-title-border-bottom-width, $type) $back-matter-title-border-bottom-style if-map-get($back-matter-title-border-bottom-color, $type);
       padding-bottom: if-map-get($back-matter-title-padding-bottom, $type);
+      letter-spacing: if-map-get($back-matter-title-letter-spacing, $type);
+      word-spacing: if-map-get($back-matter-title-word-spacing, $type);
     }
 
     h2.chapter-subtitle {
@@ -40,7 +42,11 @@
       hyphens: none;
       text-align: $section-subtitle-align;
       text-transform: $section-subtitle-text-transform;
-      column-span: all;
+      @if $type != 'epub' {
+        column-span: all;
+      }
+      letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
+      word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
     h2.chapter-author {
@@ -53,6 +59,8 @@
       hyphens: none;
       text-align: $section-author-align;
       text-transform: $section-author-text-transform;
+      letter-spacing: if-map-get($section-author-letter-spacing, $type);
+      word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
     h1.back-matter-title + h2.chapter-subtitle {

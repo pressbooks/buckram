@@ -22,6 +22,8 @@
       font-style: $front-matter-title-font-style;
       font-weight: $front-matter-title-font-weight;
       border-bottom: $front-matter-title-border-bottom-style if-map-get($front-matter-title-border-bottom-width, $type) if-map-get($front-matter-title-border-bottom-color, $type);
+      letter-spacing: if-map-get($front-matter-title-letter-spacing, $type);
+      word-spacing: if-map-get($front-matter-title-word-spacing, $type);
       hyphens: none;
       @if $type != 'epub' {
         line-height: if-map-get($front-matter-title-line-height, $type);
@@ -40,7 +42,11 @@
       hyphens: none;
       text-align: $section-subtitle-align;
       text-transform: $section-subtitle-text-transform;
-      column-span: all;
+      @if $type != 'epub' {
+        column-span: all;
+      }
+      letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
+      word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
     h2.chapter-author {
@@ -53,6 +59,8 @@
       hyphens: none;
       text-align: $section-author-align;
       text-transform: $section-author-text-transform;
+      letter-spacing: if-map-get($section-author-letter-spacing, $type);
+      word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
     h1.front-matter-title + h2.chapter-subtitle {
@@ -85,6 +93,7 @@
     font-size: if-map-get($toc-title-font-size, $type);
     font-style: $toc-title-font-style;
     font-weight: $toc-title-font-weight;
+    color: $toc-title-color;
     hyphens: none;
     @if $type != 'epub' {
       line-height: $toc-title-line-height;
