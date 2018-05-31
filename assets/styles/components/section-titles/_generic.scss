@@ -68,6 +68,8 @@
         hyphens: none;
         text-align: $section-subtitle-align;
         text-transform: $section-subtitle-text-transform;
+        letter-spacing: $section-subtitle-letter-spacing;
+        word-spacing: $section-subtitle-word-spacing;
         column-span: all;
       }
 
@@ -81,6 +83,8 @@
         hyphens: none;
         text-align: $section-author-align;
         text-transform: $section-author-text-transform;
+        letter-spacing: $section-author-letter-spacing;
+        word-spacing: $section-author-word-spacing;
       }
 
       h1 + [data-type='subtitle'] {
