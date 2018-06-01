@@ -273,6 +273,16 @@ $toc-part-title-font-size: (
   prince: 1em,
   web: 1em
 ) !default;
+
+/// Part title font size for Table of Contents
+/// @type String | Map
+/// @since 1.0.0
+$toc-part-title-margin-bottom: (
+  epub: 1em,
+  prince: 1em,
+  web: 1em
+) !default;
+
 /// Part title font style for Table of Contents
 /// @type String
 $toc-part-title-font-style: normal !default;
