@@ -117,10 +117,10 @@
       content: $toc-title-decoration-content;
       display: $toc-title-decoration-display;
       white-space: pre;
-      font-size: $toc-title-decoration-font-size;
+      font-size: if-map-get($toc-title-decoration-font-size, $type);
       font-weight: $toc-title-decoration-font-weight;
-      margin-bottom: $toc-title-decoration-margin-bottom;
-      margin-top: $toc-title-decoration-margin-top;
+      margin-bottom: if-map-get($toc-title-decoration-margin-bottom, $type);
+      margin-top: if-map-get($toc-title-decoration-margin-top, $type);
     }
   }
 }
