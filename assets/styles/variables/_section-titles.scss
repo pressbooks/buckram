@@ -186,7 +186,7 @@ $section-title-decoration-font-family: $font-3 !default;
 /// Defines the section title decoration content.
 /// @type String 
 /// @since 1.0.0
-$section-title-decoration-content: "\a P" !default;
+$section-title-decoration-content: "" !default;
 
 /// Defines the section title decoration display.
 /// @type String
@@ -196,7 +196,7 @@ $section-title-decoration-display: none !default;
 /// Defines the section title decoration font size.
 /// @type String | Map
 /// @since 1.0.0
-$section-title-decoration-font-size: (epub:  1.3em, prince: 1.3em, web: 1.3em) !default;
+$section-title-decoration-font-size: (epub:  0em, prince: 0em, web: 0em) !default;
 
 /// Defines the section title decoration font weight.
 /// @type String 
@@ -206,12 +206,12 @@ $section-title-decoration-font-weight: normal !default;
 /// Defines the section title decoration margin bottom.
 /// @type String | Map
 /// @since 1.0.0
-$section-title-decoration-margin-bottom: (epub:  0.5em, prince: 0.5em, web: 0.5em) !default;
+$section-title-decoration-margin-bottom: (epub:  0em, prince: 0em, web: 0em) !default;
 
 /// Defines the section title decoration margin top.
 /// @type String | Map
 /// @since 1.0.0
-$section-title-decoration-margin-top:  (epub:  1em, prince: 1em, web: 1em) !default;
+$section-title-decoration-margin-top:  (epub:  0em, prince: 0em, web: 0em) !default;
 
 /// Defines spacing between section subtitle and the bottom of the section header when the section does not have an author.
 /// @type String | Map
