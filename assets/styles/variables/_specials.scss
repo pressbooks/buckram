@@ -500,6 +500,15 @@ $textbox-line-height: 1.2em !default;
 /// @type String
 $textbox-text-align: left !default;
 
+/// Text indents on elements with a class of `textbox`.
+/// @type string | Map
+/// @since 1.0.0
+$textbox-text-indent: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
 /// Word spacing on elements with a class of `textbox`.
 /// @type String | Map
 /// @since 1.0.0

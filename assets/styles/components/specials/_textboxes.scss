@@ -96,6 +96,7 @@
     line-height: if-map-get($textbox-line-height, $type);
   }
   text-align: $textbox-text-align;
+  text-indent: if-map-get($textbox-text-indent, $type);
   border-style: $textbox-border-style;
   border-width: if-map-get($textbox-border-width, $type);
   border-radius: if-map-get($textbox-border-radius, $type);
