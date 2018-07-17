@@ -308,12 +308,20 @@ $pullquote-text-transform: none !default;
 $pullquote-align: center !default;
 
 /// Top margin for pullquotes on elements with a class of `pullquote`.
-/// @type String
-$pullquote-margin-top: 1em !default;
+/// @type String | Map
+$pullquote-margin-top:  (
+  epub: 1em, 
+  prince: 1em, 
+  web: 1em
+  ) !default;
 
 /// Bottom margin for pullquotes on elements with a class of `pullquote`.
-/// @type String
-$pullquote-margin-bottom: 1em !default;
+/// @type String | Map
+$pullquote-margin-bottom:  (
+  epub: 1em, 
+  prince: 1em, 
+  web: 1em
+  ) !default;
 
 /// Width for pullquotes on elements with a class of `pullquote`.
 /// @type String | Map
