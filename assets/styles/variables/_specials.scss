@@ -319,7 +319,7 @@ $pullquote-margin-bottom: 1em !default;
 /// @type String | Map
 /// @since 1.0.0
 $pullquote-width: (
-    epub: 65%, 
+    epub: auto, 
     prince: 65%, 
     web: 65%
     ) !default;
