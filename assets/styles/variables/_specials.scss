@@ -317,7 +317,7 @@ $pullquote-margin-bottom: 1em !default;
 
 /// Width for pullquotes on elements with a class of `pullquote`.
 /// @type String | Map
-/// @since 1.0.0
+/// @since 1.1.0
 $pullquote-width: (
     epub: auto, 
     prince: 65%, 
