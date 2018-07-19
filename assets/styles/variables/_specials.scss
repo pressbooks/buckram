@@ -336,7 +336,7 @@ $pullquote-left-margin-top: $pullquote-margin-top !default;
 
 /// Right margin for left pullquotes on elements with a class of `pullquote-left`.
 /// @type String | Map
-/// @since 1.1.0
+/// @since 1.1.0 supports maps
 $pullquote-left-margin-right: 1em !default;
 
 /// Bottom margin for left pullquotes on elements with a class of `pullquote-left`.
@@ -346,7 +346,7 @@ $pullquote-left-margin-bottom: $pullquote-margin-bottom !default;
 
 /// Left margin for left pullquotes on elements with a class of `pullquote-left`.
 /// @type String | Map
-/// @since 1.1.0
+/// @since 1.1.0 supports maps
 $pullquote-left-margin-left: 1em !default;
 
 /// Width for right pullquotes on elements with a class of `pullquote-right`.
@@ -360,12 +360,12 @@ $pullquote-right-margin-top: $pullquote-margin-top !default;
 
 /// Right margin for right pullquotes on elements with a class of `pullquote-right`.
 /// @type String | Map
-/// @since 1.1.0
+/// @since 1.1.0 supports maps
 $pullquote-right-margin-right: 1em !default;
 
 /// Bottom margin for right pullquotes on elements with a class of `pullquote-right`.
 /// @type String | Map
-/// @since 1.1.0
+/// @since 1.1.0 supports maps
 $pullquote-right-margin-bottom: $pullquote-margin-bottom !default;
 
 /// Text alignment for right pullquotes on elements with a class of `pullquote-right`.
