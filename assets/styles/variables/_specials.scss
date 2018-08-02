@@ -431,7 +431,7 @@ $sidebar-align: left !default;
 /// Line Height for Sidebar on `<p>` elements that are children of elements with a class of `sidebar`.
 /// @type String 
 /// /// @since 1.1.0
-$sidebar-line-height: $textbox-line-height !default;
+$sidebar-line-height: 1.4em !default;
 
 
 // Separators
