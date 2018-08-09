@@ -208,11 +208,6 @@ $section-title-decoration-font-weight: normal !default;
 /// @since 1.0.0
 $section-title-decoration-margin-bottom: (epub:  0em, prince: 0em, web: 0em) !default;
 
-/// Defines the section title decoration margin top.
-/// @type String | Map
-/// @since 1.0.0
-$section-title-decoration-margin-top:  (epub:  0em, prince: 0em, web: 0em) !default;
-
 /// Defines spacing between section subtitle and the bottom of the section header when the section does not have an author.
 /// @type String | Map
 $section-subtitle-margin-bottom: (
@@ -326,15 +321,6 @@ $aphorism-block-width: (
 /// Defines aphorism top margin.
 /// @type String | Map
 $aphorism-margin-top: (
-  epub: 0,
-  prince: 0,
-  web: 0
-) !default;
-
-/// Defines aphorism padding bottom.
-/// @type String | Map
-/// @since 1.1.0
-$aphorism-padding-bottom: (
   epub: 0,
   prince: 0,
   web: 0
