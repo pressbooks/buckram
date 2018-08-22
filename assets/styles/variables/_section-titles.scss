@@ -203,6 +203,11 @@ $section-title-decoration-font-size: (epub:  0em, prince: 0em, web: 0em) !defaul
 /// @since 1.0.0
 $section-title-decoration-font-weight: normal !default;
 
+/// Defines the section title decoration margin top.
+/// @type String | Map
+/// @since 1.0.0
+$section-title-decoration-margin-top:  (epub:  0em, prince: 0em, web: 0em) !default;
+
 /// Defines the section title decoration margin bottom.
 /// @type String | Map
 /// @since 1.0.0
@@ -350,6 +355,15 @@ $aphorism-margin-right: (
   epub: auto,
   prince: auto,
   web: auto
+) !default;
+
+/// Defines aphorism padding bottom.
+/// @type String | Map
+/// @since 1.1.0
+$aphorism-padding-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
 ) !default;
 
 /// Defines aphorism font family.
