@@ -331,6 +331,15 @@ $aphorism-margin-top: (
   web: 0
 ) !default;
 
+/// Defines aphorism padding bottom.
+/// @type String | Map
+/// @since 1.1.0
+$aphorism-padding-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
+) !default;
+
 /// Defines aphorism bottom margin.
 /// @type String | Map
 $aphorism-margin-bottom: (
@@ -346,15 +355,6 @@ $aphorism-margin-left: (
   epub: auto,
   prince: auto,
   web: auto
-) !default;
-
-/// Defines aphorism padding bottom.
-/// @type String | Map
-/// @since 1.1.0
-$aphorism-padding-bottom: (
-  epub: 0,
-  prince: 0,
-  web: 0
 ) !default;
 
 /// Defines aphorism right margin.
