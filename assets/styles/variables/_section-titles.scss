@@ -314,15 +314,6 @@ $section-author-letter-spacing: $section-title-letter-spacing !default;
 /// @since 1.0.0
 $section-author-word-spacing: $section-title-word-spacing !default;
 
-/// Defines aphorism padding bottom.
-/// @type String | Map
-/// @since 1.1.0
-$aphorism-padding-bottom: (
-  epub: 0,
-  prince: 0,
-  web: 0
-) !default;
-
 /// Defines aphorism block-width.
 /// @type String | Map
 /// @since 0.3.0
@@ -355,6 +346,15 @@ $aphorism-margin-left: (
   epub: auto,
   prince: auto,
   web: auto
+) !default;
+
+/// Defines aphorism padding bottom.
+/// @type String | Map
+/// @since 1.1.0
+$aphorism-padding-bottom: (
+  epub: 0,
+  prince: 0,
+  web: 0
 ) !default;
 
 /// Defines aphorism right margin.
