@@ -15,7 +15,8 @@
 
 #copyright-page {
   page-break-before: always;
-
+  margin-right: if-map-get($copyright-margin-right, $type);
+  margin-left: if-map-get($copyright-margin-left, $type);
   .ugc {
     float: $copyright-float;
 

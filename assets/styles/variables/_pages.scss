@@ -485,9 +485,19 @@ $before-title-title-block-margin-bottom: 0.5em !default;
 /// @type String
 $copyright-float: none !default;
 
+/// Margin right for Copyright on `<p>` elements that are children of elements with an ID of `copyright-page`.
+/// @type String | Map
+/// @since 1.2.0
+$copyright-margin-right: (epub: 0, prince: 0, web: 0) !default;
+
 /// Bottom margin for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
 /// @type String | Map
 $copyright-margin-bottom: initial !default;
+
+/// Margin left for Copyright on `<p>` elements that are children of elements with an ID of `copyright-page`.
+/// @type String | Map
+/// @since 1.2.0
+$copyright-margin-left: (epub: 0, prince: 0, web: 0) !default;
 
 /// Font family for Copyright on `<p>` elements that are children of elements with a class of `ugc`(a child of elements with ID `copyright-page`).
 /// @type String
