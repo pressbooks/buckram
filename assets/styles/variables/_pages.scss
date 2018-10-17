@@ -174,7 +174,7 @@ $title-title-padding-bottom: (epub: 0, prince: 0, web: 0) !default;
 /// Defines line height for the title page title.
 /// @type String | Map
 /// @since 1.2.0
-$title-title-line-height: (prince: 1.4em, web: 1.4em) !default;
+$title-title-line-height: $hx-line-height !default;
 
 // Subtitle
 
