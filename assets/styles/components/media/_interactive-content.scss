@@ -32,6 +32,11 @@
     margin-bottom: 0;
     text-align: left;
   }
+
+  .embed div.figcaption { 
+    text-align: center; 
+  }
+  
 }
 
 @if $type == 'web' {
