@@ -41,12 +41,24 @@
         line-height: $table-caption-line-height;
       }
     }
+    &.lines {
+      border-color: if-map-get($line-color-1, $type);
+    } 
 
     &.lines tr {
       border-top: $table-border-width solid;
       border-bottom: $table-border-width solid;
+      border-color: if-map-get($line-color-1, $type);
       border-top-color: if-map-get($line-color-1, $type);
       border-bottom-color: if-map-get($line-color-1, $type);
+    }
+
+    &.lines th {
+      border-color: if-map-get($line-color-1, $type);
+    }
+
+    &.lines td {
+      border-color: if-map-get($line-color-1, $type);
     }
 
     &.no-lines tr,
@@ -91,6 +103,7 @@
     }
     text-align: $table-th-align;
     vertical-align: $table-th-vertical-align;
+    border-color: if-map-get($line-color-1, $type);
   }
 
   td {
@@ -100,6 +113,7 @@
     }
     text-align: $table-td-align;
     vertical-align: $table-td-vertical-align;
+    border-color: if-map-get($line-color-1, $type);
   }
 }
 
@@ -197,6 +211,7 @@
       line-height: $table-th-line-height;
       text-align: $table-th-align;
       vertical-align: middle;
+      border-color: if-map-get($line-color-1, $type);
     }
 
     td {
@@ -204,6 +219,7 @@
       line-height: $table-td-line-height;
       text-align: $table-td-align;
       vertical-align: middle;
+      border-color: if-map-get($line-color-1, $type);
     }
   }
 }
