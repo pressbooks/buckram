@@ -123,6 +123,7 @@
       border-collapse: collapse;
       border-top: $table-border-width solid;
       border-bottom: $table-border-width solid;
+      border-color: if-map-get($line-color-1, $type);
       border-top-color: if-map-get($line-color-1, $type);
       border-bottom-color: if-map-get($line-color-1, $type);
 
@@ -136,11 +137,24 @@
         line-height: $table-caption-line-height;
       }
 
+      &.lines {
+        border-color: if-map-get($line-color-1, $type);
+      }
+
       &.lines tr {
         border-top: $table-border-width solid;
         border-bottom: $table-border-width solid;
+        border-color: if-map-get($line-color-1, $type);
         border-top-color: if-map-get($line-color-1, $type);
         border-bottom-color: if-map-get($line-color-1, $type);
+      }
+
+      &.lines th {
+        border-color: if-map-get($line-color-1, $type);
+      }
+  
+      &.lines td {
+        border-color: if-map-get($line-color-1, $type);
       }
 
       &.no-lines tr,
