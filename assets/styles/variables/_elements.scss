@@ -953,7 +953,7 @@ $table-th-border-bottom-width: (epub: 0, prince: 0, web:0) !default;
 /// Border bottom style on `<th>` elements.
 /// @since 1.2.0
 /// @type String | Map 
-$table-th-border-bottom-width: (epub: none, prince: none, web: none) !default;
+$table-th-border-bottom-style: (epub: none, prince: none, web: none) !default;
 
 /// Top padding for `<td>` elements.
 /// @type String
