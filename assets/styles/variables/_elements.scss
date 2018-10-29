@@ -943,7 +943,7 @@ $table-th-border-top-width: (epub: 0, prince: 0, web:0) !default;
 /// Border top style on `<th>` elements.
 /// @since 1.2.0
 /// @type String | Map 
-$table-th-border-top-width: (epub: none, prince: none, web: none) !default;
+$table-th-border-top-style: (epub: none, prince: none, web: none) !default;
 
 /// Border bottom width on `<th>` elements.
 /// @since 1.2.0
@@ -992,7 +992,7 @@ $table-tr-border-top-width: (epub: 0, prince: 0, web:0) !default;
 /// Border top style on `<tr>` elements.
 /// @since 1.2.0
 /// @type String | Map 
-$table-tr-border-top-width: (epub: none, prince: none, web: none) !default;
+$table-tr-border-top-style: (epub: none, prince: none, web: none) !default;
 
 /// Border bottom width on `<tr>` elements.
 /// @since 1.2.0
@@ -1002,7 +1002,7 @@ $table-tr-border-bottom-width: (epub: 0, prince: 0, web:0) !default;
 /// Border bottom style on `<tr>` elements.
 /// @since 1.2.0
 /// @type String | Map 
-$table-tr-border-bottom-width: (epub: none, prince: none, web: none) !default;
+$table-tr-border-bottom-style: (epub: none, prince: none, web: none) !default;
 
 /// Font size for `<cite>` elements.
 /// @type String | Map
