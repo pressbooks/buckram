@@ -120,7 +120,7 @@
   tr {
     border-top: if-map-get($table-tr-border-top-width, $type) if-map-get($table-tr-border-top-style, $type) if-map-get($line-color-1, $type);
     border-bottom: if-map-get($table-tr-border-bottom-width, $type) if-map-get($table-tr-border-bottom-style, $type) if-map-get($line-color-1, $type);
-    
+  }
 }
 
 @else {
