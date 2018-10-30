@@ -896,7 +896,7 @@ $table-align: left !default;
 $table-alignleft-margin-right: (epub: 1.5em, prince: 1.5em, web: 1.5em) !default;
 
 /// Margin left for `<table>` elements with a class of "alignright".
-/// @since 2.0.0
+/// @since 1.2.0
 /// @type String | Map
 $table-alignright-margin-left: (epub: 1.5em, prince: 1.5em, web: 1.5em) !default;
 
