@@ -891,7 +891,7 @@ $table-line-height: 1.1em;
 $table-align: left !default;
 
 /// Margin right for `<table>` elements with a class of "alignleft".
-/// @since 2.0.0
+/// @since 1.2.0
 /// @type String | Map
 $table-alignleft-margin-right: (epub: 1.5em, prince: 1.5em, web: 1.5em) !default;
 
