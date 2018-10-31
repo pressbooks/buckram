@@ -32,11 +32,10 @@
     margin-bottom: 0;
     text-align: left;
   }
+}
 
-  .embed div.figcaption { 
-    text-align: if-map-get($media-caption-align, $type); 
-  }
-  
+.embed div.figcaption { 
+  text-align: if-map-get($media-caption-align, $type); 
 }
 
 @if $type == 'web' {
