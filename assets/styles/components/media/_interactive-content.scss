@@ -43,4 +43,8 @@
     display: block;
     margin: 0 auto if-map-get($interactive-content-margin-bottom, $type);
   }
+
+  .embed figcaption { 
+    text-align: if-map-get($media-caption-align, $type); 
+  }
 }
