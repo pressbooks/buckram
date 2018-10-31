@@ -485,12 +485,12 @@ $before-title-title-block-margin-bottom: 0.5em !default;
 /// @type String
 $copyright-float: none !default;
 
-/// Top margin for Copyright on `<p>` elements that are children of elements with an ID of `copyright-page`.
+/// Top margin for copyright page.
 /// @type String | Map
 /// @since 1.2.0
 $copyright-margin-top: (epub: 2em, prince: 2cm, web: 2em) !default;
 
-/// Margin right for Copyright on `<p>` elements that are children of elements with an ID of `copyright-page`.
+/// Right margin for copyright page.
 /// @type String | Map
 /// @since 1.2.0
 $copyright-margin-right: (epub: 0, prince: 0, web: 0) !default;
@@ -499,7 +499,7 @@ $copyright-margin-right: (epub: 0, prince: 0, web: 0) !default;
 /// @type String | Map
 $copyright-margin-bottom: initial !default;
 
-/// Margin left for Copyright on `<p>` elements that are children of elements with an ID of `copyright-page`.
+/// Left margin for copyright page.
 /// @type String | Map
 /// @since 1.2.0
 $copyright-margin-left: (epub: 0, prince: 0, web: 0) !default;
