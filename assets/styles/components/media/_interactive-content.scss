@@ -34,7 +34,7 @@
   }
 
   .embed div.figcaption { 
-    text-align: center; 
+    text-align: if-map-get($media-caption-align, $type); 
   }
   
 }
