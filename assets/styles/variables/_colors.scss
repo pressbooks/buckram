@@ -11,7 +11,7 @@ $color-2: $color-1 !default; //highlight color, for titles etc.
 $color-3: $color-1 !default; //second hightlight color, or black
 $color-4: #eee !default; //shaded
 $color-5: $color-4 !default; //2nd shaded
-$color-5: $color-1 !default;
+$color-5: $color-1 !default; // TODO: Declared twice, is this a bug?!
 $color-6: $color-1 !default;
 
 //HTML ELEMENTS COLOR
@@ -21,9 +21,14 @@ $color-6: $color-1 !default;
 /// Color for `<a>` elements.
 /// @type String | Map
 $link-color: (
-  prince: initial,
+  prince: normal,
   web: var(--primary, #b01109)
 ) !default;
+
+/// Color for `<a>` elements in the print context.
+/// @since 1.2.0
+/// @type String
+$link-color-print: initial !default;
 
 //BODY COLOR
 
@@ -71,7 +76,7 @@ $table-para-color: $color-1 !default;
 $shade-color-1: $color-4 !default;
 /// Line color for `<table>` elements.
 /// @type String
-$line-color-1: $color-3 !default; //FIX
+$line-color-1: #000 !default;
 
 //INDEX PARA COLOR
 
@@ -96,12 +101,27 @@ $sidebar-color: $color-4 !default;
 /// Textbox color for `<div>` elements with class `.textbox`.
 /// @type String
 $textbox-background-color: initial !default;
-/// Textbox border color for `<div>` elements with class `.sidebar`.
-/// @type String
-$textbox-border-color: $color-1 !default;
 /// Shading color for `<div>` elements with class `.sidebar.shaded`.
 /// @type String
 $shaded-color: $color-4 !default;
+/// Textbox shaded Background color on elements with a class of `textbox` and a class of `shaded`.
+/// @type String
+$textbox-shaded-background-color: $shaded-color !default;
+/// Textbox border color for `<div>` elements with class `.sidebar`.
+/// @type String
+$textbox-border-color: $color-1 !default;
+/// Top border color on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String | Map
+/// @since 1.2.0
+$hr-break-symbols-border-top-color: $color-3 !default;
+/// Color for description term on elements `<dt>`.
+/// @type String
+/// @since 1.4.0
+$dt-color: $color-3 !default;
+/// Color for footnotes on elements with class of`.footnote`.
+/// @type String
+/// @since 1.4.0
+$footnote-color: $color-1 !default;
 
 //TITLE PAGE(S) COLOR
 

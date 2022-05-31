@@ -9,6 +9,10 @@
   a {
     color: if-map-get($link-color, $type);
   }
+
+  .print a {
+    color: $link-color-print;
+  }
 }
 
 @if $type != 'web' {
@@ -121,7 +125,7 @@ p.wp-caption-text {
 }
 
 // TITLE PAGE(S) COLOR
-#half-title-page > h1.title {
+#half-title-page > .title {
   color: if-map-get($half-title-title-color, $type);
 }
 
@@ -146,7 +150,7 @@ p.wp-caption-text {
 }
 
 // FRONT MATTER COLOR
-h1.front-matter-title {
+.front-matter-title {
   color: if-map-get($front-matter-title-color, $type);
 }
 
@@ -163,11 +167,11 @@ h1.front-matter-title {
 }
 
 // PART TITLE COLOR
-h3.part-number {
+.part-number {
   color: if-map-get($part-number-color, $type);
 }
 
-h1.part-title {
+.part-title {
   color: if-map-get($part-title-color, $type);
 }
 
@@ -177,15 +181,15 @@ h1.part-title {
   color: if-map-get($chapter-number-color, $type);
 }
 
-h2.chapter-title {
+.chapter-title {
   color: if-map-get($chapter-title-color, $type);
 }
 
-h2.chapter-subtitle {
+.chapter-subtitle {
   color: if-map-get($chapter-subtitle-color, $type);
 }
 
-h2.chapter-author {
+.chapter-author {
   color: if-map-get($chapter-author-color, $type);
 }
 
@@ -194,7 +198,7 @@ h2.chapter-author {
 }
 
 // BACK MATTER TITLE COLOR
-h1.back-matter-title {
+.back-matter-title {
   color: if-map-get($back-matter-title-color, $type);
 }
 
@@ -222,13 +226,13 @@ div.sidebar {
   background-color: if-map-get($sidebar-color, $type);
 }
 
-div.textbox {
+.textbox {
   background-color: if-map-get($textbox-background-color, $type);
   border-color: if-map-get($textbox-border-color, $type);
 }
 
 .textbox.shaded {
-  background-color: if-map-get($shaded-color, $type);
+  background-color: if-map-get($textbox-shaded-background-color, $type);
 }
 
 // SHADED COLOR

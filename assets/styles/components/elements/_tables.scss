@@ -8,6 +8,13 @@
 
 @import '../utilities';
 
+@if $type == 'prince' {
+  @page landscape_table {
+    /* stylelint-disable-next-line property-no-unknown */
+    prince-rotate-body: 270deg;
+  }
+}
+
 @if $type != 'web' {
   table {
     display: table;
@@ -25,10 +32,10 @@
     }
     text-align: $table-align;
     border-collapse: collapse;
-    border-top: $table-border-width solid;
-    border-bottom: $table-border-width solid;
-    border-top-color: if-map-get($line-color-1, $type);
-    border-bottom-color: if-map-get($line-color-1, $type);
+    border-top: $table-border-width solid if-map-get($line-color-1, $type);
+    border-right: if-map-get($table-border-right-width, $type) if-map-get($table-border-right-style, $type) if-map-get($line-color-1, $type);
+    border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
+    border-left: if-map-get($table-border-left-width, $type) if-map-get($table-border-left-style, $type) if-map-get($line-color-1, $type);
 
     p {
       text-align: $table-align;
@@ -43,14 +50,12 @@
     }
     &.lines {
       border-color: if-map-get($line-color-1, $type);
-    } 
+    }
 
     &.lines tr {
-      border-top: $table-border-width solid;
-      border-bottom: $table-border-width solid;
+      border-top: $table-border-width solid if-map-get($line-color-1, $type);
+      border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
       border-color: if-map-get($line-color-1, $type);
-      border-top-color: if-map-get($line-color-1, $type);
-      border-bottom-color: if-map-get($line-color-1, $type);
     }
 
     &.lines th {
@@ -73,7 +78,7 @@
 
     &.border {
       border: $table-border-width solid;
-      border-color: if-map-get($line-color-1, $type);
+      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
     }
 
     &.no-border,
@@ -89,19 +94,50 @@
       border-left: 0;
     }
 
+    &.grid,
+    &.grid tbody,
+    &.grid th,
+    &.grid tr,
+    &.grid td,
+    &.grid tfoot,
+    &.grid thead {
+      border: 1px solid;
+      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
+    }
+
     &.alignleft {
       float: left;
       margin-right: if-map-get($table-alignleft-margin-right, $type);
     }
-  
+
+    td img.alignleft {
+      float: left;
+    }
+
     &.aligncenter {
       margin-left: auto;
       margin-right: auto;
     }
-  
+
+    td img.aligncenter {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     &.alignright {
       float: right;
       margin-left: if-map-get($table-alignright-margin-left, $type);
+    }
+
+    td img.alignright {
+      float: right;
+    }
+
+    @if $type == 'prince' {
+      &.landscape {
+        page: landscape_table;
+      }
     }
   }
 
@@ -119,17 +155,20 @@
     text-align: $table-th-align;
     vertical-align: $table-th-vertical-align;
     border-top: if-map-get($table-th-border-top-width, $type) if-map-get($table-th-border-top-style, $type) if-map-get($line-color-1, $type);
+    border-right: if-map-get($table-th-border-right-width, $type) if-map-get($table-th-border-right-style, $type) if-map-get($line-color-1, $type);
     border-bottom: if-map-get($table-th-border-bottom-width, $type) if-map-get($table-th-border-bottom-style, $type) if-map-get($line-color-1, $type);
+    border-left: if-map-get($table-th-border-left-width, $type) if-map-get($table-th-border-left-style, $type) if-map-get($line-color-1, $type);
   }
 
   td {
+    border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
+    border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
     padding: $table-td-padding-top $table-td-padding-right $table-td-padding-bottom $table-td-padding-left;
     @if $type == 'prince' {
       line-height: $table-td-line-height;
     }
     text-align: $table-td-align;
     vertical-align: $table-td-vertical-align;
-    border-color: if-map-get($line-color-1, $type);
   }
 
   tr {
@@ -156,11 +195,9 @@
       line-height: $table-line-height;
       text-align: $table-align;
       border-collapse: collapse;
-      border-top: $table-border-width solid;
-      border-bottom: $table-border-width solid;
+      border-top: $table-border-width solid if-map-get($line-color-1, $type);
+      border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
       border-color: if-map-get($line-color-1, $type);
-      border-top-color: if-map-get($line-color-1, $type);
-      border-bottom-color: if-map-get($line-color-1, $type);
 
       p {
         text-align: $table-align;
@@ -177,17 +214,15 @@
       }
 
       &.lines tr {
-        border-top: $table-border-width solid;
-        border-bottom: $table-border-width solid;
+        border-top: $table-border-width solid if-map-get($line-color-1, $type);
+        border-bottom: $table-border-width solid if-map-get($line-color-1, $type);
         border-color: if-map-get($line-color-1, $type);
-        border-top-color: if-map-get($line-color-1, $type);
-        border-bottom-color: if-map-get($line-color-1, $type);
       }
 
       &.lines th {
         border-color: if-map-get($line-color-1, $type);
       }
-  
+
       &.lines td {
         border-color: if-map-get($line-color-1, $type);
       }
@@ -204,7 +239,7 @@
 
       &.border {
         border: $table-border-width solid;
-        border-color: if-map-get($line-color-1, $type);
+        border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
       }
 
       &.no-border,
@@ -220,19 +255,44 @@
         border-left: 0;
       }
 
+      &.grid,
+      &.grid tbody,
+      &.grid th,
+      &.grid tr,
+      &.grid td,
+      &.grid tfoot,
+      &.grid thead {
+        border: 1px solid;
+        border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
+      }
+
       &.alignleft {
         float: left;
         margin-right: if-map-get($table-alignleft-margin-right, $type);
       }
-    
+
+      td img.alignleft {
+        float: left;
+      }
+
       &.aligncenter {
         margin-left: auto;
         margin-right: auto;
       }
-    
+
+      td img.aligncenter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       &.alignright {
         float: right;
         margin-left: if-map-get($table-alignright-margin-left, $type);
+      }
+
+      td img.alignright {
+        float: right;
       }
     }
 
@@ -256,7 +316,8 @@
       line-height: $table-td-line-height;
       text-align: $table-td-align;
       vertical-align: middle;
-      border-color: if-map-get($line-color-1, $type);
+      border: if-map-get($table-td-border-width, $type) if-map-get($table-td-border-style, $type);
+      border-color: if-map-get($line-color-1, $type); // This value can be "initial" incompatible with border shorthand
     }
 
     tr {

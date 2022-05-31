@@ -8,7 +8,7 @@
   .chapter-title-wrap {
     margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
 
-    h2.chapter-title {
+    .chapter-title {
       border-bottom: if-map-get($chapter-title-border-bottom-width, $type) $chapter-title-border-bottom-style if-map-get($chapter-title-border-bottom-color, $type);
       padding-bottom: if-map-get($chapter-title-padding-bottom, $type);
       display: $chapter-title-display;
@@ -26,17 +26,19 @@
       letter-spacing: if-map-get($chapter-title-letter-spacing, $type);
       word-spacing: if-map-get($chapter-title-word-spacing, $type);
 
+      @if ($chapter-title-decoration-content != "" or $chapter-title-decoration-display != none) {
         &::after {
-            font-family: $chapter-title-decoration-font-family;
-            content: $chapter-title-decoration-content;
-            display: $chapter-title-decoration-display;
-            white-space: pre;
-            font-size: if-map-get($chapter-title-decoration-font-size, $type);
-            font-weight: $chapter-title-decoration-font-weight;
-            margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
-            margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
-            color: if-map-get($chapter-title-decoration-color, $type);
-          }
+          font-family: $chapter-title-decoration-font-family;
+          content: $chapter-title-decoration-content;
+          display: $chapter-title-decoration-display;
+          white-space: pre;
+          font-size: if-map-get($chapter-title-decoration-font-size, $type);
+          font-weight: $chapter-title-decoration-font-weight;
+          margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
+          margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
+          color: if-map-get($chapter-title-decoration-color, $type);
+        }
+      }
     }
 
     .chapter-number {
@@ -74,10 +76,13 @@
         &::after {
           content: '';
         }
+        &::before {
+          content: '';
+        }
       }
     }
 
-    h2.chapter-subtitle {
+    .chapter-subtitle {
       display: block;
       margin-bottom: 0;
       font-family: $section-subtitle-font-family;
@@ -94,7 +99,7 @@
       word-spacing: if-map-get($section-subtitle-word-spacing, $type);
     }
 
-    h2.chapter-author {
+    .chapter-author {
       display: block;
       margin-bottom: if-map-get($section-author-margin-bottom, $type);
       font-family: $section-author-font-family;
@@ -103,31 +108,38 @@
       font-weight: $section-author-font-weight;
       hyphens: none;
       text-align: $section-author-align;
+      text-indent: if-map-get($section-author-text-indent, $type);
       text-transform: $section-author-text-transform;
       letter-spacing: if-map-get($section-author-letter-spacing, $type);
       word-spacing: if-map-get($section-author-word-spacing, $type);
     }
 
-    h2.chapter-title + h2.chapter-subtitle,
-    .short-title + h2.chapter-subtitle {
+    .chapter-title + .chapter-subtitle,
+    .short-title + .chapter-subtitle {
       margin-top: if-map-get($section-title-subtitle-spacing, $type);
     }
 
-    h2.chapter-title + h2.chapter-author,
-    .short-title + h2.chapter-author {
+    .chapter-title + .chapter-author,
+    .short-title + .chapter-author {
       margin-top: if-map-get($section-title-author-spacing, $type);
     }
 
-    h2.chapter-subtitle + h2.chapter-author {
+    .chapter-subtitle + .chapter-author {
       margin-top: if-map-get($section-subtitle-author-spacing, $type);
     }
 
-    h2.chapter-title:last-child {
+    .chapter-title:last-child {
       margin-bottom: if-map-get($section-title-margin-bottom, $type);
     }
 
-    h2.chapter-subtitle:last-child {
+    .chapter-subtitle:last-child {
       margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+    }
+  }
+
+  @if $type == 'prince' {
+    div.part ~ .chapter .chapter-title {
+      prince-bookmark-level: 2;
     }
   }
 }
@@ -171,7 +183,7 @@ blockquote.aphorism {
       margin-bottom: 0;
     }
 
-    h3.chapter-number {
+    .chapter-number {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.2em;
@@ -180,7 +192,7 @@ blockquote.aphorism {
       text-align: center;
     }
 
-    h2.chapter-title {
+    .chapter-title {
       margin-top: 1em;
       margin-bottom: 1em;
       font-size: 1.5em;
@@ -189,7 +201,7 @@ blockquote.aphorism {
       text-align: center;
     }
 
-    h2.chapter-subtitle {
+    .chapter-subtitle {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       font-size: 0.9em;
@@ -198,7 +210,7 @@ blockquote.aphorism {
       text-align: center;
     }
 
-    h2.chapter-author {
+    .chapter-author {
       margin-top: 0.5em;
       margin-bottom: 0.5em;
       font-size: 0.8em;
@@ -209,11 +221,11 @@ blockquote.aphorism {
   }
 
   @media amzn-kf8 {
-    .chapter-title-wrap h2.chapter-title::before {
+    .chapter-title-wrap .chapter-title::before {
       content: '';
     }
 
-    .chapter-title-wrap h2.chapter-title::after {
+    .chapter-title-wrap .chapter-title::after {
       content: '';
     }
   }
