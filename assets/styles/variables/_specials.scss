@@ -3,6 +3,7 @@
 ////
 
 @import '../components/utilities';
+@import 'colors';
 
 // Columns
 
@@ -26,6 +27,11 @@ $column-twocolumn-column-gap: 1.5em !default;
 /// @type String
 $column-twocolumn-font-size: 0.85em !default;
 
+/// Text align for elements with class `.twocolumn`.
+/// @type String | Map
+/// @since 1.3.0
+$column-twocolumn-text-align: $para-align !default;
+
 /// Column gap for elements with class `.threecolumn`.
 /// @type String
 $column-threecolumn-column-gap: 1em !default;
@@ -33,6 +39,11 @@ $column-threecolumn-column-gap: 1em !default;
 /// Font size for elements with class `.threecolumn`.
 /// @type String
 $column-threecolumn-font-size: 0.8em !default;
+
+/// Text align for elements with class `.threecolumn`.
+/// @type String | Map
+/// @since 1.3.0
+$column-threecolumn-text-align: $column-twocolumn-text-align !default;
 
 /// Text indent for elements with class `.twocolumn` and `.threecolumn`.
 /// @type String | Map
@@ -83,21 +94,27 @@ $footnote-padding-top: 1em !default;
 /// @type String
 $footnote-padding-left: 0 !default;
 
+/// Font family for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-font-family: $body-font-family !default;
+
 /// Font size for footnote for elements with a class of `footnote`.
-/// @type String | map
+/// @type String | Map
 $footnote-font-size: (
   epub: 0.9em,
-  prince: 0.8em,
+  prince: 0.8rem,
   web: 0.9em
 ) !default;
+
+/// Font weight for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-font-weight: $body-font-weight !default;
 
 /// Font style for footnote.
 /// @type String
 $footnote-font-style: normal !default;
-
-/// Font weight for footnote.
-/// @type String
-$footnote-font-weight: normal !default;
 
 /// Line height for footnote.
 /// @type String
@@ -111,6 +128,21 @@ $footnote-indent: 0 !default;
 /// @type String | Map
 /// @since 1.2.0
 $footnote-align: (epub: left, prince: left, web: left) !default;
+
+/// Text transform for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-text-transform: (epub: none, prince: none, web: none) !default;
+
+/// Letter spacing for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-letter-spacing: (epub: normal, prince: normal, web: normal) !default;
+
+/// Word spacing for footnote for elements with a class of `footnote`.
+/// @type String | Map
+/// @since 1.4.0
+$footnote-word-spacing: (epub: normal, prince: normal, web: normal) !default;
 
 /// Top Margin for footnote blockquote for elements with a class of `fn-blockquote`.
 /// @type String
@@ -446,7 +478,7 @@ $sidebar-line-height: $body-line-height !default;
 $hr-width: 20% !default;
 
 /// Seperator Top margin on `<hr>` elements.
-/// @type String
+/// @type String | Map
 $hr-margin-top: 0.9em !default;
 
 /// Seperator Bottom margin on `<hr>` elements.
@@ -469,6 +501,11 @@ $hr-border-color: if-map-get($color-1, $type) !default;
 /// @type String
 $hr-break-symbols-margin-bottom: 1.66em !default;
 
+/// Top margin on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
+/// @type String | Map
+/// @since 1.3.0
+$hr-break-symbols-margin-top: $hr-margin-top !default;
+
 /// Font size on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
 /// @type String
 $hr-break-symbols-font-size: 1.1em !default;
@@ -486,11 +523,6 @@ $hr-break-symbols-border-top-width: (epub: 0, prince: 0, web: 0) !default;
 /// @type String | Map
 /// @since 1.2.0
 $hr-break-symbols-border-top-style: (epub: none, prince: none, web: none) !default;
-
-/// Top border color on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
-/// @type String | Map
-/// @since 1.2.0
-$hr-break-symbols-border-top-color: (epub: $color-3, prince: $color-3, web: $color-3) !default;
 
 /// Top padding on break symbols on elements with a class of `break-symbols` that are children of `<hr>` elements.
 /// @type String | Map
@@ -561,12 +593,8 @@ $textbox-text-align: left !default;
 
 /// Text indents on elements with a class of `textbox`.
 /// @type string | Map
-/// @since 1.0.0
-$textbox-text-indent: (
-  epub: 0,
-  prince: 0,
-  web: 0
-) !default;
+/// @since 1.3.0
+$textbox-text-indent: $para-indent !default;
 
 /// Word spacing on elements with a class of `textbox`.
 /// @type String | Map
@@ -592,7 +620,7 @@ $textbox-background-color: initial !default;
 
 /// Textbox shaded Background color on elements with a class of `textbox` and a class of `shaded`.
 /// @type String
-$textbox-shaded-background-color: #eee !default;
+$textbox-shaded-background-color: $shaded-color !default;
 
 /// Textbox top padding on elements with a class of `textbox`.
 /// @type String | Map
@@ -649,11 +677,6 @@ $textbox-para-margin-top: $para-margin-top !default;
 /// Textbox paragraph bottom margin on `<p>` elements that are children of elements with a class of `textbox`.
 /// @type String | Map
 $textbox-para-margin-bottom: 0.5em !default;
-
-/// Text-indent on `<p>` elements that are children of elements with a class of `textbox`.
-/// @type String | Map
-/// @since 1.1.0
-$textbox-para-indent: $para-indent !default;
 
 /// Textbox top margin on `<ol>` elements that are children of elements with a class of `textbox`.
 /// @type String
@@ -940,3 +963,72 @@ $examples-background: #f3e1e3 !default;
 /// Educational Textbox examples header background color.
 /// @type String
 $examples-header-background: #7a333a !default;
+
+// Contributors
+
+/// Margin top for elements with a class of `contributors`.
+/// @type String
+$contributors-margin-top: 2rem !default;
+
+/// Margin bottom for elements with a class of `contributors`.
+/// @type String
+$contributors-margin-bottom: 2rem !default;
+
+/// Text indent for elements with a class of `contributors`.
+/// @type String
+$contributors-text-indent: 0 !default;
+
+/// Text align for elements with a class of `contributors`.
+/// @type String
+$contributors-text-align: left !default;
+
+/// Float property for contributor profile pictures.
+/// @type String
+$contributor-profile-picture-float: left !default;
+
+/// Margin for contributor profile pictures.
+/// @type String
+$contributor-profile-picture-margin: 0 !default;
+
+/// Border radius for contributor profile pictures.
+/// @type String
+$contributor-profile-picture-border-radius: 50% !default;
+
+/// Text transform for elements with a class of `contributor__institution`.
+/// @type String
+$contributor-institution-text-transform: uppercase !default;
+
+/// Margin top for contributor links.
+/// @type String | Map
+$contributor-links-margin-top: (
+  epub: 0,
+  prince: 0,
+  web: .5rem
+) !default;
+
+/// Margin top for individual contributor link.
+/// @type String
+$contributor-link-margin-top: 0 !default;
+
+/// Text decoration for contributor links.
+/// @type String | Map
+$contributor-links-text-decoration: (
+  web: none
+) !default;
+
+/// Margin top for contributor bio.
+/// @type String
+$contributor-bio-margin-top: 1em !default;
+
+/// NEW VARIABLES BEFORE FINDING PLACE FOR THEM
+
+// $edu-textbox-sidebar-padding-top: $edu-textbox-padding-top !default;
+// $edu-textbox-sidebar-padding-top: 4em !important !default;
+// $edu-textbox-sidebar-padding-right: $edu-textbox-padding-right !default;
+// $edu-textbox-sidebar-padding-bottom: $edu-textbox-padding-bottom !default;
+// $edu-textbox-sidebar-padding-left: $edu-textbox-padding-left !default;
+
+// $edu-header-sidebar-font-style: $edu-header-font-style !default;
+// $edu-header-sidebar-font-weight: $edu-header-font-weight !default;
+// $edu-header-sidebar-font-weight: bold !default;
+// $edu-header-sidebar-text-align: $edu-header-text-align !default;

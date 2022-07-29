@@ -72,6 +72,10 @@
       if-map-get($edu-textbox-padding-left, $type);
     text-align: $edu-header-text-align;
 
+    h1, h2, h3, h4, h5, h6 {
+      color: $header-color;
+    }
+
     p {
       text-indent: 0;
     }
@@ -85,6 +89,10 @@
       if-map-get($edu-textbox-padding-bottom, $type)
       if-map-get($edu-textbox-padding-left, $type);
   }
+
+  // &.textbox--sidebar {
+
+  // }
 }
 
 .textbox {
@@ -121,11 +129,13 @@
 
   p {
     margin-bottom: if-map-get($textbox-para-margin-bottom, $type);
+    text-align: $textbox-text-align;
+    text-indent: if-map-get($textbox-text-indent, $type);
   }
 
   * + p {
     margin-top: if-map-get($textbox-para-margin-top, $type);
-    text-indent: if-map-get($textbox-para-indent, $type);
+    text-indent: if-map-get($textbox-text-indent, $type);
   }
 
   .textbox-caption {
@@ -135,10 +145,6 @@
     font-size: if-map-get($textbox-caption-font-size, $type);
     font-style: $textbox-caption-font-style;
     font-weight: $textbox-caption-font-weight;
-  }
-
-  &.shaded {
-    background-color: if-map-get($textbox-shaded-background-color, $type);
   }
 
   &.learning-objectives {
