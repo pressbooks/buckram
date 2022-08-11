@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2](https://github.com/pressbooks/buckram/compare/1.7.1...v1.7.2) (2022-08-11)
+
+
+### Bug Fixes
+
+* don't publish .github to NPM ([c272287](https://github.com/pressbooks/buckram/commit/c27228756ed6066252451986c2be8cc4b6aa73db))
+
 ## 1.7.1 (2022-08-11)
 
 ### Bug Fixes
