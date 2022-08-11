@@ -1,4 +1,11 @@
 # Changelog
+
+## 1.7.1 (2022-08-11)
+
+### Bug Fixes
+
+* resolve issues with extending compound selectors ([#275](https://github.com/pressbooks/buckram/issues/275)) ([4b2f2bb](https://github.com/pressbooks/buckram/commit/4b2f2bb938402981220fb75fe25b81aef17dcdeb))
+
 ## 1.7.0
 ### Minor changes
 - Update semantic selectors to match Pressbooks changes [#887](https://github.com/pressbooks/pressbooks-book/pull/887/files)
