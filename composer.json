@@ -2,8 +2,6 @@
 	"name": "pressbooks/buckram",
 	"description": "Opinionated SCSS components for books (web, EPUB and PDF).",
 	"license": "GPL-3.0-or-later",
-	"require-dev": {
-	},
 	"scripts": {
 		"test": [
 			"vendor/bin/pscss tests/source/styles/epub-toc-left.scss > tests/output/css/epub-toc-left.css",
@@ -13,7 +11,7 @@
 			"vendor/bin/pscss tests/source/styles/web.scss > tests/output/css/web.css"
 		]
 	},
-	"require": {
-		"scssphp/scssphp": "^1.0"
+	"require-dev": {
+		"scssphp/scssphp": "1.2"
 	}
 }
