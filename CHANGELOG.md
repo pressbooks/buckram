@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.3](https://github.com/pressbooks/buckram/compare/v1.7.2...v1.7.3) (2022-08-19)
+
+
+### Bug Fixes
+
+* bump version in buckram.scss ([781bca0](https://github.com/pressbooks/buckram/commit/781bca0e9dc8051c099757201d0f6bbafffe43a4))
+
 ## [1.7.2](https://github.com/pressbooks/buckram/compare/1.7.1...v1.7.2) (2022-08-11)
 
 
