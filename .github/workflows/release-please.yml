@@ -14,3 +14,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: node
           package-name: buckram
+          extra-files: |
+            assets/styles/buckram.scss
