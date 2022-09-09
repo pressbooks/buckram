@@ -2,15 +2,11 @@
 /// @group specials
 ////
 
-//============================================================================//
-//                            Footnotes & Endnotes                            //
-//============================================================================//
-
+// Footnotes & Endnotes
 @import '../utilities';
 
 // Prince footnotes
 @mixin prince-footnotes {
-
   // Reset counter at the beginning of a new section
   .front-matter,
   .part,
@@ -79,9 +75,7 @@
 
 @if $type == 'prince' {
   @include prince-footnotes;
-}
-
-@else if $type == 'epub' {
+} @else if $type == 'epub' {
   @include epub-footnotes;
 }
 
@@ -94,7 +88,7 @@
 }
 
 .fn_p { // Deprecated; only included for backwards-compatibility.
-  @extend .fn-p;
+  @extend .fn-p; /* stylelint-disable-line */
 }
 
 .fn-blockquote {
@@ -106,7 +100,7 @@
 }
 
 .fn_blockquote { // Deprecated; only included for backwards-compatibility.
-  @extend .fn-blockquote;
+  @extend .fn-blockquote; /* stylelint-disable-line */
 }
 
 // Endnotes

@@ -2,10 +2,7 @@
 /// @group elements
 ////
 
-//============================================================================//
-//                                Blockquotes                                 //
-//============================================================================//
-
+// Blockquotes
 @if $type != 'web' {
   .blockquote,
   blockquote {
@@ -21,6 +18,7 @@
     @if $type == 'prince' {
       line-height: $blockquote-line-height;
     }
+
     text-align: $blockquote-align;
   }
 }

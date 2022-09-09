@@ -2,10 +2,7 @@
 /// @group specials
 ////
 
-//============================================================================//
-//                                   Dropcaps                                 //
-//============================================================================//
-
+// Dropcaps
 .first-character { //
   font-family: $first-character-font-family;
   font-size: $first-character-font-size;
@@ -15,5 +12,5 @@
 }
 
 .firstcharacter { // Deprecated; only included for backwards-compatibility.
-  @extend .first-character;
+  @extend .first-character; /* stylelint-disable-line */
 }

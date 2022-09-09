@@ -59,9 +59,7 @@
   table p {
     color: if-map-get($table-para-color, $type);
   }
-}
-
-@else {
+} @else {
 .front-matter,
 .part,
 .chapter,

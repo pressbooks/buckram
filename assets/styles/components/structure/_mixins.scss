@@ -2,9 +2,7 @@
 /// @group structure
 ////
 
-//========================
 // Page Structure Mixins
-//========================
 
 @import '../utilities';
 
@@ -15,43 +13,34 @@
       'front-matter:#{$page-position}' {
       @page #{$page-type} {
         @if $page-position == 'first:left' {
-          @if (if-map-get($content-position, left)) {
+          @if  if-map-get($content-position, left) {
             #{if-map-get($content-position, left)} {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
-              }
-
-              @else if head-or-foot($content-position) == 'foot' {
+              } @else if head-or-foot($content-position) == 'foot' {
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
               @include front-matter-page-number;
             }
           }
-        }
-
-        @else if $page-position == 'first:right' {
-          @if (if-map-get($content-position, right)) {
+        } @else if $page-position == 'first:right' {
+          @if  if-map-get($content-position, right) {
             #{if-map-get($content-position, right)} {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
-              }
-
-              @else if head-or-foot($content-position) == 'foot' {
+              } @else if head-or-foot($content-position) == 'foot' {
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
               @include front-matter-page-number;
             }
           }
-        }
-        @else {
+        } @else {
           #{$content-position} {
             @if head-or-foot($content-position) == 'head' {
               padding-top: $runninghead-padding-top;
-            }
-
-            @else if head-or-foot($content-position) == 'foot' {
+            } @else if head-or-foot($content-position) == 'foot' {
               padding-bottom: $runningfoot-padding-bottom;
             }
 
@@ -69,43 +58,34 @@
       'back-matter:#{$page-position}' {
       @page #{$page-type} {
         @if $page-position == 'first:left' {
-          @if (if-map-get($content-position, left)) {
+          @if  if-map-get($content-position, left) {
             #{if-map-get($content-position, left)} {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
-              }
-
-              @else if head-or-foot($content-position) == 'foot' {
+              } @else if head-or-foot($content-position) == 'foot' {
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
               @include page-number;
             }
           }
-        }
-
-        @else if $page-position == 'first:right' {
-          @if (if-map-get($content-position, right)) {
+        } @else if $page-position == 'first:right' {
+          @if  if-map-get($content-position, right) {
             #{if-map-get($content-position, right)} {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
-              }
-
-              @else if head-or-foot($content-position) == 'foot' {
+              } @else if head-or-foot($content-position) == 'foot' {
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
               @include page-number;
             }
           }
-        }
-        @else {
+        } @else {
           #{$content-position} {
             @if head-or-foot($content-position) == 'head' {
               padding-top: $runninghead-padding-top;
-            }
-
-            @else if head-or-foot($content-position) == 'foot' {
+            } @else if head-or-foot($content-position) == 'foot' {
               padding-bottom: $runningfoot-padding-bottom;
             }
 
@@ -149,7 +129,7 @@
     'back-matter:#{$page-position}' {
     @page #{$page-type} {
       @if $page-position == 'first:left' {
-        @if (if-map-get($content-position, left)) {
+        @if  if-map-get($content-position, left) {
           #{if-map-get($content-position, left)} {
             padding-top: $runninghead-padding-top;
             font-family: $runninghead-left-font-family;
@@ -163,10 +143,8 @@
             text-transform: $runninghead-left-text-transform;
           }
         }
-      }
-
-      @else if $page-position == 'first:right' {
-        @if (if-map-get($content-position, right)) {
+      } @else if $page-position == 'first:right' {
+        @if  if-map-get($content-position, right) {
           #{if-map-get($content-position, right)} {
             padding-top: $runninghead-padding-top;
             font-family: $runninghead-right-font-family;
@@ -180,8 +158,7 @@
             text-transform: $runninghead-right-text-transform;
           }
         }
-      }
-      @else {
+      } @else {
         #{$content-position} {
           padding-top: $runninghead-padding-top;
 
@@ -195,9 +172,7 @@
             word-spacing: $runninghead-left-word-spacing;
             color: if-map-get($runninghead-color, $type);
             text-transform: $runninghead-left-text-transform;
-          }
-
-          @else if $page-position == 'right' {
+          } @else if $page-position == 'right' {
             font-family: $runninghead-right-font-family;
             font-size: $runninghead-right-font-size;
             font-style: $runninghead-right-font-style;
@@ -227,7 +202,7 @@
     'back-matter:#{$page-position}' {
     @page #{$page-type} {
       @if $page-position == 'first:left' {
-        @if (if-map-get($content-position, left)) {
+        @if  if-map-get($content-position, left) {
           #{if-map-get($content-position, left)} {
             padding-bottom: $runningfoot-padding-bottom;
             font-family: $runningfoot-left-font-family;
@@ -241,10 +216,8 @@
             text-transform: $runningfoot-left-text-transform;
           }
         }
-      }
-
-      @else if $page-position == 'first:right' {
-        @if (if-map-get($content-position, right)) {
+      } @else if $page-position == 'first:right' {
+        @if  if-map-get($content-position, right) {
           #{if-map-get($content-position, right)} {
             padding-bottom: $runningfoot-padding-bottom;
             font-family: $runningfoot-right-font-family;
@@ -258,8 +231,7 @@
             text-transform: $runningfoot-right-text-transform;
           }
         }
-      }
-      @else {
+      } @else {
         #{$content-position} {
           padding-bottom: $runningfoot-padding-bottom;
 
@@ -273,9 +245,7 @@
             word-spacing: $runningfoot-left-word-spacing;
             color: if-map-get($runningfoot-color, $type);
             text-transform: $runningfoot-left-text-transform;
-          }
-
-          @else if $page-position == 'right' {
+          } @else if $page-position == 'right' {
             font-family: $runningfoot-right-font-family;
             font-size: $runningfoot-right-font-size;
             font-style: $runningfoot-right-font-style;
@@ -309,38 +279,29 @@
                 or $running-content-position == '@bottom-right'
                 or $running-content-position == '@bottom-right-corner' {
                 content: if-map-get($left-running-content, $page-type) $left-running-separator if-map-get($left-page-number, $page-type);
-              }
-
-              @else {
+              } @else {
                 content: if-map-get($left-page-number, $page-type) $left-running-separator if-map-get($left-running-content, $page-type);
               }
-            }
-
-            @else if $page-position == 'right' {
+            } @else if $page-position == 'right' {
               @if $running-content-position == '@top-left'
                 or $running-content-position == '@top-left-corner'
                 or $running-content-position == '@bottom-left'
                 or $running-content-position == '@bottom-left-corner' {
                 content: if-map-get($right-page-number, $page-type) $right-running-separator if-map-get($right-running-content, $page-type);
-              }
-
-              @else {
+              } @else {
                 content: if-map-get($right-running-content, $page-type) $right-running-separator if-map-get($left-page-number, $page-type);
               }
             }
           }
         }
-      }
-      @else {
+      } @else {
         @page #{$page-type}:first:right {
           #{if-map-get($running-content-position, right)} {
             @if if-map-get($running-content-position, right) == '@bottom-left'
               or if-map-get($running-content-position, right) == '@bottom-left-corner'
               or if-map-get($running-content-position, right) == '@left-bottom' {
               content: if-map-get($right-page-number, $page-type) $right-running-separator if-map-get($right-running-content, $page-type);
-            }
-
-            @else {
+            } @else {
               content: if-map-get($right-running-content, $page-type) $right-running-separator if-map-get($right-page-number, $page-type);
             }
           }
@@ -352,24 +313,19 @@
               or if-map-get($running-content-position, left) == '@bottom-right-corner'
               or if-map-get($running-content-position, left) == '@right-bottom' {
               content: if-map-get($right-running-content, $page-type) $right-running-separator if-map-get($right-page-number, $page-type);
-            }
-
-            @else {
+            } @else {
               content: if-map-get($right-page-number, $page-type) $right-running-separator if-map-get($right-running-content, $page-type);
             }
           }
         }
       }
-    }
-    @else {
+    } @else {
       @if $page-position != 'first' {
         @page #{$page-type}:#{$page-position} {
           #{$running-content-position} {
             @if $page-position == 'left' {
               content: if-map-get($left-running-content, $page-type);
-            }
-
-            @else if $page-position == 'right' {
+            } @else if $page-position == 'right' {
               content: if-map-get($right-running-content, $page-type);
             }
           }
@@ -377,16 +333,13 @@
           #{$numbering-position} {
             @if $page-position == 'left' {
               content: if-map-get($left-page-number, $page-type);
-            }
-
-            @else if $page-position == 'right' {
+            } @else if $page-position == 'right' {
               content: if-map-get($right-page-number, $page-type);
             }
           }
 
         }
-      }
-      @else {
+      } @else {
         @page #{$page-type}:first:right {
           #{if-map-get($running-content-position, right)} {
             content: if-map-get($right-running-content, $page-type);
@@ -406,25 +359,19 @@
         }
       }
     }
-  }
-
-  @else {
+  } @else {
     @if $numbering-position {
       @if $page-position != 'first' {
         @page #{$page-type}:#{$page-position} {
           #{$numbering-position} {
             @if $page-position == 'left' {
               content: if-map-get($left-page-number, $page-type);
-            }
-
-            @else if $page-position == 'right' {
+            } @else if $page-position == 'right' {
               content: if-map-get($right-page-number, $page-type);
             }
           }
         }
-      }
-
-      @else {
+      } @else {
         @page #{$page-type}:first:right {
           #{if-map-get($numbering-position, right)} {
             content: if-map-get($right-page-number, $page-type);
@@ -445,16 +392,12 @@
           #{$running-content-position} {
             @if $page-position == 'left' {
               content: if-map-get($left-running-content, $page-type);
-            }
-
-            @else if $page-position == 'right' {
+            } @else if $page-position == 'right' {
               content: if-map-get($right-running-content, $page-type);
             }
           }
         }
-      }
-
-      @else {
+      } @else {
         @page #{$page-type}:first:right {
           #{if-map-get($running-content-position, right)} {
             content: if-map-get($right-running-content, $page-type);

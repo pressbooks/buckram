@@ -133,11 +133,13 @@ $image-alignleft-caption-text-align: $image-caption-text-align !default;
 $image-alignright-caption-text-align: $image-caption-text-align !default;
 
 // Secret!
+/* stylelint-disable */
 $_image-caption-text-align: (
   center: $image-aligncenter-caption-text-align,
   left: $image-alignleft-caption-text-align,
   right: $image-alignright-caption-text-align
 );
+/* stylelint-enable */
 
 /// Icon image URL for generic interactive content
 /// @type String | Map

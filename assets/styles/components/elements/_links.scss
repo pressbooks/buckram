@@ -2,10 +2,7 @@
 /// @group elements
 ////
 
-//============================================================================//
-//                                   Links                                    //
-//============================================================================//
-
+// Links
 @import "../utilities";
 
 @if $type != 'web' {
@@ -18,9 +15,7 @@
   .print a {
     text-decoration: $link-text-decoration-print;
   }
-}
-
-@else {
+} @else {
   .front-matter,
   .part,
   .chapter,

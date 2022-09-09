@@ -2,12 +2,10 @@
 /// @group elements
 ////
 
-//============================================================================//
-//                                 Headings                                   //
-//============================================================================//
-
+// Headings
 @import '../utilities';
 
+/* stylelint-disable */
 @mixin heading($heading) {
   #{$heading} {
     border-bottom: map-get($_heading-border-bottom-style, $heading) if-map-get(map-get($_heading-border-bottom-width, $heading), $type) if-map-get(map-get($_heading-border-bottom-color, $heading), $type);
@@ -21,12 +19,14 @@
     @if $type != 'epub' {
       line-height: if-map-get(map-get($_heading-line-height, $heading), $type);
     }
+
     text-align: map-get($_heading-align, $heading);
     text-transform: map-get($_heading-text-transform, $heading);
     letter-spacing: if-map-get(map-get($_heading-letter-spacing, $heading), $type);
     word-spacing: if-map-get(map-get($_heading-word-spacing, $heading), $type);
   }
 }
+/* stylelint-enable */
 
 @if $type != 'web' {
   h1,

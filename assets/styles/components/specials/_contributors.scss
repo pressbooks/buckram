@@ -2,10 +2,7 @@
 /// @group specials
 ////
 
-//============================================================================//
-//                           Contributors                                     //
-//============================================================================//
-
+// Contributors
 .contributors {
   .chapter-authors, .book-contributors {
     margin-top: $contributors-margin-top;
@@ -25,8 +22,9 @@
       margin-top: $contributors-margin-top;
       margin-bottom: $contributors-margin-bottom;
     }
+
     // TODO: replace clearfix hack with better CSS Grid solution when Prince supports grid layout
-    &__name__and__links:after {
+    &__name__and__links::after {
       content: "";
       display: table;
       clear: both;

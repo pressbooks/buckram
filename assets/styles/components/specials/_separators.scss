@@ -2,9 +2,7 @@
 /// @group specials
 ////
 
-//============================================================================//
-//                                  Separators                                //
-//============================================================================//
+// Separators
 
 // Page Breaks
 .page-break-after,
@@ -62,6 +60,7 @@ hr {
   @if $type != 'epub' {
     line-height: $section-break-space-line-height;
   }
+
   visibility: hidden;
 }
 

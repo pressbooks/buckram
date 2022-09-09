@@ -8,6 +8,7 @@
     "docs": "cross-env NODE_ENV=development node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json",
     "lint": "npm run -s lint:styles",
     "lint:styles": "stylelint 'assets/styles/**/*.scss'",
+    "lint:fix-styles": "stylelint 'assets/styles/**/*.scss' --fix",
     "test": "npm run -s lint && npm run -s build"
   },
   "repository": {

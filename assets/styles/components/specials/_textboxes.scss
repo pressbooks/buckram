@@ -2,9 +2,7 @@
 /// @group specials
 ////
 
-//============================================================================//
-//                                   Textboxes                                //
-//============================================================================//
+// Textboxes
 
 @import '../utilities';
 
@@ -107,6 +105,7 @@
   @if $type != 'epub' {
     line-height: if-map-get($textbox-line-height, $type);
   }
+
   text-align: $textbox-text-align;
   text-indent: if-map-get($textbox-text-indent, $type);
   border-style: $textbox-border-style;
@@ -193,7 +192,7 @@
 }
 
 .bcc-box {
-  @extend .textbox;
+  @extend .textbox; /* stylelint-disable-line */
 }
 
 .bcc-highlight {
@@ -214,6 +213,7 @@
   @if $type == 'prince' {
     margin-inside: $textbox-sidebar-margin-inside;
   }
+
   max-width: 25%;
 }
 
