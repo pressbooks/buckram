@@ -12,6 +12,6 @@
 		]
 	},
 	"require-dev": {
-		"scssphp/scssphp": "1.2"
+		"scssphp/scssphp": "~1.1"
 	}
 }

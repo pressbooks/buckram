@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '14' ]
+        node: [ '14', '16', '18' ]
         php: [ '7.4', '8' ]
     steps:
       - uses: actions/checkout@v3
@@ -35,6 +35,7 @@ jobs:
           key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
       - name: Install dependencies, build assets, and run tests
         run: |
+          npm -v
           npm install
           npm run build
           npm run test
