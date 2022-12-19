@@ -119,100 +119,10 @@
 }
 
 @mixin position($content-position) {
-  @if $content-position == '@bottom-center' {
-    @bottom-center {
-      @content;
-    }
-  }
+  $position: str-replace($content-position, '@');
 
-  @if $content-position == '@bottom-right-corner' {
-    @bottom-right-corner {
-      @content;
-    }
-  }
-
-  @if $content-position == '@left-middle' {
-    @left-middle {
-      @content;
-    }
-  }
-
-  @if $content-position == '@right-middle' {
-    @right-middle {
-      @content;
-    }
-  }
-
-  @if $content-position == '@top-left-corner' {
-    @top-left-corner {
-      @content;
-    }
-  }
-
-  @if $content-position == '@top-right' {
-    @top-right {
-      @content;
-    }
-  }
-
-  @if $content-position == '@bottom-left-corner' {
-    @bottom-left-corner {
-      @content;
-    }
-  }
-
-  @if $content-position == '@bottom-right' {
-    @bottom-right {
-      @content;
-    }
-  }
-
-  @if $content-position == '@left-top' {
-      @left-top {
-        @content;
-      }
-  }
-
-  @if $content-position == '@right-top' {
-    @right-top {
-      @content;
-    }
-  }
-
-  @if $content-position == '@top-left' {
-    @top-left {
-      @content;
-    }
-  }
-
-  @if $content-position == '@bottom-left' {
-    @bottom-left {
-      @content;
-    }
-  }
-
-  @if $content-position == '@left-bottom' {
-    @left-bottom {
-      @content;
-    }
-  }
-
-  @if $content-position == '@right-bottom' {
-    @right-bottom {
-      @content;
-    }
-  }
-
-  @if $content-position == '@top-center' {
-    @top-center {
-      @content;
-    }
-  }
-
-  @if $content-position == '@top-right-corner' {
-    @top-right-corner {
-      @content;
-    }
+  @#{$position} {
+    @content;
   }
 }
 
