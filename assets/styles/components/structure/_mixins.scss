@@ -16,7 +16,7 @@
       @page #{$page-type} {
         @if $page-position == 'first:left' {
           @if  if-map-get($content-position, left) {
-            #{if-map-get($content-position, left)} {
+            @include position(if-map-get($content-position, left)) {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
               } @else if head-or-foot($content-position) == 'foot' {
@@ -28,7 +28,7 @@
           }
         } @else if $page-position == 'first:right' {
           @if  if-map-get($content-position, right) {
-            #{if-map-get($content-position, right)} {
+            @include position(if-map-get($content-position, right)) {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
               } @else if head-or-foot($content-position) == 'foot' {
@@ -39,7 +39,7 @@
             }
           }
         } @else {
-          #{$content-position} {
+          @include position($content-position) {
             @if head-or-foot($content-position) == 'head' {
               padding-top: $runninghead-padding-top;
             } @else if head-or-foot($content-position) == 'foot' {
@@ -61,7 +61,7 @@
       @page #{$page-type} {
         @if $page-position == 'first:left' {
           @if  if-map-get($content-position, left) {
-            #{if-map-get($content-position, left)} {
+            @include position(if-map-get($content-position, left)) {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
               } @else if head-or-foot($content-position) == 'foot' {
@@ -73,7 +73,7 @@
           }
         } @else if $page-position == 'first:right' {
           @if  if-map-get($content-position, right) {
-            #{if-map-get($content-position, right)} {
+            @include position(if-map-get($content-position, right)) {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
               } @else if head-or-foot($content-position) == 'foot' {
@@ -84,7 +84,7 @@
             }
           }
         } @else {
-          #{$content-position} {
+          @include position($content-position) {
             @if head-or-foot($content-position) == 'head' {
               padding-top: $runninghead-padding-top;
             } @else if head-or-foot($content-position) == 'foot' {
@@ -118,6 +118,104 @@
   color: if-map-get($page-number-color, $type);
 }
 
+@mixin position($content-position) {
+  @if $content-position == '@bottom-center' {
+    @bottom-center {
+      @content;
+    }
+  }
+
+  @if $content-position == '@bottom-right-corner' {
+    @bottom-right-corner {
+      @content;
+    }
+  }
+
+  @if $content-position == '@left-middle' {
+    @left-middle {
+      @content;
+    }
+  }
+
+  @if $content-position == '@right-middle' {
+    @right-middle {
+      @content;
+    }
+  }
+
+  @if $content-position == '@top-left-corner' {
+    @top-left-corner {
+      @content;
+    }
+  }
+
+  @if $content-position == '@top-right' {
+    @top-right {
+      @content;
+    }
+  }
+
+  @if $content-position == '@bottom-left-corner' {
+    @bottom-left-corner {
+      @content;
+    }
+  }
+
+  @if $content-position == '@bottom-right' {
+    @bottom-right {
+      @content;
+    }
+  }
+
+  @if $content-position == '@left-top' {
+      @left-top {
+        @content;
+      }
+  }
+
+  @if $content-position == '@right-top' {
+    @right-top {
+      @content;
+    }
+  }
+
+  @if $content-position == '@top-left' {
+    @top-left {
+      @content;
+    }
+  }
+
+  @if $content-position == '@bottom-left' {
+    @bottom-left {
+      @content;
+    }
+  }
+
+  @if $content-position == '@left-bottom' {
+    @left-bottom {
+      @content;
+    }
+  }
+
+  @if $content-position == '@right-bottom' {
+    @right-bottom {
+      @content;
+    }
+  }
+
+  @if $content-position == '@top-center' {
+    @top-center {
+      @content;
+    }
+  }
+
+  @if $content-position == '@top-right-corner' {
+    @top-right-corner {
+      @content;
+    }
+  }
+}
+
 // Running Content
 /// @param {string} $page-position - The page position.
 /// @param {string|map} $content-position - The running content position.
@@ -132,7 +230,7 @@
     @page #{$page-type} {
       @if $page-position == 'first:left' {
         @if  if-map-get($content-position, left) {
-          #{if-map-get($content-position, left)} {
+          @include position(if-map-get($content-position, left)) {
             padding-top: $runninghead-padding-top;
             font-family: $runninghead-left-font-family;
             font-size: $runninghead-left-font-size;
@@ -147,7 +245,7 @@
         }
       } @else if $page-position == 'first:right' {
         @if  if-map-get($content-position, right) {
-          #{if-map-get($content-position, right)} {
+          @include position(if-map-get($content-position, right)) {
             padding-top: $runninghead-padding-top;
             font-family: $runninghead-right-font-family;
             font-size: $runninghead-right-font-size;
@@ -161,7 +259,7 @@
           }
         }
       } @else {
-        #{$content-position} {
+        @include position($content-position) {
           padding-top: $runninghead-padding-top;
 
           @if $page-position == 'left' {
@@ -205,7 +303,7 @@
     @page #{$page-type} {
       @if $page-position == 'first:left' {
         @if  if-map-get($content-position, left) {
-          #{if-map-get($content-position, left)} {
+          @include position(if-map-get($content-position, left)) {
             padding-bottom: $runningfoot-padding-bottom;
             font-family: $runningfoot-left-font-family;
             font-size: $runningfoot-left-font-size;
@@ -220,7 +318,7 @@
         }
       } @else if $page-position == 'first:right' {
         @if  if-map-get($content-position, right) {
-          #{if-map-get($content-position, right)} {
+          @include position(if-map-get($content-position, right)) {
             padding-bottom: $runningfoot-padding-bottom;
             font-family: $runningfoot-right-font-family;
             font-size: $runningfoot-right-font-size;
@@ -234,7 +332,7 @@
           }
         }
       } @else {
-        #{$content-position} {
+        @include position($content-position) {
           padding-bottom: $runningfoot-padding-bottom;
 
           @if $page-position == 'left' {
@@ -274,7 +372,7 @@
     @if $numbering-position == $running-content-position {
       @if $page-position != 'first' {
         @page #{$page-type}:#{$page-position} {
-          #{$running-content-position} {
+          @include position($running-content-position) {
             @if $page-position == 'left' {
               @if $running-content-position == '@top-right'
                 or $running-content-position == '@top-right-corner'
@@ -298,7 +396,7 @@
         }
       } @else {
         @page #{$page-type}:first:right {
-          #{if-map-get($running-content-position, right)} {
+          @include position(if-map-get($running-content-position, right)) {
             @if if-map-get($running-content-position, right) == '@bottom-left'
               or if-map-get($running-content-position, right) == '@bottom-left-corner'
               or if-map-get($running-content-position, right) == '@left-bottom' {
@@ -310,7 +408,7 @@
         }
 
         @page #{$page-type}:first:left {
-          #{if-map-get($running-content-position, left)} {
+          @include position(if-map-get($running-content-position, left)) {
             @if if-map-get($running-content-position, left) == '@bottom-right'
               or if-map-get($running-content-position, left) == '@bottom-right-corner'
               or if-map-get($running-content-position, left) == '@right-bottom' {
@@ -324,7 +422,7 @@
     } @else {
       @if $page-position != 'first' {
         @page #{$page-type}:#{$page-position} {
-          #{$running-content-position} {
+          @include position($running-content-position) {
             @if $page-position == 'left' {
               content: if-map-get($left-running-content, $page-type);
             } @else if $page-position == 'right' {
@@ -332,7 +430,7 @@
             }
           }
 
-          #{$numbering-position} {
+          @include position($numbering-position) {
             @if $page-position == 'left' {
               content: if-map-get($left-page-number, $page-type);
             } @else if $page-position == 'right' {
@@ -343,19 +441,19 @@
         }
       } @else {
         @page #{$page-type}:first:right {
-          #{if-map-get($running-content-position, right)} {
+          @include position(if-map-get($running-content-position, right)) {
             content: if-map-get($right-running-content, $page-type);
           }
-          #{if-map-get($numbering-position, right)} {
+          @include position(if-map-get($numbering-position, right)) {
             content: if-map-get($right-page-number, $page-type);
           }
         }
 
         @page #{$page-type}:first:left {
-          #{if-map-get($running-content-position, left)} {
+          @include position(if-map-get($running-content-position, left)) {
             content: if-map-get($left-running-content, $page-type);
           }
-          #{if-map-get($numbering-position, left)} {
+          @include position(if-map-get($numbering-position, left)) {
             content: if-map-get($left-page-number, $page-type);
           }
         }
@@ -365,7 +463,7 @@
     @if $numbering-position {
       @if $page-position != 'first' {
         @page #{$page-type}:#{$page-position} {
-          #{$numbering-position} {
+          @include position($numbering-position) {
             @if $page-position == 'left' {
               content: if-map-get($left-page-number, $page-type);
             } @else if $page-position == 'right' {
@@ -375,13 +473,13 @@
         }
       } @else {
         @page #{$page-type}:first:right {
-          #{if-map-get($numbering-position, right)} {
+          @include position(if-map-get($numbering-position, right)) {
             content: if-map-get($right-page-number, $page-type);
           }
         }
 
         @page #{$page-type}:first:left {
-          #{if-map-get($numbering-position, left)} {
+          @include position(if-map-get($numbering-position, left)) {
             content: if-map-get($left-page-number, $page-type);
           }
         }
@@ -391,7 +489,7 @@
     @if $running-content-position {
       @if $page-position != 'first' {
         @page #{$page-type}:#{$page-position} {
-          #{$running-content-position} {
+          @include position($running-content-position) {
             @if $page-position == 'left' {
               content: if-map-get($left-running-content, $page-type);
             } @else if $page-position == 'right' {
@@ -401,13 +499,13 @@
         }
       } @else {
         @page #{$page-type}:first:right {
-          #{if-map-get($running-content-position, right)} {
+          @include position(if-map-get($running-content-position, right)) {
             content: if-map-get($right-running-content, $page-type);
           }
         }
 
         @page #{$page-type}:first:left {
-          #{if-map-get($running-content-position, left)} {
+          @include position(if-map-get($running-content-position, left)) {
             content: if-map-get($left-running-content, $page-type);
           }
         }
