@@ -15,7 +15,7 @@
       'front-matter:#{$page-position}' {
       @page #{$page-type} {
         @if $page-position == 'first:left' {
-          @if  if-map-get($content-position, left) {
+          @if if-map-get($content-position, left) {
             @include position(if-map-get($content-position, left)) {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
@@ -27,7 +27,7 @@
             }
           }
         } @else if $page-position == 'first:right' {
-          @if  if-map-get($content-position, right) {
+          @if if-map-get($content-position, right) {
             @include position(if-map-get($content-position, right)) {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
@@ -39,15 +39,15 @@
             }
           }
         } @else {
-          @include position($content-position) {
-            @if head-or-foot($content-position) == 'head' {
-              padding-top: $runninghead-padding-top;
-            } @else if head-or-foot($content-position) == 'foot' {
-              padding-bottom: $runningfoot-padding-bottom;
-            }
+            @include position($content-position) {
+              @if head-or-foot($content-position) == 'head' {
+                padding-top: $runninghead-padding-top;
+              } @else if head-or-foot($content-position) == 'foot' {
+                padding-bottom: $runningfoot-padding-bottom;
+              }
 
-            @include front-matter-page-number;
-          }
+              @include front-matter-page-number;
+            }
         }
       }
     }
@@ -60,7 +60,7 @@
       'back-matter:#{$page-position}' {
       @page #{$page-type} {
         @if $page-position == 'first:left' {
-          @if  if-map-get($content-position, left) {
+          @if if-map-get($content-position, left) {
             @include position(if-map-get($content-position, left)) {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
@@ -72,7 +72,7 @@
             }
           }
         } @else if $page-position == 'first:right' {
-          @if  if-map-get($content-position, right) {
+          @if if-map-get($content-position, right) {
             @include position(if-map-get($content-position, right)) {
               @if head-or-foot($content-position) == 'head' {
                 padding-top: $runninghead-padding-top;
@@ -84,14 +84,16 @@
             }
           }
         } @else {
-          @include position($content-position) {
-            @if head-or-foot($content-position) == 'head' {
-              padding-top: $runninghead-padding-top;
-            } @else if head-or-foot($content-position) == 'foot' {
-              padding-bottom: $runningfoot-padding-bottom;
-            }
+          @if $content-position {
+            @include position($content-position) {
+              @if head-or-foot($content-position) == 'head' {
+                padding-top: $runninghead-padding-top;
+              } @else if head-or-foot($content-position) == 'foot' {
+                padding-bottom: $runningfoot-padding-bottom;
+              }
 
-            @include page-number;
+              @include page-number;
+            }
           }
         }
       }
@@ -118,100 +120,87 @@
   color: if-map-get($page-number-color, $type);
 }
 
-@mixin position($content-position) {
-  @if $content-position == '@bottom-center' {
-    @bottom-center {
-      @content;
+@mixin position($position) {
+  @if $position {
+    @if $position == '@top-left-corner' {
+      @top-left-corner {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@bottom-right-corner' {
-    @bottom-right-corner {
-      @content;
+    @if $position == '@top-left' {
+      @top-left {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@left-middle' {
-    @left-middle {
-      @content;
+    @if $position == '@top-center' {
+      @top-center {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@right-middle' {
-    @right-middle {
-      @content;
+    @if $position == '@top-right' {
+      @top-right {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@top-left-corner' {
-    @top-left-corner {
-      @content;
+    @if $position == '@top-right-corner' {
+      @top-right-corner {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@top-right' {
-    @top-right {
-      @content;
-    }
-  }
-
-  @if $content-position == '@bottom-left-corner' {
-    @bottom-left-corner {
-      @content;
-    }
-  }
-
-  @if $content-position == '@bottom-right' {
-    @bottom-right {
-      @content;
-    }
-  }
-
-  @if $content-position == '@left-top' {
+    @if $position == "@left-top" {
       @left-top {
         @content;
       }
-  }
-
-  @if $content-position == '@right-top' {
-    @right-top {
-      @content;
     }
-  }
-
-  @if $content-position == '@top-left' {
-    @top-left {
-      @content;
+    @if $position == "@left-middle" {
+      @left-middle {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@bottom-left' {
-    @bottom-left {
-      @content;
+    @if $position == "@left-bottom" {
+      @left-bottom {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@left-bottom' {
-    @left-bottom {
-      @content;
+    @if $position == "@right-top" {
+      @right-top {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@right-bottom' {
-    @right-bottom {
-      @content;
+    @if $position == "@right-middle" {
+      @right-middle {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@top-center' {
-    @top-center {
-      @content;
+    @if $position == "@right-bottom" {
+      @right-bottom {
+        @content;
+      }
     }
-  }
-
-  @if $content-position == '@top-right-corner' {
-    @top-right-corner {
-      @content;
+    @if $position == '@bottom-left-corner' {
+      @bottom-left-corner {
+        @content;
+      }
+    }
+    @if $position == '@bottom-left' {
+      @bottom-left {
+        @content;
+      }
+    }
+    @if $position == '@bottom-center' {
+      @bottom-center {
+        @content;
+      }
+    }
+    @if $position == '@bottom-right' {
+      @bottom-right {
+        @content;
+      }
+    }
+    @if $position == '@bottom-right-corner' {
+      @bottom-right-corner {
+        @content;
+      }
     }
   }
 }
@@ -229,7 +218,7 @@
     'back-matter:#{$page-position}' {
     @page #{$page-type} {
       @if $page-position == 'first:left' {
-        @if  if-map-get($content-position, left) {
+        @if if-map-get($content-position, left) {
           @include position(if-map-get($content-position, left)) {
             padding-top: $runninghead-padding-top;
             font-family: $runninghead-left-font-family;
@@ -244,7 +233,7 @@
           }
         }
       } @else if $page-position == 'first:right' {
-        @if  if-map-get($content-position, right) {
+        @if if-map-get($content-position, right) {
           @include position(if-map-get($content-position, right)) {
             padding-top: $runninghead-padding-top;
             font-family: $runninghead-right-font-family;
@@ -302,7 +291,7 @@
     'back-matter:#{$page-position}' {
     @page #{$page-type} {
       @if $page-position == 'first:left' {
-        @if  if-map-get($content-position, left) {
+        @if if-map-get($content-position, left) {
           @include position(if-map-get($content-position, left)) {
             padding-bottom: $runningfoot-padding-bottom;
             font-family: $runningfoot-left-font-family;
@@ -317,7 +306,7 @@
           }
         }
       } @else if $page-position == 'first:right' {
-        @if  if-map-get($content-position, right) {
+        @if if-map-get($content-position, right) {
           @include position(if-map-get($content-position, right)) {
             padding-bottom: $runningfoot-padding-bottom;
             font-family: $runningfoot-right-font-family;
