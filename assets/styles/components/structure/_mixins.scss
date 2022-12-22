@@ -17,9 +17,9 @@
         @if $page-position == 'first:left' {
           @if if-map-get($content-position, left) {
             @include position(if-map-get($content-position, left)) {
-              @if head-or-foot($content-position) == 'head' {
+              @if head-or-foot(if-map-get($content-position, left)) == 'head' {
                 padding-top: $runninghead-padding-top;
-              } @else if head-or-foot($content-position) == 'foot' {
+              } @else if head-or-foot(if-map-get($content-position, left)) == 'foot' {
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
@@ -29,9 +29,9 @@
         } @else if $page-position == 'first:right' {
           @if if-map-get($content-position, right) {
             @include position(if-map-get($content-position, right)) {
-              @if head-or-foot($content-position) == 'head' {
+              @if head-or-foot(if-map-get($content-position, right)) == 'head' {
                 padding-top: $runninghead-padding-top;
-              } @else if head-or-foot($content-position) == 'foot' {
+              } @else if head-or-foot(if-map-get($content-position, right)) == 'foot' {
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
@@ -62,9 +62,9 @@
         @if $page-position == 'first:left' {
           @if if-map-get($content-position, left) {
             @include position(if-map-get($content-position, left)) {
-              @if head-or-foot($content-position) == 'head' {
+              @if head-or-foot(if-map-get($content-position, left)) == 'head' {
                 padding-top: $runninghead-padding-top;
-              } @else if head-or-foot($content-position) == 'foot' {
+              } @else if head-or-foot(if-map-get($content-position, left)) == 'foot' {
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
@@ -74,9 +74,9 @@
         } @else if $page-position == 'first:right' {
           @if if-map-get($content-position, right) {
             @include position(if-map-get($content-position, right)) {
-              @if head-or-foot($content-position) == 'head' {
+              @if head-or-foot(if-map-get($content-position, right)) == 'head' {
                 padding-top: $runninghead-padding-top;
-              } @else if head-or-foot($content-position) == 'foot' {
+              } @else if head-or-foot(if-map-get($content-position, right)) == 'foot' {
                 padding-bottom: $runningfoot-padding-bottom;
               }
 
