@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.8.0](https://github.com/pressbooks/buckram/compare/v1.7.3...v1.8.0) (2023-01-03)
+
+
+### Features
+
+* make Buckram compatible with latest SCSSPHP ([#304](https://github.com/pressbooks/buckram/issues/304)) ([eb087ca](https://github.com/pressbooks/buckram/commit/eb087caf75ff026253904c64f8dbab335ec593f7))
+
+
+### Bug Fixes
+
+* unset content on blank pages instead of using an empty string ([#305](https://github.com/pressbooks/buckram/issues/305)) ([e9063fb](https://github.com/pressbooks/buckram/commit/e9063fbe89947173177369a4a293eba8bea5e6a6))
+
 ## [1.7.3](https://github.com/pressbooks/buckram/compare/v1.7.2...v1.7.3) (2022-08-19)
 
 
