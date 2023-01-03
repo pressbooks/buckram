@@ -63,3 +63,7 @@ typings/
 
 docs
 vendor
+
+# IDEs
+.idea
+.vscode
