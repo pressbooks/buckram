@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.1](https://github.com/pressbooks/buckram/compare/v1.8.0...v1.8.1) (2023-01-04)
+
+
+### Bug Fixes
+
+* update gitignore to avoid publish config files ([71fb1ae](https://github.com/pressbooks/buckram/commit/71fb1aefcba5807d65cd674c5a7947e5e19bbe06))
+
 ## [1.8.0](https://github.com/pressbooks/buckram/compare/v1.7.3...v1.8.0) (2023-01-03)
 
 
