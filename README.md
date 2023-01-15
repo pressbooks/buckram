@@ -1,6 +1,6 @@
 # Buckram
 
-[![License](https://badgen.net/github/license/pressbooks/buckram)](https://github.com/pressbooks/buckram/blob/main/LICENSE) [![Build Status](https://badgen.net/github/status/pressbooks/buckram)](https://github.com/pressbooks/buckram/actions) [![Latest Release](https://badgen.net/npm/v/buckram)](https://www.npmjs.com/package/buckram)
+[![License](https://badgen.net/github/license/pressbooks/buckram)](https://github.com/pressbooks/buckram/blob/production/LICENSE) [![Build Status](https://badgen.net/github/status/pressbooks/buckram)](https://github.com/pressbooks/buckram/actions) [![Latest Release](https://badgen.net/npm/v/buckram)](https://www.npmjs.com/package/buckram)
 
 Opinionated SCSS components for books (web, EPUB and PDF).
 
