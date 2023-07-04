@@ -9,35 +9,56 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        node: [ '14', '16', '18' ]
-        php: [ '7.4', '8' ]
+        node: [ '18' ]
+        php: [ '8.1', '8.2' ]
+        include:
+          - experimental: true
+          - experimental: false
+            php: 8.1
+            node: 18
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
       - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php }}
-          tools: composer
+      
       - name: Cache Node modules
         uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
-      - name: Cache Composer packages
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
+      
       - name: Install dependencies, build assets, and run tests
         run: |
           npm -v
           npm install
           npm run build
           npm run test
+      
       - name: Run Stylelint
         run: npm run lint
+        
+      - name: Cache Composer packages
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/composer.lock') }}
+      
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: composer
+          
+      - name: Install PHP dependencies
+        run: |
+           export PATH="$HOME/.composer/vendor/bin:$PATH"
+           composer install --no-interaction
+     
+      - name: Run PHP Tests
+        run: composer test
