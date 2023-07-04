@@ -62,7 +62,8 @@
   .pullquote--outside + p,
   .pullquote-inside + p,
   .pullquote--inside + p,
-  .sidebar + p {
+  .sidebar + p,
+  .textbox--sidebar + p {
     margin-top: $para-margin-top;
     text-indent: $para-indent;
   }
