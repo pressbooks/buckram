@@ -39,13 +39,14 @@
     text-transform: if-map-get($footnote-text-transform, $type);
     counter-increment: footnote;
     footnote-style-position: outside;
+  }
 
+  .footnotes {
     .mathjax {
-      width: $footnote-mathjax-width;
+      min-width: $footnote-mathjax-width;
       padding-bottom: $footnote-mathjax-padding-bottom;
     }
   }
-
 
   // Footnote & Endnote number markers (in body text)
 
@@ -79,6 +80,10 @@
 
   .footnotes {
     font-size: if-map-get($footnote-font-size, $type);
+    .mathjax {
+      min-width: $footnote-mathjax-width;
+      padding-bottom: $footnote-mathjax-padding-bottom;
+    }
   }
 }
 
