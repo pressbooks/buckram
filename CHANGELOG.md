@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.7](https://github.com/pressbooks/buckram/compare/v1.8.6...v1.8.7) (2025-09-30)
+
+
+### Bug Fixes
+
+* remove usage of border color variable in shorthand ([#382](https://github.com/pressbooks/buckram/issues/382)) ([decb1af](https://github.com/pressbooks/buckram/commit/decb1af876745c6adf78e6eb4e186c0a7e6b6d63))
+
 ## [1.8.6](https://github.com/pressbooks/buckram/compare/v1.8.5...v1.8.6) (2025-03-11)
 
 
