@@ -28,9 +28,8 @@
         text-align: $part-title-align;
         text-transform: $part-title-text-transform;
 
-        span {
-          border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type);
-          border-bottom-color: if-map-get($part-number-border-bottom-color, $type);
+        span.number {
+          border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) if-map-get($part-number-border-bottom-color, $type);
           display: $part-number-display;
           margin: if-map-get($part-number-margin-top, $type) if-map-get($part-number-margin-right, $type) if-map-get($part-number-margin-bottom, $type) if-map-get($part-number-margin-left, $type);
           padding-bottom: if-map-get($part-number-padding-bottom, $type);
@@ -125,9 +124,8 @@
         text-align: $chapter-title-align;
         text-transform: $chapter-title-text-transform;
 
-        span {
-          border-bottom: $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-width, $type);
-          border-bottom-color: if-map-get($chapter-number-border-bottom-color, $type);
+        span.number {
+          border-bottom: $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-width, $type) if-map-get($chapter-number-border-bottom-color, $type);
           display: $chapter-number-display;
           margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
           padding-bottom: if-map-get($chapter-number-padding-bottom, $type);
@@ -151,7 +149,7 @@
       }
 
       .numberless & {
-        h1 span {
+        h1 span.number {
           display: none;
           content: '';
         }
