@@ -1,0 +1,52 @@
+/**
+ * Miscellaneous Elements Component
+ * 
+ * Converted from SCSS to CSS custom properties
+ * Source: components/elements/_miscellaneous.scss
+ * 
+ * Includes: cite, code, pre, sub, sup elements
+ */
+
+/* Cite element */
+.front-matter cite,
+.part cite,
+.chapter cite,
+.back-matter cite,
+body#tinymce.wp-editor cite {
+  font-style: var(--cite-font-style);
+  font-weight: var(--cite-font-weight);
+  text-transform: var(--cite-text-transform);
+}
+
+/* Code element */
+.front-matter code,
+.part code,
+.chapter code,
+.back-matter code,
+body#tinymce.wp-editor code {
+  background: var(--code-background);
+  border: var(--code-border);
+  border-radius: var(--code-border-radius);
+}
+
+/* Subscript element */
+.front-matter sub,
+.part sub,
+.chapter sub,
+.back-matter sub,
+body#tinymce.wp-editor sub {
+  font-style: var(--sub-font-style);
+  font-weight: var(--sub-font-weight);
+  text-transform: var(--sub-text-transform);
+}
+
+/* Superscript element */
+.front-matter sup,
+.part sup,
+.chapter sup,
+.back-matter sup,
+body#tinymce.wp-editor sup {
+  font-style: var(--sup-font-style);
+  font-weight: var(--sup-font-weight);
+  text-transform: var(--sup-text-transform);
+}

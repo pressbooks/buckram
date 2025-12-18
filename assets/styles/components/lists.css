@@ -1,0 +1,63 @@
+/**
+ * Lists Component
+ * 
+ * Converted from SCSS to CSS custom properties
+ * Source: components/elements/_lists.scss
+ * 
+ * Note: This is a web-specific version using CSS custom properties
+ * for margins, padding, and nested list spacing.
+ */
+
+/* Ordered lists */
+ol {
+  margin-top: var(--ol-margin-top);
+  margin-bottom: var(--ol-margin-bottom);
+  margin-left: var(--ol-margin-left);
+  padding-left: var(--ol-padding-left);
+}
+
+ol ol {
+  margin-bottom: 0;
+  margin-top: var(--ol-ol-margin-top);
+}
+
+/* Unordered lists */
+ul {
+  margin-top: var(--ul-margin-top);
+  margin-bottom: var(--ul-margin-bottom);
+  margin-left: var(--ul-margin-left);
+  padding-left: var(--ul-padding-left);
+}
+
+ul ul {
+  margin-bottom: 0;
+  margin-top: var(--ul-ul-margin-top);
+}
+
+/* Nested list items */
+li + li {
+  margin-top: var(--li-li-margin-top);
+}
+
+/* Definition lists */
+dt {
+  margin-top: var(--dt-margin-top);
+  margin-right: var(--dt-margin-right);
+  margin-bottom: var(--dt-margin-bottom);
+  margin-left: var(--dt-margin-left);
+  font-style: var(--dt-font-style);
+  font-weight: var(--dt-font-weight);
+}
+
+dd {
+  margin-top: var(--dd-margin-top);
+  margin-right: var(--dd-margin-right);
+  margin-bottom: var(--dd-margin-bottom);
+  margin-left: var(--dd-margin-left);
+  font-style: var(--dd-font-style);
+  font-weight: var(--dd-font-weight);
+}
+
+dd + dt {
+  margin-top: var(--dd-dt-spacing);
+}

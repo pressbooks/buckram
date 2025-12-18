@@ -1,0 +1,24 @@
+/**
+ * Body Component
+ * 
+ * Converted from SCSS to CSS custom properties
+ * Source: components/elements/_body.scss
+ * 
+ * Note: This is a web-specific version. EPUB/Prince versions
+ * would need separate handling for context-specific overrides.
+ */
+
+/* Base body styles for web */
+.front-matter,
+.part,
+.chapter,
+.back-matter,
+body#tinymce.wp-editor {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-style: var(--body-font-style);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

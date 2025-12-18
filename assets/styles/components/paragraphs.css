@@ -1,0 +1,90 @@
+/**
+ * Paragraph Component
+ * 
+ * Converted from SCSS to CSS custom properties
+ * Source: components/elements/_paragraphs.scss
+ * 
+ * Note: This is a web-specific version for webbooks.
+ */
+
+/* Base paragraph styles */
+p {
+  margin-bottom: var(--para-margin-bottom);
+  text-align: var(--para-align);
+  widows: var(--widows);
+  orphans: var(--orphans);
+}
+
+/* Paragraph indentation */
+p + p,
+.indent {
+  margin-top: var(--para-margin-top);
+  text-indent: var(--para-indent);
+}
+
+.no-indent {
+  margin-top: var(--para-no-indent-margin-top);
+  text-indent: 0;
+}
+
+/* Hyphenation */
+body,
+p {
+  hyphens: var(--para-hyphens);
+}
+
+/* No hyphenation for specific sections */
+#copyright-page p,
+.dedication p,
+.epigraph p {
+  hyphens: none;
+}
+
+/* Hanging indents */
+.hanging-indent {
+  padding-left: var(--para-hanging-indent-padding-left);
+  text-indent: var(--para-hanging-indent-text-indent);
+}
+
+/* Paragraph tracking variants (letter and word spacing) */
+.tight {
+  letter-spacing: var(--para-tight-letter-spacing);
+  word-spacing: var(--para-tight-word-spacing);
+}
+
+.very-tight {
+  letter-spacing: var(--para-very-tight-letter-spacing);
+  word-spacing: var(--para-very-tight-word-spacing);
+}
+
+.loose {
+  letter-spacing: var(--para-loose-letter-spacing);
+  word-spacing: var(--para-loose-word-spacing);
+}
+
+.very-loose {
+  letter-spacing: var(--para-very-loose-letter-spacing);
+  word-spacing: var(--para-very-loose-word-spacing);
+}
+
+/* Indentation after floated elements */
+.wp-caption.alignleft + p,
+.wp-nocaption.alignleft + p,
+.wp-caption.alignright + p,
+.wp-nocaption.alignright + p,
+.float-top + p,
+.float-bottom + p,
+.pullquote + p,
+.pullquote-right + p,
+.pullquote--right + p,
+.pullquote-left + p,
+.pullquote--left + p,
+.pullquote-outside + p,
+.pullquote--outside + p,
+.pullquote-inside + p,
+.pullquote--inside + p,
+.sidebar + p,
+.textbox--sidebar + p {
+  margin-top: var(--para-margin-top);
+  text-indent: var(--para-indent);
+}

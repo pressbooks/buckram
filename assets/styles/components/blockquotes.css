@@ -1,0 +1,40 @@
+/**
+ * Blockquote Component
+ * 
+ * Converted from SCSS to CSS custom properties
+ * Source: components/elements/_blockquotes.scss
+ * 
+ * Note: This is a web-specific version. Uses CSS custom properties
+ * for all styling to enable easy theme overrides.
+ */
+
+/* Base blockquote styles for web */
+.blockquote,
+.front-matter blockquote,
+.part blockquote,
+.chapter blockquote,
+.back-matter blockquote,
+body#tinymce.wp-editor blockquote {
+  margin: var(--blockquote-margin-top) var(--blockquote-margin-right) 
+          var(--blockquote-margin-bottom) var(--blockquote-margin-left);
+  font-family: var(--blockquote-font-family);
+  font-size: var(--blockquote-font-size);
+  font-style: var(--blockquote-font-style);
+  font-weight: var(--blockquote-font-weight);
+  line-height: var(--blockquote-line-height);
+  padding: var(--blockquote-padding-top) var(--blockquote-padding-right) 
+           var(--blockquote-padding-bottom) var(--blockquote-padding-left);
+  text-align: var(--blockquote-align);
+  border-left-width: var(--blockquote-border-left-width);
+  border-left-style: var(--blockquote-border-left-style);
+  border-left-color: var(--blockquote-border-left-color);
+}
+
+/* Blockquote cite element */
+.blockquote cite,
+blockquote cite {
+  font-size: var(--cite-font-size);
+  font-style: var(--cite-font-style);
+  font-weight: var(--cite-font-weight);
+  text-transform: var(--cite-text-transform);
+}

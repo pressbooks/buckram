@@ -1,0 +1,223 @@
+/**
+ * Tables Component
+ * 
+ * Converted from SCSS to CSS custom properties
+ * Source: components/elements/_tables.scss
+ * 
+ * Note: This is a web-specific version using CSS custom properties.
+ * Includes support for various table utility classes.
+ */
+
+/* Base table styles for web */
+.front-matter table,
+.part table,
+.chapter table,
+.back-matter table,
+body#tinymce.wp-editor table {
+  display: table;
+  max-width: 100%;
+  margin-top: var(--table-margin-top);
+  margin-bottom: var(--table-margin-bottom);
+  overflow-x: scroll;
+  font-family: var(--table-font-family);
+  font-size: var(--table-font-size);
+  hyphens: var(--table-hyphens);
+  line-height: var(--table-line-height);
+  text-align: var(--table-align);
+  border-collapse: collapse;
+  border-top: var(--table-border-width) solid;
+  border-bottom: var(--table-border-width) solid;
+  border-left: var(--table-border-left-width) var(--table-border-left-style);
+  border-right: var(--table-border-right-width) var(--table-border-right-style);
+}
+
+/* Table paragraph alignment */
+.front-matter table p,
+.part table p,
+.chapter table p,
+.back-matter table p,
+body#tinymce.wp-editor table p {
+  text-align: var(--table-align);
+}
+
+/* Table caption */
+.front-matter table caption,
+.part table caption,
+.chapter table caption,
+.back-matter table caption,
+body#tinymce.wp-editor table caption {
+  margin-bottom: var(--table-caption-margin-bottom);
+  font-weight: var(--table-caption-font-weight);
+  line-height: var(--table-caption-line-height);
+}
+
+/* Table header cells */
+.front-matter table th,
+.part table th,
+.chapter table th,
+.back-matter table th,
+body#tinymce.wp-editor table th {
+  padding: var(--table-th-padding-top) var(--table-th-padding-right) 
+           var(--table-th-padding-bottom) var(--table-th-padding-left);
+  line-height: var(--table-th-line-height);
+  text-align: var(--table-th-align);
+  vertical-align: middle;
+  border-top: var(--table-th-border-top-width) var(--table-th-border-top-style);
+  border-right: var(--table-th-border-right-width) var(--table-th-border-right-style);
+  border-bottom: var(--table-th-border-bottom-width) var(--table-th-border-bottom-style);
+  border-left: var(--table-th-border-left-width) var(--table-th-border-left-style);
+}
+
+/* Table data cells */
+.front-matter table td,
+.part table td,
+.chapter table td,
+.back-matter table td,
+body#tinymce.wp-editor table td {
+  padding: var(--table-td-padding-top) var(--table-td-padding-right) 
+           var(--table-td-padding-bottom) var(--table-td-padding-left);
+  line-height: var(--table-td-line-height);
+  text-align: var(--table-td-align);
+  vertical-align: middle;
+  border: var(--table-td-border-width) var(--table-td-border-style);
+}
+
+/* Table rows */
+.front-matter table tr,
+.part table tr,
+.chapter table tr,
+.back-matter table tr,
+body#tinymce.wp-editor table tr {
+  border-top: var(--table-tr-border-top-width) var(--table-tr-border-top-style);
+  border-bottom: var(--table-tr-border-bottom-width) var(--table-tr-border-bottom-style);
+}
+
+/* Table alignment utilities */
+.front-matter table.alignleft,
+.part table.alignleft,
+.chapter table.alignleft,
+.back-matter table.alignleft,
+body#tinymce.wp-editor table.alignleft {
+  float: left;
+  margin-right: var(--table-alignleft-margin-right);
+}
+
+.front-matter table.aligncenter,
+.part table.aligncenter,
+.chapter table.aligncenter,
+.back-matter table.aligncenter,
+body#tinymce.wp-editor table.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.front-matter table.alignright,
+.part table.alignright,
+.chapter table.alignright,
+.back-matter table.alignright,
+body#tinymce.wp-editor table.alignright {
+  float: right;
+  margin-left: var(--table-alignright-margin-left);
+}
+
+/* Table border variants */
+.front-matter table.no-lines tr,
+.part table.no-lines tr,
+.chapter table.no-lines tr,
+.back-matter table.no-lines tr,
+body#tinymce.wp-editor table.no-lines tr,
+.front-matter table.no-lines td,
+.part table.no-lines td,
+.chapter table.no-lines td,
+.back-matter table.no-lines td,
+body#tinymce.wp-editor table.no-lines td {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.front-matter table.border,
+.part table.border,
+.chapter table.border,
+.back-matter table.border,
+body#tinymce.wp-editor table.border {
+  border: var(--table-border-width) solid;
+}
+
+.front-matter table.no-border,
+.part table.no-border,
+.chapter table.no-border,
+.back-matter table.no-border,
+body#tinymce.wp-editor table.no-border,
+.front-matter table.no-border tbody,
+.part table.no-border tbody,
+.chapter table.no-border tbody,
+.back-matter table.no-border tbody,
+body#tinymce.wp-editor table.no-border tbody,
+.front-matter table.no-border th,
+.part table.no-border th,
+.chapter table.no-border th,
+.back-matter table.no-border th,
+body#tinymce.wp-editor table.no-border th,
+.front-matter table.no-border tr,
+.part table.no-border tr,
+.chapter table.no-border tr,
+.back-matter table.no-border tr,
+body#tinymce.wp-editor table.no-border tr,
+.front-matter table.no-border td,
+.part table.no-border td,
+.chapter table.no-border td,
+.back-matter table.no-border td,
+body#tinymce.wp-editor table.no-border td,
+.front-matter table.no-border tfoot,
+.part table.no-border tfoot,
+.chapter table.no-border tfoot,
+.back-matter table.no-border tfoot,
+body#tinymce.wp-editor table.no-border tfoot,
+.front-matter table.no-border thead,
+.part table.no-border thead,
+.chapter table.no-border thead,
+.back-matter table.no-border thead,
+body#tinymce.wp-editor table.no-border thead {
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.front-matter table.grid,
+.part table.grid,
+.chapter table.grid,
+.back-matter table.grid,
+body#tinymce.wp-editor table.grid,
+.front-matter table.grid tbody,
+.part table.grid tbody,
+.chapter table.grid tbody,
+.back-matter table.grid tbody,
+body#tinymce.wp-editor table.grid tbody,
+.front-matter table.grid th,
+.part table.grid th,
+.chapter table.grid th,
+.back-matter table.grid th,
+body#tinymce.wp-editor table.grid th,
+.front-matter table.grid tr,
+.part table.grid tr,
+.chapter table.grid tr,
+.back-matter table.grid tr,
+body#tinymce.wp-editor table.grid tr,
+.front-matter table.grid td,
+.part table.grid td,
+.chapter table.grid td,
+.back-matter table.grid td,
+body#tinymce.wp-editor table.grid td,
+.front-matter table.grid tfoot,
+.part table.grid tfoot,
+.chapter table.grid tfoot,
+.back-matter table.grid tfoot,
+body#tinymce.wp-editor table.grid tfoot,
+.front-matter table.grid thead,
+.part table.grid thead,
+.chapter table.grid thead,
+.back-matter table.grid thead,
+body#tinymce.wp-editor table.grid thead {
+  border: 1px solid;
+}
