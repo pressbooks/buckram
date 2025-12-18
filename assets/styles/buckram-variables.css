@@ -465,3 +465,124 @@
  *   --custom-body-font-size: 16pt;
  * }
  */
+
+  /* ============================================================================
+   * Phase 3: Special Elements Variables
+   * Added: [Current Date]
+   * Count: 74 variables
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Image Captions & Wrappers
+   * Source: variables/_media.scss
+   * Note: Context-mapped variables use web defaults
+   * -------------------------------------------------------------------------- */
+  
+  /* Image Caption Spacing */
+  --image-caption-margin-top: var(--custom-image-caption-margin-top, 0); /* web: 0, prince/epub: 0 */
+  --image-caption-padding-bottom: var(--custom-image-caption-padding-bottom, 0.5em);
+  
+  /* Image Caption Typography */
+  --image-caption-font-family: var(--custom-image-caption-font-family, var(--font-1));
+  --image-caption-font-size: var(--custom-image-caption-font-size, 0.8em);
+  --image-caption-font-style: var(--custom-image-caption-font-style, normal);
+  --image-caption-font-weight: var(--custom-image-caption-font-weight, normal);
+  --image-caption-line-height: var(--custom-image-caption-line-height, 1.2em); /* web: 1.2em, epub: 1.2, prince: 1.2em */
+  --image-caption-text-align: var(--custom-image-caption-text-align, left);
+  --image-caption-text-indent: var(--custom-image-caption-text-indent, 0); /* web/epub/prince: 0 */
+  --image-caption-text-transform: var(--custom-image-caption-text-transform, none);
+  
+  /* Image Wrapper Spacing */
+  --image-wrapper-margin-top: var(--custom-image-wrapper-margin-top, 0.5em);
+  --image-wrapper-margin-bottom: var(--custom-image-wrapper-margin-bottom, 0.5em);
+  
+  /* Image Alignment Spacing */
+  --image-alignleft-margin-right: var(--custom-image-alignleft-margin-right, 1em);
+  --image-alignright-margin-left: var(--custom-image-alignright-margin-left, 1em);
+
+  /* ----------------------------------------------------------------------------
+   * Pullquotes
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  /* Pullquote Borders */
+  --pullquote-border-top-width: var(--custom-pullquote-border-top-width, 0);
+  --pullquote-border-top-style: var(--custom-pullquote-border-top-style, none);
+  --pullquote-border-top-color: var(--custom-pullquote-border-top-color, transparent);
+  --pullquote-border-bottom-width: var(--custom-pullquote-border-bottom-width, 0);
+  --pullquote-border-bottom-style: var(--custom-pullquote-border-bottom-style, none);
+  --pullquote-border-bottom-color: var(--custom-pullquote-border-bottom-color, transparent);
+  
+  /* Pullquote Spacing */
+  --pullquote-padding-top: var(--custom-pullquote-padding-top, 0);
+  --pullquote-padding-bottom: var(--custom-pullquote-padding-bottom, 0);
+  --pullquote-margin-top: var(--custom-pullquote-margin-top, 1em);
+  --pullquote-margin-bottom: var(--custom-pullquote-margin-bottom, 1em);
+  
+  /* Pullquote Typography */
+  --pullquote-font-family: var(--custom-pullquote-font-family, var(--font-3));
+  --pullquote-font-size: var(--custom-pullquote-font-size, 1.25em);
+  --pullquote-font-style: var(--custom-pullquote-font-style, normal);
+  --pullquote-font-weight: var(--custom-pullquote-font-weight, bold);
+  --pullquote-line-height: var(--custom-pullquote-line-height, 1.2em);
+  --pullquote-text-transform: var(--custom-pullquote-text-transform, none);
+  --pullquote-align: var(--custom-pullquote-align, center);
+  
+  /* Pullquote Width */
+  --pullquote-width: var(--custom-pullquote-width, auto);
+  
+  /* Pullquote Left Alignment */
+  --pullquote-left-width: var(--custom-pullquote-left-width, 45%);
+  --pullquote-left-align: var(--custom-pullquote-left-align, var(--pullquote-align));
+  --pullquote-left-margin-top: var(--custom-pullquote-left-margin-top, var(--pullquote-margin-top));
+  --pullquote-left-margin-right: var(--custom-pullquote-left-margin-right, 1em);
+  --pullquote-left-margin-bottom: var(--custom-pullquote-left-margin-bottom, var(--pullquote-margin-bottom));
+  --pullquote-left-margin-left: var(--custom-pullquote-left-margin-left, 1em);
+  
+  /* Pullquote Right Alignment */
+  --pullquote-right-width: var(--custom-pullquote-right-width, 45%);
+  --pullquote-right-align: var(--custom-pullquote-right-align, var(--pullquote-align));
+  --pullquote-right-margin-top: var(--custom-pullquote-right-margin-top, var(--pullquote-margin-top));
+  --pullquote-right-margin-right: var(--custom-pullquote-right-margin-right, 1em);
+  --pullquote-right-margin-bottom: var(--custom-pullquote-right-margin-bottom, var(--pullquote-margin-bottom));
+  --pullquote-right-margin-left: var(--custom-pullquote-right-margin-left, 1em);
+
+  /* ----------------------------------------------------------------------------
+   * Sidebars
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  /* Sidebar Layout */
+  --sidebar-width: var(--custom-sidebar-width, 35%);
+  --sidebar-align: var(--custom-sidebar-align, left);
+  
+  /* Sidebar Spacing */
+  --sidebar-padding-top: var(--custom-sidebar-padding-top, 1em);
+  --sidebar-padding-right: var(--custom-sidebar-padding-right, 1em);
+  --sidebar-padding-bottom: var(--custom-sidebar-padding-bottom, 1em);
+  --sidebar-padding-left: var(--custom-sidebar-padding-left, 1em);
+  --sidebar-margin-top: var(--custom-sidebar-margin-top, 0.5em);
+  --sidebar-margin-right: var(--custom-sidebar-margin-right, 0);
+  --sidebar-margin-left: var(--custom-sidebar-margin-left, 1em);
+  
+  /* Sidebar Typography */
+  --sidebar-font-size: var(--custom-sidebar-font-size, 0.9em);
+  --sidebar-font-style: var(--custom-sidebar-font-style, italic);
+  --sidebar-font-weight: var(--custom-sidebar-font-weight, normal);
+  --sidebar-line-height: var(--custom-sidebar-line-height, var(--body-line-height));
+
+  /* ----------------------------------------------------------------------------
+   * Textboxes
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  /* Textbox Typography */
+  --textbox-font-family: var(--custom-textbox-font-family, var(--font-1));
+  --textbox-font-size: var(--custom-textbox-font-size, 0.9em);
+  --textbox-font-style: var(--custom-textbox-font-style, normal);
+  --textbox-font-weight: var(--custom-textbox-font-weight, normal);
+  --textbox-line-height: var(--custom-textbox-line-height, 1.2em);
+  --textbox-text-align: var(--custom-textbox-align, left);
+  --textbox-text-indent: var(--custom-textbox-text-indent, var(--para-indent));
+}
+
