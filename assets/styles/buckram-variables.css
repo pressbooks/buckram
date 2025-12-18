@@ -247,6 +247,151 @@
   --code-border: var(--custom-code-border, none);
   --code-border-radius: var(--custom-code-border-radius, 0);
   --code-background: var(--custom-code-background, transparent);
+
+  /* ============================================================================
+   * Layout - List Margins (Context-aware - Web defaults)
+   * Source: variables/_elements.scss
+   * Note: EPUB/Prince use 2em left margin, Web uses 0
+   * ========================================================================== */
+  
+  --ol-margin-top: var(--custom-ol-margin-top, 1em);
+  --ol-margin-bottom: var(--custom-ol-margin-bottom, 1em);
+  --ol-margin-left: var(--custom-ol-margin-left, 0); /* Web: 0, EPUB/Prince: 2em */
+  --ol-padding-left: var(--custom-ol-padding-left, 2em);
+  --ul-margin-top: var(--custom-ul-margin-top, 1em);
+  --ul-margin-bottom: var(--custom-ul-margin-bottom, 1em);
+  --ul-margin-left: var(--custom-ul-margin-left, 0); /* Web: 0, EPUB/Prince: 2em */
+  --ul-padding-left: var(--custom-ul-padding-left, 2em);
+  --li-li-margin-top: var(--custom-li-li-margin-top, 0.5em);
+  --ol-ol-margin-top: var(--custom-ol-ol-margin-top, 0.5em);
+  --ul-ul-margin-top: var(--custom-ul-ul-margin-top, 0.5em);
+
+  /* ============================================================================
+   * Layout - Definition Lists (Context-aware - Web defaults)
+   * Source: variables/_elements.scss
+   * Note: dd-margin-left varies by context (Web: 0, Prince: 2em, EPUB: 0)
+   * ========================================================================== */
+  
+  --dt-margin-top: var(--custom-dt-margin-top, 0);
+  --dt-margin-right: var(--custom-dt-margin-right, 0);
+  --dt-margin-bottom: var(--custom-dt-margin-bottom, 0);
+  --dt-margin-left: var(--custom-dt-margin-left, 0);
+  --dd-dt-spacing: var(--custom-dd-dt-spacing, 1em);
+  --dd-margin-top: var(--custom-dd-margin-top, 0);
+  --dd-margin-right: var(--custom-dd-margin-right, 0);
+  --dd-margin-bottom: var(--custom-dd-margin-bottom, 0);
+  --dd-margin-left: var(--custom-dd-margin-left, 0); /* Web: 0, Prince: 2em, EPUB: 0 */
+
+  /* ============================================================================
+   * Typography - Body Element (Context-aware - Web defaults)
+   * Source: variables/_elements.scss
+   * Note: Font size and line height vary by context
+   * ========================================================================== */
+  
+  --body-font-size: var(--custom-body-font-size, 14pt); /* Web: 14pt, Prince: 11pt, EPUB: medium */
+  --body-line-height: var(--custom-body-line-height, 1.8em); /* Web: 1.8em, EPUB/Prince: 1.4em */
+
+  /* ============================================================================
+   * Typography - Paragraph Alignment (Context-aware - Web defaults)
+   * Source: variables/_elements.scss
+   * Note: Prince uses justify, Web/EPUB use initial
+   * ========================================================================== */
+  
+  --para-align: var(--custom-para-align, initial); /* Web/EPUB: initial, Prince: justify */
+  --para-margin-bottom: var(--custom-para-margin-bottom, 0);
+  --para-margin-top: var(--custom-para-margin-top, 0);
+  --para-indent: var(--custom-para-indent, 1em);
+  --para-no-indent-margin-top: var(--custom-para-no-indent-margin-top, 1em);
+  --para-hyphens: var(--custom-para-hyphens, auto);
+  --para-hanging-indent-padding-left: var(--custom-para-hanging-indent-padding-left, 1em);
+  --para-hanging-indent-text-indent: var(--custom-para-hanging-indent-text-indent, -1em);
+
+  /* ============================================================================
+   * Typography - Paragraph Letter Spacing
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --para-tight-letter-spacing: var(--custom-para-tight-letter-spacing, -0.25px);
+  --para-tight-word-spacing: var(--custom-para-tight-word-spacing, -0.075em);
+  --para-very-tight-letter-spacing: var(--custom-para-very-tight-letter-spacing, -0.5px);
+  --para-very-tight-word-spacing: var(--custom-para-very-tight-word-spacing, -0.09em);
+  --para-loose-letter-spacing: var(--custom-para-loose-letter-spacing, 0.25px);
+  --para-loose-word-spacing: var(--custom-para-loose-word-spacing, 0.075em);
+  --para-very-loose-letter-spacing: var(--custom-para-very-loose-letter-spacing, 0.5px);
+  --para-very-loose-word-spacing: var(--custom-para-very-loose-word-spacing, 0.09em);
+
+  /* ============================================================================
+   * Layout - Blockquote Borders (Context-aware)
+   * Source: variables/_elements.scss
+   * Note: These have identical values across all contexts
+   * ========================================================================== */
+  
+  --blockquote-border-left-width: var(--custom-blockquote-border-left-width, 0);
+  --blockquote-border-left-style: var(--custom-blockquote-border-left-style, none);
+  --blockquote-border-left-color: var(--custom-blockquote-border-left-color, initial);
+
+  /* ============================================================================
+   * Layout - Table Alignment Margins (Context-aware)
+   * Source: variables/_elements.scss
+   * Note: These have identical 1.5em values across all contexts
+   * ========================================================================== */
+  
+  --table-alignleft-margin-right: var(--custom-table-alignleft-margin-right, 1.5em);
+  --table-alignright-margin-left: var(--custom-table-alignright-margin-left, 1.5em);
+
+  /* ============================================================================
+   * Layout - Table Borders (Context-aware)
+   * Source: variables/_elements.scss
+   * Note: These have identical values (0/none) across all contexts
+   * ========================================================================== */
+  
+  --table-border-left-width: var(--custom-table-border-left-width, 0);
+  --table-border-left-style: var(--custom-table-border-left-style, none);
+  --table-border-right-width: var(--custom-table-border-right-width, 0);
+  --table-border-right-style: var(--custom-table-border-right-style, none);
+
+  /* ============================================================================
+   * Layout - Table Header Cell Borders (Context-aware)
+   * Source: variables/_elements.scss
+   * Note: These have identical values (0/none) across all contexts
+   * ========================================================================== */
+  
+  --table-th-border-top-width: var(--custom-table-th-border-top-width, 0);
+  --table-th-border-right-width: var(--custom-table-th-border-right-width, 0);
+  --table-th-border-bottom-width: var(--custom-table-th-border-bottom-width, 0);
+  --table-th-border-left-width: var(--custom-table-th-border-left-width, 0);
+  --table-th-border-top-style: var(--custom-table-th-border-top-style, none);
+  --table-th-border-right-style: var(--custom-table-th-border-right-style, none);
+  --table-th-border-left-style: var(--custom-table-th-border-left-style, none);
+  --table-th-border-bottom-style: var(--custom-table-th-border-bottom-style, none);
+
+  /* ============================================================================
+   * Layout - Table Data Cell Borders (Context-aware)
+   * Source: variables/_elements.scss
+   * Note: These have identical values (0/none) across all contexts
+   * ========================================================================== */
+  
+  --table-td-border-width: var(--custom-table-td-border-width, 0);
+  --table-td-border-style: var(--custom-table-td-border-style, none);
+
+  /* ============================================================================
+   * Layout - Table Row Borders (Context-aware)
+   * Source: variables/_elements.scss
+   * Note: These have identical values (0/none) across all contexts
+   * ========================================================================== */
+  
+  --table-tr-border-top-width: var(--custom-table-tr-border-top-width, 0);
+  --table-tr-border-top-style: var(--custom-table-tr-border-top-style, none);
+  --table-tr-border-bottom-width: var(--custom-table-tr-border-bottom-width, 0);
+  --table-tr-border-bottom-style: var(--custom-table-tr-border-bottom-style, none);
+
+  /* ============================================================================
+   * Typography - Widows and Orphans
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --widows: var(--custom-widows, 2);
+  --orphans: var(--custom-orphans, 1);
 }
 
 /* ============================================================================
@@ -274,6 +419,8 @@
  *   color: var(--blockquote-color);
  *   font-style: var(--blockquote-font-style);
  *   font-weight: var(--blockquote-font-weight);
+ *   border-left-width: var(--blockquote-border-left-width);
+ *   border-left-style: var(--blockquote-border-left-style);
  * }
  * 
  * table {
@@ -294,6 +441,17 @@
  *   background: var(--code-background);
  * }
  * 
+ * p {
+ *   text-align: var(--para-align);
+ *   hyphens: var(--para-hyphens);
+ *   margin-bottom: var(--para-margin-bottom);
+ * }
+ * 
+ * ul, ol {
+ *   margin-left: var(--ol-margin-left);
+ *   padding-left: var(--ol-padding-left);
+ * }
+ * 
  * Example: Theme override
  * 
  * :root {
@@ -303,5 +461,7 @@
  *   --custom-blockquote-padding-left: 3em;
  *   --custom-table-border-width: 2px;
  *   --custom-code-background: #f5f5f5;
+ *   --custom-para-align: justify;
+ *   --custom-body-font-size: 16pt;
  * }
  */

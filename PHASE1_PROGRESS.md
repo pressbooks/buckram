@@ -1,11 +1,12 @@
-# Phase 1 Implementation Progress
+# Phase 1 & 2 Implementation Progress
 
 **Branch:** `feat/migrate-to-css-properties`  
-**Started:** December 18, 2024  
-**Completed:** December 18, 2024  
-**Status:** ✅ **COMPLETE** (107/90 variables - 119% of target)
+**Phase 1 Started:** December 18, 2024  
+**Phase 1 Completed:** December 18, 2024  
+**Phase 2 Started:** December 18, 2024  
+**Status:** 🔄 **Phase 2 In Progress** (168 variables total - 187% of original 90 target)
 
-## Variables Converted (107/90 target) ✅ Phase 1 Complete!
+## Variables Converted (168/90 target) ✅ Phase 1 Complete! Phase 2 Started!
 
 ### ✅ Colors (13 variables)
 Source: `variables/_colors.scss`
@@ -178,10 +179,117 @@ Source: `variables/_elements.scss`
 - [x] `$code-border-radius` → `--code-border-radius`
 - [x] `$code-background` → `--code-background`
 
+## Phase 2: Context-Aware Variables (61 additional variables) 🔄
+
+Variables with context maps (epub/prince/web) - using web defaults with documentation
+
+### ✅ Layout - List Margins (11 variables)
+Source: `variables/_elements.scss` - Context maps with web defaults
+
+- [x] `$ol-margin-top` → `--ol-margin-top`
+- [x] `$ol-margin-bottom` → `--ol-margin-bottom`
+- [x] `$ol-margin-left` → `--ol-margin-left` (Web: 0, EPUB/Prince: 2em)
+- [x] `$ol-padding-left` → `--ol-padding-left`
+- [x] `$ul-margin-top` → `--ul-margin-top`
+- [x] `$ul-margin-bottom` → `--ul-margin-bottom`
+- [x] `$ul-margin-left` → `--ul-margin-left` (Web: 0, EPUB/Prince: 2em)
+- [x] `$ul-padding-left` → `--ul-padding-left`
+- [x] `$li-li-margin-top` → `--li-li-margin-top`
+- [x] `$ol-ol-margin-top` → `--ol-ol-margin-top`
+- [x] `$ul-ul-margin-top` → `--ul-ul-margin-top`
+
+### ✅ Layout - Definition Lists (9 variables)
+Source: `variables/_elements.scss` - Context-aware
+
+- [x] `$dt-margin-top` → `--dt-margin-top`
+- [x] `$dt-margin-right` → `--dt-margin-right`
+- [x] `$dt-margin-bottom` → `--dt-margin-bottom`
+- [x] `$dt-margin-left` → `--dt-margin-left`
+- [x] `$dd-dt-spacing` → `--dd-dt-spacing`
+- [x] `$dd-margin-top` → `--dd-margin-top`
+- [x] `$dd-margin-right` → `--dd-margin-right`
+- [x] `$dd-margin-bottom` → `--dd-margin-bottom`
+- [x] `$dd-margin-left` → `--dd-margin-left` (Web/EPUB: 0, Prince: 2em)
+
+### ✅ Typography - Body Element (2 variables)
+Source: `variables/_elements.scss` - Context-specific
+
+- [x] `$body-font-size` → `--body-font-size` (Web: 14pt, Prince: 11pt, EPUB: medium)
+- [x] `$body-line-height` → `--body-line-height` (Web: 1.8em, EPUB/Prince: 1.4em)
+
+### ✅ Typography - Paragraph Properties (18 variables)
+Source: `variables/_elements.scss`
+
+- [x] `$para-align` → `--para-align` (Web/EPUB: initial, Prince: justify)
+- [x] `$para-margin-bottom` → `--para-margin-bottom`
+- [x] `$para-margin-top` → `--para-margin-top`
+- [x] `$para-indent` → `--para-indent`
+- [x] `$para-no-indent-margin-top` → `--para-no-indent-margin-top`
+- [x] `$para-hyphens` → `--para-hyphens`
+- [x] `$para-hanging-indent-padding-left` → `--para-hanging-indent-padding-left`
+- [x] `$para-hanging-indent-text-indent` → `--para-hanging-indent-text-indent`
+- [x] `$para-tight-letter-spacing` → `--para-tight-letter-spacing`
+- [x] `$para-tight-word-spacing` → `--para-tight-word-spacing`
+- [x] `$para-very-tight-letter-spacing` → `--para-very-tight-letter-spacing`
+- [x] `$para-very-tight-word-spacing` → `--para-very-tight-word-spacing`
+- [x] `$para-loose-letter-spacing` → `--para-loose-letter-spacing`
+- [x] `$para-loose-word-spacing` → `--para-loose-word-spacing`
+- [x] `$para-very-loose-letter-spacing` → `--para-very-loose-letter-spacing`
+- [x] `$para-very-loose-word-spacing` → `--para-very-loose-word-spacing`
+- [x] `$widows` → `--widows`
+- [x] `$orphans` → `--orphans`
+
+### ✅ Layout - Blockquote Borders (3 variables)
+Source: `variables/_elements.scss` - Identical across contexts
+
+- [x] `$blockquote-border-left-width` → `--blockquote-border-left-width`
+- [x] `$blockquote-border-left-style` → `--blockquote-border-left-style`
+- [x] `$blockquote-border-left-color` → `--blockquote-border-left-color`
+
+### ✅ Layout - Table Alignment (2 variables)
+Source: `variables/_elements.scss` - Identical across contexts
+
+- [x] `$table-alignleft-margin-right` → `--table-alignleft-margin-right`
+- [x] `$table-alignright-margin-left` → `--table-alignright-margin-left`
+
+### ✅ Layout - Table Borders (4 variables)
+Source: `variables/_elements.scss` - Identical across contexts
+
+- [x] `$table-border-left-width` → `--table-border-left-width`
+- [x] `$table-border-left-style` → `--table-border-left-style`
+- [x] `$table-border-right-width` → `--table-border-right-width`
+- [x] `$table-border-right-style` → `--table-border-right-style`
+
+### ✅ Layout - Table Header Cell Borders (8 variables)
+Source: `variables/_elements.scss` - Identical across contexts
+
+- [x] `$table-th-border-top-width` → `--table-th-border-top-width`
+- [x] `$table-th-border-right-width` → `--table-th-border-right-width`
+- [x] `$table-th-border-bottom-width` → `--table-th-border-bottom-width`
+- [x] `$table-th-border-left-width` → `--table-th-border-left-width`
+- [x] `$table-th-border-top-style` → `--table-th-border-top-style`
+- [x] `$table-th-border-right-style` → `--table-th-border-right-style`
+- [x] `$table-th-border-left-style` → `--table-th-border-left-style`
+- [x] `$table-th-border-bottom-style` → `--table-th-border-bottom-style`
+
+### ✅ Layout - Table Data Cell Borders (2 variables)
+Source: `variables/_elements.scss` - Identical across contexts
+
+- [x] `$table-td-border-width` → `--table-td-border-width`
+- [x] `$table-td-border-style` → `--table-td-border-style`
+
+### ✅ Layout - Table Row Borders (4 variables)
+Source: `variables/_elements.scss` - Identical across contexts
+
+- [x] `$table-tr-border-top-width` → `--table-tr-border-top-width`
+- [x] `$table-tr-border-top-style` → `--table-tr-border-top-style`
+- [x] `$table-tr-border-bottom-width` → `--table-tr-border-bottom-width`
+- [x] `$table-tr-border-bottom-style` → `--table-tr-border-bottom-style`
+
 ## Files Created
 
 ### Core Files
-- ✅ `assets/styles/buckram-variables.css` - CSS custom properties (107 variables)
+- ✅ `assets/styles/buckram-variables.css` - CSS custom properties (168 variables)
 - ✅ `assets/styles/components/headings.css` - Converted headings component
 - ✅ `assets/styles/test.html` - Visual test page
 
@@ -191,11 +299,12 @@ Source: `variables/_elements.scss`
 ## Next Steps
 
 ### ✅ Phase 1 Complete! (107/90 variables - 119% of target)
+### 🔄 Phase 2 In Progress! (61 context-aware variables added - 168 total)
 
 ### Immediate Next Actions
 1. [x] Test in browser (standalone HTML test)
 2. [x] Test in live Pressbooks environment via mu-plugin
-3. [x] Reach 90 variable target ✅ **EXCEEDED: 107 variables!**
+3. [x] Reach 90 variable target ✅ **EXCEEDED: 168 variables!**
    - [x] Blockquote margins/padding (6 variables)
    - [x] Cite element (3 variables)
    - [x] Sub/Sup elements (6 variables)
@@ -271,21 +380,21 @@ h1.entry-title {
 }
 ```
 
-### Variables Deferred to Phase 2
-These require context maps or complex handling:
-- Font sizes (have epub/prince/web maps)
-- Line heights (have context maps)
-- Margins/padding with context variations
-- Letter spacing maps
-- Word spacing maps
+### Context-Aware Variables Strategy
+Phase 2 variables include context maps (epub/prince/web). Strategy:
+- Use **web defaults** as base values (primary use case)
+- Document context variations in comments
+- Future: Generate context-specific CSS files for EPUB/Prince exports
+- Variables marked with context notes: e.g., `--ol-margin-left` (Web: 0, EPUB/Prince: 2em)
 
 ### Success Criteria
-- ✅ 60+ simple variables converted ✅ **EXCEEDED: 107 variables**
+- ✅ 60+ simple variables converted ✅ **EXCEEDED: 168 variables**
 - ✅ Visual test works in live Pressbooks
 - ✅ Override mechanism validated
 - ✅ DevTools show CSS custom properties
 - ✅ Hybrid approach proven (SCSS + CSS vars coexist)
-- ✅ Phase 1 target reached (90 variables) ✅ **EXCEEDED by 19%**
+- ✅ Phase 1 target reached (90 variables) ✅ **EXCEEDED by 187%**
+- 🔄 Phase 2 context-aware variables: 61 additional variables (web defaults)
 
 ## Timeline
 
@@ -298,3 +407,13 @@ These require context maps or complex handling:
 - **Dec 18, 2024 (Evening):** Added 12 more variables (blockquote, cite, sub/sup) → 74 total
 - **Dec 18, 2024 (Evening):** Added 33 more variables (tables, definition lists, code) → **107 total**
 - ✅ **Phase 1 COMPLETE!** Target exceeded: 107/90 variables (119%)
+- **Dec 18, 2024 (Evening):** Phase 2 started - Added 61 context-aware variables → **168 total**
+  - List margins (11 variables)
+  - Definition list margins (9 variables)
+  - Body font size & line height (2 variables)
+  - Paragraph properties (18 variables including widows/orphans)
+  - Blockquote borders (3 variables)
+  - Table alignment margins (2 variables)
+  - Table borders (4 variables)
+  - Table cell borders (14 variables)
+- 🔄 **Phase 2 IN PROGRESS!** Total: 168 variables (187% of original target)
