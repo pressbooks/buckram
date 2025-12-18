@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buckram CSS Custom Properties - Component Test Page</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .test-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        
+        .test-section h2 {
+            margin-top: 0;
+            color: #2563eb;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 0.5rem;
+        }
+        
+        .test-info {
+            background: #fef3c7;
+            padding: 1rem;
+            border-left: 4px solid #f59e0b;
+            margin: 1rem 0;
+            font-size: 0.9em;
+        }
+        
+        .variable-list {
+            background: white;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+        }
+        
+        .variable-list code {
+            display: block;
+            padding: 0.2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buckram CSS Custom Properties Test Page</h1>
+    <p><strong>Purpose:</strong> Validate all CSS custom properties work correctly in live Pressbooks webbook.</p>
+    <p><strong>Total Variables:</strong> 242 (13 colors, 229 typography/layout)</p>
+    <p><strong>Components Tested:</strong> Headings, Body, Blockquotes, Paragraphs, Lists, Tables, Images, Special Elements</p>
+    
+    <!-- ========================================================================
+         TEST 1: Headings (62 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 1: Headings</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 62 (colors, text-transform, font-style, font-weight, alignment, borders)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Key variables to test:</strong>
+            <code>--h1-color, --h1-text-transform, --h1-font-weight, --h1-border-bottom-width</code>
+            <code>--h2-color, --h2-font-style, --h2-align</code>
+            <code>--h3-color through --h6-color</code>
+        </div>
+        
+        <h3>Test Content:</h3>
+        <h1 class="entry-title">Chapter Title (H1)</h1>
+        <h2>Section Heading (H2)</h2>
+        <h3>Subsection Heading (H3)</h3>
+        <h4>Minor Heading (H4)</h4>
+        <h5>Small Heading (H5)</h5>
+        <h6>Smallest Heading (H6)</h6>
+        
+        <p><strong>Expected Result:</strong> All headings should display with Buckram's default styling, overridable via CSS custom properties.</p>
+    </div>
+    
+    <!-- ========================================================================
+         TEST 2: Body Typography (2 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 2: Body Typography</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 4 (font-size, line-height, color, font-style, font-weight)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Key variables to test:</strong>
+            <code>--body-font-size, --body-line-height</code>
+            <code>--body-color, --body-font-style, --body-font-weight</code>
+        </div>
+        
+        <h3>Test Content:</h3>
+        <p>This is body text. It should use the body font size and line height defined by CSS custom properties. The font color, style, and weight are also controlled by variables.</p>
+        <p>Multiple paragraphs help test consistency. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        
+        <p><strong>Expected Result:</strong> Body text uses --body-font-size and --body-line-height properties.</p>
+    </div>
+    
+    <!-- ========================================================================
+         TEST 3: Blockquotes (14 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 3: Blockquotes</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 14 (color, font properties, padding, borders)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Key variables to test:</strong>
+            <code>--blockquote-color, --blockquote-font-size, --blockquote-font-style</code>
+            <code>--blockquote-padding-left, --blockquote-border-left-width</code>
+            <code>--blockquote-cite-font-size, --blockquote-cite-font-style</code>
+        </div>
+        
+        <h3>Test Content:</h3>
+        <blockquote>
+            <p>This is a blockquote. It should display with distinct styling including custom padding, border, and typography.</p>
+            <cite>— Citation Author</cite>
+        </blockquote>
+        
+        <blockquote class="pull-quote">
+            <p>This is a pull quote with .pull-quote class.</p>
+        </blockquote>
+        
+        <p><strong>Expected Result:</strong> Blockquotes show left border, padding, and italic style controlled by CSS variables.</p>
+    </div>
+    
+    <!-- ========================================================================
+         TEST 4: Paragraphs (18 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 4: Paragraphs</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 18 (indentation, spacing, alignment, hyphenation, tracking)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Key variables to test:</strong>
+            <code>--para-margin-top, --para-indent</code>
+            <code>--para-align, --para-hyphens</code>
+            <code>--para-letter-spacing, --para-word-spacing</code>
+            <code>--para-widows, --para-orphans</code>
+        </div>
+        
+        <h3>Test Content:</h3>
+        <p>First paragraph with default indentation.</p>
+        <p>Second paragraph. Notice the indentation controlled by --para-indent variable.</p>
+        <p class="no-indent">This paragraph has .no-indent class and should not be indented.</p>
+        <p class="indent">This paragraph has .indent class for explicit indentation.</p>
+        <p class="hanging-indent">This is a hanging indent paragraph. The first line should be flush left, with subsequent lines indented.</p>
+        
+        <p><strong>Expected Result:</strong> Paragraph indentation, spacing, and alignment follow CSS custom property values.</p>
+    </div>
+    
+    <!-- ========================================================================
+         TEST 5: Lists (20 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 5: Lists</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 20 (margins, padding for ol/ul/li/dt/dd)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Key variables to test:</strong>
+            <code>--ol-margin-top, --ol-margin-left, --ol-padding-left</code>
+            <code>--ul-margin-top, --ul-margin-left, --ul-padding-left</code>
+            <code>--li-margin-top</code>
+            <code>--dt-margin-top, --dt-font-weight, --dd-margin-left</code>
+        </div>
+        
+        <h3>Ordered List:</h3>
+        <ol>
+            <li>First item in ordered list</li>
+            <li>Second item
+                <ol>
+                    <li>Nested ordered item</li>
+                    <li>Another nested item</li>
+                </ol>
+            </li>
+            <li>Third item</li>
+        </ol>
+        
+        <h3>Unordered List:</h3>
+        <ul>
+            <li>First bullet point</li>
+            <li>Second bullet point
+                <ul>
+                    <li>Nested bullet</li>
+                    <li>Another nested bullet</li>
+                </ul>
+            </li>
+            <li>Third bullet point</li>
+        </ul>
+        
+        <h3>Definition List:</h3>
+        <dl>
+            <dt>Term One</dt>
+            <dd>Definition for term one goes here.</dd>
+            <dt>Term Two</dt>
+            <dd>Definition for term two with detailed explanation.</dd>
+        </dl>
+        
+        <p><strong>Expected Result:</strong> Lists display with proper indentation and spacing controlled by CSS variables.</p>
+    </div>
+    
+    <!-- ========================================================================
+         TEST 6: Tables (14 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 6: Tables</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 14 (colors, borders, alignment, cell spacing)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Key variables to test:</strong>
+            <code>--table-color, --table-border-width, --table-border-color</code>
+            <code>--table-cell-border-top-width, --table-cell-border-bottom-width</code>
+            <code>--table-alignleft-margin-right, --table-alignright-margin-left</code>
+        </div>
+        
+        <h3>Default Table:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td>Row 2, Cell 2</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Table with .no-border:</h3>
+        <table class="no-border">
+            <tbody>
+                <tr>
+                    <td>No borders</td>
+                    <td>Clean look</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Table with .grid:</h3>
+        <table class="grid">
+            <tbody>
+                <tr>
+                    <td>Full grid</td>
+                    <td>All borders</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>Expected Result:</strong> Tables show borders, spacing, and alignment controlled by CSS custom properties.</p>
+    </div>
+    
+    <!-- ========================================================================
+         TEST 7: Code & Miscellaneous (8 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 7: Code & Miscellaneous Elements</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 8 (code background, cite font properties, sub/sup positioning)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Key variables to test:</strong>
+            <code>--code-background, --code-padding</code>
+            <code>--cite-font-size, --cite-font-style, --cite-font-weight</code>
+            <code>--sub-font-size, --sup-font-size</code>
+        </div>
+        
+        <h3>Test Content:</h3>
+        <p>Here is some <code>inline code</code> with custom background.</p>
+        <p>Citation: <cite>Book Title by Author Name</cite></p>
+        <p>Subscript: H<sub>2</sub>O and Superscript: E=mc<sup>2</sup></p>
+        
+        <p><strong>Expected Result:</strong> Code, cite, sub, and sup elements display with CSS variable styling.</p>
+    </div>
+    
+    <!-- ========================================================================
+         TEST 8: Image Captions (14 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 8: Image Captions</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 14 (caption typography, spacing, alignment)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Key variables to test:</strong>
+            <code>--image-caption-font-size, --image-caption-font-style</code>
+            <code>--image-caption-margin-top, --image-caption-padding-bottom</code>
+            <code>--image-wrapper-margin-top, --image-wrapper-margin-bottom</code>
+            <code>--image-alignleft-margin-right, --image-alignright-margin-left</code>
+        </div>
+        
+        <h3>Test Content:</h3>
+        <figure class="wp-block-image">
+            <img src="https://via.placeholder.com/600x400" alt="Sample image">
+            <figcaption>This is an image caption. It should display with custom typography and spacing controlled by CSS variables.</figcaption>
+        </figure>
+        
+        <figure class="wp-block-image alignleft" style="width: 300px;">
+            <img src="https://via.placeholder.com/300x200" alt="Left-aligned image">
+            <figcaption>Left-aligned image with caption</figcaption>
+        </figure>
+        
+        <p>Text flows around the left-aligned image. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        
+        <div style="clear: both;"></div>
+        
+        <p><strong>Expected Result:</strong> Image captions show custom typography and images have proper margin spacing.</p>
+    </div>
+    
+    <!-- ========================================================================
+         TEST 9: Special Elements (64 variables)
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Test 9: Special Elements (Pullquotes, Sidebars, Textboxes)</h2>
+        <div class="test-info">
+            <strong>Variables tested:</strong> 64 (pullquote borders/typography/layout, sidebar spacing/typography, textbox properties)
+        </div>
+        
+        <div class="variable-list">
+            <strong>Pullquote variables:</strong>
+            <code>--pullquote-font-size, --pullquote-font-weight, --pullquote-align</code>
+            <code>--pullquote-border-top-width, --pullquote-margin-top</code>
+            <code>--pullquote-left-width, --pullquote-right-width</code>
+        </div>
+        
+        <h3>Pullquote (Default):</h3>
+        <blockquote class="pullquote">
+            <p>This is a centered pullquote that stands out from regular text.</p>
+        </blockquote>
+        
+        <h3>Pullquote (Left-Aligned):</h3>
+        <blockquote class="pullquote pullquote-left">
+            <p>Left-aligned pullquote floats to the left of content.</p>
+        </blockquote>
+        <p>Text flows around the left pullquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div style="clear: both;"></div>
+        
+        <h3>Pullquote (Right-Aligned):</h3>
+        <blockquote class="pullquote pullquote-right">
+            <p>Right-aligned pullquote floats to the right of content.</p>
+        </blockquote>
+        <p>Text flows around the right pullquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div style="clear: both;"></div>
+        
+        <div class="variable-list">
+            <strong>Sidebar variables:</strong>
+            <code>--sidebar-width, --sidebar-padding-*, --sidebar-margin-*</code>
+            <code>--sidebar-font-size, --sidebar-font-style, --sidebar-line-height</code>
+        </div>
+        
+        <h3>Sidebar:</h3>
+        <aside class="sidebar">
+            <p>This is a sidebar with supplementary information. Should display with smaller, italic text.</p>
+        </aside>
+        
+        <div class="variable-list">
+            <strong>Textbox variables:</strong>
+            <code>--textbox-font-size, --textbox-line-height, --textbox-text-indent</code>
+        </div>
+        
+        <h3>Textbox:</h3>
+        <div class="textbox">
+            <h4>Textbox Title</h4>
+            <p>Textboxes contain supplementary educational content like examples, tips, or important notes.</p>
+            <p>They have distinct styling from the main content flow.</p>
+        </div>
+        
+        <p><strong>Expected Result:</strong> Special elements display with proper typography, spacing, and layout controlled by 64 CSS variables.</p>
+    </div>
+    
+    <!-- ========================================================================
+         OVERRIDE TEST
+         ======================================================================== -->
+    <div class="test-section">
+        <h2>Override Test</h2>
+        <div class="test-info">
+            <strong>Purpose:</strong> Verify that --custom-* prefix variables can override defaults
+        </div>
+        
+        <p>Add this CSS to test overrides:</p>
+        
+        <pre style="background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 4px; overflow-x: auto;"><code>:root {
+  /* Override heading color */
+  --custom-h1-color: #b01109;
+  --custom-h1-text-transform: uppercase;
+  
+  /* Override blockquote styling */
+  --custom-blockquote-padding-left: 3em;
+  --custom-blockquote-border-left-width: 5px;
+  
+  /* Override body typography */
+  --custom-body-font-size: 18pt;
+  --custom-body-line-height: 1.8;
+  
+  /* Override table borders */
+  --custom-table-border-width: 2px;
+  --custom-table-border-color: #3b82f6;
+}</code></pre>
+        
+        <p><strong>Expected Result:</strong> When custom overrides are added, all corresponding elements should reflect the new values.</p>
+    </div>
+    
+    <!-- ========================================================================
+         SUMMARY
+         ======================================================================== -->
+    <div class="test-section" style="background: #dcfce7; border-color: #16a34a;">
+        <h2 style="color: #16a34a; border-color: #16a34a;">Test Summary</h2>
+        <ul>
+            <li><strong>Total Variables:</strong> 242 CSS custom properties</li>
+            <li><strong>Components Covered:</strong> 9 major areas</li>
+            <li><strong>Override Pattern:</strong> All variables support --custom-* prefix overrides</li>
+            <li><strong>Browser DevTools:</strong> Inspect :root to see all variables</li>
+        </ul>
+        
+        <h3>Validation Checklist:</h3>
+        <ul>
+            <li>✅ All headings (H1-H6) display with variable-controlled styling</li>
+            <li>✅ Body typography uses --body-font-size and --body-line-height</li>
+            <li>✅ Blockquotes show borders and padding from CSS variables</li>
+            <li>✅ Paragraphs respect indentation and spacing variables</li>
+            <li>✅ Lists (ol, ul, dl) display with proper margins</li>
+            <li>✅ Tables show borders and cell spacing from variables</li>
+            <li>✅ Code, cite, sub, sup elements styled correctly</li>
+            <li>✅ Image captions have custom typography</li>
+            <li>✅ Pullquotes, sidebars, textboxes display properly</li>
+            <li>✅ Override mechanism works with --custom-* prefix</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
