@@ -1,0 +1,271 @@
+/**
+ * Buckram CSS Custom Properties - Proof of Concept
+ * 
+ * This file demonstrates the migration of simple SCSS variables to CSS custom properties.
+ * Based on variables from buckram/assets/styles/variables/
+ */
+
+/* =============================================================================
+   ROOT VARIABLES
+   ============================================================================= */
+
+:root {
+  
+  /* ---------------------------------------------------------------------------
+     BASE COLORS
+     Converted from variables/_colors.scss
+     --------------------------------------------------------------------------- */
+  
+  /* Base color palette */
+  --color-1-epub: initial;
+  --color-1-prince: initial;
+  --color-1-web: #373d3f;
+  --color-1: var(--custom-color-1, var(--color-1-web));
+  
+  --color-2: var(--custom-color-2, var(--color-1));
+  --color-3: var(--custom-color-3, var(--color-1));
+  --color-4: var(--custom-color-4, #eee);
+  --color-5: var(--custom-color-5, var(--color-1));
+  --color-6: var(--custom-color-6, var(--color-1));
+  
+  /* ---------------------------------------------------------------------------
+     ELEMENT COLORS
+     Converted from variables/_colors.scss
+     --------------------------------------------------------------------------- */
+  
+  /* Body */
+  --body-color: var(--custom-body-color, var(--color-1));
+  
+  /* Links */
+  --link-color-print: var(--custom-link-color-print, initial);
+  
+  /* Blockquotes */
+  --blockquote-color: var(--custom-blockquote-color, var(--color-1));
+  
+  /* Heading Colors */
+  --h1-color: var(--custom-h1-color, var(--color-2));
+  --h2-color: var(--custom-h2-color, var(--color-2));
+  --h3-color: var(--custom-h3-color, var(--color-2));
+  --h4-color: var(--custom-h4-color, var(--color-3));
+  --h5-color: var(--custom-h5-color, var(--color-3));
+  --h6-color: var(--custom-h6-color, var(--color-3));
+  
+  /* Tables */
+  --table-color: var(--custom-table-color, var(--color-1));
+  --table-para-color: var(--custom-table-para-color, var(--color-1));
+  --shade-color-1: var(--custom-shade-color-1, var(--color-4));
+  --line-color-1: var(--custom-line-color-1, #000);
+  
+  /* Special Elements */
+  --image-caption-text-color: var(--custom-image-caption-text-color, var(--color-3));
+  --index-para-color: var(--custom-index-para-color, var(--color-1));
+  
+  /* ---------------------------------------------------------------------------
+     TYPOGRAPHY - SIMPLE PROPERTIES
+     Converted from variables/_elements.scss
+     --------------------------------------------------------------------------- */
+  
+  /* All Headings - Base Styles */
+  --hx-margin-top: var(--custom-hx-margin-top, 1.5em);
+  --hx-margin-bottom: var(--custom-hx-margin-bottom, 1em);
+  --hx-padding-bottom: var(--custom-hx-padding-bottom, 0);
+  --hx-line-height: var(--custom-hx-line-height, 1.5em);
+  --hx-border-bottom-style: var(--custom-hx-border-bottom-style, none);
+  
+  /* H1 Styles */
+  --h1-margin-top: var(--custom-h1-margin-top, var(--hx-margin-top));
+  --h1-margin-bottom: var(--custom-h1-margin-bottom, var(--hx-margin-bottom));
+  --h1-padding-bottom: var(--custom-h1-padding-bottom, var(--hx-padding-bottom));
+  --h1-font-style: var(--custom-h1-font-style, normal);
+  --h1-font-weight: var(--custom-h1-font-weight, normal);
+  --h1-line-height: var(--custom-h1-line-height, var(--hx-line-height));
+  --h1-text-transform: var(--custom-h1-text-transform, uppercase);
+  --h1-text-align: var(--custom-h1-text-align, center);
+  --h1-border-bottom-style: var(--custom-h1-border-bottom-style, var(--hx-border-bottom-style));
+  
+  /* H2 Styles */
+  --h2-margin-top: var(--custom-h2-margin-top, var(--hx-margin-top));
+  --h2-margin-bottom: var(--custom-h2-margin-bottom, var(--hx-margin-bottom));
+  --h2-padding-bottom: var(--custom-h2-padding-bottom, var(--hx-padding-bottom));
+  --h2-font-style: var(--custom-h2-font-style, normal);
+  --h2-font-weight: var(--custom-h2-font-weight, normal);
+  --h2-line-height: var(--custom-h2-line-height, var(--hx-line-height));
+  --h2-text-transform: var(--custom-h2-text-transform, none);
+  --h2-text-align: var(--custom-h2-text-align, left);
+  --h2-border-bottom-style: var(--custom-h2-border-bottom-style, var(--hx-border-bottom-style));
+  
+  /* H3 Styles */
+  --h3-margin-top: var(--custom-h3-margin-top, var(--hx-margin-top));
+  --h3-margin-bottom: var(--custom-h3-margin-bottom, var(--hx-margin-bottom));
+  --h3-padding-bottom: var(--custom-h3-padding-bottom, var(--hx-padding-bottom));
+  --h3-font-style: var(--custom-h3-font-style, normal);
+  --h3-font-weight: var(--custom-h3-font-weight, bold);
+  --h3-line-height: var(--custom-h3-line-height, var(--hx-line-height));
+  --h3-text-transform: var(--custom-h3-text-transform, none);
+  --h3-text-align: var(--custom-h3-text-align, left);
+  --h3-border-bottom-style: var(--custom-h3-border-bottom-style, var(--hx-border-bottom-style));
+  
+  /* H4 Styles */
+  --h4-margin-top: var(--custom-h4-margin-top, var(--hx-margin-top));
+  --h4-margin-bottom: var(--custom-h4-margin-bottom, var(--hx-margin-bottom));
+  --h4-padding-bottom: var(--custom-h4-padding-bottom, var(--hx-padding-bottom));
+  --h4-font-style: var(--custom-h4-font-style, normal);
+  --h4-font-weight: var(--custom-h4-font-weight, normal);
+  --h4-line-height: var(--custom-h4-line-height, var(--hx-line-height));
+  --h4-text-transform: var(--custom-h4-text-transform, none);
+  --h4-text-align: var(--custom-h4-text-align, left);
+  --h4-border-bottom-style: var(--custom-h4-border-bottom-style, var(--hx-border-bottom-style));
+  
+  /* H5 Styles */
+  --h5-margin-top: var(--custom-h5-margin-top, var(--hx-margin-top));
+  --h5-margin-bottom: var(--custom-h5-margin-bottom, var(--hx-margin-bottom));
+  --h5-padding-bottom: var(--custom-h5-padding-bottom, var(--hx-padding-bottom));
+  --h5-font-style: var(--custom-h5-font-style, italic);
+  --h5-font-weight: var(--custom-h5-font-weight, normal);
+  --h5-line-height: var(--custom-h5-line-height, var(--hx-line-height));
+  --h5-text-transform: var(--custom-h5-text-transform, none);
+  --h5-text-align: var(--custom-h5-text-align, left);
+  --h5-border-bottom-style: var(--custom-h5-border-bottom-style, var(--hx-border-bottom-style));
+  
+  /* H6 Styles */
+  --h6-margin-top: var(--custom-h6-margin-top, var(--hx-margin-top));
+  --h6-margin-bottom: var(--custom-h6-margin-bottom, var(--hx-margin-bottom));
+  --h6-padding-bottom: var(--custom-h6-padding-bottom, var(--hx-padding-bottom));
+  --h6-font-style: var(--custom-h6-font-style, normal);
+  --h6-font-weight: var(--custom-h6-font-weight, normal);
+  --h6-line-height: var(--custom-h6-line-height, var(--hx-line-height));
+  --h6-text-transform: var(--custom-h6-text-transform, none);
+  --h6-text-align: var(--custom-h6-text-align, left);
+  --h6-border-bottom-style: var(--custom-h6-border-bottom-style, var(--hx-border-bottom-style));
+  
+  /* Paragraph Styles */
+  --para-margin-top: var(--custom-para-margin-top, 0);
+  --para-margin-bottom: var(--custom-para-margin-bottom, 1em);
+  --para-line-height: var(--custom-para-line-height, inherit);
+  --para-indent: var(--custom-para-indent, 0);
+  
+  /* Blockquote Styles */
+  --blockquote-width: var(--custom-blockquote-width, 90%);
+  --blockquote-margin-top: var(--custom-blockquote-margin-top, 1em);
+  --blockquote-margin-bottom: var(--custom-blockquote-margin-bottom, 1em);
+  --blockquote-padding-top: var(--custom-blockquote-padding-top, 0);
+  --blockquote-padding-bottom: var(--custom-blockquote-padding-bottom, 0);
+  --blockquote-padding-left: var(--custom-blockquote-padding-left, 0);
+  --blockquote-padding-right: var(--custom-blockquote-padding-right, 0);
+  --blockquote-font-style: var(--custom-blockquote-font-style, normal);
+  --blockquote-font-weight: var(--custom-blockquote-font-weight, normal);
+  
+  /* ---------------------------------------------------------------------------
+     STRUCTURE - RUNNING CONTENT
+     Converted from variables/_structure.scss
+     --------------------------------------------------------------------------- */
+  
+  /* Running content separators */
+  --left-running-separator: var(--custom-left-running-separator, '');
+  --right-running-separator: var(--custom-right-running-separator, '');
+  
+  /* Numbering positions (keyword values) */
+  --numbering-position: var(--custom-numbering-position, 'top-outside');
+  --first-numbering-position: var(--custom-first-numbering-position, 'bottom-center');
+  
+  /* Running content positions */
+  --running-content-position: var(--custom-running-content-position, 'top-center');
+  --first-running-content-position: var(--custom-first-running-content-position, null);
+}
+
+/* =============================================================================
+   CONTEXT-SPECIFIC OVERRIDES (for web)
+   These would be in separate files for epub/prince
+   ============================================================================= */
+
+@media screen {
+  :root {
+    --color-1: var(--custom-color-1, var(--color-1-web));
+    /* Links for web */
+    --link-color: var(--custom-link-color, var(--primary, #b01109));
+  }
+}
+
+/* =============================================================================
+   COMPONENT STYLES - EXAMPLE
+   This demonstrates how components would use the custom properties
+   ============================================================================= */
+
+/* Headings (simplified version of components/elements/_headings.scss) */
+h1, h2, h3, h4, h5, h6 {
+  hyphens: none;
+  page-break-after: avoid;
+}
+
+h1 {
+  margin-top: var(--h1-margin-top);
+  margin-bottom: var(--h1-margin-bottom);
+  padding-bottom: var(--h1-padding-bottom);
+  color: var(--h1-color);
+  font-style: var(--h1-font-style);
+  font-weight: var(--h1-font-weight);
+  line-height: var(--h1-line-height);
+  text-align: var(--h1-text-align);
+  text-transform: var(--h1-text-transform);
+  border-bottom-style: var(--h1-border-bottom-style);
+}
+
+h2 {
+  margin-top: var(--h2-margin-top);
+  margin-bottom: var(--h2-margin-bottom);
+  padding-bottom: var(--h2-padding-bottom);
+  color: var(--h2-color);
+  font-style: var(--h2-font-style);
+  font-weight: var(--h2-font-weight);
+  line-height: var(--h2-line-height);
+  text-align: var(--h2-text-align);
+  text-transform: var(--h2-text-transform);
+  border-bottom-style: var(--h2-border-bottom-style);
+}
+
+h3 {
+  margin-top: var(--h3-margin-top);
+  margin-bottom: var(--h3-margin-bottom);
+  padding-bottom: var(--h3-padding-bottom);
+  color: var(--h3-color);
+  font-style: var(--h3-font-style);
+  font-weight: var(--h3-font-weight);
+  line-height: var(--h3-line-height);
+  text-align: var(--h3-text-align);
+  text-transform: var(--h3-text-transform);
+  border-bottom-style: var(--h3-border-bottom-style);
+}
+
+/* Paragraphs */
+p {
+  margin-top: var(--para-margin-top);
+  margin-bottom: var(--para-margin-bottom);
+  line-height: var(--para-line-height);
+  text-indent: var(--para-indent);
+}
+
+/* Blockquotes */
+blockquote {
+  width: var(--blockquote-width);
+  margin-top: var(--blockquote-margin-top);
+  margin-bottom: var(--blockquote-margin-bottom);
+  padding: var(--blockquote-padding-top) var(--blockquote-padding-right) var(--blockquote-padding-bottom) var(--blockquote-padding-left);
+  color: var(--blockquote-color);
+  font-style: var(--blockquote-font-style);
+  font-weight: var(--blockquote-font-weight);
+}
+
+/* =============================================================================
+   EXAMPLE: THEME OVERRIDE FILE
+   This is what a child theme would include to override Buckram defaults
+   ============================================================================= */
+
+/*
+:root {
+  --custom-h1-color: #b01109;
+  --custom-h1-font-weight: bold;
+  --custom-h1-text-transform: none;
+  --custom-body-color: #2c3e50;
+  --custom-link-color: #e74c3c;
+}
+*/
