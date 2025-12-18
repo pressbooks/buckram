@@ -1,0 +1,168 @@
+/**
+ * Headings Component (CSS Custom Properties Version)
+ * 
+ * Converted from: components/elements/_headings.scss
+ * Uses: buckram-variables.css
+ * 
+ * @since 2.0.0
+ */
+
+/* ============================================================================
+ * All Headings (h1-h6)
+ * Common styles shared across all heading levels
+ * ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  hyphens: none;
+  page-break-after: avoid;
+}
+
+/* ============================================================================
+ * Individual Heading Levels
+ * ========================================================================== */
+
+h1 {
+  margin-top: var(--h1-margin-top, 1.5em);
+  margin-bottom: var(--h1-margin-bottom, 1em);
+  padding-bottom: var(--h1-padding-bottom, 0);
+  font-family: var(--h1-font-family, inherit);
+  font-size: var(--h1-font-size, 1em);
+  font-style: var(--h1-font-style);
+  font-weight: var(--h1-font-weight);
+  line-height: var(--h1-line-height, 1.5em);
+  text-align: var(--h1-align);
+  text-transform: var(--h1-text-transform);
+  letter-spacing: var(--h1-letter-spacing, normal);
+  word-spacing: var(--h1-word-spacing, normal);
+  color: var(--h1-color);
+  border-bottom-style: var(--h1-border-bottom-style);
+  border-bottom-width: var(--h1-border-bottom-width);
+  border-bottom-color: var(--h1-border-bottom-color);
+}
+
+h2 {
+  margin-top: var(--h2-margin-top, 1.5em);
+  margin-bottom: var(--h2-margin-bottom, 1em);
+  padding-bottom: var(--h2-padding-bottom, 0);
+  font-family: var(--h2-font-family, inherit);
+  font-size: var(--h2-font-size, 1em);
+  font-style: var(--h2-font-style);
+  font-weight: var(--h2-font-weight);
+  line-height: var(--h2-line-height, 1.5em);
+  text-align: var(--h2-align);
+  text-transform: var(--h2-text-transform);
+  letter-spacing: var(--h2-letter-spacing, normal);
+  word-spacing: var(--h2-word-spacing, normal);
+  color: var(--h2-color);
+  border-bottom-style: var(--h2-border-bottom-style);
+  border-bottom-width: var(--h2-border-bottom-width);
+  border-bottom-color: var(--h2-border-bottom-color);
+}
+
+h3 {
+  margin-top: var(--h3-margin-top, 1.5em);
+  margin-bottom: var(--h3-margin-bottom, 1em);
+  padding-bottom: var(--h3-padding-bottom, 0);
+  font-family: var(--h3-font-family, inherit);
+  font-size: var(--h3-font-size, 1em);
+  font-style: var(--h3-font-style);
+  font-weight: var(--h3-font-weight);
+  line-height: var(--h3-line-height, 1.5em);
+  text-align: var(--h3-align);
+  text-transform: var(--h3-text-transform);
+  letter-spacing: var(--h3-letter-spacing, normal);
+  word-spacing: var(--h3-word-spacing, normal);
+  color: var(--h3-color);
+  border-bottom-style: var(--h3-border-bottom-style);
+  border-bottom-width: var(--h3-border-bottom-width);
+  border-bottom-color: var(--h3-border-bottom-color);
+}
+
+h4 {
+  margin-top: var(--h4-margin-top, 1.5em);
+  margin-bottom: var(--h4-margin-bottom, 1em);
+  padding-bottom: var(--h4-padding-bottom, 0);
+  font-family: var(--h4-font-family, inherit);
+  font-size: var(--h4-font-size, 1em);
+  font-style: var(--h4-font-style);
+  font-weight: var(--h4-font-weight);
+  line-height: var(--h4-line-height, 1.5em);
+  text-align: var(--h4-align);
+  text-transform: var(--h4-text-transform);
+  letter-spacing: var(--h4-letter-spacing, normal);
+  word-spacing: var(--h4-word-spacing, normal);
+  color: var(--h4-color);
+  border-bottom-style: var(--h4-border-bottom-style);
+  border-bottom-width: var(--h4-border-bottom-width);
+  border-bottom-color: var(--h4-border-bottom-color);
+}
+
+h5 {
+  margin-top: var(--h5-margin-top, 1.5em);
+  margin-bottom: var(--h5-margin-bottom, 1em);
+  padding-bottom: var(--h5-padding-bottom, 0);
+  font-family: var(--h5-font-family, inherit);
+  font-size: var(--h5-font-size, 1em);
+  font-style: var(--h5-font-style);
+  font-weight: var(--h5-font-weight);
+  line-height: var(--h5-line-height, 1.5em);
+  text-align: var(--h5-align);
+  text-transform: var(--h5-text-transform);
+  letter-spacing: var(--h5-letter-spacing, normal);
+  word-spacing: var(--h5-word-spacing, normal);
+  color: var(--h5-color);
+  border-bottom-style: var(--h5-border-bottom-style);
+  border-bottom-width: var(--h5-border-bottom-width);
+  border-bottom-color: var(--h5-border-bottom-color);
+}
+
+h6 {
+  margin-top: var(--h6-margin-top, 1.5em);
+  margin-bottom: var(--h6-margin-bottom, 1em);
+  padding-bottom: var(--h6-padding-bottom, 0);
+  font-family: var(--h6-font-family, inherit);
+  font-size: var(--h6-font-size, 1em);
+  font-style: var(--h6-font-style);
+  font-weight: var(--h6-font-weight);
+  line-height: var(--h6-line-height, 1.5em);
+  text-align: var(--h6-align);
+  text-transform: var(--h6-text-transform);
+  letter-spacing: var(--h6-letter-spacing, normal);
+  word-spacing: var(--h6-word-spacing, normal);
+  color: var(--h6-color);
+  border-bottom-style: var(--h6-border-bottom-style);
+  border-bottom-width: var(--h6-border-bottom-width);
+  border-bottom-color: var(--h6-border-bottom-color);
+}
+
+/* ============================================================================
+ * Special Context Overrides
+ * ========================================================================== */
+
+/**
+ * TOC Headings
+ * Exclude div.ugc h1 from PDF TOC
+ */
+div.ugc h1 {
+  prince-bookmark-level: none;
+}
+
+/* ============================================================================
+ * Notes
+ * ========================================================================== */
+
+/**
+ * Context-specific variables (font-size, line-height, margins, etc.)
+ * will need to be defined in separate context files:
+ * - buckram-web.css (web defaults)
+ * - buckram-epub.css (epub defaults)  
+ * - buckram-prince.css (PDF/prince defaults)
+ * 
+ * This is required because CSS custom properties cannot have
+ * different values based on media type like SCSS maps could.
+ */

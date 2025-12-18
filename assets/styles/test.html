@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buckram CSS Custom Properties - Test</title>
+    
+    <!-- Load the CSS custom properties -->
+    <link rel="stylesheet" href="buckram-variables.css">
+    <link rel="stylesheet" href="components/headings.css">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            line-height: 1.6;
+        }
+        
+        .test-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .test-section h3:first-of-type {
+            margin-top: 0;
+        }
+        
+        .override-demo {
+            background: #f5f5f5;
+        }
+        
+        /* Theme override example */
+        .theme-override {
+            --custom-h1-color: #b01109;
+            --custom-h1-text-transform: uppercase;
+            --custom-h2-color: #2c5f2d;
+            --custom-h2-text-transform: uppercase;
+            --custom-h3-color: #444;
+        }
+        
+        .code-block {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Buckram CSS Custom Properties Test</h1>
+        <p><strong>Phase 1 POC:</strong> Simple Variables Migration</p>
+    </header>
+
+    <main>
+        <!-- Test 1: Default Values -->
+        <section class="test-section">
+            <h3>Test 1: Default Heading Styles</h3>
+            <p>These headings use the default CSS custom property values:</p>
+            
+            <h1>Heading 1 - Default</h1>
+            <h2>Heading 2 - Default</h2>
+            <h3>Heading 3 - Default</h3>
+            <h4>Heading 4 - Default</h4>
+            <h5>Heading 5 - Default</h5>
+            <h6>Heading 6 - Default</h6>
+            
+            <div class="code-block">
+/* Default values from buckram-variables.css */
+--h1-color: var(--custom-h1-color, #373d3f);
+--h1-text-transform: var(--custom-h1-text-transform, none);
+--h1-font-weight: var(--custom-h1-font-weight, bold);
+--h1-align: var(--custom-h1-align, center);
+            </div>
+        </section>
+
+        <!-- Test 2: Theme Override -->
+        <section class="test-section theme-override">
+            <h3>Test 2: Theme Override (Custom Variables)</h3>
+            <p>These headings demonstrate theme-level customization using <code>--custom-*</code> properties:</p>
+            
+            <h1>Heading 1 - Overridden</h1>
+            <h2>Heading 2 - Overridden</h2>
+            <h3>Heading 3 - Overridden</h3>
+            <h4>Heading 4 - Uses Default</h4>
+            
+            <div class="code-block">
+/* Theme override example */
+.theme-override {
+  --custom-h1-color: #b01109;
+  --custom-h1-text-transform: uppercase;
+  --custom-h2-color: #2c5f2d;
+  --custom-h2-text-transform: uppercase;
+  --custom-h3-color: #444;
+}
+            </div>
+        </section>
+
+        <!-- Test 3: Variables Converted -->
+        <section class="test-section">
+            <h3>Test 3: Variables Converted in Phase 1</h3>
+            <ul>
+                <li><strong>Colors:</strong> 13 variables (h1-h6 colors, body, blockquote, table, captions)</li>
+                <li><strong>Text Transform:</strong> 6 variables (h1-h6)</li>
+                <li><strong>Font Style:</strong> 8 variables (h1-h6, body, blockquote)</li>
+                <li><strong>Font Weight:</strong> 8 variables (h1-h6, body, blockquote)</li>
+                <li><strong>Alignment:</strong> 6 variables (h1-h6)</li>
+                <li><strong>Borders:</strong> 21 variables (styles, widths, colors for hx + h1-h6)</li>
+            </ul>
+            <p><strong>Total:</strong> 62 simple variables converted ✅</p>
+        </section>
+
+        <!-- Test 4: Browser DevTools -->
+        <section class="test-section">
+            <h3>Test 4: Inspect with Browser DevTools</h3>
+            <p>Open your browser's DevTools and:</p>
+            <ol>
+                <li>Inspect any heading element</li>
+                <li>Look at the Computed styles</li>
+                <li>Find properties using <code>var(--h1-color)</code></li>
+                <li>Edit the values in the Styles panel to test override behavior</li>
+                <li>Try adding <code>--custom-h1-color: blue;</code> to the :root selector</li>
+            </ol>
+        </section>
+
+        <!-- Test 5: Comparison -->
+        <section class="test-section">
+            <h3>Test 5: SCSS vs CSS Custom Properties</h3>
+            
+            <h4>Old SCSS Approach:</h4>
+            <div class="code-block">
+// variables/_elements.scss
+$h1-color: $color-2 !default;
+$h1-text-transform: none !default;
+
+// components/elements/_headings.scss
+h1 {
+  color: if-map-get($h1-color, $type);
+  text-transform: $h1-text-transform;
+}
+
+// Theme override (functions.php)
+$styles->getSass()->setVariables([
+  'h1-color' => '#b01109',
+]);
+            </div>
+            
+            <h4>New CSS Custom Properties:</h4>
+            <div class="code-block">
+/* buckram-variables.css */
+:root {
+  --h1-color: var(--custom-h1-color, #373d3f);
+  --h1-text-transform: var(--custom-h1-text-transform, none);
+}
+
+/* components/headings.css */
+h1 {
+  color: var(--h1-color);
+  text-transform: var(--h1-text-transform);
+}
+
+/* Theme override (CSS) */
+:root {
+  --custom-h1-color: #b01109;
+}
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="test-section">
+            <h3>Benefits Demonstrated</h3>
+            <ul>
+                <li>✅ <strong>No Runtime Compilation:</strong> Static CSS, no SCSSPHP needed</li>
+                <li>✅ <strong>Browser DevTools:</strong> Inspect and modify variables in real-time</li>
+                <li>✅ <strong>Simple Override:</strong> Theme customization via --custom-* prefix</li>
+                <li>✅ <strong>Cascade Friendly:</strong> CSS natural cascade rules apply</li>
+                <li>✅ <strong>Performance:</strong> No PHP processing at runtime</li>
+                <li>✅ <strong>Maintainability:</strong> Standard CSS, easier debugging</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer style="margin-top: 3rem; padding: 2rem 0; border-top: 2px solid #ddd; text-align: center;">
+        <p><strong>Buckram CSS Custom Properties Migration</strong></p>
+        <p>Phase 1 POC - December 2024</p>
+    </footer>
+</body>
+</html>

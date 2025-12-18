@@ -1,0 +1,307 @@
+/**
+ * Buckram CSS Custom Properties
+ * 
+ * Phase 1 Migration: Simple Variables
+ * Converted from SCSS variables in variables/ directory
+ * 
+ * Pattern: --var: var(--custom-var, default);
+ * Theme overrides use --custom-var prefix
+ * 
+ * @since 2.0.0
+ */
+
+:root {
+  /* ============================================================================
+   * Colors
+   * Source: variables/_colors.scss
+   * ========================================================================== */
+  
+  /* Heading Colors */
+  --h1-color: var(--custom-h1-color, #373d3f);
+  --h2-color: var(--custom-h2-color, #373d3f);
+  --h3-color: var(--custom-h3-color, #373d3f);
+  --h4-color: var(--custom-h4-color, #373d3f);
+  --h5-color: var(--custom-h5-color, #373d3f);
+  --h6-color: var(--custom-h6-color, #373d3f);
+  
+  /* Body Colors */
+  --body-color: var(--custom-body-color, #373d3f);
+  
+  /* Blockquote Colors */
+  --blockquote-color: var(--custom-blockquote-color, #373d3f);
+  
+  /* Table Colors */
+  --table-color: var(--custom-table-color, #373d3f);
+  --table-para-color: var(--custom-table-para-color, #373d3f);
+  --shade-color-1: var(--custom-shade-color-1, #eee);
+  --line-color-1: var(--custom-line-color-1, #000);
+  
+  /* Caption Colors */
+  --image-caption-text-color: var(--custom-image-caption-text-color, #373d3f);
+  
+  /* ============================================================================
+   * Typography - Heading Text Transforms
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --h1-text-transform: var(--custom-h1-text-transform, none);
+  --h2-text-transform: var(--custom-h2-text-transform, none);
+  --h3-text-transform: var(--custom-h3-text-transform, none);
+  --h4-text-transform: var(--custom-h4-text-transform, none);
+  --h5-text-transform: var(--custom-h5-text-transform, none);
+  --h6-text-transform: var(--custom-h6-text-transform, none);
+  
+  /* ============================================================================
+   * Typography - Heading Font Styles
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --h1-font-style: var(--custom-h1-font-style, normal);
+  --h2-font-style: var(--custom-h2-font-style, normal);
+  --h3-font-style: var(--custom-h3-font-style, normal);
+  --h4-font-style: var(--custom-h4-font-style, normal);
+  --h5-font-style: var(--custom-h5-font-style, italic);
+  --h6-font-style: var(--custom-h6-font-style, italic);
+  
+  /* ============================================================================
+   * Typography - Heading Font Weights
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --h1-font-weight: var(--custom-h1-font-weight, bold);
+  --h2-font-weight: var(--custom-h2-font-weight, bold);
+  --h3-font-weight: var(--custom-h3-font-weight, bold);
+  --h4-font-weight: var(--custom-h4-font-weight, bold);
+  --h5-font-weight: var(--custom-h5-font-weight, bold);
+  --h6-font-weight: var(--custom-h6-font-weight, normal);
+  
+  /* ============================================================================
+   * Typography - Heading Alignment
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --h1-align: var(--custom-h1-align, center);
+  --h2-align: var(--custom-h2-align, left);
+  --h3-align: var(--custom-h3-align, left);
+  --h4-align: var(--custom-h4-align, left);
+  --h5-align: var(--custom-h5-align, left);
+  --h6-align: var(--custom-h6-align, left);
+  
+  /* ============================================================================
+   * Typography - Body Element
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --body-font-style: var(--custom-body-font-style, normal);
+  --body-font-weight: var(--custom-body-font-weight, normal);
+  
+  /* ============================================================================
+   * Typography - Blockquote Element
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --blockquote-font-style: var(--custom-blockquote-font-style, italic);
+  --blockquote-font-weight: var(--custom-blockquote-font-weight, normal);
+  
+  /* ============================================================================
+   * Layout - Heading Border Styles
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --hx-border-bottom-style: var(--custom-hx-border-bottom-style, none);
+  --h1-border-bottom-style: var(--custom-h1-border-bottom-style, none);
+  --h2-border-bottom-style: var(--custom-h2-border-bottom-style, none);
+  --h3-border-bottom-style: var(--custom-h3-border-bottom-style, none);
+  --h4-border-bottom-style: var(--custom-h4-border-bottom-style, none);
+  --h5-border-bottom-style: var(--custom-h5-border-bottom-style, none);
+  --h6-border-bottom-style: var(--custom-h6-border-bottom-style, none);
+  
+  /* ============================================================================
+   * Layout - Heading Border Widths
+   * Source: variables/_elements.scss
+   * Note: Context-specific - these are web defaults
+   * ========================================================================== */
+  
+  --hx-border-bottom-width: var(--custom-hx-border-bottom-width, 0);
+  --h1-border-bottom-width: var(--custom-h1-border-bottom-width, 0);
+  --h2-border-bottom-width: var(--custom-h2-border-bottom-width, 0);
+  --h3-border-bottom-width: var(--custom-h3-border-bottom-width, 0);
+  --h4-border-bottom-width: var(--custom-h4-border-bottom-width, 0);
+  --h5-border-bottom-width: var(--custom-h5-border-bottom-width, 0);
+  --h6-border-bottom-width: var(--custom-h6-border-bottom-width, 0);
+  
+  /* ============================================================================
+   * Layout - Heading Border Colors
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --hx-border-bottom-color: var(--custom-hx-border-bottom-color, initial);
+  --h1-border-bottom-color: var(--custom-h1-border-bottom-color, initial);
+  --h2-border-bottom-color: var(--custom-h2-border-bottom-color, initial);
+  --h3-border-bottom-color: var(--custom-h3-border-bottom-color, initial);
+  --h4-border-bottom-color: var(--custom-h4-border-bottom-color, initial);
+  --h5-border-bottom-color: var(--custom-h5-border-bottom-color, initial);
+  --h6-border-bottom-color: var(--custom-h6-border-bottom-color, initial);
+  
+  /* ============================================================================
+   * Layout - Blockquote Margins & Padding
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --blockquote-margin-top: var(--custom-blockquote-margin-top, 1em);
+  --blockquote-margin-bottom: var(--custom-blockquote-margin-bottom, 1em);
+  --blockquote-padding-top: var(--custom-blockquote-padding-top, 0);
+  --blockquote-padding-bottom: var(--custom-blockquote-padding-bottom, 0);
+  --blockquote-padding-left: var(--custom-blockquote-padding-left, 2em);
+  --blockquote-padding-right: var(--custom-blockquote-padding-right, 0);
+  
+  /* ============================================================================
+   * Typography - Cite Element
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --cite-font-style: var(--custom-cite-font-style, normal);
+  --cite-font-weight: var(--custom-cite-font-weight, normal);
+  --cite-text-transform: var(--custom-cite-text-transform, uppercase);
+  
+  /* ============================================================================
+   * Typography - Subscript & Superscript
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --sub-font-style: var(--custom-sub-font-style, normal);
+  --sub-font-weight: var(--custom-sub-font-weight, normal);
+  --sub-text-transform: var(--custom-sub-text-transform, none);
+  
+  --sup-font-style: var(--custom-sup-font-style, normal);
+  --sup-font-weight: var(--custom-sup-font-weight, normal);
+  --sup-text-transform: var(--custom-sup-text-transform, none);
+
+  /* ============================================================================
+   * Layout - Table Styles
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --table-margin-top: var(--custom-table-margin-top, 1.5em);
+  --table-margin-bottom: var(--custom-table-margin-bottom, 1.5em);
+  --table-font-size: var(--custom-table-font-size, 0.9em);
+  --table-hyphens: var(--custom-table-hyphens, none);
+  --table-line-height: var(--custom-table-line-height, 1.1em);
+  --table-align: var(--custom-table-align, left);
+  --table-border-width: var(--custom-table-border-width, 1px);
+
+  /* ============================================================================
+   * Typography - Table Caption
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --table-caption-margin-bottom: var(--custom-table-caption-margin-bottom, 0.5em);
+  --table-caption-font-weight: var(--custom-table-caption-font-weight, bold);
+  --table-caption-line-height: var(--custom-table-caption-line-height, 1.1em);
+
+  /* ============================================================================
+   * Layout - Table Header Cells (th)
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --table-th-padding-top: var(--custom-table-th-padding-top, 0.45em);
+  --table-th-padding-right: var(--custom-table-th-padding-right, 0.45em);
+  --table-th-padding-bottom: var(--custom-table-th-padding-bottom, 0.45em);
+  --table-th-padding-left: var(--custom-table-th-padding-left, 0.45em);
+  --table-th-line-height: var(--custom-table-th-line-height, 1.1em);
+  --table-th-align: var(--custom-table-th-align, left);
+
+  /* ============================================================================
+   * Layout - Table Data Cells (td)
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --table-td-padding-top: var(--custom-table-td-padding-top, 0.45em);
+  --table-td-padding-right: var(--custom-table-td-padding-right, 0.45em);
+  --table-td-padding-bottom: var(--custom-table-td-padding-bottom, 0.45em);
+  --table-td-padding-left: var(--custom-table-td-padding-left, 0.45em);
+  --table-td-line-height: var(--custom-table-td-line-height, 1.1em);
+  --table-td-align: var(--custom-table-td-align, left);
+
+  /* ============================================================================
+   * Typography - Definition List Terms (dt)
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --dt-font-style: var(--custom-dt-font-style, normal);
+  --dt-font-weight: var(--custom-dt-font-weight, bold);
+
+  /* ============================================================================
+   * Typography - Definition List Descriptions (dd)
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --dd-font-style: var(--custom-dd-font-style, normal);
+  --dd-font-weight: var(--custom-dd-font-weight, normal);
+
+  /* ============================================================================
+   * Typography - Code Elements
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --code-border: var(--custom-code-border, none);
+  --code-border-radius: var(--custom-code-border-radius, 0);
+  --code-background: var(--custom-code-background, transparent);
+}
+
+/* ============================================================================
+ * Usage Examples
+ * ========================================================================== */
+
+/**
+ * Example: Using the variables in component styles
+ * 
+ * h1 {
+ *   color: var(--h1-color);
+ *   text-transform: var(--h1-text-transform);
+ *   font-style: var(--h1-font-style);
+ *   font-weight: var(--h1-font-weight);
+ *   text-align: var(--h1-align);
+ *   border-bottom-style: var(--h1-border-bottom-style);
+ *   border-bottom-width: var(--h1-border-bottom-width);
+ *   border-bottom-color: var(--h1-border-bottom-color);
+ * }
+ * 
+ * blockquote {
+ *   margin-top: var(--blockquote-margin-top);
+ *   margin-bottom: var(--blockquote-margin-bottom);
+ *   padding-left: var(--blockquote-padding-left);
+ *   color: var(--blockquote-color);
+ *   font-style: var(--blockquote-font-style);
+ *   font-weight: var(--blockquote-font-weight);
+ * }
+ * 
+ * table {
+ *   margin-top: var(--table-margin-top);
+ *   margin-bottom: var(--table-margin-bottom);
+ *   font-size: var(--table-font-size);
+ *   line-height: var(--table-line-height);
+ * }
+ * 
+ * th, td {
+ *   padding: var(--table-th-padding-top) var(--table-th-padding-right)
+ *            var(--table-th-padding-bottom) var(--table-th-padding-left);
+ * }
+ * 
+ * code {
+ *   border: var(--code-border);
+ *   border-radius: var(--code-border-radius);
+ *   background: var(--code-background);
+ * }
+ * 
+ * Example: Theme override
+ * 
+ * :root {
+ *   --custom-h1-color: #b01109;
+ *   --custom-h1-text-transform: uppercase;
+ *   --custom-h2-color: #333;
+ *   --custom-blockquote-padding-left: 3em;
+ *   --custom-table-border-width: 2px;
+ *   --custom-code-background: #f5f5f5;
+ * }
+ */
