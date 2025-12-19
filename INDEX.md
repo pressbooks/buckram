@@ -347,16 +347,16 @@ Looking for something specific?
 
 | Document | Status | Last Updated |
 |----------|--------|--------------|
-| PAGE_LAYOUT_REFACTORING.md | ✅ Complete | 2024-12-18 |
-| TESTING_PLAN.md | ✅ Complete | 2024-12-18 |
-| README_CSS_CUSTOM_PROPERTIES.md | ✅ Complete | 2024-12-18 |
-| CSS_CUSTOM_PROPERTIES_MIGRATION.md | ✅ Complete | 2024-12-18 |
-| ARCHITECTURE_COMPARISON.md | ✅ Complete | 2024-12-18 |
-| CONVERSION_GUIDE.md | ✅ Complete | 2024-12-18 |
-| GETTING_STARTED.md | ✅ Complete | 2024-12-18 |
-| POC_SIMPLE_VARIABLES.md | ✅ Complete | 2024-12-18 |
-| PHP_INTEGRATION_EXAMPLES.php | ✅ Complete | 2024-12-18 |
-| poc/buckram-variables-simple.css | ✅ Complete | 2024-12-18 |
+| PAGE_LAYOUT_REFACTORING.md | ✅ Complete | 2025-12-18 |
+| TESTING_PLAN.md | ✅ Complete | 2025-12-18 |
+| README_CSS_CUSTOM_PROPERTIES.md | ✅ Complete | 2025-12-18 |
+| CSS_CUSTOM_PROPERTIES_MIGRATION.md | ✅ Complete | 2025-12-18 |
+| ARCHITECTURE_COMPARISON.md | ✅ Complete | 2025-12-18 |
+| CONVERSION_GUIDE.md | ✅ Complete | 2025-12-18 |
+| GETTING_STARTED.md | ✅ Complete | 2025-12-18 |
+| POC_SIMPLE_VARIABLES.md | ✅ Complete | 2025-12-18 |
+| PHP_INTEGRATION_EXAMPLES.php | ✅ Complete | 2025-12-18 |
+| poc/buckram-variables-simple.css | ✅ Complete | 2025-12-18 |
 
 ---
 

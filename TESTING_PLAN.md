@@ -997,5 +997,5 @@ Migration is successful when:
 
 ---
 
-**Last Updated:** December 18, 2024  
+**Last Updated:** December 18, 2025  
 **Maintained by:** Pressbooks QA Team

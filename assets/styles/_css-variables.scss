@@ -1,0 +1,185 @@
+/**
+ * CSS Custom Properties - Format-Specific Values
+ * 
+ * This file generates :root declarations with format-specific values
+ * based on the $type variable (epub, prince, or web).
+ * 
+ * This allows CSS custom properties to have different values for each output format
+ * while components always use the same var(--property-name) syntax.
+ */
+
+@import 'components/utilities';
+@import 'variables/fonts';
+@import 'variables/colors';
+@import 'variables/elements';
+@import 'variables/media';
+@import 'variables/pages';
+@import 'variables/section-titles';
+@import 'variables/specials';
+@import 'variables/structure';
+@import 'variables/toc';
+
+:root {
+  /* ============================================================================
+   * Font Stacks
+   * ========================================================================== */
+  
+  --font-1: #{$font-1};
+  --font-2: #{$font-2};
+  --font-3: #{$font-3};
+  
+  /* ============================================================================
+   * Base Colors
+   * ========================================================================== */
+  
+  --color-1: #{if-map-get($color-1, $type)};
+  --color-2: #{if-map-get($color-2, $type)};
+  --color-3: #{if-map-get($color-3, $type)};
+  --color-4: #{$color-4};
+  --color-5: #{if-map-get($color-5, $type)};
+  --color-6: #{if-map-get($color-6, $type)};
+  
+  /* ============================================================================
+   * Typography - Body
+   * ========================================================================== */
+  
+  --body-font-family: #{$body-font-family};
+  --body-font-size: #{if-map-get($body-font-size, $type)};
+  --body-font-style: #{$body-font-style};
+  --body-font-weight: #{$body-font-weight};
+  --body-line-height: #{if-map-get($body-line-height, $type)};
+  
+  /* ============================================================================
+   * Typography - Headings
+   * ========================================================================== */
+  
+  --hx-margin-top: #{if-map-get($hx-margin-top, $type)};
+  --hx-margin-bottom: #{if-map-get($hx-margin-bottom, $type)};
+  --hx-padding-bottom: #{if-map-get($hx-padding-bottom, $type)};
+  --hx-line-height: #{if-map-get($hx-line-height, $type)};
+  --hx-border-bottom-style: #{$hx-border-bottom-style};
+  --hx-border-bottom-width: #{if-map-get($hx-border-bottom-width, $type)};
+  --hx-border-bottom-color: #{if-map-get($hx-border-bottom-color, $type)};
+  --hx-letter-spacing: #{if-map-get($hx-letter-spacing, $type)};
+  --hx-word-spacing: #{if-map-get($hx-word-spacing, $type)};
+  
+  /* H1 */
+  --h1-margin-top: #{if-map-get($h1-margin-top, $type)};
+  --h1-margin-bottom: #{if-map-get($h1-margin-bottom, $type)};
+  --h1-padding-bottom: #{if-map-get($h1-padding-bottom, $type)};
+  --h1-font-family: #{$h1-font-family};
+  --h1-font-size: #{if-map-get($h1-font-size, $type)};
+  --h1-font-style: #{$h1-font-style};
+  --h1-font-weight: #{$h1-font-weight};
+  --h1-line-height: #{if-map-get($h1-line-height, $type)};
+  --h1-text-transform: #{$h1-text-transform};
+  --h1-align: #{$h1-align};
+  --h1-border-bottom-style: #{$h1-border-bottom-style};
+  --h1-border-bottom-width: #{if-map-get($h1-border-bottom-width, $type)};
+  --h1-border-bottom-color: #{if-map-get($h1-border-bottom-color, $type)};
+  --h1-letter-spacing: #{if-map-get($h1-letter-spacing, $type)};
+  --h1-word-spacing: #{if-map-get($h1-word-spacing, $type)};
+  
+  /* H2 */
+  --h2-margin-top: #{if-map-get($h2-margin-top, $type)};
+  --h2-margin-bottom: #{if-map-get($h2-margin-bottom, $type)};
+  --h2-padding-bottom: #{if-map-get($h2-padding-bottom, $type)};
+  --h2-font-family: #{$h2-font-family};
+  --h2-font-size: #{if-map-get($h2-font-size, $type)};
+  --h2-font-style: #{$h2-font-style};
+  --h2-font-weight: #{$h2-font-weight};
+  --h2-line-height: #{if-map-get($h2-line-height, $type)};
+  --h2-text-transform: #{$h2-text-transform};
+  --h2-align: #{$h2-align};
+  --h2-border-bottom-style: #{$h2-border-bottom-style};
+  --h2-border-bottom-width: #{if-map-get($h2-border-bottom-width, $type)};
+  --h2-border-bottom-color: #{if-map-get($h2-border-bottom-color, $type)};
+  --h2-letter-spacing: #{if-map-get($h2-letter-spacing, $type)};
+  --h2-word-spacing: #{if-map-get($h2-word-spacing, $type)};
+  
+  /* H3 */
+  --h3-margin-top: #{if-map-get($h3-margin-top, $type)};
+  --h3-margin-bottom: #{if-map-get($h3-margin-bottom, $type)};
+  --h3-padding-bottom: #{if-map-get($h3-padding-bottom, $type)};
+  --h3-font-family: #{$h3-font-family};
+  --h3-font-size: #{if-map-get($h3-font-size, $type)};
+  --h3-font-style: #{$h3-font-style};
+  --h3-font-weight: #{$h3-font-weight};
+  --h3-line-height: #{if-map-get($h3-line-height, $type)};
+  --h3-text-transform: #{$h3-text-transform};
+  --h3-align: #{$h3-align};
+  --h3-border-bottom-style: #{$h3-border-bottom-style};
+  --h3-border-bottom-width: #{if-map-get($h3-border-bottom-width, $type)};
+  --h3-border-bottom-color: #{if-map-get($h3-border-bottom-color, $type)};
+  --h3-letter-spacing: #{if-map-get($h3-letter-spacing, $type)};
+  --h3-word-spacing: #{if-map-get($h3-word-spacing, $type)};
+  
+  /* H4 */
+  --h4-margin-top: #{if-map-get($h4-margin-top, $type)};
+  --h4-margin-bottom: #{if-map-get($h4-margin-bottom, $type)};
+  --h4-padding-bottom: #{if-map-get($h4-padding-bottom, $type)};
+  --h4-font-family: #{$h4-font-family};
+  --h4-font-size: #{if-map-get($h4-font-size, $type)};
+  --h4-font-style: #{$h4-font-style};
+  --h4-font-weight: #{$h4-font-weight};
+  --h4-line-height: #{if-map-get($h4-line-height, $type)};
+  --h4-text-transform: #{$h4-text-transform};
+  --h4-align: #{$h4-align};
+  --h4-border-bottom-style: #{$h4-border-bottom-style};
+  --h4-border-bottom-width: #{if-map-get($h4-border-bottom-width, $type)};
+  --h4-border-bottom-color: #{if-map-get($h4-border-bottom-color, $type)};
+  --h4-letter-spacing: #{if-map-get($h4-letter-spacing, $type)};
+  --h4-word-spacing: #{if-map-get($h4-word-spacing, $type)};
+  
+  /* H5 */
+  --h5-margin-top: #{if-map-get($h5-margin-top, $type)};
+  --h5-margin-bottom: #{if-map-get($h5-margin-bottom, $type)};
+  --h5-padding-bottom: #{if-map-get($h5-padding-bottom, $type)};
+  --h5-font-family: #{$h5-font-family};
+  --h5-font-size: #{if-map-get($h5-font-size, $type)};
+  --h5-font-style: #{$h5-font-style};
+  --h5-font-weight: #{$h5-font-weight};
+  --h5-line-height: #{if-map-get($h5-line-height, $type)};
+  --h5-text-transform: #{$h5-text-transform};
+  --h5-align: #{$h5-align};
+  --h5-border-bottom-style: #{$h5-border-bottom-style};
+  --h5-border-bottom-width: #{if-map-get($h5-border-bottom-width, $type)};
+  --h5-border-bottom-color: #{if-map-get($h5-border-bottom-color, $type)};
+  --h5-letter-spacing: #{if-map-get($h5-letter-spacing, $type)};
+  --h5-word-spacing: #{if-map-get($h5-word-spacing, $type)};
+  
+  /* H6 */
+  --h6-margin-top: #{if-map-get($h6-margin-top, $type)};
+  --h6-margin-bottom: #{if-map-get($h6-margin-bottom, $type)};
+  --h6-padding-bottom: #{if-map-get($h6-padding-bottom, $type)};
+  --h6-font-family: #{$h6-font-family};
+  --h6-font-size: #{if-map-get($h6-font-size, $type)};
+  --h6-font-style: #{$h6-font-style};
+  --h6-font-weight: #{$h6-font-weight};
+  --h6-line-height: #{if-map-get($h6-line-height, $type)};
+  --h6-text-transform: #{$h6-text-transform};
+  --h6-align: #{$h6-align};
+  --h6-border-bottom-style: #{$h6-border-bottom-style};
+  --h6-border-bottom-width: #{if-map-get($h6-border-bottom-width, $type)};
+  --h6-border-bottom-color: #{if-map-get($h6-border-bottom-color, $type)};
+  --h6-letter-spacing: #{if-map-get($h6-letter-spacing, $type)};
+  --h6-word-spacing: #{if-map-get($h6-word-spacing, $type)};
+  
+  /* ============================================================================
+   * Colors
+   * ========================================================================== */
+  
+  --link-color: #{if-map-get($link-color, $type)};
+  --link-color-print: #{$link-color-print};
+  --body-color: #{if-map-get($body-color, $type)};
+  --blockquote-color: #{if-map-get($blockquote-color, $type)};
+  --h1-color: #{if-map-get($h1-color, $type)};
+  --h2-color: #{if-map-get($h2-color, $type)};
+  --h3-color: #{if-map-get($h3-color, $type)};
+  --h4-color: #{if-map-get($h4-color, $type)};
+  --h5-color: #{if-map-get($h5-color, $type)};
+  --h6-color: #{if-map-get($h6-color, $type)};
+  
+  /* Add more variables as needed - this is a starter set */
+  /* Full implementation would include all 1,078 variables */
+}

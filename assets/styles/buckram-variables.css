@@ -599,7 +599,7 @@
 
   /* ============================================================================
    * Phase 4: Section Titles & Subtitles
-   * Added: December 18, 2024
+   * Added: December 18, 2025
    * Count: 28 variables
    * ========================================================================== */
 
@@ -654,7 +654,7 @@
 
   /* ============================================================================
    * Phase 5: Footnotes & Endnotes
-   * Added: December 18, 2024
+   * Added: December 18, 2025
    * Count: 21 variables
    * ========================================================================== */
 
@@ -701,7 +701,7 @@
 
   /* ============================================================================
    * Phase 6: Columns, Dropcaps, Asides, and Extended Endnotes
-   * Added: December 18, 2024
+   * Added: December 18, 2025
    * Count: 32 variables
    * ========================================================================== */
 
@@ -774,5 +774,1260 @@
   --endnote-li-padding-left: var(--custom-endnote-li-padding-left, 0);
   --endnote-li-margin-top: var(--custom-endnote-li-margin-top, 0.4em);
   --endnote-li-indent: var(--custom-endnote-li-indent, 0);
+
+  /* ============================================================================
+   * Phase 7: Separators (hr and section breaks)
+   * Added: December 18, 2025
+   * Count: 20 variables
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Horizontal Rules (<hr>)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --hr-width: var(--custom-hr-width, 20%);
+  --hr-margin-top: var(--custom-hr-margin-top, 0.9em); /* web: 0.9em, context-mapped */
+  --hr-margin-bottom: var(--custom-hr-margin-bottom, 0.9em);
+  --hr-border-style: var(--custom-hr-border-style, solid);
+  --hr-border-width: var(--custom-hr-border-width, 1px);
+  --hr-border-color: var(--custom-hr-border-color, #373d3f); /* context: color-1 */
+
+  /* ----------------------------------------------------------------------------
+   * HR Break Symbols (.break-symbols)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --hr-break-symbols-margin-top: var(--custom-hr-break-symbols-margin-top, 0.9em);
+  --hr-break-symbols-margin-bottom: var(--custom-hr-break-symbols-margin-bottom, 1.66em);
+  --hr-break-symbols-font-size: var(--custom-hr-break-symbols-font-size, 1.1em);
+  --hr-break-symbols-content: var(--custom-hr-break-symbols-content, '\066D');
+  --hr-break-symbols-border-top-width: var(--custom-hr-break-symbols-border-top-width, 0); /* web/epub/prince: 0 */
+  --hr-break-symbols-border-top-style: var(--custom-hr-break-symbols-border-top-style, none); /* web/epub/prince: none */
+  --hr-break-symbols-padding-top: var(--custom-hr-break-symbols-padding-top, 0); /* web/epub/prince: 0 */
+
+  /* ----------------------------------------------------------------------------
+   * Section Breaks
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  /* Basic Section Break (.section-break) */
+  --section-break-margin-top: var(--custom-section-break-margin-top, 1em);
+  --section-break-margin-bottom: var(--custom-section-break-margin-bottom, 1em);
+  
+  /* Section Break Space (.section-break-space) */
+  --section-break-space-margin-top: var(--custom-section-break-space-margin-top, 1em);
+  --section-break-space-margin-bottom: var(--custom-section-break-space-margin-bottom, 0);
+  --section-break-space-line-height: var(--custom-section-break-space-line-height, 1em);
+  
+  /* Section Break Page (.section-break-page) */
+  --section-break-page-margin-top: var(--custom-section-break-page-margin-top, 1em);
+  --section-break-page-margin-bottom: var(--custom-section-break-page-margin-bottom, 1em);
+  
+  /* Section Break Page Invisible (.section-break-page-invisible) */
+  --section-break-page-invisible-margin-top: var(--custom-section-break-page-invisible-margin-top, 1em);
+  --section-break-page-invisible-margin-bottom: var(--custom-section-break-page-invisible-margin-bottom, 1em);
+
+  /* ============================================================================
+   * Phase 8: Educational Textboxes & Contributors
+   * Added: December 18, 2025
+   * Count: 48 variables
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Educational Textbox Base Styling
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --edu-textbox-border-style: var(--custom-edu-textbox-border-style, solid);
+  --edu-textbox-border-width: var(--custom-edu-textbox-border-width, 0.05em);
+  --edu-textbox-border-radius: var(--custom-edu-textbox-border-radius, 0.35em);
+  --edu-textbox-padding-top: var(--custom-edu-textbox-padding-top, 1em);
+  --edu-textbox-padding-right: var(--custom-edu-textbox-padding-right, 1em);
+  --edu-textbox-padding-bottom: var(--custom-edu-textbox-padding-bottom, 1em);
+  --edu-textbox-padding-left: var(--custom-edu-textbox-padding-left, 1em);
+  --edu-textbox-margin-bottom: var(--custom-edu-textbox-margin-bottom, 1.35em);
+  --edu-textbox-margin-left: var(--custom-edu-textbox-margin-left, 0); /* web/epub/prince: 0 */
+  --edu-textbox-margin-right: var(--custom-edu-textbox-margin-right, 0); /* web/epub/prince: 0 */
+
+  /* ----------------------------------------------------------------------------
+   * Educational Textbox Headers (deprecated but still used)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --edu-header-padding-top: var(--custom-edu-header-padding-top, 1.35em);
+  --edu-header-padding-right: var(--custom-edu-header-padding-right, 0);
+  --edu-header-padding-bottom: var(--custom-edu-header-padding-bottom, 1.35em);
+  --edu-header-padding-left: var(--custom-edu-header-padding-left, 0);
+  --edu-header-margin-top: var(--custom-edu-header-margin-top, -1.2em);
+  --edu-header-margin-right: var(--custom-edu-header-margin-right, -1.2em);
+  --edu-header-margin-bottom: var(--custom-edu-header-margin-bottom, 1.35em);
+  --edu-header-margin-left: var(--custom-edu-header-margin-left, -1.2em);
+  --edu-header-text-color: var(--custom-edu-header-text-color, #fff);
+  --edu-header-font-size: var(--custom-edu-header-font-size, 0.9em);
+  --edu-header-font-style: var(--custom-edu-header-font-style, normal);
+  --edu-header-font-weight: var(--custom-edu-header-font-weight, bold);
+  --edu-header-text-align: var(--custom-edu-header-text-align, center);
+
+  /* ----------------------------------------------------------------------------
+   * Learning Objectives Textbox (.learning-objectives)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --learning-objectives-color: var(--custom-learning-objectives-color, #000);
+  --learning-objectives-header-color: var(--custom-learning-objectives-header-color, #fff);
+  --learning-objectives-background: var(--custom-learning-objectives-background, #f7f7f9);
+  --learning-objectives-header-background: var(--custom-learning-objectives-header-background, #111);
+
+  /* ----------------------------------------------------------------------------
+   * Key Takeaways Textbox (.key-takeaways)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --key-takeaways-color: var(--custom-key-takeaways-color, #000);
+  --key-takeaways-header-color: var(--custom-key-takeaways-header-color, #fff);
+  --key-takeaways-background: var(--custom-key-takeaways-background, #eaf5ea);
+  --key-takeaways-header-background: var(--custom-key-takeaways-header-background, #3a7a33);
+
+  /* ----------------------------------------------------------------------------
+   * Exercises Textbox (.exercises)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --exercises-color: var(--custom-exercises-color, #000);
+  --exercises-header-color: var(--custom-exercises-header-color, #fff);
+  --exercises-background: var(--custom-exercises-background, #e3eff6);
+  --exercises-header-background: var(--custom-exercises-header-background, #0b6396);
+
+  /* ----------------------------------------------------------------------------
+   * Examples Textbox (.examples)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --examples-color: var(--custom-examples-color, #000);
+  --examples-header-color: var(--custom-examples-header-color, #fff);
+  --examples-background: var(--custom-examples-background, #f3e1e3);
+  --examples-header-background: var(--custom-examples-header-background, #7a333a);
+
+  /* ----------------------------------------------------------------------------
+   * Contributors Section (.contributors)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --contributors-margin-top: var(--custom-contributors-margin-top, 2rem);
+  --contributors-margin-bottom: var(--custom-contributors-margin-bottom, 2rem);
+  --contributors-text-indent: var(--custom-contributors-text-indent, 0);
+  --contributors-text-align: var(--custom-contributors-text-align, left);
+  
+  /* Contributor Profile Pictures */
+  --contributor-profile-picture-float: var(--custom-contributor-profile-picture-float, left);
+  --contributor-profile-picture-margin: var(--custom-contributor-profile-picture-margin, 0);
+  --contributor-profile-picture-border-radius: var(--custom-contributor-profile-picture-border-radius, 50%);
+  
+  /* Contributor Institution */
+  --contributor-institution-text-transform: var(--custom-contributor-institution-text-transform, uppercase);
+  
+  /* Contributor Links */
+  --contributor-links-margin-top: var(--custom-contributor-links-margin-top, 0.5rem); /* web: 0.5rem, epub/prince: 0 */
+  --contributor-link-margin-top: var(--custom-contributor-link-margin-top, 0);
+  --contributor-links-text-decoration: var(--custom-contributor-links-text-decoration, none); /* web: none */
+  
+  /* Contributor Bio */
+  --contributor-bio-margin-top: var(--custom-contributor-bio-margin-top, 1em);
+
+  /* ============================================================================
+   * Phase 9: Pullquotes & Sidebars (21 variables)
+   * Source: variables/_specials.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Right Pullquotes (.pullquote-right)
+   * -------------------------------------------------------------------------- */
+  
+  --pullquote-right-width: var(--custom-pullquote-right-width, 35%);
+  --pullquote-right-float: var(--custom-pullquote-right-float, right);
+  --pullquote-right-margin-top: var(--custom-pullquote-right-margin-top, 0.5em);
+  --pullquote-right-margin-right: var(--custom-pullquote-right-margin-right, 1em);
+  --pullquote-right-margin-bottom: var(--custom-pullquote-right-margin-bottom, 0.5em); /* inherits from pullquote-margin-bottom */
+  --pullquote-right-align: var(--custom-pullquote-right-align, left); /* inherits from pullquote-align */
+  --pullquote-right-margin-left: var(--custom-pullquote-right-margin-left, 1em);
+
+  /* ----------------------------------------------------------------------------
+   * Sidebars (.sidebar)
+   * -------------------------------------------------------------------------- */
+  
+  --sidebar-width: var(--custom-sidebar-width, 35%);
+  --sidebar-padding-top: var(--custom-sidebar-padding-top, 1em);
+  --sidebar-padding-right: var(--custom-sidebar-padding-right, 1em);
+  --sidebar-padding-bottom: var(--custom-sidebar-padding-bottom, 1em);
+  --sidebar-padding-left: var(--custom-sidebar-padding-left, 1em);
+  --sidebar-margin-top: var(--custom-sidebar-margin-top, 0.5em);
+  --sidebar-margin-right: var(--custom-sidebar-margin-right, 0);
+  --sidebar-margin-left: var(--custom-sidebar-margin-left, 1em);
+  --sidebar-font-size: var(--custom-sidebar-font-size, 0.9em);
+  --sidebar-font-style: var(--custom-sidebar-font-style, italic);
+  --sidebar-font-weight: var(--custom-sidebar-font-weight, normal);
+  --sidebar-align: var(--custom-sidebar-align, left);
+  --sidebar-line-height: var(--custom-sidebar-line-height, 1.4em); /* inherits from body-line-height */
+
+  /* ============================================================================
+   * Phase 10: Textboxes (42 variables)
+   * Source: variables/_specials.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Base Textbox Styling (.textbox)
+   * -------------------------------------------------------------------------- */
+  
+  --textbox-font-family: var(--custom-textbox-font-family, serif); /* inherits from font-1 */
+  --textbox-font-size: var(--custom-textbox-font-size, 0.9em);
+  --textbox-font-style: var(--custom-textbox-font-style, normal);
+  --textbox-font-weight: var(--custom-textbox-font-weight, normal);
+  --textbox-line-height: var(--custom-textbox-line-height, 1.2em);
+  --textbox-text-align: var(--custom-textbox-text-align, left);
+  --textbox-text-indent: var(--custom-textbox-text-indent, 0); /* inherits from para-indent */
+  --textbox-word-spacing: var(--custom-textbox-word-spacing, normal); /* web/epub/prince: normal */
+  --textbox-letter-spacing: var(--custom-textbox-letter-spacing, normal); /* web/epub/prince: normal */
+  --textbox-background-color: var(--custom-textbox-background-color, initial);
+  --textbox-shaded-background-color: var(--custom-textbox-shaded-background-color, #eee); /* inherits from shaded-color */
+  --textbox-padding-top: var(--custom-textbox-padding-top, 2.5em);
+  --textbox-padding-right: var(--custom-textbox-padding-right, 2.5em);
+  --textbox-padding-bottom: var(--custom-textbox-padding-bottom, 2.5em);
+  --textbox-padding-left: var(--custom-textbox-padding-left, 2.5em);
+  --textbox-margin-top: var(--custom-textbox-margin-top, 0.9em);
+  --textbox-margin-right: var(--custom-textbox-margin-right, 0);
+  --textbox-margin-bottom: var(--custom-textbox-margin-bottom, 0.9em);
+  --textbox-margin-left: var(--custom-textbox-margin-left, 0);
+  --textbox-border-style: var(--custom-textbox-border-style, solid);
+  --textbox-border-color: var(--custom-textbox-border-color, #000);
+  --textbox-border-width: var(--custom-textbox-border-width, 0.05em);
+  --textbox-border-radius: var(--custom-textbox-border-radius, 0);
+
+  /* ----------------------------------------------------------------------------
+   * Textbox Children Elements
+   * -------------------------------------------------------------------------- */
+  
+  --textbox-para-margin-top: var(--custom-textbox-para-margin-top, 0.5em); /* inherits from para-margin-top */
+  --textbox-para-margin-bottom: var(--custom-textbox-para-margin-bottom, 0.5em);
+  --textbox-ol-margin-top: var(--custom-textbox-ol-margin-top, 1em);
+  --textbox-ol-margin-bottom: var(--custom-textbox-ol-margin-bottom, 0.75em);
+  --textbox-ul-margin-top: var(--custom-textbox-ul-margin-top, 1em);
+  --textbox-ul-margin-bottom: var(--custom-textbox-ul-margin-bottom, 0.75em);
+  --textbox-li-margin-left: var(--custom-textbox-li-margin-left, 0.75em);
+  --textbox-caption-font-family: var(--custom-textbox-caption-font-family, sans-serif); /* inherits from font-2 */
+  --textbox-caption-font-size: var(--custom-textbox-caption-font-size, 0.875em);
+  --textbox-caption-font-style: var(--custom-textbox-caption-font-style, normal);
+  --textbox-caption-font-weight: var(--custom-textbox-caption-font-weight, bold);
+
+  /* ----------------------------------------------------------------------------
+   * Sidebar Textboxes (.textbox.sidebar)
+   * -------------------------------------------------------------------------- */
+  
+  --textbox-sidebar-float: var(--custom-textbox-sidebar-float, right); /* prince: outside, epub/web: right */
+  --textbox-sidebar-margin-top: var(--custom-textbox-sidebar-margin-top, 1em);
+  --textbox-sidebar-margin-right: var(--custom-textbox-sidebar-margin-right, 0);
+  --textbox-sidebar-margin-bottom: var(--custom-textbox-sidebar-margin-bottom, 1em);
+  --textbox-sidebar-margin-left: var(--custom-textbox-sidebar-margin-left, 1em); /* prince: 0, epub/web: 1em */
+
+  /* ============================================================================
+   * Phase 11: Heading Elements (h1-h6 + base) (86 variables)
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Body Element (<body>)
+   * -------------------------------------------------------------------------- */
+  
+  --body-font-family: var(--custom-body-font-family, serif); /* inherits from font-1 */
+  --body-font-size: var(--custom-body-font-size, 14pt); /* epub: medium, prince: 11pt, web: 14pt */
+  --body-font-style: var(--custom-body-font-style, normal);
+  --body-font-weight: var(--custom-body-font-weight, normal);
+  --body-line-height: var(--custom-body-line-height, 1.8em); /* epub/prince: 1.4em, web: 1.8em */
+
+  /* ----------------------------------------------------------------------------
+   * Base Heading Styles (all hx elements)
+   * -------------------------------------------------------------------------- */
+  
+  --hx-margin-top: var(--custom-hx-margin-top, 1.5em);
+  --hx-margin-bottom: var(--custom-hx-margin-bottom, 1em);
+  --hx-padding-bottom: var(--custom-hx-padding-bottom, 0);
+  --hx-line-height: var(--custom-hx-line-height, 1.5em);
+  --hx-border-bottom-style: var(--custom-hx-border-bottom-style, none);
+  --hx-border-bottom-width: var(--custom-hx-border-bottom-width, 0);
+  --hx-border-bottom-color: var(--custom-hx-border-bottom-color, initial);
+  --hx-letter-spacing: var(--custom-hx-letter-spacing, normal); /* web/epub/prince: normal */
+  --hx-word-spacing: var(--custom-hx-word-spacing, normal); /* web/epub/prince: normal */
+
+  /* ----------------------------------------------------------------------------
+   * H1 Element (<h1>)
+   * -------------------------------------------------------------------------- */
+  
+  --h1-margin-top: var(--custom-h1-margin-top, 1.5em); /* inherits from hx-margin-top */
+  --h1-margin-bottom: var(--custom-h1-margin-bottom, 1em); /* inherits from hx-margin-bottom */
+  --h1-padding-bottom: var(--custom-h1-padding-bottom, 0); /* inherits from hx-padding-bottom */
+  --h1-font-family: var(--custom-h1-font-family, sans-serif); /* inherits from font-3 */
+  --h1-font-size: var(--custom-h1-font-size, 1em);
+  --h1-font-style: var(--custom-h1-font-style, normal);
+  --h1-font-weight: var(--custom-h1-font-weight, bold);
+  --h1-line-height: var(--custom-h1-line-height, 1.5em); /* inherits from hx-line-height */
+  --h1-align: var(--custom-h1-align, center);
+  --h1-border-bottom-style: var(--custom-h1-border-bottom-style, none); /* inherits from hx-border-bottom-style */
+  --h1-border-bottom-width: var(--custom-h1-border-bottom-width, 0); /* inherits from hx-border-bottom-width */
+  --h1-border-bottom-color: var(--custom-h1-border-bottom-color, initial); /* inherits from hx-border-bottom-color */
+  --h1-letter-spacing: var(--custom-h1-letter-spacing, normal); /* inherits from hx-word-spacing */
+  --h1-word-spacing: var(--custom-h1-word-spacing, normal); /* inherits from hx-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * H2 Element (<h2>)
+   * -------------------------------------------------------------------------- */
+  
+  --h2-margin-top: var(--custom-h2-margin-top, 1.5em); /* inherits from hx-margin-top */
+  --h2-margin-bottom: var(--custom-h2-margin-bottom, 1em); /* inherits from hx-margin-bottom */
+  --h2-padding-bottom: var(--custom-h2-padding-bottom, 0); /* inherits from hx-padding-bottom */
+  --h2-font-family: var(--custom-h2-font-family, sans-serif); /* inherits from font-3 */
+  --h2-font-size: var(--custom-h2-font-size, 1em);
+  --h2-font-style: var(--custom-h2-font-style, normal);
+  --h2-font-weight: var(--custom-h2-font-weight, normal);
+  --h2-line-height: var(--custom-h2-line-height, 1.5em); /* inherits from hx-line-height */
+  --h2-align: var(--custom-h2-align, center);
+  --h2-border-bottom-style: var(--custom-h2-border-bottom-style, none); /* inherits from hx-border-bottom-style */
+  --h2-border-bottom-width: var(--custom-h2-border-bottom-width, 0); /* inherits from hx-border-bottom-width */
+  --h2-border-bottom-color: var(--custom-h2-border-bottom-color, initial); /* inherits from hx-border-bottom-color */
+  --h2-letter-spacing: var(--custom-h2-letter-spacing, normal); /* inherits from hx-word-spacing */
+  --h2-word-spacing: var(--custom-h2-word-spacing, normal); /* inherits from hx-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * H3 Element (<h3>)
+   * -------------------------------------------------------------------------- */
+  
+  --h3-margin-top: var(--custom-h3-margin-top, 1.5em); /* inherits from hx-margin-top */
+  --h3-margin-bottom: var(--custom-h3-margin-bottom, 1em); /* inherits from hx-margin-bottom */
+  --h3-padding-bottom: var(--custom-h3-padding-bottom, 0); /* inherits from hx-padding-bottom */
+  --h3-font-family: var(--custom-h3-font-family, sans-serif); /* inherits from font-3 */
+  --h3-font-size: var(--custom-h3-font-size, 1em);
+  --h3-font-style: var(--custom-h3-font-style, italic);
+  --h3-font-weight: var(--custom-h3-font-weight, normal);
+  --h3-line-height: var(--custom-h3-line-height, 1.5em); /* inherits from hx-line-height */
+  --h3-align: var(--custom-h3-align, center);
+  --h3-border-bottom-style: var(--custom-h3-border-bottom-style, none); /* inherits from hx-border-bottom-style */
+  --h3-border-bottom-width: var(--custom-h3-border-bottom-width, 0); /* inherits from hx-border-bottom-width */
+  --h3-border-bottom-color: var(--custom-h3-border-bottom-color, initial); /* inherits from hx-border-bottom-color */
+  --h3-letter-spacing: var(--custom-h3-letter-spacing, normal); /* inherits from hx-word-spacing */
+  --h3-word-spacing: var(--custom-h3-word-spacing, normal); /* inherits from hx-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * H4 Element (<h4>)
+   * -------------------------------------------------------------------------- */
+  
+  --h4-margin-top: var(--custom-h4-margin-top, 1.5em); /* inherits from hx-margin-top */
+  --h4-margin-bottom: var(--custom-h4-margin-bottom, 1em); /* inherits from hx-margin-bottom */
+  --h4-padding-bottom: var(--custom-h4-padding-bottom, 0); /* inherits from hx-padding-bottom */
+  --h4-font-family: var(--custom-h4-font-family, sans-serif); /* inherits from font-3 */
+  --h4-font-size: var(--custom-h4-font-size, 1em);
+  --h4-font-style: var(--custom-h4-font-style, normal);
+  --h4-font-weight: var(--custom-h4-font-weight, normal);
+  --h4-line-height: var(--custom-h4-line-height, 1.5em); /* inherits from hx-line-height */
+  --h4-align: var(--custom-h4-align, left);
+  --h4-border-bottom-style: var(--custom-h4-border-bottom-style, none); /* inherits from hx-border-bottom-style */
+  --h4-border-bottom-width: var(--custom-h4-border-bottom-width, 0); /* inherits from hx-border-bottom-width */
+  --h4-border-bottom-color: var(--custom-h4-border-bottom-color, initial); /* inherits from hx-border-bottom-color */
+  --h4-letter-spacing: var(--custom-h4-letter-spacing, normal); /* inherits from hx-word-spacing */
+  --h4-word-spacing: var(--custom-h4-word-spacing, normal); /* inherits from hx-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * H5 Element (<h5>)
+   * -------------------------------------------------------------------------- */
+  
+  --h5-margin-top: var(--custom-h5-margin-top, 1.5em); /* inherits from hx-margin-top */
+  --h5-margin-bottom: var(--custom-h5-margin-bottom, 1em); /* inherits from hx-margin-bottom */
+  --h5-padding-bottom: var(--custom-h5-padding-bottom, 0); /* inherits from hx-padding-bottom */
+  --h5-font-family: var(--custom-h5-font-family, sans-serif); /* inherits from font-3 */
+  --h5-font-size: var(--custom-h5-font-size, 1em);
+  --h5-font-style: var(--custom-h5-font-style, italic);
+  --h5-font-weight: var(--custom-h5-font-weight, normal);
+  --h5-line-height: var(--custom-h5-line-height, 1.5em); /* inherits from hx-line-height */
+  --h5-align: var(--custom-h5-align, left);
+  --h5-border-bottom-style: var(--custom-h5-border-bottom-style, none); /* inherits from hx-border-bottom-style */
+  --h5-border-bottom-width: var(--custom-h5-border-bottom-width, 0); /* inherits from hx-border-bottom-width */
+  --h5-border-bottom-color: var(--custom-h5-border-bottom-color, initial); /* inherits from hx-border-bottom-color */
+  --h5-letter-spacing: var(--custom-h5-letter-spacing, normal); /* inherits from hx-word-spacing */
+  --h5-word-spacing: var(--custom-h5-word-spacing, normal); /* inherits from hx-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * H6 Element (<h6>)
+   * -------------------------------------------------------------------------- */
+  
+  --h6-margin-top: var(--custom-h6-margin-top, 1.5em); /* inherits from hx-margin-top */
+  --h6-margin-bottom: var(--custom-h6-margin-bottom, 1em); /* inherits from hx-margin-bottom */
+  --h6-padding-bottom: var(--custom-h6-padding-bottom, 0); /* inherits from hx-padding-bottom */
+  --h6-font-family: var(--custom-h6-font-family, serif); /* inherits from font-1 */
+  --h6-font-size: var(--custom-h6-font-size, 1em);
+  --h6-font-style: var(--custom-h6-font-style, normal);
+  --h6-font-weight: var(--custom-h6-font-weight, normal);
+  --h6-line-height: var(--custom-h6-line-height, 1.5em); /* inherits from hx-line-height */
+  --h6-align: var(--custom-h6-align, left);
+  --h6-border-bottom-style: var(--custom-h6-border-bottom-style, none); /* inherits from hx-border-bottom-style */
+  --h6-border-bottom-width: var(--custom-h6-border-bottom-width, 0); /* inherits from hx-border-bottom-width */
+  --h6-border-bottom-color: var(--custom-h6-border-bottom-color, initial); /* inherits from hx-border-bottom-color */
+  --h6-letter-spacing: var(--custom-h6-letter-spacing, normal); /* inherits from hx-word-spacing */
+  --h6-word-spacing: var(--custom-h6-word-spacing, normal); /* inherits from hx-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * Paragraph Element (<p>)
+   * -------------------------------------------------------------------------- */
+  
+  --para-margin-bottom: var(--custom-para-margin-bottom, 0);
+  --para-align: var(--custom-para-align, initial); /* epub/web: initial, prince: justify */
+  --widows: var(--custom-widows, 2);
+
+  /* ============================================================================
+   * Phase 12: Section Titles & Headers (60 variables)
+   * Source: variables/_section-titles.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Section Header Block
+   * -------------------------------------------------------------------------- */
+  
+  --section-header-margin-top: var(--custom-section-header-margin-top, 3em); /* epub/web: 3em, prince: 3cm */
+  --section-header-margin-bottom: var(--custom-section-header-margin-bottom, 2em); /* epub/web: 2em, prince: 2cm */
+  --section-header-margin-left: var(--custom-section-header-margin-left, 0); /* web/epub/prince: 0 */
+  --section-header-margin-right: var(--custom-section-header-margin-right, 0); /* web/epub/prince: 0 */
+
+  /* ----------------------------------------------------------------------------
+   * Section Title
+   * -------------------------------------------------------------------------- */
+  
+  --section-title-display: var(--custom-section-title-display, block);
+  --section-title-margin-top: var(--custom-section-title-margin-top, 0); /* web/epub/prince: 0 */
+  --section-title-margin-bottom: var(--custom-section-title-margin-bottom, 2em); /* epub/web: 2em, prince: 1.5cm */
+  --section-title-margin-left: var(--custom-section-title-margin-left, 0); /* web/epub/prince: 0 */
+  --section-title-margin-right: var(--custom-section-title-margin-right, 0); /* web/epub/prince: 0 */
+  --section-title-border-bottom-width: var(--custom-section-title-border-bottom-width, 0); /* web/epub/prince: 0 */
+  --section-title-border-bottom-style: var(--custom-section-title-border-bottom-style, none);
+  --section-title-border-bottom-color: var(--custom-section-title-border-bottom-color, #000); /* inherits from color-3 */
+  --section-title-padding-bottom: var(--custom-section-title-padding-bottom, 0); /* web/epub/prince: 0 */
+  --section-title-subtitle-spacing: var(--custom-section-title-subtitle-spacing, 2em); /* inherits from section-title-margin-bottom */
+  --section-title-author-spacing: var(--custom-section-title-author-spacing, 2em); /* inherits from section-title-margin-bottom */
+  --section-title-font-family: var(--custom-section-title-font-family, sans-serif); /* inherits from font-2 */
+  --section-title-font-size: var(--custom-section-title-font-size, 2em); /* epub: 1.5em, prince/web: 2em */
+  --section-title-font-style: var(--custom-section-title-font-style, normal);
+  --section-title-font-weight: var(--custom-section-title-font-weight, normal);
+  --section-title-align: var(--custom-section-title-align, center);
+  --section-title-text-transform: var(--custom-section-title-text-transform, none);
+  --section-title-line-height: var(--custom-section-title-line-height, 1.5em); /* inherits from h1-line-height */
+  --section-title-letter-spacing: var(--custom-section-title-letter-spacing, normal); /* web/epub/prince: normal */
+  --section-title-word-spacing: var(--custom-section-title-word-spacing, normal); /* web/epub/prince: normal */
+
+  /* ----------------------------------------------------------------------------
+   * Section Title Decoration
+   * -------------------------------------------------------------------------- */
+  
+  --section-title-decoration-font-family: var(--custom-section-title-decoration-font-family, sans-serif); /* inherits from font-3 */
+  --section-title-decoration-content: var(--custom-section-title-decoration-content, "");
+  --section-title-decoration-display: var(--custom-section-title-decoration-display, none);
+  --section-title-decoration-font-size: var(--custom-section-title-decoration-font-size, 0); /* web/epub/prince: 0 */
+  --section-title-decoration-font-weight: var(--custom-section-title-decoration-font-weight, normal);
+  --section-title-decoration-margin-bottom: var(--custom-section-title-decoration-margin-bottom, 0); /* web/epub/prince: 0 */
+  --section-title-decoration-margin-top: var(--custom-section-title-decoration-margin-top, 0); /* web/epub/prince: 0 */
+
+  /* ----------------------------------------------------------------------------
+   * Section Subtitle
+   * -------------------------------------------------------------------------- */
+  
+  --section-subtitle-margin-bottom: var(--custom-section-subtitle-margin-bottom, 0); /* web/epub/prince: 0 */
+  --section-subtitle-author-spacing: var(--custom-section-subtitle-author-spacing, 0.5em); /* epub/web: 0.5em, prince: 0.375cm */
+  --section-subtitle-font-family: var(--custom-section-subtitle-font-family, sans-serif); /* inherits from font-2 */
+  --section-subtitle-font-size: var(--custom-section-subtitle-font-size, 1em); /* epub: medium, prince/web: 1em */
+  --section-subtitle-font-style: var(--custom-section-subtitle-font-style, normal);
+  --section-subtitle-font-weight: var(--custom-section-subtitle-font-weight, normal);
+  --section-subtitle-align: var(--custom-section-subtitle-align, center);
+  --section-subtitle-text-transform: var(--custom-section-subtitle-text-transform, none);
+  --section-subtitle-letter-spacing: var(--custom-section-subtitle-letter-spacing, normal); /* inherits from section-title-letter-spacing */
+  --section-subtitle-word-spacing: var(--custom-section-subtitle-word-spacing, normal); /* inherits from section-title-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * Section Author
+   * -------------------------------------------------------------------------- */
+  
+  --section-author-margin-bottom: var(--custom-section-author-margin-bottom, 0); /* web/epub/prince: 0 */
+  --section-author-font-family: var(--custom-section-author-font-family, sans-serif); /* inherits from font-2 */
+  --section-author-font-size: var(--custom-section-author-font-size, 1em); /* epub: medium, prince/web: 1em */
+  --section-author-font-style: var(--custom-section-author-font-style, normal);
+  --section-author-font-weight: var(--custom-section-author-font-weight, normal);
+  --section-author-align: var(--custom-section-author-align, center);
+  --section-author-text-indent: var(--custom-section-author-text-indent, 0);
+  --section-author-text-transform: var(--custom-section-author-text-transform, uppercase);
+  --section-author-letter-spacing: var(--custom-section-author-letter-spacing, normal); /* inherits from section-title-letter-spacing */
+  --section-author-word-spacing: var(--custom-section-author-word-spacing, normal); /* inherits from section-title-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * Aphorism (Chapter epigraph)
+   * -------------------------------------------------------------------------- */
+  
+  --aphorism-block-width: var(--custom-aphorism-block-width, 100%); /* web/epub/prince: 100% */
+  --aphorism-margin-top: var(--custom-aphorism-margin-top, 0); /* web/epub/prince: 0 */
+  --aphorism-padding-bottom: var(--custom-aphorism-padding-bottom, 0); /* web/epub/prince: 0 */
+  --aphorism-margin-bottom: var(--custom-aphorism-margin-bottom, 0); /* web/epub/prince: 0 */
+  --aphorism-margin-left: var(--custom-aphorism-margin-left, auto); /* web/epub/prince: auto */
+  --aphorism-margin-right: var(--custom-aphorism-margin-right, auto); /* web/epub/prince: auto */
+  --aphorism-font-family: var(--custom-aphorism-font-family, serif); /* inherits from body-font-family */
+  --aphorism-font-size: var(--custom-aphorism-font-size, 0.9em); /* epub: small, prince/web: 0.9em */
+  --aphorism-font-style: var(--custom-aphorism-font-style, italic);
+  --aphorism-font-weight: var(--custom-aphorism-font-weight, normal);
+
+  /* ============================================================================
+   * Phase 13: Title Pages (26 variables)
+   * Source: variables/_pages.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Half Title Page
+   * -------------------------------------------------------------------------- */
+  
+  --title-half-title-display: var(--custom-title-half-title-display, none); /* epub/web: none, prince: initial */
+  --title-half-title-block-margin-top: var(--custom-title-half-title-block-margin-top, 3em); /* epub/web: 2-3em, prince: 3cm */
+  --title-half-title-font-family: var(--custom-title-half-title-font-family, sans-serif); /* inherits from font-2 */
+  --title-half-title-font-size: var(--custom-title-half-title-font-size, 1.5em);
+  --title-half-title-font-style: var(--custom-title-half-title-font-style, normal);
+  --title-half-title-font-weight: var(--custom-title-half-title-font-weight, normal);
+  --title-half-title-letter-spacing: var(--custom-title-half-title-letter-spacing, normal);
+  --title-half-title-word-spacing: var(--custom-title-half-title-word-spacing, normal);
+  --title-half-title-align: var(--custom-title-half-title-align, center);
+  --title-half-title-text-transform: var(--custom-title-half-title-text-transform, none);
+
+  /* ----------------------------------------------------------------------------
+   * Title Page - Title
+   * -------------------------------------------------------------------------- */
+  
+  --title-title-margin-top: var(--custom-title-title-margin-top, 3em); /* epub/web: 2em, prince: 3cm */
+  --title-title-margin-right: var(--custom-title-title-margin-right, 0);
+  --title-title-margin-left: var(--custom-title-title-margin-left, 0);
+  --title-title-font-family: var(--custom-title-title-font-family, sans-serif); /* inherits from font-2 */
+  --title-title-font-size: var(--custom-title-title-font-size, 2em); /* epub/web: 1.75em, prince: 2em */
+  --title-title-font-style: var(--custom-title-title-font-style, normal);
+  --title-title-font-weight: var(--custom-title-title-font-weight, normal);
+  --title-title-letter-spacing: var(--custom-title-title-letter-spacing, normal);
+  --title-title-word-spacing: var(--custom-title-title-word-spacing, normal);
+  --title-title-align: var(--custom-title-title-align, center);
+  --title-title-text-transform: var(--custom-title-title-text-transform, none);
+  --title-title-line-height: var(--custom-title-title-line-height, 1.5em);
+  --title-title-margin-bottom: var(--custom-title-title-margin-bottom, 1em);
 }
 
+  /* ============================================================================
+   * Phase 14: Part & Chapter Numbers (52 variables)
+   * Source: variables/_section-titles.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Aphorism Extended (Chapter epigraph details)
+   * -------------------------------------------------------------------------- */
+  
+  --aphorism-line-height: var(--custom-aphorism-line-height, 1.4em); /* inherits from body-line-height */
+  --aphorism-align: var(--custom-aphorism-align, left);
+  --aphorism-indent: var(--custom-aphorism-indent, 0); /* web/epub/prince: 0 */
+  --aphorism-cite-font-size: var(--custom-aphorism-cite-font-size, 0.9em); /* epub: small, prince/web: 0.9em */
+  --aphorism-cite-font-style: var(--custom-aphorism-cite-font-style, italic);
+  --aphorism-cite-font-variant: var(--custom-aphorism-cite-font-variant, normal);
+  --aphorism-cite-font-weight: var(--custom-aphorism-cite-font-weight, normal);
+  --aphorism-cite-text-transform: var(--custom-aphorism-cite-text-transform, none);
+  --aphorism-cite-align: var(--custom-aphorism-cite-align, left);
+  --aphorism-cite-margin-left: var(--custom-aphorism-cite-margin-left, 0); /* web/epub/prince: 0 */
+  --aphorism-cite-margin-right: var(--custom-aphorism-cite-margin-right, 0); /* web/epub/prince: 0 */
+  --aphorism-cite-before-content: var(--custom-aphorism-cite-before-content, "\2014\00a0"); /* em dash + nbsp */
+
+  /* ----------------------------------------------------------------------------
+   * Part Numbers
+   * -------------------------------------------------------------------------- */
+  
+  --part-number-display: var(--custom-part-number-display, block);
+  --part-number-margin-top: var(--custom-part-number-margin-top, 0); /* web/epub/prince: 0 */
+  --part-number-margin-right: var(--custom-part-number-margin-right, 0); /* web/epub/prince: 0 */
+  --part-number-margin-bottom: var(--custom-part-number-margin-bottom, 1em); /* epub/web: 1em, prince: 0.5cm */
+  --part-number-margin-left: var(--custom-part-number-margin-left, 0); /* web/epub/prince: 0 */
+  --part-number-padding-bottom: var(--custom-part-number-padding-bottom, 0); /* inherits from section-title-padding-bottom */
+  --part-number-border-bottom-width: var(--custom-part-number-border-bottom-width, 0); /* inherits from section-title-border-bottom-width */
+  --part-number-border-bottom-style: var(--custom-part-number-border-bottom-style, none); /* inherits from section-title-border-bottom-style */
+  --part-number-border-bottom-color: var(--custom-part-number-border-bottom-color, #000); /* inherits from section-title-border-bottom-color */
+  --part-number-font-family: var(--custom-part-number-font-family, sans-serif); /* inherits from font-3 */
+  --part-number-font-size: var(--custom-part-number-font-size, 1em); /* epub/web: 1em, prince: 1.5em */
+  --part-number-font-style: var(--custom-part-number-font-style, normal);
+  --part-number-font-weight: var(--custom-part-number-font-weight, normal);
+  --part-number-letter-spacing: var(--custom-part-number-letter-spacing, 1px);
+  --part-number-word-spacing: var(--custom-part-number-word-spacing, 2px);
+  --part-number-align: var(--custom-part-number-align, center);
+  --part-number-text-transform: var(--custom-part-number-text-transform, none);
+  --part-number-line-height: var(--custom-part-number-line-height, 1); /* web/epub/prince: 1 */
+  --part-number-before-content: var(--custom-part-number-before-content, "Part\00A0"); /* localized + nbsp */
+  --part-number-before-content-text-transform: var(--custom-part-number-before-content-text-transform, uppercase);
+  --part-number-after-content: var(--custom-part-number-after-content, "");
+
+  /* ----------------------------------------------------------------------------
+   * Part Titles
+   * -------------------------------------------------------------------------- */
+  
+  --part-title-display: var(--custom-part-title-display, block); /* inherits from section-title-display */
+  --part-title-margin-top: var(--custom-part-title-margin-top, 0); /* web/epub/prince: 0 */
+  --part-title-margin-bottom: var(--custom-part-title-margin-bottom, 0); /* web/epub/prince: 0 */
+  --part-title-margin-left: var(--custom-part-title-margin-left, 0); /* web/epub/prince: 0 */
+  --part-title-margin-right: var(--custom-part-title-margin-right, 0); /* web/epub/prince: 0 */
+  --part-title-font-family: var(--custom-part-title-font-family, sans-serif); /* inherits from font-2 */
+  --part-title-font-size: var(--custom-part-title-font-size, 2.5em); /* epub: 1.75em, prince/web: 2.5em */
+  --part-title-font-style: var(--custom-part-title-font-style, normal);
+  --part-title-font-weight: var(--custom-part-title-font-weight, normal);
+  --part-title-align: var(--custom-part-title-align, center); /* web/epub/prince: center */
+  --part-title-text-transform: var(--custom-part-title-text-transform, uppercase);
+  --part-title-line-height: var(--custom-part-title-line-height, 1.5em); /* inherits from h1-line-height */
+  --part-title-letter-spacing: var(--custom-part-title-letter-spacing, normal); /* inherits from section-title-letter-spacing */
+  --part-title-word-spacing: var(--custom-part-title-word-spacing, normal); /* inherits from section-title-word-spacing */
+  --part-title-border-bottom-width: var(--custom-part-title-border-bottom-width, 0); /* web/epub/prince: 0 */
+  --part-title-border-bottom-style: var(--custom-part-title-border-bottom-style, none); /* inherits from section-title-border-bottom-style */
+  --part-title-border-bottom-color: var(--custom-part-title-border-bottom-color, #000); /* inherits from section-title-border-bottom-color */
+
+  /* ============================================================================
+   * Phase 15: Title Page Extended (20 variables)
+   * Source: variables/_pages.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Title Page - Subtitle
+   * -------------------------------------------------------------------------- */
+  
+  --title-subtitle-margin-top: var(--custom-title-subtitle-margin-top, 0);
+  --title-subtitle-margin-right: var(--custom-title-subtitle-margin-right, 0);
+  --title-subtitle-margin-left: var(--custom-title-subtitle-margin-left, 0);
+  --title-subtitle-font-family: var(--custom-title-subtitle-font-family, sans-serif); /* inherits from font-3 */
+  --title-subtitle-font-size: var(--custom-title-subtitle-font-size, 1.25em); /* epub/web: 1.25em, prince: 1.5em */
+  --title-subtitle-font-style: var(--custom-title-subtitle-font-style, italic);
+  --title-subtitle-font-weight: var(--custom-title-subtitle-font-weight, normal);
+  --title-subtitle-letter-spacing: var(--custom-title-subtitle-letter-spacing, normal);
+  --title-subtitle-word-spacing: var(--custom-title-subtitle-word-spacing, normal);
+  --title-subtitle-align: var(--custom-title-subtitle-align, center);
+  --title-subtitle-text-transform: var(--custom-title-subtitle-text-transform, none);
+  --title-subtitle-line-height: var(--custom-title-subtitle-line-height, 1.5em); /* inherits from title-title-line-height */
+
+  /* ----------------------------------------------------------------------------
+   * Title Page - Author
+   * -------------------------------------------------------------------------- */
+  
+  --title-author-margin-top: var(--custom-title-author-margin-top, 2em); /* epub/web: 2em, prince: 2cm */
+  --title-author-margin-right: var(--custom-title-author-margin-right, 0);
+  --title-author-margin-left: var(--custom-title-author-margin-left, 0);
+  --title-author-font-family: var(--custom-title-author-font-family, sans-serif); /* inherits from font-2 */
+  --title-author-font-size: var(--custom-title-author-font-size, 1em); /* epub/web: 1em, prince: 1.5em */
+  --title-author-font-style: var(--custom-title-author-font-style, normal);
+  --title-author-font-weight: var(--custom-title-author-font-weight, normal);
+  --title-author-letter-spacing: var(--custom-title-author-letter-spacing, 1px);
+
+  /* ============================================================================
+   * Phase 16: Running Headers & Page Numbers (48 variables)
+   * Source: variables/_structure.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Page Numbering Configuration
+   * -------------------------------------------------------------------------- */
+  
+  --numbering-position: var(--custom-numbering-position, top-outside);
+  --first-numbering-position: var(--custom-first-numbering-position, bottom-center);
+  --running-content-position: var(--custom-running-content-position, top-center);
+  --first-running-content-position: var(--custom-first-running-content-position, null);
+  --left-running-separator: var(--custom-left-running-separator, "");
+  --right-running-separator: var(--custom-right-running-separator, "");
+
+  /* ----------------------------------------------------------------------------
+   * Front Matter Page Numbers
+   * -------------------------------------------------------------------------- */
+  
+  --front-matter-page-number-font-family: var(--custom-front-matter-page-number-font-family, sans-serif); /* inherits from font-2 */
+  --front-matter-page-number-font-size: var(--custom-front-matter-page-number-font-size, 0.8em);
+  --front-matter-page-number-font-style: var(--custom-front-matter-page-number-font-style, normal);
+  --front-matter-page-number-font-weight: var(--custom-front-matter-page-number-font-weight, normal);
+  --front-matter-page-number-text-transform: var(--custom-front-matter-page-number-text-transform, none);
+
+  /* ----------------------------------------------------------------------------
+   * Page Numbers
+   * -------------------------------------------------------------------------- */
+  
+  --page-number-font-family: var(--custom-page-number-font-family, sans-serif); /* inherits from font-2 */
+  --page-number-font-size: var(--custom-page-number-font-size, 0.9em);
+  --page-number-font-style: var(--custom-page-number-font-style, normal);
+  --page-number-font-weight: var(--custom-page-number-font-weight, normal);
+  --page-number-text-transform: var(--custom-page-number-text-transform, none);
+
+  /* ----------------------------------------------------------------------------
+   * Running Headers
+   * -------------------------------------------------------------------------- */
+  
+  --runninghead-padding-top: var(--custom-runninghead-padding-top, 0.4in);
+
+  /* Running Header Left */
+  --runninghead-left-font-family: var(--custom-runninghead-left-font-family, sans-serif); /* inherits from font-3 */
+  --runninghead-left-font-size: var(--custom-runninghead-left-font-size, 0.7em);
+  --runninghead-left-font-style: var(--custom-runninghead-left-font-style, normal);
+  --runninghead-left-font-weight: var(--custom-runninghead-left-font-weight, normal);
+  --runninghead-left-text-transform: var(--custom-runninghead-left-text-transform, uppercase);
+  --runninghead-left-letter-spacing: var(--custom-runninghead-left-letter-spacing, 1px);
+  --runninghead-left-word-spacing: var(--custom-runninghead-left-word-spacing, 2px);
+
+  /* Running Header Right */
+  --runninghead-right-font-family: var(--custom-runninghead-right-font-family, sans-serif); /* inherits from font-3 */
+  --runninghead-right-font-size: var(--custom-runninghead-right-font-size, 0.7em);
+  --runninghead-right-font-style: var(--custom-runninghead-right-font-style, normal);
+  --runninghead-right-font-weight: var(--custom-runninghead-right-font-weight, normal);
+  --runninghead-right-text-transform: var(--custom-runninghead-right-text-transform, uppercase);
+  --runninghead-right-letter-spacing: var(--custom-runninghead-right-letter-spacing, 1px);
+  --runninghead-right-word-spacing: var(--custom-runninghead-right-word-spacing, 2px);
+
+  /* Running Header Center */
+  --runninghead-center-font-family: var(--custom-runninghead-center-font-family, sans-serif); /* inherits from font-3 */
+  --runninghead-center-font-size: var(--custom-runninghead-center-font-size, 0.7em);
+  --runninghead-center-font-style: var(--custom-runninghead-center-font-style, normal);
+  --runninghead-center-font-weight: var(--custom-runninghead-center-font-weight, normal);
+  --runninghead-center-text-transform: var(--custom-runninghead-center-text-transform, uppercase);
+  --runninghead-center-letter-spacing: var(--custom-runninghead-center-letter-spacing, 1px);
+  --runninghead-center-word-spacing: var(--custom-runninghead-center-word-spacing, 2px);
+
+  /* Running Header Outside */
+  --runninghead-outside-font-family: var(--custom-runninghead-outside-font-family, sans-serif); /* inherits from font-3 */
+  --runninghead-outside-font-size: var(--custom-runninghead-outside-font-size, 0.7em);
+  --runninghead-outside-font-style: var(--custom-runninghead-outside-font-style, normal);
+  --runninghead-outside-font-weight: var(--custom-runninghead-outside-font-weight, normal);
+  --runninghead-outside-text-transform: var(--custom-runninghead-outside-text-transform, uppercase);
+  --runninghead-outside-letter-spacing: var(--custom-runninghead-outside-letter-spacing, 1px);
+  --runninghead-outside-word-spacing: var(--custom-runninghead-outside-word-spacing, 2px);
+}
+
+  /* ============================================================================
+   * Phase 17: Table of Contents Titles (20 variables)
+   * Source: variables/_section-titles.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * TOC Title (inherits from section-title)
+   * -------------------------------------------------------------------------- */
+  
+  --toc-title-display: var(--custom-toc-title-display, block); /* inherits from section-title-display */
+  --toc-title-margin-top: var(--custom-toc-title-margin-top, 0); /* inherits from section-title-margin-top */
+  --toc-title-margin-right: var(--custom-toc-title-margin-right, 0); /* inherits from section-title-margin-right */
+  --toc-title-margin-bottom: var(--custom-toc-title-margin-bottom, 1em); /* inherits from section-title-margin-bottom */
+  --toc-title-margin-left: var(--custom-toc-title-margin-left, 0); /* inherits from section-title-margin-left */
+  --toc-title-font-family: var(--custom-toc-title-font-family, sans-serif); /* inherits from section-title-font-family */
+  --toc-title-font-size: var(--custom-toc-title-font-size, 2em); /* inherits from section-title-font-size */
+  --toc-title-font-style: var(--custom-toc-title-font-style, normal); /* inherits from section-title-font-style */
+  --toc-title-font-weight: var(--custom-toc-title-font-weight, bold); /* inherits from section-title-font-weight */
+  --toc-title-align: var(--custom-toc-title-align, center); /* inherits from section-title-align */
+  --toc-title-text-transform: var(--custom-toc-title-text-transform, uppercase); /* inherits from section-title-text-transform */
+  --toc-title-line-height: var(--custom-toc-title-line-height, 1.2em); /* inherits from section-title-line-height */
+  --toc-title-border-bottom-style: var(--custom-toc-title-border-bottom-style, none); /* inherits from section-title-border-bottom-style */
+  --toc-title-border-bottom-width: var(--custom-toc-title-border-bottom-width, 0); /* inherits from section-title-border-bottom-width */
+  --toc-title-border-bottom-color: var(--custom-toc-title-border-bottom-color, #000); /* inherits from section-title-border-bottom-color */
+  --toc-title-padding-bottom: var(--custom-toc-title-padding-bottom, 0); /* inherits from section-title-padding-bottom */
+  --toc-title-letter-spacing: var(--custom-toc-title-letter-spacing, normal); /* inherits from section-title-letter-spacing */
+  --toc-title-word-spacing: var(--custom-toc-title-word-spacing, normal); /* inherits from section-title-word-spacing */
+
+  /* TOC Title Decoration (not commonly used, but available) */
+  --toc-title-decoration-font-family: var(--custom-toc-title-decoration-font-family, sans-serif); /* inherits from section-title-decoration-font-family */
+  --toc-title-decoration-content: var(--custom-toc-title-decoration-content, ""); /* inherits from section-title-decoration-content */
+
+  /* ============================================================================
+   * Phase 18: Chapter Numbers & Titles (50 variables)
+   * Source: variables/_section-titles.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Chapter Numbers
+   * -------------------------------------------------------------------------- */
+  
+  --chapter-number-display: var(--custom-chapter-number-display, block);
+  --chapter-number-margin-top: var(--custom-chapter-number-margin-top, 0); /* web/epub/prince: 0 */
+  --chapter-number-margin-right: var(--custom-chapter-number-margin-right, 0); /* web/epub/prince: 0 */
+  --chapter-number-margin-bottom: var(--custom-chapter-number-margin-bottom, 1em); /* epub/web: 1em, prince: 0.5cm */
+  --chapter-number-margin-left: var(--custom-chapter-number-margin-left, 0); /* web/epub/prince: 0 */
+  --chapter-number-padding-bottom: var(--custom-chapter-number-padding-bottom, 0); /* inherits from section-title-padding-bottom */
+  --chapter-number-border-bottom-width: var(--custom-chapter-number-border-bottom-width, 0); /* inherits from section-title-border-bottom-width */
+  --chapter-number-border-bottom-style: var(--custom-chapter-number-border-bottom-style, none); /* inherits from section-title-border-bottom-style */
+  --chapter-number-border-bottom-color: var(--custom-chapter-number-border-bottom-color, #000); /* inherits from section-title-border-bottom-color */
+  --chapter-number-font-family: var(--custom-chapter-number-font-family, sans-serif); /* inherits from font-3 */
+  --chapter-number-font-size: var(--custom-chapter-number-font-size, 1em); /* epub/web: 1em, prince: 1.5em */
+  --chapter-number-font-style: var(--custom-chapter-number-font-style, normal);
+  --chapter-number-font-weight: var(--custom-chapter-number-font-weight, normal);
+  --chapter-number-line-height: var(--custom-chapter-number-line-height, 1); /* web/epub/prince: 1 */
+  --chapter-number-align: var(--custom-chapter-number-align, center);
+  --chapter-number-text-transform: var(--custom-chapter-number-text-transform, none);
+  --chapter-number-before-content: var(--custom-chapter-number-before-content, ""); /* localized "Chapter" string */
+  --chapter-number-before-content-text-transform: var(--custom-chapter-number-before-content-text-transform, none);
+  --chapter-number-after-content: var(--custom-chapter-number-after-content, ".\00A0"); /* period + nbsp */
+  --chapter-number-letter-spacing: var(--custom-chapter-number-letter-spacing, normal); /* inherits from section-title-letter-spacing */
+  --chapter-number-word-spacing: var(--custom-chapter-number-word-spacing, normal); /* inherits from section-title-word-spacing */
+
+  /* ----------------------------------------------------------------------------
+   * Chapter Titles
+   * -------------------------------------------------------------------------- */
+  
+  --chapter-title-display: var(--custom-chapter-title-display, block); /* inherits from section-title-display */
+  --chapter-title-margin-top: var(--custom-chapter-title-margin-top, 0); /* inherits from section-title-margin-top */
+  --chapter-title-margin-bottom: var(--custom-chapter-title-margin-bottom, 1em); /* inherits from section-title-margin-bottom */
+  --chapter-title-margin-right: var(--custom-chapter-title-margin-right, 0); /* inherits from section-title-margin-right */
+  --chapter-title-margin-left: var(--custom-chapter-title-margin-left, 0); /* inherits from section-title-margin-left */
+  --chapter-title-font-family: var(--custom-chapter-title-font-family, sans-serif); /* inherits from section-title-font-family */
+  --chapter-title-font-size: var(--custom-chapter-title-font-size, 2em); /* inherits from section-title-font-size */
+  --chapter-title-font-style: var(--custom-chapter-title-font-style, normal); /* inherits from section-title-font-style */
+  --chapter-title-font-weight: var(--custom-chapter-title-font-weight, bold); /* inherits from section-title-font-weight */
+  --chapter-title-align: var(--custom-chapter-title-align, center); /* inherits from section-title-align */
+  --chapter-title-text-transform: var(--custom-chapter-title-text-transform, uppercase); /* inherits from section-title-text-transform */
+  --chapter-title-line-height: var(--custom-chapter-title-line-height, 1.2em); /* inherits from section-title-line-height */
+  --chapter-title-letter-spacing: var(--custom-chapter-title-letter-spacing, normal); /* inherits from section-title-letter-spacing */
+  --chapter-title-word-spacing: var(--custom-chapter-title-word-spacing, normal); /* inherits from section-title-word-spacing */
+  --chapter-title-border-bottom-width: var(--custom-chapter-title-border-bottom-width, 0); /* inherits from section-title-border-bottom-width */
+  --chapter-title-border-bottom-style: var(--custom-chapter-title-border-bottom-style, none); /* inherits from section-title-border-bottom-style */
+  --chapter-title-border-bottom-color: var(--custom-chapter-title-border-bottom-color, #000); /* inherits from section-title-border-bottom-color */
+  --chapter-title-padding-bottom: var(--custom-chapter-title-padding-bottom, 0); /* inherits from section-title-padding-bottom */
+  --chapter-title-decoration-font-family: var(--custom-chapter-title-decoration-font-family, sans-serif); /* inherits from section-title-decoration-font-family */
+  --chapter-title-decoration-content: var(--custom-chapter-title-decoration-content, ""); /* inherits from section-title-decoration-content */
+  --chapter-title-decoration-display: var(--custom-chapter-title-decoration-display, none); /* inherits from section-title-decoration-display */
+  --chapter-title-decoration-font-size: var(--custom-chapter-title-decoration-font-size, 1em); /* inherits from section-title-decoration-font-size */
+  --chapter-title-decoration-font-weight: var(--custom-chapter-title-decoration-font-weight, normal); /* inherits from section-title-decoration-font-weight */
+  --chapter-title-decoration-margin-bottom: var(--custom-chapter-title-decoration-margin-bottom, 0); /* inherits from section-title-decoration-margin-bottom */
+  --chapter-title-decoration-margin-top: var(--custom-chapter-title-decoration-margin-top, 0); /* inherits from section-title-decoration-margin-top */
+
+  /* ============================================================================
+   * Phase 19: Back Matter Titles (29 variables)
+   * Source: variables/_section-titles.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Back Matter Titles (inherits from section-title)
+   * -------------------------------------------------------------------------- */
+  
+  --back-matter-title-display: var(--custom-back-matter-title-display, block); /* inherits from section-title-display */
+  --back-matter-title-margin-top: var(--custom-back-matter-title-margin-top, 0); /* inherits from section-title-margin-top */
+  --back-matter-title-margin-bottom: var(--custom-back-matter-title-margin-bottom, 1em); /* inherits from section-title-margin-bottom */
+  --back-matter-title-margin-right: var(--custom-back-matter-title-margin-right, 0); /* inherits from section-title-margin-right */
+  --back-matter-title-margin-left: var(--custom-back-matter-title-margin-left, 0); /* inherits from section-title-margin-left */
+  --back-matter-title-font-family: var(--custom-back-matter-title-font-family, sans-serif); /* inherits from section-title-font-family */
+  --back-matter-title-font-size: var(--custom-back-matter-title-font-size, 2em); /* inherits from section-title-font-size */
+  --back-matter-title-font-style: var(--custom-back-matter-title-font-style, normal); /* inherits from section-title-font-style */
+  --back-matter-title-font-weight: var(--custom-back-matter-title-font-weight, bold); /* inherits from section-title-font-weight */
+  --back-matter-title-align: var(--custom-back-matter-title-align, center); /* inherits from section-title-align */
+  --back-matter-title-text-transform: var(--custom-back-matter-title-text-transform, uppercase); /* inherits from section-title-text-transform */
+  --back-matter-title-line-height: var(--custom-back-matter-title-line-height, 1.2em); /* inherits from section-title-line-height */
+  --back-matter-title-border-bottom-width: var(--custom-back-matter-title-border-bottom-width, 0); /* inherits from section-title-border-bottom-width */
+  --back-matter-title-border-bottom-style: var(--custom-back-matter-title-border-bottom-style, none); /* inherits from section-title-border-bottom-style */
+  --back-matter-title-border-bottom-color: var(--custom-back-matter-title-border-bottom-color, #000); /* inherits from section-title-border-bottom-color */
+  --back-matter-title-padding-bottom: var(--custom-back-matter-title-padding-bottom, 0); /* inherits from section-title-padding-bottom */
+  --back-matter-title-letter-spacing: var(--custom-back-matter-title-letter-spacing, normal); /* inherits from section-title-letter-spacing */
+  --back-matter-title-word-spacing: var(--custom-back-matter-title-word-spacing, normal); /* inherits from section-title-word-spacing */
+  --back-matter-title-decoration-font-family: var(--custom-back-matter-title-decoration-font-family, sans-serif); /* inherits from section-title-decoration-font-family */
+  --back-matter-title-decoration-content: var(--custom-back-matter-title-decoration-content, ""); /* inherits from section-title-decoration-content */
+  --back-matter-title-decoration-display: var(--custom-back-matter-title-decoration-display, none); /* inherits from section-title-decoration-display */
+  --back-matter-title-decoration-font-size: var(--custom-back-matter-title-decoration-font-size, 1em); /* inherits from section-title-decoration-font-size */
+  --back-matter-title-decoration-font-weight: var(--custom-back-matter-title-decoration-font-weight, normal); /* inherits from section-title-decoration-font-weight */
+  --back-matter-title-decoration-margin-bottom: var(--custom-back-matter-title-decoration-margin-bottom, 0); /* inherits from section-title-decoration-margin-bottom */
+  --back-matter-title-decoration-margin-top: var(--custom-back-matter-title-decoration-margin-top, 0); /* inherits from section-title-decoration-margin-top */
+
+  /* Front matter title variables - similar structure but defined in previous phases */
+  /* Introduction title variables - similar structure but defined in previous phases */
+
+  /* ============================================================================
+   * Phase 20: Running Footers & Content (30 variables)
+   * Source: variables/_structure.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Running Footers
+   * -------------------------------------------------------------------------- */
+  
+  --runningfoot-padding-bottom: var(--custom-runningfoot-padding-bottom, 0.4in);
+
+  /* Running Footer Left */
+  --runningfoot-left-font-family: var(--custom-runningfoot-left-font-family, sans-serif); /* inherits from font-2 */
+  --runningfoot-left-font-size: var(--custom-runningfoot-left-font-size, 0.7em);
+  --runningfoot-left-font-style: var(--custom-runningfoot-left-font-style, normal);
+  --runningfoot-left-font-weight: var(--custom-runningfoot-left-font-weight, normal);
+  --runningfoot-left-text-transform: var(--custom-runningfoot-left-text-transform, uppercase);
+  --runningfoot-left-letter-spacing: var(--custom-runningfoot-left-letter-spacing, normal);
+  --runningfoot-left-word-spacing: var(--custom-runningfoot-left-word-spacing, normal);
+
+  /* Running Footer Right */
+  --runningfoot-right-font-family: var(--custom-runningfoot-right-font-family, sans-serif); /* inherits from font-2 */
+  --runningfoot-right-font-size: var(--custom-runningfoot-right-font-size, 0.7em);
+  --runningfoot-right-font-style: var(--custom-runningfoot-right-font-style, normal);
+  --runningfoot-right-font-weight: var(--custom-runningfoot-right-font-weight, normal);
+  --runningfoot-right-text-transform: var(--custom-runningfoot-right-text-transform, uppercase);
+  --runningfoot-right-letter-spacing: var(--custom-runningfoot-right-letter-spacing, normal);
+  --runningfoot-right-word-spacing: var(--custom-runningfoot-right-word-spacing, normal);
+
+  /* ----------------------------------------------------------------------------
+   * Running Content Configuration (content strings)
+   * -------------------------------------------------------------------------- */
+  
+  /* Front Matter Running Content */
+  --front-matter-running-content-left: var(--custom-front-matter-running-content-left, string(book-author));
+  --front-matter-running-content-right: var(--custom-front-matter-running-content-right, string(book-title));
+
+  /* Introduction Running Content */
+  --introduction-running-content-left: var(--custom-introduction-running-content-left, string(book-author));
+  --introduction-running-content-right: var(--custom-introduction-running-content-right, string(book-title));
+
+  /* Part Running Content */
+  --part-running-content-left: var(--custom-part-running-content-left, string(book-author));
+  --part-running-content-right: var(--custom-part-running-content-right, string(book-title));
+
+  /* Chapter Running Content */
+  --chapter-running-content-left: var(--custom-chapter-running-content-left, string(book-author));
+  --chapter-running-content-right: var(--custom-chapter-running-content-right, string(book-title));
+
+  /* Back Matter Running Content */
+  --back-matter-running-content-left: var(--custom-back-matter-running-content-left, string(book-author));
+  --back-matter-running-content-right: var(--custom-back-matter-running-content-right, string(book-title));
+}
+  /* ============================================================================
+   * Phase 21: Page Configuration (35 variables)
+   * Source: variables/_structure.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Page Number Styles (counter formats)
+   * -------------------------------------------------------------------------- */
+  
+  /* Front Matter Page Numbers */
+  --front-matter-page-number-left: var(--custom-front-matter-page-number-left, counter(page, lower-roman));
+  --front-matter-page-number-right: var(--custom-front-matter-page-number-right, counter(page, lower-roman));
+
+  /* Introduction Page Numbers */
+  --introduction-page-number-left: var(--custom-introduction-page-number-left, counter(page));
+  --introduction-page-number-right: var(--custom-introduction-page-number-right, counter(page));
+  --post-introduction-page-number-left: var(--custom-post-introduction-page-number-left, counter(page));
+  --post-introduction-page-number-right: var(--custom-post-introduction-page-number-right, counter(page));
+
+  /* Part Page Numbers */
+  --part-page-number-left: var(--custom-part-page-number-left, counter(page));
+  --part-page-number-right: var(--custom-part-page-number-right, counter(page));
+
+  /* Chapter Page Numbers */
+  --chapter-page-number-left: var(--custom-chapter-page-number-left, counter(page));
+  --chapter-page-number-right: var(--custom-chapter-page-number-right, counter(page));
+
+  /* Back Matter Page Numbers */
+  --back-matter-page-number-left: var(--custom-back-matter-page-number-left, counter(page));
+  --back-matter-page-number-right: var(--custom-back-matter-page-number-right, counter(page));
+
+  /* ----------------------------------------------------------------------------
+   * Page Physical Properties (Prince)
+   * -------------------------------------------------------------------------- */
+  
+  /* Crop Marks */
+  --page-cropmarks: var(--custom-page-cropmarks, none); /* none | crop | cross */
+
+  /* Page Dimensions */
+  --page-width: var(--custom-page-width, 5.5in);
+  --page-height: var(--custom-page-height, 8.5in);
+
+  /* Page Margins */
+  --page-margin-top: var(--custom-page-margin-top, 2cm);
+  --page-margin-inside: var(--custom-page-margin-inside, 2cm);
+  --page-margin-bottom: var(--custom-page-margin-bottom, 2cm);
+  --page-margin-outside: var(--custom-page-margin-outside, 2cm);
+
+  /* ----------------------------------------------------------------------------
+   * Recto-Verso Openings
+   * -------------------------------------------------------------------------- */
+  
+  --recto-verso-standard-opening: var(--custom-recto-verso-standard-opening, right); /* right | auto */
+  --recto-verso-first-section-opening: var(--custom-recto-verso-first-section-opening, right);
+  --recto-verso-section-opening: var(--custom-recto-verso-section-opening, auto);
+  --recto-verso-copyright-page-opening: var(--custom-recto-verso-copyright-page-opening, left);
+
+  /* ----------------------------------------------------------------------------
+   * Index
+   * -------------------------------------------------------------------------- */
+  
+  --index-align: var(--custom-index-align, left);
+}
+  /* ============================================================================
+   * Phase 22: Interactive Media & Audio/Video (46 variables)
+   * Source: variables/_media.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Interactive Content Icons
+   * -------------------------------------------------------------------------- */
+  
+  /* Icon URLs */
+  --interactive-icon-url-prince: var(--custom-interactive-icon-url-prince, "images/icon-interactive.svg");
+  --interactive-icon-url-epub: var(--custom-interactive-icon-url-epub, "images/icon-interactive.png");
+  --interactive-icon-url-web: var(--custom-interactive-icon-url-web, "images/icon-interactive.svg");
+  --audio-icon-url-prince: var(--custom-audio-icon-url-prince, "images/icon-audio.svg");
+  --audio-icon-url-epub: var(--custom-audio-icon-url-epub, "images/icon-audio.png");
+  --audio-icon-url-web: var(--custom-audio-icon-url-web, "images/icon-audio.svg");
+  --video-icon-url-prince: var(--custom-video-icon-url-prince, "images/icon-video.svg");
+  --video-icon-url-epub: var(--custom-video-icon-url-epub, "images/icon-video.png");
+  --video-icon-url-web: var(--custom-video-icon-url-web, "images/icon-video.svg");
+
+  /* Icon Display Properties */
+  --interactive-icon-display: var(--custom-interactive-icon-display, block);
+  --interactive-icon-float: var(--custom-interactive-icon-float, left);
+  --interactive-icon-width: var(--custom-interactive-icon-width, 3em);
+  --interactive-icon-height: var(--custom-interactive-icon-height, 3em);
+  --interactive-icon-margin-top: var(--custom-interactive-icon-margin-top, 0);
+  --interactive-icon-margin-right: var(--custom-interactive-icon-margin-right, 0.5em);
+  --interactive-icon-margin-bottom: var(--custom-interactive-icon-margin-bottom, 0);
+  --interactive-icon-margin-left: var(--custom-interactive-icon-margin-left, 0);
+  --interactive-icon-background-size-prince: var(--custom-interactive-icon-background-size-prince, cover);
+  --interactive-icon-background-size-epub: var(--custom-interactive-icon-background-size-epub, 3em 3em); /* uses icon width/height */
+  --interactive-icon-background-size-web: var(--custom-interactive-icon-background-size-web, cover);
+
+  /* Thumbnail */
+  --interactive-thumbnail-margin-bottom: var(--custom-interactive-thumbnail-margin-bottom, 0.5em);
+
+  /* ----------------------------------------------------------------------------
+   * Interactive Content Box
+   * -------------------------------------------------------------------------- */
+  
+  --interactive-content-line-height: var(--custom-interactive-content-line-height, 1.4em); /* inherits from body-line-height */
+  --interactive-content-font-size: var(--custom-interactive-content-font-size, 0.9em);
+  --interactive-content-font-style: var(--custom-interactive-content-font-style, italic);
+  --interactive-content-font-family: var(--custom-interactive-content-font-family, serif); /* inherits from textbox-font-family */
+  --interactive-content-font-weight: var(--custom-interactive-content-font-weight, normal); /* inherits from textbox-font-weight */
+  --interactive-content-margin-bottom-prince: var(--custom-interactive-content-margin-bottom-prince, 1.5em);
+  --interactive-content-margin-bottom-epub: var(--custom-interactive-content-margin-bottom-epub, 1em);
+  --interactive-content-margin-bottom-web: var(--custom-interactive-content-margin-bottom-web, 1em);
+  --interactive-content-padding-top: var(--custom-interactive-content-padding-top, 1em); /* inherits from textbox-padding-top */
+  --interactive-content-padding-right: var(--custom-interactive-content-padding-right, 1em); /* inherits from textbox-padding-right */
+  --interactive-content-padding-bottom: var(--custom-interactive-content-padding-bottom, 1em); /* inherits from textbox-padding-bottom */
+  --interactive-content-padding-left: var(--custom-interactive-content-padding-left, 1em); /* inherits from textbox-padding-left */
+  --interactive-content-text-align-epub: var(--custom-interactive-content-text-align-epub, left);
+  --interactive-content-text-align-prince: var(--custom-interactive-content-text-align-prince, left);
+  --interactive-content-text-align-web: var(--custom-interactive-content-text-align-web, left);
+  --interactive-content-text-indent: var(--custom-interactive-content-text-indent, 0);
+
+  /* ----------------------------------------------------------------------------
+   * Media Captions
+   * -------------------------------------------------------------------------- */
+  
+  --media-caption-align-epub: var(--custom-media-caption-align-epub, center);
+  --media-caption-align-prince: var(--custom-media-caption-align-prince, center);
+  --media-caption-align-web: var(--custom-media-caption-align-web, center);
+}
+  /* ============================================================================
+   * Phase 23: Paragraph & Text Elements (35 variables)
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Paragraph Styling
+   * -------------------------------------------------------------------------- */
+  
+  --para-margin-bottom: var(--custom-para-margin-bottom, 0);
+  --para-margin-top: var(--custom-para-margin-top, 0);
+  --para-align-epub: var(--custom-para-align-epub, initial);
+  --para-align-prince: var(--custom-para-align-prince, justify);
+  --para-align-web: var(--custom-para-align-web, initial);
+  --widows: var(--custom-widows, 2); /* Minimum lines at top of page */
+  --orphans: var(--custom-orphans, 1); /* Minimum lines at bottom of page */
+
+  /* Paragraph Indentation */
+  --para-indent: var(--custom-para-indent, 1em);
+  --para-no-indent-margin-top: var(--custom-para-no-indent-margin-top, 1em);
+
+  /* Paragraph Hyphenation */
+  --para-hyphens: var(--custom-para-hyphens, auto);
+  --para-hyphenate-before: var(--custom-para-hyphenate-before, 3);
+  --para-hyphenate-after: var(--custom-para-hyphenate-after, 3);
+  --para-hyphenate-lines: var(--custom-para-hyphenate-lines, 2);
+
+  /* Hanging Indent */
+  --para-hanging-indent-padding-left: var(--custom-para-hanging-indent-padding-left, 1em);
+  --para-hanging-indent-text-indent: var(--custom-para-hanging-indent-text-indent, -1em);
+
+  /* Tracking/Letter Spacing Classes */
+  --para-tight-letter-spacing: var(--custom-para-tight-letter-spacing, -0.25px);
+  --para-tight-word-spacing: var(--custom-para-tight-word-spacing, -0.075em);
+  --para-very-tight-letter-spacing: var(--custom-para-very-tight-letter-spacing, -0.5px);
+  --para-very-tight-word-spacing: var(--custom-para-very-tight-word-spacing, -0.09em);
+  --para-loose-letter-spacing: var(--custom-para-loose-letter-spacing, 0.25px);
+  --para-loose-word-spacing: var(--custom-para-loose-word-spacing, 0.075em);
+  --para-very-loose-letter-spacing: var(--custom-para-very-loose-letter-spacing, 0.5px);
+  --para-very-loose-word-spacing: var(--custom-para-very-loose-word-spacing, 0.09em);
+
+  /* ----------------------------------------------------------------------------
+   * Citation Elements
+   * -------------------------------------------------------------------------- */
+  
+  --cite-font-size: var(--custom-cite-font-size, 0.9em);
+  --cite-font-style: var(--custom-cite-font-style, normal);
+  --cite-font-weight: var(--custom-cite-font-weight, normal);
+  --cite-text-transform: var(--custom-cite-text-transform, uppercase);
+  --cite-letter-spacing: var(--custom-cite-letter-spacing, normal);
+  --cite-word-spacing: var(--custom-cite-word-spacing, normal);
+  --cite-font-variant: var(--custom-cite-font-variant, small-caps);
+
+  /* ----------------------------------------------------------------------------
+   * Subscript/Superscript
+   * -------------------------------------------------------------------------- */
+  
+  /* Sub */
+  --sub-font-style: var(--custom-sub-font-style, normal);
+  --sub-text-transform: var(--custom-sub-text-transform, none);
+  --sub-font-size: var(--custom-sub-font-size, 0.8em);
+  --sub-line-height: var(--custom-sub-line-height, 0.5em);
+
+  /* Sup */
+  --sup-font-style: var(--custom-sup-font-style, normal);
+  --sup-text-transform: var(--custom-sup-text-transform, none);
+  --sup-font-size: var(--custom-sup-font-size, 0.8em);
+  --sup-line-height: var(--custom-sup-line-height, 0.5em);
+}
+  /* ============================================================================
+   * Phase 24: Code & Pre Elements (33 variables)
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Code Elements
+   * -------------------------------------------------------------------------- */
+  
+  --code-border: var(--custom-code-border, none);
+  --code-border-radius: var(--custom-code-border-radius, 0);
+  --code-background: var(--custom-code-background, transparent);
+  --code-font-family: var(--custom-code-font-family, monospace);
+  --code-font-size: var(--custom-code-font-size, 14pt); /* inherits from body-font-size */
+  --code-margin-top: var(--custom-code-margin-top, 0);
+  --code-margin-right: var(--custom-code-margin-right, 0);
+  --code-margin-bottom: var(--custom-code-margin-bottom, 0);
+  --code-margin-left: var(--custom-code-margin-left, 0);
+  --code-padding-top: var(--custom-code-padding-top, 0);
+  --code-padding-right: var(--custom-code-padding-right, 0);
+  --code-padding-bottom: var(--custom-code-padding-bottom, 0);
+  --code-padding-left: var(--custom-code-padding-left, 0);
+  --code-line-height: var(--custom-code-line-height, 1.4em); /* inherits from body-line-height */
+
+  /* ----------------------------------------------------------------------------
+   * Pre Elements
+   * -------------------------------------------------------------------------- */
+  
+  --pre-border: var(--custom-pre-border, none);
+  --pre-border-radius: var(--custom-pre-border-radius, 0);
+  --pre-background: var(--custom-pre-background, transparent);
+  --pre-font-family: var(--custom-pre-font-family, monospace); /* inherits from code-font-family */
+  --pre-font-size: var(--custom-pre-font-size, 14pt); /* inherits from code-font-size */
+  --pre-line-height: var(--custom-pre-line-height, normal);
+  --pre-margin-top: var(--custom-pre-margin-top, 1em);
+  --pre-margin-right: var(--custom-pre-margin-right, 0);
+  --pre-margin-bottom: var(--custom-pre-margin-bottom, 1em);
+  --pre-margin-left: var(--custom-pre-margin-left, 0);
+  --pre-padding-top: var(--custom-pre-padding-top, 0);
+  --pre-padding-right: var(--custom-pre-padding-right, 0);
+  --pre-padding-bottom: var(--custom-pre-padding-bottom, 0);
+  --pre-padding-left: var(--custom-pre-padding-left, 0);
+
+  /* ============================================================================
+   * Phase 25: Color Palette (50 variables)
+   * Source: variables/_colors.scss
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Base Colors (already defined in Phase 1, but extended here)
+   * -------------------------------------------------------------------------- */
+  
+  /* Note: color-1 through color-6 already defined in Phase 1 */
+
+  /* ----------------------------------------------------------------------------
+   * Element Colors
+   * -------------------------------------------------------------------------- */
+  
+  /* Link Colors */
+  --link-color-print: var(--custom-link-color-print, initial);
+
+  /* Text Colors */
+  --body-color: var(--custom-body-color, #373d3f); /* uses color-1 */
+  --blockquote-color: var(--custom-blockquote-color, #373d3f); /* uses color-1 */
+
+  /* Heading Colors */
+  --h1-color: var(--custom-h1-color, #373d3f); /* uses color-2 */
+  --h2-color: var(--custom-h2-color, #373d3f); /* uses color-2 */
+  --h3-color: var(--custom-h3-color, #373d3f); /* uses color-2 */
+  --h4-color: var(--custom-h4-color, #373d3f); /* uses color-3 */
+  --h5-color: var(--custom-h5-color, #373d3f); /* uses color-3 */
+  --h6-color: var(--custom-h6-color, #373d3f); /* uses color-3 */
+
+  /* Table Colors */
+  --table-color: var(--custom-table-color, #373d3f);
+  --table-para-color: var(--custom-table-para-color, #373d3f);
+
+  /* Special Element Colors */
+  --image-caption-text-color: var(--custom-image-caption-text-color, #373d3f);
+  --first-character-color: var(--custom-first-character-color, #373d3f);
+  --pullquote-color: var(--custom-pullquote-color, #373d3f);
+  --sidebar-color: var(--custom-sidebar-color, #eee);
+  --shaded-color: var(--custom-shaded-color, #eee);
+  --textbox-shaded-background-color: var(--custom-textbox-shaded-background-color, #eee);
+  --textbox-border-color: var(--custom-textbox-border-color, #373d3f);
+  --hr-break-symbols-border-top-color: var(--custom-hr-break-symbols-border-top-color, #373d3f);
+  --dt-color: var(--custom-dt-color, #373d3f);
+  --footnote-color: var(--custom-footnote-color, #373d3f);
+  --index-para-color: var(--custom-index-para-color, #373d3f);
+
+  /* ----------------------------------------------------------------------------
+   * Title Page Colors
+   * -------------------------------------------------------------------------- */
+  
+  --half-title-title-color: var(--custom-half-title-title-color, #373d3f);
+  --title-page-title-color: var(--custom-title-page-title-color, #373d3f);
+  --title-title-decoration-color: var(--custom-title-title-decoration-color, #373d3f);
+  --title-page-subtitle-color: var(--custom-title-page-subtitle-color, #373d3f);
+  --title-page-author-color: var(--custom-title-page-author-color, #373d3f);
+  --title-page-publisher-color: var(--custom-title-page-publisher-color, #373d3f);
+  --title-page-publisher-city-color: var(--custom-title-page-publisher-city-color, #373d3f);
+
+  /* ----------------------------------------------------------------------------
+   * Section Colors
+   * -------------------------------------------------------------------------- */
+  
+  --front-matter-title-color: var(--custom-front-matter-title-color, #373d3f);
+  --front-matter-title-decoration-color: var(--custom-front-matter-title-decoration-color, #373d3f);
+  --copyright-para-color: var(--custom-copyright-para-color, #373d3f);
+  --dedication-para-color: var(--custom-dedication-para-color, #373d3f);
+  --epigraph-para-color: var(--custom-epigraph-para-color, #373d3f);
+  --part-number-color: var(--custom-part-number-color, #373d3f);
+  --part-title-color: var(--custom-part-title-color, #373d3f);
+  --part-title-decoration-color: var(--custom-part-title-decoration-color, #373d3f);
+  --chapter-number-color: var(--custom-chapter-number-color, #373d3f);
+  --chapter-title-color: var(--custom-chapter-title-color, #373d3f);
+  --chapter-title-decoration-color: var(--custom-chapter-title-decoration-color, #373d3f);
+  --chapter-subtitle-color: var(--custom-chapter-subtitle-color, #373d3f);
+  --chapter-author-color: var(--custom-chapter-author-color, #373d3f);
+  --chapter-aphorism-color: var(--custom-chapter-aphorism-color, #373d3f);
+  --back-matter-title-color: var(--custom-back-matter-title-color, #373d3f);
+  --back-matter-title-decoration-color: var(--custom-back-matter-title-decoration-color, #373d3f);
+
+  /* ----------------------------------------------------------------------------
+   * Running Headers/Footers Colors
+   * -------------------------------------------------------------------------- */
+  
+  --runninghead-color: var(--custom-runninghead-color, #373d3f);
+  --runningfoot-color: var(--custom-runningfoot-color, #373d3f);
+  --page-number-color: var(--custom-page-number-color, #373d3f);
+
+  /* ----------------------------------------------------------------------------
+   * TOC Colors
+   * -------------------------------------------------------------------------- */
+  
+  --toc-title-color: var(--custom-toc-title-color, #373d3f);
+  --toc-front-matter-title-color: var(--custom-toc-front-matter-title-color, #373d3f);
+  --toc-front-matter-subtitle-color: var(--custom-toc-front-matter-subtitle-color, #373d3f);
+  --toc-front-matter-author-color: var(--custom-toc-front-matter-author-color, #373d3f);
+  --toc-part-number-color: var(--custom-toc-part-number-color, #373d3f);
+  --toc-part-title-color: var(--custom-toc-part-title-color, #373d3f);
+  --toc-chapter-number-color: var(--custom-toc-chapter-number-color, #373d3f);
+  --toc-chapter-title-color: var(--custom-toc-chapter-title-color, #373d3f);
+  --toc-chapter-subtitle-color: var(--custom-toc-chapter-subtitle-color, #373d3f);
+  --toc-chapter-author-color: var(--custom-toc-chapter-author-color, #373d3f);
+  --toc-page-number-color: var(--custom-toc-page-number-color, #373d3f);
+  --toc-front-matter-page-number-color: var(--custom-toc-front-matter-page-number-color, #373d3f);
+  --toc-back-matter-title-color: var(--custom-toc-back-matter-title-color, #373d3f);
+  --toc-back-matter-subtitle-color: var(--custom-toc-back-matter-subtitle-color, #373d3f);
+  --toc-back-matter-author-color: var(--custom-toc-back-matter-author-color, #373d3f);
+}

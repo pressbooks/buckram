@@ -10,11 +10,11 @@
 
 @if $type != 'web' {
   body {
-    font-family: $body-font-family;
-    font-size: if-map-get($body-font-size, $type);
-    font-style: $body-font-style;
-    font-weight: $body-font-weight;
-    line-height: if-map-get($body-line-height, $type);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    line-height: var(--body-line-height);
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
@@ -42,12 +42,13 @@
   .chapter,
   .back-matter,
   body#tinymce.wp-editor {
-    font-family: $body-font-family;
-    font-size: if-map-get($body-font-size, $type);
-    font-style: $body-font-style;
-    font-weight: $body-font-weight;
-    line-height: if-map-get($body-line-height, $type);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    line-height: var(--body-line-height);
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
 }
+

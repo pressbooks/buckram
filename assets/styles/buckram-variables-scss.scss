@@ -1,0 +1,51 @@
+/**
+ * Buckram CSS Custom Properties - SCSS Generator
+ * 
+ * This file generates format-specific :root declarations for CSS custom properties
+ * based on the $type variable (epub, prince, or web).
+ * 
+ * This allows the same CSS custom property names to have different values
+ * depending on the output format.
+ */
+
+// Import variable definitions to access SCSS variables
+@import 'variables/fonts';
+@import 'variables/colors';
+@import 'variables/elements';
+@import 'variables/media';
+@import 'variables/pages';
+@import 'variables/section-titles';
+@import 'variables/specials';
+@import 'variables/structure';
+@import 'variables/toc';
+@import 'components/utilities';
+
+:root {
+  /* ============================================================================
+   * Font Stacks
+   * ========================================================================== */
+  
+  --font-1: #{$font-1};
+  --font-2: #{$font-2};
+  --font-3: #{$font-3};
+  
+  /* ============================================================================
+   * Typography - Body
+   * ========================================================================== */
+  
+  --body-font-family: #{$body-font-family};
+  --body-font-size: #{if-map-get($body-font-size, $type)};
+  --body-font-style: #{$body-font-style};
+  --body-font-weight: #{$body-font-weight};
+  --body-line-height: #{if-map-get($body-line-height, $type)};
+  
+  /* ============================================================================
+   * Colors
+   * ========================================================================== */
+  
+  --color-1: #{if-map-get($color-1, $type)};
+  --link-color: #{if-map-get($link-color, $type)};
+  --body-color: #{if-map-get($body-color, $type)};
+  
+  /* Add more variables as needed... */
+}
