@@ -698,5 +698,81 @@
   /* Endnotes */
   --endnote-margin-left: var(--custom-endnote-margin-left, 1.5em);
   --endnote-line-height: var(--custom-endnote-line-height, 1.1em);
+
+  /* ============================================================================
+   * Phase 6: Columns, Dropcaps, Asides, and Extended Endnotes
+   * Added: December 18, 2024
+   * Count: 32 variables
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Columns (.twocolumn, .threecolumn)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --column-margin-top: var(--custom-column-margin-top, 1em);
+  --column-margin-bottom: var(--custom-column-margin-bottom, 1em);
+  --column-line-height: var(--custom-column-line-height, 1.2em);
+  --column-text-indent: var(--custom-column-text-indent, 0); /* web/epub/prince: 0 */
+  
+  /* Two Column Layout */
+  --column-twocolumn-column-gap: var(--custom-column-twocolumn-column-gap, 1.5em);
+  --column-twocolumn-font-size: var(--custom-column-twocolumn-font-size, 0.85em);
+  --column-twocolumn-text-align: var(--custom-column-twocolumn-text-align, initial); /* web: initial, prince: justify */
+  
+  /* Three Column Layout */
+  --column-threecolumn-column-gap: var(--custom-column-threecolumn-column-gap, 1em);
+  --column-threecolumn-font-size: var(--custom-column-threecolumn-font-size, 0.8em);
+  --column-threecolumn-text-align: var(--custom-column-threecolumn-text-align, initial); /* web: initial, prince: justify */
+
+  /* ----------------------------------------------------------------------------
+   * Dropcaps (.first-character)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --first-character-font-family: var(--custom-first-character-font-family, var(--font-2));
+  --first-character-font-size: var(--custom-first-character-font-size, 300%);
+  --first-character-font-style: var(--custom-first-character-font-style, normal);
+  --first-character-font-weight: var(--custom-first-character-font-weight, bold);
+  --first-character-line-height: var(--custom-first-character-line-height, 0.7em);
+
+  /* ----------------------------------------------------------------------------
+   * Asides (<aside>, .aside)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  /* Aside Padding */
+  --aside-padding-top: var(--custom-aside-padding-top, 0.9em);
+  --aside-padding-right: var(--custom-aside-padding-right, 0);
+  --aside-padding-bottom: var(--custom-aside-padding-bottom, 0.9em);
+  --aside-padding-left: var(--custom-aside-padding-left, 0);
+  
+  /* Aside Margins */
+  --aside-margin-top: var(--custom-aside-margin-top, 2em);
+  --aside-margin-right: var(--custom-aside-margin-right, 10%);
+  --aside-margin-bottom: var(--custom-aside-margin-bottom, 2em);
+  --aside-margin-left: var(--custom-aside-margin-left, 10%);
+  
+  /* Aside Typography */
+  --aside-line-height: var(--custom-aside-line-height, 1.2em);
+  
+  /* Aside Borders */
+  --aside-border-top: var(--custom-aside-border-top, 1px solid);
+  --aside-border-right: var(--custom-aside-border-right, 0);
+  --aside-border-bottom: var(--custom-aside-border-bottom, 1px solid);
+  --aside-border-left: var(--custom-aside-border-left, 0);
+
+  /* ----------------------------------------------------------------------------
+   * Extended Endnote Styling
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --endnote-h3-padding-bottom: var(--custom-endnote-h3-padding-bottom, 0.5em);
+  --endnote-ol-margin-top: var(--custom-endnote-ol-margin-top, 0.4em);
+  --endnote-ol-margin-left: var(--custom-endnote-ol-margin-left, 0);
+  --endnote-ol-font-size: var(--custom-endnote-ol-font-size, 0.85em);
+  --endnote-li-padding-left: var(--custom-endnote-li-padding-left, 0);
+  --endnote-li-margin-top: var(--custom-endnote-li-margin-top, 0.4em);
+  --endnote-li-indent: var(--custom-endnote-li-indent, 0);
 }
 

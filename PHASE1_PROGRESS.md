@@ -1,4 +1,4 @@
-# Phase 1, 2, 3, 4, & 5 Implementation Progress
+# Phase 1, 2, 3, 4, 5, & 6 Implementation Progress
 
 **Branch:** `feat/migrate-to-css-properties`  
 **Phase 1 Started:** December 18, 2024  
@@ -10,9 +10,11 @@
 **Phase 4 Started:** December 18, 2024  
 **Phase 4 Completed:** December 18, 2024  
 **Phase 5 Started:** December 18, 2024  
-**Status:** 🔄 **Phase 5 In Progress** (295 variables total)
+**Phase 5 Completed:** December 18, 2024  
+**Phase 6 Started:** December 18, 2024  
+**Status:** 🔄 **Phase 6 In Progress** (327 variables total)
 
-## Variables Converted (295 total) ✅ Phase 1-4 Complete! Phase 5 Started!
+## Variables Converted (327 total) ✅ Phase 1-5 Complete! Phase 6 Started!
 
 ### ✅ Colors (15 variables)
 Source: `variables/_colors.scss`
@@ -303,7 +305,7 @@ Source: `variables/_elements.scss` - Identical across contexts
 ## Files Created
 
 ### Core Files
-- ✅ `assets/styles/buckram-variables.css` - CSS custom properties (295 variables)
+- ✅ `assets/styles/buckram-variables.css` - CSS custom properties (327 variables)
 - ✅ `assets/styles/components/headings.css` - Converted headings component
 - ✅ `assets/styles/components/body.css` - Converted body component (web)
 - ✅ `assets/styles/components/blockquotes.css` - Converted blockquote component (web)
@@ -686,3 +688,56 @@ Source: `variables/_specials.scss`
 **Endnotes:**
 - [x] `$endnote-margin-left` → `--endnote-margin-left`
 - [x] `$endnote-line-height` → `--endnote-line-height`
+### ✅ Phase 6: Columns, Dropcaps, Asides, and Extended Endnotes (32 variables)
+Source: `variables/_specials.scss`
+
+**Columns - Base Layout (4 variables):**
+- [x] `$column-margin-top` → `--column-margin-top`
+- [x] `$column-margin-bottom` → `--column-margin-bottom`
+- [x] `$column-line-height` → `--column-line-height`
+- [x] `$column-text-indent` → `--column-text-indent` (web/epub/prince: 0)
+
+**Two Column Layout (3 variables):**
+- [x] `$column-twocolumn-column-gap` → `--column-twocolumn-column-gap`
+- [x] `$column-twocolumn-font-size` → `--column-twocolumn-font-size`
+- [x] `$column-twocolumn-text-align` → `--column-twocolumn-text-align`
+
+**Three Column Layout (3 variables):**
+- [x] `$column-threecolumn-column-gap` → `--column-threecolumn-column-gap`
+- [x] `$column-threecolumn-font-size` → `--column-threecolumn-font-size`
+- [x] `$column-threecolumn-text-align` → `--column-threecolumn-text-align`
+
+**Dropcaps (.first-character) (5 variables):**
+- [x] `$first-character-font-family` → `--first-character-font-family`
+- [x] `$first-character-font-size` → `--first-character-font-size`
+- [x] `$first-character-font-style` → `--first-character-font-style`
+- [x] `$first-character-font-weight` → `--first-character-font-weight`
+- [x] `$first-character-line-height` → `--first-character-line-height`
+
+**Asides - Padding (4 variables):**
+- [x] `$aside-padding-top` → `--aside-padding-top`
+- [x] `$aside-padding-right` → `--aside-padding-right`
+- [x] `$aside-padding-bottom` → `--aside-padding-bottom`
+- [x] `$aside-padding-left` → `--aside-padding-left`
+
+**Asides - Margins (4 variables):**
+- [x] `$aside-margin-top` → `--aside-margin-top`
+- [x] `$aside-margin-right` → `--aside-margin-right`
+- [x] `$aside-margin-bottom` → `--aside-margin-bottom`
+- [x] `$aside-margin-left` → `--aside-margin-left`
+
+**Asides - Typography & Borders (5 variables):**
+- [x] `$aside-line-height` → `--aside-line-height`
+- [x] `$aside-border-top` → `--aside-border-top`
+- [x] `$aside-border-right` → `--aside-border-right`
+- [x] `$aside-border-bottom` → `--aside-border-bottom`
+- [x] `$aside-border-left` → `--aside-border-left`
+
+**Extended Endnote Styling (7 variables):**
+- [x] `$endnote-h3-padding-bottom` → `--endnote-h3-padding-bottom`
+- [x] `$endnote-ol-margin-top` → `--endnote-ol-margin-top`
+- [x] `$endnote-ol-margin-left` → `--endnote-ol-margin-left`
+- [x] `$endnote-ol-font-size` → `--endnote-ol-font-size`
+- [x] `$endnote-li-padding-left` → `--endnote-li-padding-left`
+- [x] `$endnote-li-margin-top` → `--endnote-li-margin-top`
+- [x] `$endnote-li-indent` → `--endnote-li-indent`
