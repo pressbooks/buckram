@@ -5,14 +5,14 @@
 @mixin caption-text-align($align) {
   figcaption,
   .wp-caption-text {
-    text-align: map-get($image-caption-text-align-map, $align);
+    text-align: var(--image-caption-text-align-#{$align});
   }
 }
 
 p {
   img {
     &.aligncenter {
-      margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
+      margin: var(--image-wrapper-margin-top) auto var(--image-wrapper-margin-bottom);
       text-align: center;
       display: block;
 
@@ -21,7 +21,7 @@ p {
 
     &.alignleft {
       float: left;
-      margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+      margin: var(--image-wrapper-margin-top) var(--image-alignleft-margin-right) var(--floated-image-wrapper-margin-bottom) 0;
       padding-right: 0;
 
       @include caption-text-align(left);
@@ -29,7 +29,7 @@ p {
 
     &.alignright {
       float: right;
-      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+      margin: var(--image-wrapper-margin-top) 0 var(--floated-image-wrapper-margin-bottom) var(--image-alignright-margin-left);
       padding-left: 0;
 
       @include caption-text-align(right);
@@ -46,17 +46,17 @@ p {
 @if $type == 'epub' {
   figcaption,
   .wp-caption-text {
-    font-family: $image-caption-font-family;
-    font-size: if-map-get($image-caption-font-size, $type);
-    font-style: $image-caption-font-style;
-    font-weight: $image-caption-font-weight;
+    font-family: var(--image-caption-font-family);
+    font-size: var(--image-caption-font-size);
+    font-style: var(--image-caption-font-style);
+    font-weight: var(--image-caption-font-weight);
     hyphens: none;
-    padding-bottom: if-map-get($image-caption-padding-bottom, $type);
-    margin-top: if-map-get($image-caption-margin-top, $type);
-    text-align: $image-caption-text-align;
-    text-transform: $image-caption-text-transform;
-    text-indent: if-map-get($image-caption-text-indent, $type);
-    color: if-map-get($image-caption-text-color, $type);
+    padding-bottom: var(--image-caption-padding-bottom);
+    margin-top: var(--image-caption-margin-top);
+    text-align: var(--image-caption-text-align);
+    text-transform: var(--image-caption-text-transform);
+    text-indent: var(--image-caption-text-indent);
+    color: var(--image-caption-text-color);
   }
 
   img {
@@ -155,18 +155,18 @@ p {
 } @else if $type == 'prince' {
   figcaption,
   .wp-caption-text {
-    font-family: $image-caption-font-family;
-    font-size: if-map-get($image-caption-font-size, $type);
-    font-style: $image-caption-font-style;
-    font-weight: $image-caption-font-weight;
+    font-family: var(--image-caption-font-family);
+    font-size: var(--image-caption-font-size);
+    font-style: var(--image-caption-font-style);
+    font-weight: var(--image-caption-font-weight);
     hyphens: none;
-    line-height: if-map-get($image-caption-line-height, $type);
-    margin-top: if-map-get($image-caption-margin-top, $type);
-    padding-bottom: if-map-get($image-caption-padding-bottom, $type);
-    text-align: $image-caption-text-align;
-    text-transform: $image-caption-text-transform;
-    text-indent: if-map-get($image-caption-text-indent, $type);
-    color: if-map-get($image-caption-text-color, $type);
+    line-height: var(--image-caption-line-height);
+    margin-top: var(--image-caption-margin-top);
+    padding-bottom: var(--image-caption-padding-bottom);
+    text-align: var(--image-caption-text-align);
+    text-transform: var(--image-caption-text-transform);
+    text-indent: var(--image-caption-text-indent);
+    color: var(--image-caption-text-color);
   }
 
   img {
@@ -194,15 +194,15 @@ p {
 
     &.alignnone {
       padding-left: 0;
-      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
+      margin: var(--image-wrapper-margin-top) 0 var(--image-wrapper-margin-bottom);
       text-align: left;
-      width: if-map-get($image-alignnone-wrapper-width, $type) !important;
+      width: var(--image-alignnone-wrapper-width) !important;
 
       @include caption-text-align(left);
     }
 
     &.aligncenter {
-      margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
+      margin: var(--image-wrapper-margin-top) auto var(--image-wrapper-margin-bottom);
       text-align: center;
 
       @include caption-text-align(center);
@@ -215,7 +215,7 @@ p {
 
     &.alignleft {
       float: left;
-      margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+      margin: var(--image-wrapper-margin-top) var(--image-alignleft-margin-right) var(--floated-image-wrapper-margin-bottom) 0;
       max-width: 50%;
 
       @include caption-text-align(left);
@@ -223,7 +223,7 @@ p {
 
     &.alignright {
       float: right;
-      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+      margin: var(--image-wrapper-margin-top) 0 var(--floated-image-wrapper-margin-bottom) var(--image-alignright-margin-left);
       max-width: 50%;
       padding-right: 0;
 
@@ -233,17 +233,17 @@ p {
 
   .wp-caption.alignnone {
     img {
-      float: $image-alignnone-image-float;
+      float: var(--image-alignnone-image-float);
       margin-right: 0;
-      max-width: if-map-get($image-alignnone-image-maxwidth, $type) !important;
+      max-width: var(--image-alignnone-image-maxwidth) !important;
     }
 
     figcaption,
     .wp-caption-text {
       box-sizing: border-box;
-      float: $image-alignnone-caption-float;
-      padding-left: if-map-get($image-alignnone-caption-left-padding, $type);
-      width: if-map-get($image-alignnone-caption-width, $type) !important;
+      float: var(--image-alignnone-caption-float);
+      padding-left: var(--image-alignnone-caption-left-padding);
+      width: var(--image-alignnone-caption-width) !important;
     }
 
     &::after {
@@ -259,18 +259,18 @@ p {
   .back-matter {
     .wp-caption figcaption,
     .wp-caption .wp-caption-text {
-      font-family: $image-caption-font-family;
-      font-size: if-map-get($image-caption-font-size, $type);
-      font-style: $image-caption-font-style;
-      font-weight: $image-caption-font-weight;
+      font-family: var(--image-caption-font-family);
+      font-size: var(--image-caption-font-size);
+      font-style: var(--image-caption-font-style);
+      font-weight: var(--image-caption-font-weight);
       hyphens: none;
-      line-height: if-map-get($image-caption-line-height, $type);
-      padding-bottom: if-map-get($image-caption-padding-bottom, $type);
-      margin-top: if-map-get($image-caption-margin-top, $type);
-      text-align: $image-caption-text-align;
-      text-transform: $image-caption-text-transform;
-      text-indent: if-map-get($image-caption-text-indent, $type);
-      color: if-map-get($image-caption-text-color, $type);
+      line-height: var(--image-caption-line-height);
+      padding-bottom: var(--image-caption-padding-bottom);
+      margin-top: var(--image-caption-margin-top);
+      text-align: var(--image-caption-text-align);
+      text-transform: var(--image-caption-text-transform);
+      text-indent: var(--image-caption-text-indent);
+      color: var(--image-caption-text-color);
     }
 
     img {
@@ -297,15 +297,15 @@ p {
 
       &.alignnone {
         padding-left: 0;
-        margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
+        margin: var(--image-wrapper-margin-top) 0 var(--image-wrapper-margin-bottom);
         text-align: left;
-        width: if-map-get($image-alignnone-wrapper-width, $type) !important;
+        width: var(--image-alignnone-wrapper-width) !important;
 
         @include caption-text-align(left);
       }
 
       &.aligncenter {
-        margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
+        margin: var(--image-wrapper-margin-top) auto var(--image-wrapper-margin-bottom);
         text-align: center;
 
         @include caption-text-align(center);
@@ -318,7 +318,7 @@ p {
 
       &.alignleft {
         float: left;
-        margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+        margin: var(--image-wrapper-margin-top) var(--image-alignleft-margin-right) var(--floated-image-wrapper-margin-bottom) 0;
         max-width: 50%;
 
         @include caption-text-align(left);
@@ -326,7 +326,7 @@ p {
 
       &.alignright {
         float: right;
-        margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+        margin: var(--image-wrapper-margin-top) 0 var(--floated-image-wrapper-margin-bottom) var(--image-alignright-margin-left);
         max-width: 50%;
         padding-right: 0;
 

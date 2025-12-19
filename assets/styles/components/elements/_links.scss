@@ -10,13 +10,13 @@
 
 @if $type != 'web' {
   a {
-    text-decoration: if-map-get($link-text-decoration, $type);
+    text-decoration: var(--link-text-decoration);
   }
 }
 
 @if $type == 'prince' {
   .print a {
-    text-decoration: $link-text-decoration-print;
+    text-decoration: var(--link-text-decoration-print);
   }
 } @else {
   .front-matter,
@@ -24,7 +24,7 @@
   .chapter,
   .back-matter {
     a {
-      text-decoration: if-map-get($link-text-decoration, $type);
+      text-decoration: var(--link-text-decoration);
     }
   }
 }

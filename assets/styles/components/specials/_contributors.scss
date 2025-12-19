@@ -8,22 +8,22 @@
 
 .contributors {
   .chapter-authors, .book-contributors {
-    margin-top: $contributors-margin-top;
-    font-family: $body-font-family;
+    margin-top: var(--contributors-margin-top);
+    font-family: var(--body-font-family);
   }
 
   .about-authors {
-    margin-top: $contributors-margin-top;
-    margin-bottom: $contributors-margin-bottom;
-    text-align: $contributors-text-align;
+    margin-top: var(--contributors-margin-top);
+    margin-bottom: var(--contributors-margin-bottom);
+    text-align: var(--contributors-text-align);
   }
 
   .contributor {
-    margin-top: $contributors-margin-top;
+    margin-top: var(--contributors-margin-top);
 
     &__type {
-      margin-top: $contributors-margin-top;
-      margin-bottom: $contributors-margin-bottom;
+      margin-top: var(--contributors-margin-top);
+      margin-bottom: var(--contributors-margin-bottom);
     }
 
     // TODO: replace clearfix hack with better CSS Grid solution when Prince supports grid layout
@@ -34,15 +34,15 @@
     }
 
     &__profile__picture {
-      float: $contributor-profile-picture-float;
-      margin: $contributor-profile-picture-margin;
+      float: var(--contributor-profile-picture-float);
+      margin: var(--contributor-profile-picture-margin);
       width: 33%;
       max-width: 400px;
-      border-radius: $contributor-profile-picture-border-radius;
+      border-radius: var(--contributor-profile-picture-border-radius);
     }
 
     &__name__and__links > div {
-      float: $contributor-profile-picture-float;
+      float: var(--contributor-profile-picture-float);
 
       &.contributor__info__small {
         width: 67%;
@@ -56,30 +56,30 @@
     }
 
     &__name {
-      font-family: $h1-font-family;
-      font-size: $h3-font-size;
-      text-indent: $contributors-text-indent;
+      font-family: var(--h1-font-family);
+      font-size: var(--h3-font-size);
+      text-indent: var(--contributors-text-indent);
       margin: 0;
     }
 
     &__institution {
-      font-family: $h1-font-family;
-      text-transform: $contributor-institution-text-transform;
-      text-indent: $contributors-text-indent;
-      margin: $contributor-link-margin-top;
+      font-family: var(--h1-font-family);
+      text-transform: var(--contributor-institution-text-transform);
+      text-indent: var(--contributors-text-indent);
+      margin: var(--contributor-link-margin-top);
     }
 
     &__website {
-      margin-top: $contributor-link-margin-top;
-      text-indent: $contributors-text-indent;
+      margin-top: var(--contributor-link-margin-top);
+      text-indent: var(--contributors-text-indent);
     }
 
     &__links {
-      margin-top: if-map-get($contributor-links-margin-top, $type);
+      margin-top: var(--contributor-links-margin-top);
       display: inline-block;
 
       a {
-        text-decoration: if-map-get($contributor-links-text-decoration, $type);
+        text-decoration: var(--contributor-links-text-decoration);
       }
 
       svg {
@@ -89,12 +89,12 @@
     }
 
     &__link {
-      margin-top: $contributor-link-margin-top;
-      text-indent: $contributors-text-indent;
+      margin-top: var(--contributor-link-margin-top);
+      text-indent: var(--contributors-text-indent);
     }
 
     &__bio {
-      margin-top: $contributor-bio-margin-top;
+      margin-top: var(--contributor-bio-margin-top);
     }
   }
 }

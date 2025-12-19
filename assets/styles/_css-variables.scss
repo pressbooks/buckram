@@ -6,18 +6,11 @@
  * 
  * This allows CSS custom properties to have different values for each output format
  * while components always use the same var(--property-name) syntax.
+ * 
+ * This file should be imported AFTER all SCSS variables are loaded.
  */
 
 @import 'components/utilities';
-@import 'variables/fonts';
-@import 'variables/colors';
-@import 'variables/elements';
-@import 'variables/media';
-@import 'variables/pages';
-@import 'variables/section-titles';
-@import 'variables/specials';
-@import 'variables/structure';
-@import 'variables/toc';
 
 :root {
   /* ============================================================================

@@ -19,55 +19,55 @@
   table {
     display: table;
     max-width: 100%;
-    margin-top: $table-margin-top;
-    margin-bottom: $table-margin-bottom;
+    margin-top: var(--table-margin-top);
+    margin-bottom: var(--table-margin-bottom);
     @if $type != 'prince' {
       overflow-x: scroll;
     }
 
-    font-family: $table-font-family;
-    font-size: $table-font-size;
-    hyphens: $table-hyphens;
+    font-family: var(--table-font-family);
+    font-size: var(--table-font-size);
+    hyphens: var(--table-hyphens);
     @if $type == 'prince' {
-      line-height: $table-line-height;
+      line-height: var(--table-line-height);
     }
 
-    text-align: $table-align;
+    text-align: var(--table-align);
     border-collapse: collapse;
-    border-color: if-map-get($line-color-1, $type);
-    border-top: $table-border-width solid;
-    border-right: if-map-get($table-border-right-width, $type) if-map-get($table-border-right-style, $type);
-    border-bottom: $table-border-width solid;
-    border-left: if-map-get($table-border-left-width, $type) if-map-get($table-border-left-style, $type);
+    border-color: var(--line-color-1);
+    border-top: var(--table-border-width) solid;
+    border-right: var(--table-border-right-width) var(--table-border-right-style);
+    border-bottom: var(--table-border-width) solid;
+    border-left: var(--table-border-left-width) var(--table-border-left-style);
 
     p {
-      text-align: $table-align;
+      text-align: var(--table-align);
     }
 
     caption {
-      margin-bottom: $table-caption-margin-bottom;
-      font-weight: $table-caption-font-weight;
+      margin-bottom: var(--table-caption-margin-bottom);
+      font-weight: var(--table-caption-font-weight);
       @if $type == 'prince' {
-        line-height: $table-caption-line-height;
+        line-height: var(--table-caption-line-height);
       }
     }
 
     &.lines {
-      border-color: if-map-get($line-color-1, $type);
+      border-color: var(--line-color-1);
     }
 
     &.lines tr {
-      border-top: $table-border-width solid;
-      border-bottom: $table-border-width solid;
-      border-color: if-map-get($line-color-1, $type);
+      border-top: var(--table-border-width) solid;
+      border-bottom: var(--table-border-width) solid;
+      border-color: var(--line-color-1);
     }
 
     &.lines th {
-      border-color: if-map-get($line-color-1, $type);
+      border-color: var(--line-color-1);
     }
 
     &.lines td {
-      border-color: if-map-get($line-color-1, $type);
+      border-color: var(--line-color-1);
     }
 
     &.no-lines tr,
@@ -77,12 +77,12 @@
     }
 
     &.shaded {
-      background-color: if-map-get($shade-color-1, $type);
+      background-color: var(--shade-color-1);
     }
 
     &.border {
-      border: $table-border-width solid;
-      border-color: if-map-get($line-color-1, $type);
+      border: var(--table-border-width) solid;
+      border-color: var(--line-color-1);
     }
 
     &.no-border,

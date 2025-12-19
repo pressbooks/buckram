@@ -11,30 +11,30 @@
     }
 
     .toc-chapter-title {
-      display: $toc-left-chapter-title-display;
-      width: if-map-get($toc-left-title-width, $type);
+      display: var(--toc-left-chapter-title-display);
+      width: var(--toc-left-title-width);
     }
 
     .chapter-subtitle {
-      display: $toc-left-subtitle-display;
-      width: if-map-get($toc-left-subtitle-width, $type);
+      display: var(--toc-left-subtitle-display);
+      width: var(--toc-left-subtitle-width);
     }
 
     .chapter-author {
-      display: $toc-left-author-display;
-      width: if-map-get($toc-left-author-width, $type);
+      display: var(--toc-left-author-display);
+      width: var(--toc-left-author-width);
     }
 
     .toc-subsection-title {
-      display: $toc-left-subsection-display;
-      width: if-map-get($toc-left-subsection-width, $type);
+      display: var(--toc-left-subsection-display);
+      width: var(--toc-left-subsection-width);
     }
 
     .chapter .chapter-subtitle,
     .chapter .chapter-author,
     .chapter .sections,
     .chapter .chapter-license {
-      margin-left: if-map-get($toc-left-left-gutter, $type);
+      margin-left: var(--toc-left-left-gutter);
     }
   }
 }
@@ -45,7 +45,7 @@
     .chapter-author,
     .chapter-license,
     .sections {
-      margin-left: if-map-get($toc-left-left-gutter, $type);
+      margin-left: var(--toc-left-left-gutter);
     }
   }
 }
@@ -53,37 +53,37 @@
 @if $type == 'prince' {
   #toc {
     a::after {
-      display: $toc-left-page-number-display;
+      display: var(--toc-left-page-number-display);
       position: absolute;
       right: 0;
-      text-align: $toc-left-page-number-align;
+      text-align: var(--toc-left-page-number-align);
       top: 0;
-      width: if-map-get($toc-left-right-gutter, $type);
+      width: var(--toc-left-right-gutter);
     }
 
     .front-matter,
     .part,
     .back-matter,
     .chapter.numberless {
-      margin-left: if-map-get($toc-left-left-gutter, $type);
+      margin-left: var(--toc-left-left-gutter);
     }
 
     .part {
-      margin-right: if-map-get($toc-left-right-gutter, $type);
+      margin-right: var(--toc-left-right-gutter);
     }
 
     .part a::before {
-      content: $toc-part-number-before-content $toc-part-number-content $toc-left-part-number-after-content;
-      display: $toc-left-part-number-display;
-      text-align: $toc-left-part-number-align;
+      content: var(--toc-part-number-before-content) var(--toc-part-number-content) var(--toc-left-part-number-after-content);
+      display: var(--toc-left-part-number-display);
+      text-align: var(--toc-left-part-number-align);
     }
 
     .chapter a::before {
-      content: $toc-chapter-number-before-content $toc-chapter-number-content $toc-left-chapter-number-after-content;
-      display: $toc-left-chapter-number-display;
-      float: $toc-left-chapter-number-float; // TODO
-      text-align: $toc-left-chapter-number-align; // $toc-chapter-number-align;
-      width: if-map-get($toc-left-left-gutter, $type);
+      content: var(--toc-chapter-number-before-content) var(--toc-chapter-number-content) var(--toc-left-chapter-number-after-content);
+      display: var(--toc-left-chapter-number-display);
+      float: var(--toc-left-chapter-number-float); // TODO
+      text-align: var(--toc-left-chapter-number-align); // $toc-chapter-number-align;
+      width: var(--toc-left-left-gutter);
       overflow-wrap: normal;
     }
   }

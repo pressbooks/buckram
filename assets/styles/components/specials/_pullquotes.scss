@@ -10,40 +10,40 @@
 
 aside,
 .aside {
-  padding: $aside-padding-top $aside-padding-right $aside-padding-bottom $aside-padding-left;
-  margin: $aside-margin-top $aside-margin-right $aside-margin-bottom $aside-margin-left;
+  padding: var(--aside-padding-top) var(--aside-padding-right) var(--aside-padding-bottom) var(--aside-padding-left);
+  margin: var(--aside-margin-top) var(--aside-margin-right) var(--aside-margin-bottom) var(--aside-margin-left);
   @if $type != 'epub' {
-    line-height: $aside-line-height;
+    line-height: var(--aside-line-height);
   }
 
   text-indent: 0;
-  border-top: $aside-border-top;
-  border-right: $aside-border-right;
-  border-bottom: $aside-border-bottom;
-  border-left: $aside-border-left;
+  border-top: var(--aside-border-top);
+  border-right: var(--aside-border-right);
+  border-bottom: var(--aside-border-bottom);
+  border-left: var(--aside-border-left);
 }
 
 // Pullquotes
 
 %pullquote {
   display: inline-block;
-  font-family: $pullquote-font-family;
-  font-size: $pullquote-font-size;
-  font-style: $pullquote-font-style;
-  font-weight: $pullquote-font-weight;
+  font-family: var(--pullquote-font-family);
+  font-size: var(--pullquote-font-size);
+  font-style: var(--pullquote-font-style);
+  font-weight: var(--pullquote-font-weight);
   hyphens: none;
   @if $type != 'epub' {
-    line-height: $pullquote-line-height;
+    line-height: var(--pullquote-line-height);
   }
 
-  text-align: $pullquote-align;
+  text-align: var(--pullquote-align);
   text-indent: 0;
-  border-top: if-map-get($pullquote-border-top-width, $type) $pullquote-border-top-style;
-  border-top-color: $pullquote-border-top-color;
-  border-bottom: if-map-get($pullquote-border-bottom-width, $type) $pullquote-border-bottom-style;
-  border-bottom-color: $pullquote-border-bottom-color;
-  padding-top: if-map-get($pullquote-padding-top, $type);
-  padding-bottom: if-map-get($pullquote-padding-bottom, $type);
+  border-top: var(--pullquote-border-top-width) var(--pullquote-border-top-style);
+  border-top-color: var(--pullquote-border-top-color);
+  border-bottom: var(--pullquote-border-bottom-width) var(--pullquote-border-bottom-style);
+  border-bottom-color: var(--pullquote-border-bottom-color);
+  padding-top: var(--pullquote-padding-top);
+  padding-bottom: var(--pullquote-padding-bottom);
   page-break-inside: avoid;
   break-inside: avoid;
 }
@@ -51,8 +51,8 @@ aside,
 .pullquote {
   @extend %pullquote;
 
-  margin: if-map-get($pullquote-margin-top, $type) auto if-map-get($pullquote-margin-bottom, $type);
-  width: if-map-get($pullquote-width, $type);
+  margin: var(--pullquote-margin-top) auto var(--pullquote-margin-bottom);
+  width: var(--pullquote-width);
 }
 
 .pullquote-left,
@@ -60,9 +60,9 @@ aside,
   @extend %pullquote;
 
   float: left;
-  margin: if-map-get($pullquote-left-margin-top, $type) if-map-get($pullquote-left-margin-right, $type) if-map-get($pullquote-left-margin-bottom, $type) if-map-get($pullquote-left-margin-left, $type);
-  text-align: $pullquote-left-align;
-  width: $pullquote-left-width;
+  margin: var(--pullquote-left-margin-top) var(--pullquote-left-margin-right) var(--pullquote-left-margin-bottom) var(--pullquote-left-margin-left);
+  text-align: var(--pullquote-left-align);
+  width: var(--pullquote-left-width);
 }
 
 .pullquote-right,
@@ -70,9 +70,9 @@ aside,
   @extend %pullquote;
 
   float: right;
-  margin: if-map-get($pullquote-right-margin-top, $type) if-map-get($pullquote-right-margin-right, $type) if-map-get($pullquote-right-margin-bottom, $type) if-map-get($pullquote-right-margin-left, $type);
-  text-align: $pullquote-right-align;
-  width: $pullquote-right-width;
+  margin: var(--pullquote-right-margin-top) var(--pullquote-right-margin-right) var(--pullquote-right-margin-bottom) var(--pullquote-right-margin-left);
+  text-align: var(--pullquote-right-align);
+  width: var(--pullquote-right-width);
 }
 
 @supports not ((page-break-inside: avoid) and (break-inside: avoid)) {
@@ -88,17 +88,17 @@ aside,
 // Sidebars
 .sidebar {
   float: right;
-  width: $sidebar-width;
-  padding: $sidebar-padding-top $sidebar-padding-right $sidebar-padding-bottom $sidebar-padding-left;
-  margin-top: $sidebar-margin-top;
-  margin-right: $sidebar-margin-right;
-  margin-left: $sidebar-margin-left;
-  font-size: $sidebar-font-size;
-  font-style: $sidebar-font-style;
-  font-weight: $sidebar-font-weight;
-  text-align: $sidebar-align;
+  width: var(--sidebar-width);
+  padding: var(--sidebar-padding-top) var(--sidebar-padding-right) var(--sidebar-padding-bottom) var(--sidebar-padding-left);
+  margin-top: var(--sidebar-margin-top);
+  margin-right: var(--sidebar-margin-right);
+  margin-left: var(--sidebar-margin-left);
+  font-size: var(--sidebar-font-size);
+  font-style: var(--sidebar-font-style);
+  font-weight: var(--sidebar-font-weight);
+  text-align: var(--sidebar-align);
   @if $type != 'epub' {
-    line-height: if-map-get($sidebar-line-height, $type);
+    line-height: var(--sidebar-line-height);
   }
 }
 

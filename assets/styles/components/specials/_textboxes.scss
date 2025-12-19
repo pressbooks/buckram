@@ -11,66 +11,66 @@
 // Legacy Educational Textboxes
 @mixin educational-textbox($header-color: #fff, $header-background: #444, $color: #000, $background: #fff) {
   padding:
-    if-map-get($edu-textbox-padding-top, $type)
-    if-map-get($edu-textbox-padding-right, $type)
-    if-map-get($edu-textbox-padding-bottom, $type)
-    if-map-get($edu-textbox-padding-left, $type);
-  margin-bottom: if-map-get($edu-textbox-margin-bottom, $type);
-  margin-left: if-map-get($edu-textbox-margin-left, $type);
-  margin-right: if-map-get($edu-textbox-margin-right, $type);
-  border-radius: if-map-get($edu-textbox-border-radius, $type);
-  border-style: $edu-textbox-border-style;
-  border-width: if-map-get($edu-textbox-border-width, $type);
+    var(--edu-textbox-padding-top)
+    var(--edu-textbox-padding-right)
+    var(--edu-textbox-padding-bottom)
+    var(--edu-textbox-padding-left);
+  margin-bottom: var(--edu-textbox-margin-bottom);
+  margin-left: var(--edu-textbox-margin-left);
+  margin-right: var(--edu-textbox-margin-right);
+  border-radius: var(--edu-textbox-border-radius);
+  border-style: var(--edu-textbox-border-style);
+  border-width: var(--edu-textbox-border-width);
   color: $color;
   background: $background;
 
   h3 {
     padding:
-      if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
-      if-map-get($edu-textbox-padding-right, $type) * (1 / $edu-header-font-size-multiplier)
-      if-map-get($edu-textbox-padding-bottom, $type) * (1 / $edu-header-font-size-multiplier)
-      if-map-get($edu-textbox-padding-left, $type) * (1 / $edu-header-font-size-multiplier);
+      calc(var(--edu-textbox-padding-top) * (1 / #{$edu-header-font-size-multiplier}))
+      calc(var(--edu-textbox-padding-right) * (1 / #{$edu-header-font-size-multiplier}))
+      calc(var(--edu-textbox-padding-bottom) * (1 / #{$edu-header-font-size-multiplier}))
+      calc(var(--edu-textbox-padding-left) * (1 / #{$edu-header-font-size-multiplier}));
     margin:
-      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
-      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
-      if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier)
-      -1 * if-map-get($edu-textbox-padding-top, $type) * (1 / $edu-header-font-size-multiplier);
-    border-top-right-radius: if-map-get($edu-textbox-border-radius, $type) * (1 / $edu-header-font-size-multiplier) - if-map-get($edu-textbox-border-width, $type);
-    border-top-left-radius: if-map-get($edu-textbox-border-radius, $type) * (1 / $edu-header-font-size-multiplier) - if-map-get($edu-textbox-border-width, $type);
-    font-size: $edu-header-font-size-multiplier * if-map-get($textbox-font-size, $type);
-    font-style: $edu-header-font-style;
-    font-weight: $edu-header-font-weight;
+      calc(-1 * var(--edu-textbox-padding-top) * (1 / #{$edu-header-font-size-multiplier}))
+      calc(-1 * var(--edu-textbox-padding-top) * (1 / #{$edu-header-font-size-multiplier}))
+      calc(var(--edu-textbox-padding-top) * (1 / #{$edu-header-font-size-multiplier}))
+      calc(-1 * var(--edu-textbox-padding-top) * (1 / #{$edu-header-font-size-multiplier}));
+    border-top-right-radius: calc(var(--edu-textbox-border-radius) * (1 / #{$edu-header-font-size-multiplier}) - var(--edu-textbox-border-width));
+    border-top-left-radius: calc(var(--edu-textbox-border-radius) * (1 / #{$edu-header-font-size-multiplier}) - var(--edu-textbox-border-width));
+    font-size: calc(#{$edu-header-font-size-multiplier} * var(--textbox-font-size));
+    font-style: var(--edu-header-font-style);
+    font-weight: var(--edu-header-font-weight);
     color: $header-color;
     background: $header-background;
-    text-align: $edu-header-text-align;
+    text-align: var(--edu-header-text-align);
   }
 }
 
 // Legacy Educational Textboxes
 @mixin edu-textbox($header-color: #fff, $header-background: #444, $color: #000, $background: #fff) {
-  margin-bottom: if-map-get($edu-textbox-margin-bottom, $type);
+  margin-bottom: var(--edu-textbox-margin-bottom);
   padding: 0;
-  border-radius: if-map-get($edu-textbox-border-radius, $type);
-  border-style: $edu-textbox-border-style;
-  border-width: if-map-get($edu-textbox-border-width, $type);
+  border-radius: var(--edu-textbox-border-radius);
+  border-style: var(--edu-textbox-border-style);
+  border-width: var(--edu-textbox-border-width);
   color: $color;
   background: $background;
 
   .textbox__header {
     background: $header-background;
-    border-top-left-radius: if-map-get($edu-textbox-border-radius, $type);
-    border-top-right-radius: if-map-get($edu-textbox-border-radius, $type);
+    border-top-left-radius: var(--edu-textbox-border-radius);
+    border-top-right-radius: var(--edu-textbox-border-radius);
     color: $header-color;
-    font-size: $edu-header-font-size;
-    font-style: $edu-header-font-style;
-    font-weight: $edu-header-font-weight;
+    font-size: var(--edu-header-font-size);
+    font-style: var(--edu-header-font-style);
+    font-weight: var(--edu-header-font-weight);
     margin: 0;
     padding:
-      if-map-get($edu-textbox-padding-top, $type)
-      if-map-get($edu-textbox-padding-right, $type)
-      if-map-get($edu-textbox-padding-bottom, $type)
-      if-map-get($edu-textbox-padding-left, $type);
-    text-align: $edu-header-text-align;
+      var(--edu-textbox-padding-top)
+      var(--edu-textbox-padding-right)
+      var(--edu-textbox-padding-bottom)
+      var(--edu-textbox-padding-left);
+    text-align: var(--edu-header-text-align);
 
     h1, h2, h3, h4, h5, h6 {
       color: $header-color;
@@ -84,10 +84,10 @@
   .textbox__content {
     margin: 0;
     padding:
-      if-map-get($edu-textbox-padding-top, $type)
-      if-map-get($edu-textbox-padding-right, $type)
-      if-map-get($edu-textbox-padding-bottom, $type)
-      if-map-get($edu-textbox-padding-left, $type);
+      var(--edu-textbox-padding-top)
+      var(--edu-textbox-padding-right)
+      var(--edu-textbox-padding-bottom)
+      var(--edu-textbox-padding-left);
   }
 
   // &.textbox--sidebar {
@@ -96,56 +96,56 @@
 }
 
 .textbox, .bcc-box {
-  padding: if-map-get($textbox-padding-top, $type) if-map-get($textbox-padding-right, $type) if-map-get($textbox-padding-bottom, $type) if-map-get($textbox-padding-left, $type);
-  margin: if-map-get($textbox-margin-top, $type) if-map-get($textbox-margin-right, $type) if-map-get($textbox-margin-bottom, $type) if-map-get($textbox-margin-left, $type);
-  font-family: $textbox-font-family;
-  font-size: if-map-get($textbox-font-size, $type);
-  font-style: $textbox-font-style;
-  font-weight: $textbox-font-weight;
-  word-spacing: if-map-get($textbox-word-spacing, $type);
-  letter-spacing: if-map-get($textbox-letter-spacing, $type);
+  padding: var(--textbox-padding-top) var(--textbox-padding-right) var(--textbox-padding-bottom) var(--textbox-padding-left);
+  margin: var(--textbox-margin-top) var(--textbox-margin-right) var(--textbox-margin-bottom) var(--textbox-margin-left);
+  font-family: var(--textbox-font-family);
+  font-size: var(--textbox-font-size);
+  font-style: var(--textbox-font-style);
+  font-weight: var(--textbox-font-weight);
+  word-spacing: var(--textbox-word-spacing);
+  letter-spacing: var(--textbox-letter-spacing);
   @if $type != 'epub' {
-    line-height: if-map-get($textbox-line-height, $type);
+    line-height: var(--textbox-line-height);
   }
 
-  text-align: $textbox-text-align;
-  text-indent: if-map-get($textbox-text-indent, $type);
-  border-style: $textbox-border-style;
-  border-width: if-map-get($textbox-border-width, $type);
-  border-radius: if-map-get($textbox-border-radius, $type);
+  text-align: var(--textbox-text-align);
+  text-indent: var(--textbox-text-indent);
+  border-style: var(--textbox-border-style);
+  border-width: var(--textbox-border-width);
+  border-radius: var(--textbox-border-radius);
 
   ul {
-    margin-top: $textbox-ul-margin-top;
-    margin-bottom: $textbox-ul-margin-bottom;
+    margin-top: var(--textbox-ul-margin-top);
+    margin-bottom: var(--textbox-ul-margin-bottom);
   }
 
   ol {
-    margin-top: $textbox-ol-margin-top;
-    margin-bottom: $textbox-ol-margin-bottom;
+    margin-top: var(--textbox-ol-margin-top);
+    margin-bottom: var(--textbox-ol-margin-bottom);
   }
 
   li {
-    margin-left: $textbox-li-margin-left;
+    margin-left: var(--textbox-li-margin-left);
   }
 
   p {
-    margin-bottom: if-map-get($textbox-para-margin-bottom, $type);
-    text-align: $textbox-text-align;
-    text-indent: if-map-get($textbox-text-indent, $type);
+    margin-bottom: var(--textbox-para-margin-bottom);
+    text-align: var(--textbox-text-align);
+    text-indent: var(--textbox-text-indent);
   }
 
   * + p {
-    margin-top: if-map-get($textbox-para-margin-top, $type);
-    text-indent: if-map-get($textbox-text-indent, $type);
+    margin-top: var(--textbox-para-margin-top);
+    text-indent: var(--textbox-text-indent);
   }
 
   .textbox-caption {
     display: block;
     margin: 0;
-    font-family: $textbox-caption-font-family;
-    font-size: if-map-get($textbox-caption-font-size, $type);
-    font-style: $textbox-caption-font-style;
-    font-weight: $textbox-caption-font-weight;
+    font-family: var(--textbox-caption-font-family);
+    font-size: var(--textbox-caption-font-size);
+    font-style: var(--textbox-caption-font-style);
+    font-weight: var(--textbox-caption-font-weight);
   }
 
   &.learning-objectives {
@@ -206,13 +206,13 @@
 }
 
 .textbox--sidebar {
-  float: if-map-get($textbox-sidebar-float, $type);
-  margin: if-map-get($textbox-sidebar-margin-top, $type) if-map-get($textbox-sidebar-margin-right, $type) if-map-get($textbox-sidebar-margin-bottom, $type) if-map-get($textbox-sidebar-margin-left, $type);
+  float: var(--textbox-sidebar-float);
+  margin: var(--textbox-sidebar-margin-top) var(--textbox-sidebar-margin-right) var(--textbox-sidebar-margin-bottom) var(--textbox-sidebar-margin-left);
   @if $type == 'prince' {
-    margin-inside: $textbox-sidebar-margin-inside;
+    margin-inside: var(--textbox-sidebar-margin-inside);
   }
 
-  max-width: $textbox-sidebar-max-width;
+  max-width: var(--textbox-sidebar-max-width);
 }
 
 @if $type == 'epub' {

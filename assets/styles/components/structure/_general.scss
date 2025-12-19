@@ -9,16 +9,16 @@
 // Size & Cropmarks
 
 @page {
-  marks: $page-cropmarks;
-  size: $page-width $page-height;
+  marks: var(--page-cropmarks);
+  size: var(--page-width) var(--page-height);
 }
 
 // Margins
 
 @page:left {
-  margin: $page-margin-top $page-margin-inside $page-margin-bottom $page-margin-outside;
+  margin: var(--page-margin-top) var(--page-margin-inside) var(--page-margin-bottom) var(--page-margin-outside);
 }
 
 @page:right {
-  margin: $page-margin-top $page-margin-outside $page-margin-bottom $page-margin-inside;
+  margin: var(--page-margin-top) var(--page-margin-outside) var(--page-margin-bottom) var(--page-margin-inside);
 }

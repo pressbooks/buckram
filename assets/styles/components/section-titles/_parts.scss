@@ -8,64 +8,64 @@
 
 @if $type != 'web' {
   .part-title-wrap {
-    margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+    margin: var(--section-header-margin-top) var(--section-header-margin-right) var(--section-header-margin-bottom) var(--section-header-margin-left);
 
     .part-number {
-      border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type);
-      border-bottom-color: if-map-get($part-number-border-bottom-color, $type);
-      display: $part-number-display;
-      margin: if-map-get($part-number-margin-top, $type) if-map-get($part-number-margin-right, $type) if-map-get($part-number-margin-bottom, $type) if-map-get($part-number-margin-left, $type);
-      padding-bottom: if-map-get($part-number-padding-bottom, $type);
-      font-family: $part-number-font-family;
-      font-size: if-map-get($part-number-font-size, $type);
-      font-style: $part-number-font-style;
-      font-weight: $part-number-font-weight;
-      letter-spacing: $part-number-letter-spacing;
-      word-spacing: $part-number-word-spacing;
-      text-align: $part-number-align;
-      text-transform: $part-number-text-transform;
+      border-bottom: var(--part-number-border-bottom-style) var(--part-number-border-bottom-width);
+      border-bottom-color: var(--part-number-border-bottom-color);
+      display: var(--part-number-display);
+      margin: var(--part-number-margin-top) var(--part-number-margin-right) var(--part-number-margin-bottom) var(--part-number-margin-left);
+      padding-bottom: var(--part-number-padding-bottom);
+      font-family: var(--part-number-font-family);
+      font-size: var(--part-number-font-size);
+      font-style: var(--part-number-font-style);
+      font-weight: var(--part-number-font-weight);
+      letter-spacing: var(--part-number-letter-spacing);
+      word-spacing: var(--part-number-word-spacing);
+      text-align: var(--part-number-align);
+      text-transform: var(--part-number-text-transform);
       page-break-after: avoid;
 
       &::before {
-        text-transform: $part-number-before-content-text-transform;
-        content: $part-number-before-content;
+        text-transform: var(--part-number-before-content-text-transform);
+        content: var(--part-number-before-content);
       }
 
       &::after {
-        content: $part-number-after-content;
+        content: var(--part-number-after-content);
       }
     }
 
     .part-title {
-      margin: if-map-get($part-title-margin-top, $type) if-map-get($part-title-margin-right, $type) if-map-get($part-title-margin-bottom, $type) if-map-get($part-title-margin-left, $type);
-      font-family: $part-title-font-family;
-      font-size: if-map-get($part-title-font-size, $type);
-      font-style: $part-title-font-style;
-      font-weight: $part-title-font-weight;
+      margin: var(--part-title-margin-top) var(--part-title-margin-right) var(--part-title-margin-bottom) var(--part-title-margin-left);
+      font-family: var(--part-title-font-family);
+      font-size: var(--part-title-font-size);
+      font-style: var(--part-title-font-style);
+      font-weight: var(--part-title-font-weight);
       hyphens: none;
       @if $type != 'epub' {
-        line-height: if-map-get($part-title-line-height, $type);
+        line-height: var(--part-title-line-height);
       }
 
-      text-align: if-map-get($part-title-align, $type);
-      text-transform: $part-title-text-transform;
+      text-align: var(--part-title-align);
+      text-transform: var(--part-title-text-transform);
       page-break-after: avoid;
-      letter-spacing: if-map-get($part-title-letter-spacing, $type);
-      word-spacing: if-map-get($part-title-word-spacing, $type);
-      border-bottom: if-map-get($part-title-border-bottom-width, $type) $part-title-border-bottom-style;
-      border-bottom-color: if-map-get($part-title-border-bottom-color, $type);
+      letter-spacing: var(--part-title-letter-spacing);
+      word-spacing: var(--part-title-word-spacing);
+      border-bottom: var(--part-title-border-bottom-width) var(--part-title-border-bottom-style);
+      border-bottom-color: var(--part-title-border-bottom-color);
 
       @if  $part-title-decoration-content != "" or $part-title-decoration-display != none {
         &::after {
-          font-family: $part-title-decoration-font-family;
-          content: $part-title-decoration-content;
-          display: $part-title-decoration-display;
+          font-family: var(--part-title-decoration-font-family);
+          content: var(--part-title-decoration-content);
+          display: var(--part-title-decoration-display);
           white-space: pre;
-          font-size: if-map-get($part-title-decoration-font-size, $type);
-          font-weight: $part-title-decoration-font-weight;
-          margin-bottom: if-map-get($part-title-decoration-margin-bottom, $type);
-          margin-top: if-map-get($part-title-decoration-margin-top, $type);
-          color: if-map-get($part-title-decoration-color, $type);
+          font-size: var(--part-title-decoration-font-size);
+          font-weight: var(--part-title-decoration-font-weight);
+          margin-bottom: var(--part-title-decoration-margin-bottom);
+          margin-top: var(--part-title-decoration-margin-top);
+          color: var(--part-title-decoration-color);
         }
       }
     }

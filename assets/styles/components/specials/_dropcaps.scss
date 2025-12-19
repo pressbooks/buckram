@@ -9,9 +9,9 @@
 .first-character,
 .firstcharacter // Deprecated; only included for backwards-compatibility.
 {
-  font-family: $first-character-font-family;
-  font-size: $first-character-font-size;
-  font-style: $first-character-font-style;
-  font-weight: $first-character-font-weight;
-  line-height: $first-character-line-height;
+  font-family: var(--first-character-font-family);
+  font-size: var(--first-character-font-size);
+  font-style: var(--first-character-font-style);
+  font-weight: var(--first-character-font-weight);
+  line-height: var(--first-character-line-height);
 }

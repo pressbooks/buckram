@@ -7,56 +7,56 @@
 .interactive-content {
 
   @if $type != 'epub' {
-    line-height: if-map-get($interactive-content-line-height, $type);
+    line-height: var(--interactive-content-line-height);
   }
 
-  margin-bottom: if-map-get($interactive-content-margin-bottom, $type);
-  padding: if-map-get($interactive-content-padding-top, $type) if-map-get($interactive-content-padding-right, $type) if-map-get($interactive-content-padding-bottom, $type) if-map-get($interactive-content-padding-left, $type);
+  margin-bottom: var(--interactive-content-margin-bottom);
+  padding: var(--interactive-content-padding-top) var(--interactive-content-padding-right) var(--interactive-content-padding-bottom) var(--interactive-content-padding-left);
 
   &__icon {
-    display: $interactive-icon-display;
-    float: $interactive-icon-float;
-    width: if-map-get($interactive-icon-width, $type);
-    height: if-map-get($interactive-icon-height, $type);
+    display: var(--interactive-icon-display);
+    float: var(--interactive-icon-float);
+    width: var(--interactive-icon-width);
+    height: var(--interactive-icon-height);
     margin:
-      if-map-get($interactive-icon-margin-top, $type)
-      if-map-get($interactive-icon-margin-right, $type)
-      if-map-get($interactive-icon-margin-bottom, $type)
-      if-map-get($interactive-icon-margin-left, $type);
-    background-image: url('#{if-map-get($interactive-icon-url, $type)}');
+      var(--interactive-icon-margin-top)
+      var(--interactive-icon-margin-right)
+      var(--interactive-icon-margin-bottom)
+      var(--interactive-icon-margin-left);
+    background-image: url('#{var(--interactive-icon-url)}');
     background-repeat: no-repeat;
-    background-size: if-map-get($interactive-icon-background-size, $type);
+    background-size: var(--interactive-icon-background-size);
   }
 
   img {
     display: block;
-    margin-bottom: if-map-get($interactive-thumbnail-margin-bottom, $type);
+    margin-bottom: var(--interactive-thumbnail-margin-bottom);
     margin-left: auto;
     margin-right: auto;
   }
 
   p {
-    font-size: if-map-get($interactive-content-font-size, $type);
-    font-style: $interactive-content-font-style;
-    font-family: $interactive-content-font-family;
-    font-weight: $interactive-content-font-weight;
+    font-size: var(--interactive-content-font-size);
+    font-style: var(--interactive-content-font-style);
+    font-family: var(--interactive-content-font-family);
+    font-weight: var(--interactive-content-font-weight);
     margin-bottom: 0;
-    text-indent: if-map-get($interactive-content-text-indent, $type);
-    text-align: if-map-get($interactive-content-text-align, $type);
+    text-indent: var(--interactive-content-text-indent);
+    text-align: var(--interactive-content-text-align);
   }
 }
 
 .embed div.figcaption {
-  text-align: if-map-get($media-caption-align, $type);
+  text-align: var(--media-caption-align);
 }
 
 @if $type == 'web' {
   iframe {
     display: block;
-    margin: 0 auto if-map-get($interactive-content-margin-bottom, $type);
+    margin: 0 auto var(--interactive-content-margin-bottom);
   }
 
   .embed figcaption {
-    text-align: if-map-get($media-caption-align, $type);
+    text-align: var(--media-caption-align);
   }
 }

@@ -6,20 +6,20 @@
 
 // Half Title Page
 #half-title-page {
-  display: if-map-get($title-half-title-display, $type);
+  display: var(--title-half-title-display);
 }
 
 #half-title-page > .title {
-  margin-top: if-map-get($title-half-title-block-margin-top, $type);
-  font-family: $title-half-title-font-family;
-  font-size: if-map-get($title-half-title-font-size, $type);
-  font-style: $title-half-title-font-style;
-  font-weight: $title-half-title-font-weight;
+  margin-top: var(--title-half-title-block-margin-top);
+  font-family: var(--title-half-title-font-family);
+  font-size: var(--title-half-title-font-size);
+  font-style: var(--title-half-title-font-style);
+  font-weight: var(--title-half-title-font-weight);
   hyphens: none;
-  letter-spacing: $title-half-title-letter-spacing;
-  word-spacing: $title-half-title-word-spacing;
-  text-align: $title-half-title-align;
-  text-transform: $title-half-title-text-transform;
+  letter-spacing: var(--title-half-title-letter-spacing);
+  word-spacing: var(--title-half-title-word-spacing);
+  text-align: var(--title-half-title-align);
+  text-transform: var(--title-half-title-text-transform);
   @if $type == 'prince' {
     prince-bookmark-level: none;
   }
@@ -27,142 +27,142 @@
 
 // Title Page
 .title {
-  margin-top: if-map-get($title-title-margin-top, $type);
-  margin-right: if-map-get($title-title-margin-right, $type);
-  margin-left: if-map-get($title-title-margin-left, $type);
-  font-family: $title-title-font-family;
-  font-size: if-map-get($title-title-font-size, $type);
-  font-style: $title-title-font-style;
-  font-weight: $title-title-font-weight;
+  margin-top: var(--title-title-margin-top);
+  margin-right: var(--title-title-margin-right);
+  margin-left: var(--title-title-margin-left);
+  font-family: var(--title-title-font-family);
+  font-size: var(--title-title-font-size);
+  font-style: var(--title-title-font-style);
+  font-weight: var(--title-title-font-weight);
   hyphens: none;
-  letter-spacing: $title-title-letter-spacing;
-  word-spacing: $title-title-word-spacing;
-  text-align: $title-title-align;
-  text-transform: $title-title-text-transform;
-  border-bottom: if-map-get($title-title-border-bottom-width, $type) $title-title-border-bottom-style;
-  border-bottom-color: if-map-get($title-title-border-bottom-color, $type);
-  padding-bottom: if-map-get($title-title-padding-bottom, $type);
+  letter-spacing: var(--title-title-letter-spacing);
+  word-spacing: var(--title-title-word-spacing);
+  text-align: var(--title-title-align);
+  text-transform: var(--title-title-text-transform);
+  border-bottom: var(--title-title-border-bottom-width) var(--title-title-border-bottom-style);
+  border-bottom-color: var(--title-title-border-bottom-color);
+  padding-bottom: var(--title-title-padding-bottom);
   @if $type == 'prince' {
     prince-bookmark-level: none;
   }
   @if $type != 'epub' {
-    line-height: if-map-get($title-title-line-height, $type);
+    line-height: var(--title-title-line-height);
   }
 
   @if  $title-title-decoration-content != "" or $title-title-decoration-display != none {
     &::after {
-      font-family: $title-title-decoration-font-family;
-      content: $title-title-decoration-content;
-      display: $title-title-decoration-display;
+      font-family: var(--title-title-decoration-font-family);
+      content: var(--title-title-decoration-content);
+      display: var(--title-title-decoration-display);
       white-space: pre;
-      font-size: if-map-get($title-title-decoration-font-size, $type);
-      font-weight: $title-title-decoration-font-weight;
-      margin-bottom: if-map-get($title-title-decoration-margin-bottom, $type);
-      margin-top: if-map-get($title-title-decoration-margin-top, $type);
-      color: if-map-get($title-title-decoration-color, $type);
+      font-size: var(--title-title-decoration-font-size);
+      font-weight: var(--title-title-decoration-font-weight);
+      margin-bottom: var(--title-title-decoration-margin-bottom);
+      margin-top: var(--title-title-decoration-margin-top);
+      color: var(--title-title-decoration-color);
     }
   }
 }
 
 .subtitle {
-  margin-top: if-map-get($title-subtitle-margin-top, $type);
-  margin-right: if-map-get($title-subtitle-margin-right, $type);
-  margin-left: if-map-get($title-subtitle-margin-left, $type);
-  font-family: $title-subtitle-font-family;
-  font-size: if-map-get($title-subtitle-font-size, $type);
-  font-style: $title-subtitle-font-style;
-  font-weight: $title-subtitle-font-weight;
+  margin-top: var(--title-subtitle-margin-top);
+  margin-right: var(--title-subtitle-margin-right);
+  margin-left: var(--title-subtitle-margin-left);
+  font-family: var(--title-subtitle-font-family);
+  font-size: var(--title-subtitle-font-size);
+  font-style: var(--title-subtitle-font-style);
+  font-weight: var(--title-subtitle-font-weight);
   hyphens: none;
-  letter-spacing: $title-subtitle-letter-spacing;
-  word-spacing: $title-subtitle-word-spacing;
-  text-align: $title-subtitle-align;
-  text-transform: $title-subtitle-text-transform;
-  border-bottom: if-map-get($title-subtitle-border-bottom-width, $type) $title-subtitle-border-bottom-style;
-  border-bottom-color: if-map-get($title-subtitle-border-bottom-color, $type);
-  padding-bottom: if-map-get($title-subtitle-padding-bottom, $type);
+  letter-spacing: var(--title-subtitle-letter-spacing);
+  word-spacing: var(--title-subtitle-word-spacing);
+  text-align: var(--title-subtitle-align);
+  text-transform: var(--title-subtitle-text-transform);
+  border-bottom: var(--title-subtitle-border-bottom-width) var(--title-subtitle-border-bottom-style);
+  border-bottom-color: var(--title-subtitle-border-bottom-color);
+  padding-bottom: var(--title-subtitle-padding-bottom);
   @if $type != 'epub' {
-    line-height: if-map-get($title-subtitle-line-height, $type);
+    line-height: var(--title-subtitle-line-height);
   }
 }
 
 .author {
-  margin-top: if-map-get($title-author-margin-top, $type);
-  margin-right: if-map-get($title-author-margin-right, $type);
-  margin-left: if-map-get($title-author-margin-left, $type);
-  font-family: $title-author-font-family;
-  font-size: if-map-get($title-author-font-size, $type);
-  font-style: $title-author-font-style;
-  font-weight: $title-author-font-weight;
+  margin-top: var(--title-author-margin-top);
+  margin-right: var(--title-author-margin-right);
+  margin-left: var(--title-author-margin-left);
+  font-family: var(--title-author-font-family);
+  font-size: var(--title-author-font-size);
+  font-style: var(--title-author-font-style);
+  font-weight: var(--title-author-font-weight);
   hyphens: none;
-  letter-spacing: $title-author-letter-spacing;
-  word-spacing: $title-author-word-spacing;
-  text-align: $title-author-align;
-  text-transform: $title-author-text-transform;
+  letter-spacing: var(--title-author-letter-spacing);
+  word-spacing: var(--title-author-word-spacing);
+  text-align: var(--title-author-align);
+  text-transform: var(--title-author-text-transform);
   text-indent: 0;
-  border-bottom: if-map-get($title-author-border-bottom-width, $type) $title-author-border-bottom-style;
-  border-bottom-color: if-map-get($title-author-border-bottom-color, $type);
-  padding-bottom: if-map-get($title-author-padding-bottom, $type);
+  border-bottom: var(--title-author-border-bottom-width) var(--title-author-border-bottom-style);
+  border-bottom-color: var(--title-author-border-bottom-color);
+  padding-bottom: var(--title-author-padding-bottom);
   @if $type != 'epub' {
-    line-height: if-map-get($title-author-line-height, $type);
+    line-height: var(--title-author-line-height);
   }
 }
 
 div.publisher-logo {
-  display: $title-publisher-logo-display;
-  width: $title-publisher-logo-width;
+  display: var(--title-publisher-logo-display);
+  width: var(--title-publisher-logo-width);
   height: auto;
-  padding-top: $title-publisher-logo-padding-top;
-  padding-bottom: $title-publisher-logo-padding-bottom;
-  margin-right: $title-publisher-logo-margin-right;
-  margin-left: $title-publisher-logo-margin-left;
-  text-align: $title-publisher-logo-text-align;
+  padding-top: var(--title-publisher-logo-padding-top);
+  padding-bottom: var(--title-publisher-logo-padding-bottom);
+  margin-right: var(--title-publisher-logo-margin-right);
+  margin-left: var(--title-publisher-logo-margin-left);
+  text-align: var(--title-publisher-logo-text-align);
 }
 
 .publisher {
   display: block;
-  float: if-map-get($title-publisher-float, $type);
-  margin: if-map-get($title-publisher-margin-top, $type) if-map-get($title-publisher-margin-right, $type) if-map-get($title-publisher-margin-bottom, $type) if-map-get($title-publisher-margin-left, $type);
-  font-family: $title-publisher-font-family;
-  font-size: if-map-get($title-publisher-font-size, $type);
-  font-style: $title-publisher-font-style;
-  font-weight: $title-publisher-font-weight;
+  float: var(--title-publisher-float);
+  margin: var(--title-publisher-margin-top) var(--title-publisher-margin-right) var(--title-publisher-margin-bottom) var(--title-publisher-margin-left);
+  font-family: var(--title-publisher-font-family);
+  font-size: var(--title-publisher-font-size);
+  font-style: var(--title-publisher-font-style);
+  font-weight: var(--title-publisher-font-weight);
   hyphens: none;
   @if $type != 'epub' {
-    line-height: $title-publisher-line-height;
+    line-height: var(--title-publisher-line-height);
   }
 
-  letter-spacing: $title-publisher-letter-spacing;
-  word-spacing: $title-publisher-word-spacing;
-  text-align: $title-publisher-align;
-  text-transform: $title-publisher-text-transform;
+  letter-spacing: var(--title-publisher-letter-spacing);
+  word-spacing: var(--title-publisher-word-spacing);
+  text-align: var(--title-publisher-align);
+  text-transform: var(--title-publisher-text-transform);
   text-indent: 0;
-  border-bottom: if-map-get($title-publisher-border-bottom-width, $type) $title-publisher-border-bottom-style;
-  border-bottom-color: if-map-get($title-publisher-border-bottom-color, $type);
-  padding-bottom: if-map-get($title-publisher-padding-bottom, $type);
+  border-bottom: var(--title-publisher-border-bottom-width) var(--title-publisher-border-bottom-style);
+  border-bottom-color: var(--title-publisher-border-bottom-color);
+  padding-bottom: var(--title-publisher-padding-bottom);
 }
 
 .publisher-city {
-  float: if-map-get($title-publisher-city-float, $type);
+  float: var(--title-publisher-city-float);
   margin-top: 0;
-  margin-left: if-map-get($title-publisher-city-margin-left, $type);
-  margin-right: if-map-get($title-publisher-city-margin-right, $type);
-  font-family: $title-publisher-city-font-family;
-  font-size: if-map-get($title-publisher-city-font-size, $type);
-  font-style: $title-publisher-city-font-style;
-  font-weight: $title-publisher-city-font-weight;
+  margin-left: var(--title-publisher-city-margin-left);
+  margin-right: var(--title-publisher-city-margin-right);
+  font-family: var(--title-publisher-city-font-family);
+  font-size: var(--title-publisher-city-font-size);
+  font-style: var(--title-publisher-city-font-style);
+  font-weight: var(--title-publisher-city-font-weight);
   hyphens: none;
   @if $type != 'epub' {
-    line-height: $title-publisher-city-line-height;
+    line-height: var(--title-publisher-city-line-height);
   }
 
-  letter-spacing: $title-publisher-city-letter-spacing;
-  word-spacing: $title-publisher-city-word-spacing;
-  text-align: $title-publisher-city-align;
-  text-transform: $title-publisher-city-text-transform;
+  letter-spacing: var(--title-publisher-city-letter-spacing);
+  word-spacing: var(--title-publisher-city-word-spacing);
+  text-align: var(--title-publisher-city-align);
+  text-transform: var(--title-publisher-city-text-transform);
   text-indent: 0;
-  border-bottom: if-map-get($title-publisher-city-border-bottom-width, $type) $title-publisher-city-border-bottom-style;
-  border-bottom-color: if-map-get($title-publisher-city-border-bottom-color, $type);
-  padding-bottom: if-map-get($title-publisher-city-padding-bottom, $type);
+  border-bottom: var(--title-publisher-city-border-bottom-width) var(--title-publisher-city-border-bottom-style);
+  border-bottom-color: var(--title-publisher-city-border-bottom-color);
+  padding-bottom: var(--title-publisher-city-padding-bottom);
 }
 
 // Prince and EPUB-specific display rules

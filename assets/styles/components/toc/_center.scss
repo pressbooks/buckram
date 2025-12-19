@@ -8,28 +8,28 @@
   #toc {
     li {
       text-align: center;
-      margin-left: if-map-get($toc-center-left-gutter, $type);
-      margin-right: if-map-get($toc-center-right-gutter, $type);
+      margin-left: var(--toc-center-left-gutter);
+      margin-right: var(--toc-center-right-gutter);
     }
 
     .toc-chapter-title {
-      display: $toc-center-chapter-title-display;
-      width: if-map-get($toc-center-title-width, $type);
+      display: var(--toc-center-chapter-title-display);
+      width: var(--toc-center-title-width);
     }
 
     .chapter-subtitle {
-      display: $toc-center-subtitle-display;
-      width: if-map-get($toc-center-title-width, $type);
+      display: var(--toc-center-subtitle-display);
+      width: var(--toc-center-title-width);
     }
 
     .chapter-author {
-      display: $toc-center-author-display;
-      width: if-map-get($toc-center-title-width, $type);
+      display: var(--toc-center-author-display);
+      width: var(--toc-center-title-width);
     }
 
     .toc-subsection-title {
-      display: $toc-center-subsection-display;
-      width: if-map-get($toc-center-subsection-width, $type);
+      display: var(--toc-center-subsection-display);
+      width: var(--toc-center-subsection-width);
     }
   }
 }
@@ -37,17 +37,17 @@
 @if $type == 'prince' {
   #toc {
     a::after {
-      display: $toc-center-page-number-display;
+      display: var(--toc-center-page-number-display);
     }
 
     .part a::before {
-      content: $toc-part-number-before-content $toc-part-number-content $toc-center-part-number-after-content;
-      display: $toc-center-part-number-display;
+      content: var(--toc-part-number-before-content) var(--toc-part-number-content) var(--toc-center-part-number-after-content);
+      display: var(--toc-center-part-number-display);
     }
 
     .chapter a::before {
-      content: $toc-chapter-number-before-content counter(chapter) $toc-center-chapter-number-after-content;
-      display: $toc-center-chapter-number-display;
+      content: var(--toc-chapter-number-before-content) counter(chapter) var(--toc-center-chapter-number-after-content);
+      display: var(--toc-center-chapter-number-display);
     }
   }
 }

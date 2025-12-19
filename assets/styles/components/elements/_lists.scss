@@ -8,26 +8,26 @@
 @import "../utilities";
 
 %ol {
-  margin-top: if-map-get($ol-margin-top, $type);
-  margin-bottom: if-map-get($ol-margin-bottom, $type);
-  margin-left: if-map-get($ol-margin-left, $type);
-  padding-left: if-map-get($ol-padding-left, $type);
+  margin-top: var(--ol-margin-top);
+  margin-bottom: var(--ol-margin-bottom);
+  margin-left: var(--ol-margin-left);
+  padding-left: var(--ol-padding-left);
 
   ol {
     margin-bottom: 0;
-    margin-top: if-map-get($ol-ol-margin-top, $type);
+    margin-top: var(--ol-ol-margin-top);
   }
 }
 
 %ul {
-  margin-top: if-map-get($ul-margin-top, $type);
-  margin-bottom: if-map-get($ul-margin-bottom, $type);
-  margin-left: if-map-get($ul-margin-left, $type);
-  padding-left: if-map-get($ul-padding-left, $type);
+  margin-top: var(--ul-margin-top);
+  margin-bottom: var(--ul-margin-bottom);
+  margin-left: var(--ul-margin-left);
+  padding-left: var(--ul-padding-left);
 
   ul {
     margin-bottom: 0;
-    margin-top: if-map-get($ul-ul-margin-top, $type);
+    margin-top: var(--ul-ul-margin-top);
   }
 }
 
@@ -65,7 +65,7 @@
     content: counter(level-1) ".\A0";
     display: inline-block;
     text-align: right;
-    width: if-map-get($ol-padding-left, $type);
+    width: var(--ol-padding-left);
   }
 
   ol {
@@ -76,7 +76,7 @@
   ol li::before {
     counter-increment: level-2;
     content: counter(level-2, lower-alpha) ".\A0";
-    min-width: if-map-get($ol-padding-left, $type);
+    min-width: var(--ol-padding-left);
     width: auto;
   }
 

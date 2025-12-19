@@ -10,23 +10,23 @@
 
 @mixin heading($heading) {
   #{$heading} {
-    border-bottom: map-get($heading-border-bottom-style-map, $heading) if-map-get(map-get($heading-border-bottom-width-map, $heading), $type);
-    border-bottom-color: if-map-get(map-get($heading-border-bottom-color-map, $heading), $type);
-    margin-top: if-map-get(map-get($heading-margin-top-map, $heading), $type);
-    margin-bottom: if-map-get(map-get($heading-margin-bottom-map, $heading), $type);
-    padding-bottom: if-map-get(map-get($heading-padding-bottom-map, $heading), $type);
-    font-family: if-map-get(map-get($heading-font-family-map, $heading), $type);
-    font-size: if-map-get(map-get($heading-font-size-map, $heading), $type);
-    font-style: map-get($heading-font-style-map, $heading);
-    font-weight: map-get($heading-font-weight-map, $heading);
+    border-bottom: var(--#{$heading}-border-bottom-style) var(--#{$heading}-border-bottom-width);
+    border-bottom-color: var(--#{$heading}-border-bottom-color);
+    margin-top: var(--#{$heading}-margin-top);
+    margin-bottom: var(--#{$heading}-margin-bottom);
+    padding-bottom: var(--#{$heading}-padding-bottom);
+    font-family: var(--#{$heading}-font-family);
+    font-size: var(--#{$heading}-font-size);
+    font-style: var(--#{$heading}-font-style);
+    font-weight: var(--#{$heading}-font-weight);
     @if $type != 'epub' {
-      line-height: if-map-get(map-get($heading-line-height-map, $heading), $type);
+      line-height: var(--#{$heading}-line-height);
     }
 
-    text-align: map-get($heading-align-map, $heading);
-    text-transform: map-get($heading-text-transform-map, $heading);
-    letter-spacing: if-map-get(map-get($heading-letter-spacing-map, $heading), $type);
-    word-spacing: if-map-get(map-get($heading-word-spacing-map, $heading), $type);
+    text-align: var(--#{$heading}-align);
+    text-transform: var(--#{$heading}-text-transform);
+    letter-spacing: var(--#{$heading}-letter-spacing);
+    word-spacing: var(--#{$heading}-word-spacing);
   }
 }
 

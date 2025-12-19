@@ -5,59 +5,59 @@
 @import '../utilities';
 
 .twocolumn {
-  margin-top: $column-margin-top;
-  margin-bottom: $column-margin-bottom;
-  font-size: $column-twocolumn-font-size;
+  margin-top: var(--column-margin-top);
+  margin-bottom: var(--column-margin-bottom);
+  font-size: var(--column-twocolumn-font-size);
   @if $type != 'epub' {
-    line-height: $column-line-height;
+    line-height: var(--column-line-height);
   }
 
-  text-align: if-map-get($column-twocolumn-text-align, $type);
-  text-indent: if-map-get($column-text-indent, $type);
-  column-gap: $column-twocolumn-column-gap;
+  text-align: var(--column-twocolumn-text-align);
+  text-indent: var(--column-text-indent);
+  column-gap: var(--column-twocolumn-column-gap);
   column-count: 2;
   column-fill: balance;
 
   p {
     font-size: inherit;
     @if $type != 'epub' {
-      line-height: $column-line-height;
+      line-height: var(--column-line-height);
     }
 
-    text-align: if-map-get($column-twocolumn-text-align, $type);
-    text-indent: $para-indent;
+    text-align: var(--column-twocolumn-text-align);
+    text-indent: var(--para-indent);
   }
 
   p + p {
-    margin-top: $para-margin-top;
+    margin-top: var(--para-margin-top);
   }
 }
 
 .threecolumn {
-  margin-top: $column-margin-top;
-  margin-bottom: $column-margin-bottom;
-  font-size: $column-threecolumn-font-size;
-  text-indent: if-map-get($column-text-indent, $type);
-  text-align: if-map-get($column-threecolumn-text-align, $type);
+  margin-top: var(--column-margin-top);
+  margin-bottom: var(--column-margin-bottom);
+  font-size: var(--column-threecolumn-font-size);
+  text-indent: var(--column-text-indent);
+  text-align: var(--column-threecolumn-text-align);
   @if $type != 'epub' {
-    line-height: $column-line-height;
+    line-height: var(--column-line-height);
   }
 
-  column-gap: $column-threecolumn-column-gap;
+  column-gap: var(--column-threecolumn-column-gap);
   column-count: 3;
   column-fill: balance;
 
   p {
     font-size: inherit;
     @if $type != 'epub' {
-      line-height: $column-line-height;
+      line-height: var(--column-line-height);
     }
 
-    text-align: if-map-get($column-threecolumn-text-align, $type);
-    text-indent: $para-indent;
+    text-align: var(--column-threecolumn-text-align);
+    text-indent: var(--para-indent);
   }
 
   p + p {
-    margin-top: $para-margin-top;
+    margin-top: var(--para-margin-top);
   }
 }

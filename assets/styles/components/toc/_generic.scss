@@ -4,7 +4,7 @@
   #toc {
     ul {
       @if $type != 'epub' {
-        line-height: if-map-get($toc-base-line-height, $type);
+        line-height: var(--toc-base-line-height);
       }
 
       list-style: none;
@@ -46,61 +46,61 @@
 
     .front-matter {
       @if $type == 'epub' {
-        color: if-map-get($toc-front-matter-title-color, $type);
+        color: var(--toc-front-matter-title-color);
       }
 
-      font-family: $toc-front-matter-title-font-family;
-      font-size: if-map-get($toc-front-matter-title-font-size, $type);
-      font-style: $toc-front-matter-title-font-style;
-      font-weight: $toc-front-matter-title-font-weight;
+      font-family: var(--toc-front-matter-title-font-family);
+      font-size: var(--toc-front-matter-title-font-size);
+      font-style: var(--toc-front-matter-title-font-style);
+      font-weight: var(--toc-front-matter-title-font-weight);
       hyphens: none;
       @if $type != 'epub' {
-        line-height: if-map-get($toc-front-matter-line-height, $type);
+        line-height: var(--toc-front-matter-line-height);
       }
 
-      text-transform: $toc-front-matter-title-text-transform;
+      text-transform: var(--toc-front-matter-title-text-transform);
     }
 
     .front-matter .chapter-subtitle {
       @if $type == 'epub' {
-        color: if-map-get($toc-front-matter-subtitle-color, $type);
+        color: var(--toc-front-matter-subtitle-color);
       }
 
-      font-family: $toc-front-matter-subtitle-font-family;
-      font-size: if-map-get($toc-front-matter-subtitle-font-size, $type);
-      font-style: $toc-front-matter-subtitle-font-style;
-      font-weight: $toc-front-matter-subtitle-font-weight;
-      text-transform: $toc-front-matter-subtitle-text-transform;
+      font-family: var(--toc-front-matter-subtitle-font-family);
+      font-size: var(--toc-front-matter-subtitle-font-size);
+      font-style: var(--toc-front-matter-subtitle-font-style);
+      font-weight: var(--toc-front-matter-subtitle-font-weight);
+      text-transform: var(--toc-front-matter-subtitle-text-transform);
     }
 
     .front-matter .chapter-author {
       @if $type == 'epub' {
-        color: if-map-get($toc-front-matter-author-color, $type);
+        color: var(--toc-front-matter-author-color);
       }
 
-      font-family: $toc-front-matter-author-font-family;
-      font-size: if-map-get($toc-front-matter-author-font-size, $type);
-      font-style: $toc-front-matter-author-font-style;
-      font-weight: $toc-front-matter-author-font-weight;
-      text-transform: $toc-front-matter-author-text-transform;
+      font-family: var(--toc-front-matter-author-font-family);
+      font-size: var(--toc-front-matter-author-font-size);
+      font-style: var(--toc-front-matter-author-font-style);
+      font-weight: var(--toc-front-matter-author-font-weight);
+      text-transform: var(--toc-front-matter-author-text-transform);
     }
 
     .part {
       @if $type == 'epub' {
-        color: if-map-get($toc-part-title-color, $type);
+        color: var(--toc-part-title-color);
       }
 
-      font-family: $toc-part-title-font-family;
-      font-size: if-map-get($toc-part-title-font-size, $type);
-      font-style: $toc-part-title-font-style;
-      font-weight: $toc-part-title-font-weight;
+      font-family: var(--toc-part-title-font-family);
+      font-size: var(--toc-part-title-font-size);
+      font-style: var(--toc-part-title-font-style);
+      font-weight: var(--toc-part-title-font-weight);
       hyphens: none;
       @if $type != 'epub' {
-        line-height: if-map-get($toc-part-line-height, $type);
+        line-height: var(--toc-part-line-height);
       }
 
-      margin-top: if-map-get($toc-part-margin-top, $type);
-      text-transform: $toc-part-title-text-transform;
+      margin-top: var(--toc-part-margin-top);
+      text-transform: var(--toc-part-title-text-transform);
     }
 
     // epub uses .display-none in the TOC for parts, not .invisble
@@ -113,126 +113,126 @@
 
     .chapter {
       @if $type == 'epub' {
-        color: if-map-get($toc-chapter-title-color, $type);
+        color: var(--toc-chapter-title-color);
       }
 
-      font-family: $toc-chapter-title-font-family;
-      font-size: if-map-get($toc-chapter-title-font-size, $type);
-      font-style: $toc-chapter-title-font-style;
-      font-weight: $toc-chapter-title-font-weight;
+      font-family: var(--toc-chapter-title-font-family);
+      font-size: var(--toc-chapter-title-font-size);
+      font-style: var(--toc-chapter-title-font-style);
+      font-weight: var(--toc-chapter-title-font-weight);
       @if $type != 'epub' {
-        line-height: if-map-get($toc-chapter-line-height, $type);
+        line-height: var(--toc-chapter-line-height);
       }
 
-      text-transform: $toc-chapter-title-text-transform;
+      text-transform: var(--toc-chapter-title-text-transform);
     }
 
     .chapter .chapter-subtitle {
       @if $type == 'epub' {
-        color: if-map-get($toc-chapter-subtitle-color, $type);
+        color: var(--toc-chapter-subtitle-color);
       }
 
-      font-family: $toc-chapter-subtitle-font-family;
-      font-size: if-map-get($toc-chapter-subtitle-font-size, $type);
-      font-style: $toc-chapter-subtitle-font-style;
-      font-weight: $toc-chapter-subtitle-font-weight;
-      text-transform: $toc-chapter-subtitle-text-transform;
-      margin-top: if-map-get($toc-chapter-subtitle-margin-top, $type);
+      font-family: var(--toc-chapter-subtitle-font-family);
+      font-size: var(--toc-chapter-subtitle-font-size);
+      font-style: var(--toc-chapter-subtitle-font-style);
+      font-weight: var(--toc-chapter-subtitle-font-weight);
+      text-transform: var(--toc-chapter-subtitle-text-transform);
+      margin-top: var(--toc-chapter-subtitle-margin-top);
     }
 
     .chapter .chapter-author {
       @if $type == 'epub' {
-        color: if-map-get($toc-chapter-author-color, $type);
+        color: var(--toc-chapter-author-color);
       }
 
-      font-family: $toc-chapter-author-font-family;
-      font-size: if-map-get($toc-chapter-author-font-size, $type);
-      font-style: $toc-chapter-author-font-style;
-      font-weight: $toc-chapter-author-font-weight;
-      text-transform: $toc-chapter-author-text-transform;
-      margin-top: if-map-get($toc-chapter-author-margin-top, $type);
+      font-family: var(--toc-chapter-author-font-family);
+      font-size: var(--toc-chapter-author-font-size);
+      font-style: var(--toc-chapter-author-font-style);
+      font-weight: var(--toc-chapter-author-font-weight);
+      text-transform: var(--toc-chapter-author-text-transform);
+      margin-top: var(--toc-chapter-author-margin-top);
     }
 
     .back-matter {
       @if $type == 'epub' {
-        color: if-map-get($toc-back-matter-title-color, $type);
+        color: var(--toc-back-matter-title-color);
       }
 
-      font-family: $toc-back-matter-title-font-family;
-      font-size: if-map-get($toc-back-matter-title-font-size, $type);
-      font-style: $toc-back-matter-title-font-style;
-      font-weight: $toc-back-matter-title-font-weight;
+      font-family: var(--toc-back-matter-title-font-family);
+      font-size: var(--toc-back-matter-title-font-size);
+      font-style: var(--toc-back-matter-title-font-style);
+      font-weight: var(--toc-back-matter-title-font-weight);
       hyphens: none;
       @if $type != 'epub' {
-        line-height: if-map-get($toc-front-matter-line-height, $type);
+        line-height: var(--toc-front-matter-line-height);
       }
 
-      text-transform: $toc-back-matter-title-text-transform;
+      text-transform: var(--toc-back-matter-title-text-transform);
     }
 
     .back-matter .chapter-subtitle {
       @if $type == 'epub' {
-        color: if-map-get($toc-back-matter-subtitle-color, $type);
+        color: var(--toc-back-matter-subtitle-color);
       }
 
-      font-family: $toc-back-matter-subtitle-font-family;
-      font-size: if-map-get($toc-back-matter-subtitle-font-size, $type);
-      font-style: $toc-back-matter-subtitle-font-style;
-      font-weight: $toc-back-matter-subtitle-font-weight;
-      text-transform: $toc-back-matter-subtitle-text-transform;
+      font-family: var(--toc-back-matter-subtitle-font-family);
+      font-size: var(--toc-back-matter-subtitle-font-size);
+      font-style: var(--toc-back-matter-subtitle-font-style);
+      font-weight: var(--toc-back-matter-subtitle-font-weight);
+      text-transform: var(--toc-back-matter-subtitle-text-transform);
     }
 
     .back-matter .chapter-author {
       @if $type == 'epub' {
-        color: if-map-get($toc-back-matter-author-color, $type);
+        color: var(--toc-back-matter-author-color);
       }
 
-      font-family: $toc-back-matter-author-font-family;
-      font-size: if-map-get($toc-back-matter-author-font-size, $type);
-      font-style: $toc-back-matter-author-font-style;
-      font-weight: $toc-back-matter-author-font-weight;
-      text-transform: $toc-back-matter-author-text-transform;
+      font-family: var(--toc-back-matter-author-font-family);
+      font-size: var(--toc-back-matter-author-font-size);
+      font-style: var(--toc-back-matter-author-font-style);
+      font-weight: var(--toc-back-matter-author-font-weight);
+      text-transform: var(--toc-back-matter-author-text-transform);
     }
 
     .front-matter + .front-matter {
-      margin-top: if-map-get($toc-front-matter-margin-top, $type);
+      margin-top: var(--toc-front-matter-margin-top);
     }
 
     .chapter + .chapter {
-      margin-top: if-map-get($toc-chapter-margin-top, $type);
+      margin-top: var(--toc-chapter-margin-top);
     }
 
     .back-matter + .back-matter {
-      margin-top: if-map-get($toc-back-matter-margin-top, $type);
+      margin-top: var(--toc-back-matter-margin-top);
     }
 
     .front-matter + .chapter,
     .chapter + .back-matter,
     .part + .chapter,
     .part + .back-matter {
-      margin-top: if-map-get($toc-block-margin-top, $type);
+      margin-top: var(--toc-block-margin-top);
     }
 
     .sections {
-      margin-top: if-map-get($toc-section-margin-top, $type);
+      margin-top: var(--toc-section-margin-top);
     }
 
     .section {
-      font-size: if-map-get($toc-section-title-font-size, $type);
-      font-style: $toc-section-title-font-style;
-      font-weight: $toc-section-title-font-weight;
+      font-size: var(--toc-section-title-font-size);
+      font-style: var(--toc-section-title-font-style);
+      font-weight: var(--toc-section-title-font-weight);
       @if $type != 'epub' {
-        line-height: if-map-get($toc-front-matter-line-height, $type);
+        line-height: var(--toc-front-matter-line-height);
       }
 
-      margin-top: if-map-get($toc-section-margin-top, $type);
+      margin-top: var(--toc-section-margin-top);
     }
   }
 }
 
 @if $type == 'prince' {
   #toc {
-    display: $toc-display;
+    display: var(--toc-display);
     counter-reset: part;
     page-break-before: right;
 
@@ -241,13 +241,13 @@
     }
 
     a::after {
-      content: $toc-page-number-before-content target-counter(attr(href), page);
-      font-family: $toc-page-number-font-family;
-      font-size: $toc-page-number-font-size;
-      font-style: $toc-page-number-font-style;
-      font-weight: $toc-page-number-font-weight;
-      text-transform: $toc-page-number-text-transform;
-      text-decoration: $toc-page-number-text-decoration;
+      content: var(--toc-page-number-before-content) target-counter(attr(href), page);
+      font-family: var(--toc-page-number-font-family);
+      font-size: var(--toc-page-number-font-size);
+      font-style: var(--toc-page-number-font-style);
+      font-weight: var(--toc-page-number-font-weight);
+      text-transform: var(--toc-page-number-text-transform);
+      text-decoration: var(--toc-page-number-text-decoration);
       hyphens: none;
     }
 
@@ -261,27 +261,27 @@
     }
 
     .front-matter a::after {
-      content: $toc-page-number-before-content target-counter(attr(href), page, lower-roman);
-      font-family: $toc-page-number-font-family;
-      font-size: $toc-front-matter-page-number-font-size;
-      font-style: $toc-front-matter-page-number-font-style;
-      font-weight: $toc-front-matter-page-number-font-weight;
-      text-transform: $toc-front-matter-page-number-text-transform;
+      content: var(--toc-page-number-before-content) target-counter(attr(href), page, lower-roman);
+      font-family: var(--toc-page-number-font-family);
+      font-size: var(--toc-front-matter-page-number-font-size);
+      font-style: var(--toc-front-matter-page-number-font-style);
+      font-weight: var(--toc-front-matter-page-number-font-weight);
+      text-transform: var(--toc-front-matter-page-number-text-transform);
       hyphens: none;
     }
 
     .front-matter.introduction a::after,
     .front-matter.post-introduction a::after {
-      content: $toc-page-number-before-content target-counter(attr(href), page);
+      content: var(--toc-page-number-before-content) target-counter(attr(href), page);
     }
 
     .chapter a::before {
-      content: $toc-page-number-before-content target-counter(attr(href), page);
-      font-family: $toc-chapter-number-font-family;
-      font-size: if-map-get($toc-chapter-number-font-size, $type);
-      font-style: $toc-chapter-number-font-style;
-      font-weight: $toc-chapter-number-font-weight;
-      text-transform: $toc-chapter-number-text-transform;
+      content: var(--toc-page-number-before-content) target-counter(attr(href), page);
+      font-family: var(--toc-chapter-number-font-family);
+      font-size: var(--toc-chapter-number-font-size);
+      font-style: var(--toc-chapter-number-font-style);
+      font-weight: var(--toc-chapter-number-font-weight);
+      text-transform: var(--toc-chapter-number-text-transform);
       hyphens: none;
       counter-increment: chapter;
       page-break-after: avoid;
@@ -293,13 +293,13 @@
 
     .part a::before {
       counter-increment: part;
-      font-family: $toc-part-number-font-family;
-      font-size: if-map-get($toc-part-number-font-size, $type);
-      font-style: $toc-part-number-font-style;
-      font-weight: $toc-part-number-font-weight;
+      font-family: var(--toc-part-number-font-family);
+      font-size: var(--toc-part-number-font-size);
+      font-style: var(--toc-part-number-font-style);
+      font-weight: var(--toc-part-number-font-weight);
       hyphens: none;
       page-break-after: avoid;
-      text-transform: $toc-part-number-text-transform;
+      text-transform: var(--toc-part-number-text-transform);
     }
 
     .part a::after {
@@ -324,61 +324,61 @@
 
   .print #toc {
     a::after {
-      color: if-map-get($toc-page-number-color, $type);
+      color: var(--toc-page-number-color);
     }
 
     .front-matter {
-      color: if-map-get($toc-front-matter-title-color, $type);
+      color: var(--toc-front-matter-title-color);
     }
 
     .front-matter a::after {
-      color: if-map-get($toc-front-matter-page-number-color, $type);
+      color: var(--toc-front-matter-page-number-color);
     }
 
     .front-matter .chapter-subtitle {
-      color: if-map-get($toc-front-matter-subtitle-color, $type);
+      color: var(--toc-front-matter-subtitle-color);
     }
 
     .front-matter .chapter-author {
-      color: if-map-get($toc-front-matter-author-color, $type);
+      color: var(--toc-front-matter-author-color);
     }
 
     .part a {
-      color: if-map-get($toc-part-title-color, $type);
+      color: var(--toc-part-title-color);
     }
 
     .part a::before {
-      color: if-map-get($toc-part-number-color, $type);
+      color: var(--toc-part-number-color);
     }
 
     .chapter {
-      color: if-map-get($toc-chapter-title-color, $type);
+      color: var(--toc-chapter-title-color);
     }
 
     .chapter a::before {
-      color: if-map-get($toc-chapter-number-color, $type);
+      color: var(--toc-chapter-number-color);
     }
 
     .chapter .chapter-subtitle {
-      color: if-map-get($toc-chapter-subtitle-color, $type);
+      color: var(--toc-chapter-subtitle-color);
     }
 
     .chapter .chapter-author {
-      color: if-map-get($toc-chapter-author-color, $type);
+      color: var(--toc-chapter-author-color);
     }
 
     .back-matter {
-      color: if-map-get($toc-back-matter-title-color, $type);
+      color: var(--toc-back-matter-title-color);
 
     }
 
     .back-matter .chapter-subtitle {
-      color: if-map-get($toc-back-matter-subtitle-color, $type);
+      color: var(--toc-back-matter-subtitle-color);
 
     }
 
     .back-matter .chapter-author {
-      color: if-map-get($toc-back-matter-author-color, $type);
+      color: var(--toc-back-matter-author-color);
     }
   }
 }

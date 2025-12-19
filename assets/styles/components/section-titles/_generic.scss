@@ -10,44 +10,44 @@
   section.part,
   section.chapter {
     header {
-      margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+      margin: var(--section-header-margin-top) var(--section-header-margin-right) var(--section-header-margin-bottom) var(--section-header-margin-left);
     }
   }
 
   section.part {
     header {
       h1 {
-        display: $part-title-display;
-        margin: if-map-get($part-title-margin-top, $type) if-map-get($part-title-margin-right, $type) if-map-get($part-title-margin-bottom, $type) if-map-get($part-title-margin-left, $type);
-        font-family: $part-title-font-family;
-        font-size: if-map-get($part-title-font-size, $type);
-        font-style: $part-title-font-style;
-        font-weight: $part-title-font-weight;
+        display: var(--part-title-display);
+        margin: var(--part-title-margin-top) var(--part-title-margin-right) var(--part-title-margin-bottom) var(--part-title-margin-left);
+        font-family: var(--part-title-font-family);
+        font-size: var(--part-title-font-size);
+        font-style: var(--part-title-font-style);
+        font-weight: var(--part-title-font-weight);
         hyphens: none;
-        line-height: if-map-get($part-title-line-height, $type);
-        text-align: $part-title-align;
-        text-transform: $part-title-text-transform;
+        line-height: var(--part-title-line-height);
+        text-align: var(--part-title-align);
+        text-transform: var(--part-title-text-transform);
 
         span.number {
-          border-bottom: $part-number-border-bottom-style if-map-get($part-number-border-bottom-width, $type) if-map-get($part-number-border-bottom-color, $type);
-          display: $part-number-display;
-          margin: if-map-get($part-number-margin-top, $type) if-map-get($part-number-margin-right, $type) if-map-get($part-number-margin-bottom, $type) if-map-get($part-number-margin-left, $type);
-          padding-bottom: if-map-get($part-number-padding-bottom, $type);
-          font-family: $part-number-font-family;
-          font-size: if-map-get($part-number-font-size, $type);
-          font-style: $part-number-font-style;
-          font-weight: $part-number-font-weight;
-          line-height: if-map-get($part-number-line-height, $type);
-          text-align: $part-number-align;
-          text-transform: $part-number-text-transform;
+          border-bottom: var(--part-number-border-bottom-style) var(--part-number-border-bottom-width) var(--part-number-border-bottom-color);
+          display: var(--part-number-display);
+          margin: var(--part-number-margin-top) var(--part-number-margin-right) var(--part-number-margin-bottom) var(--part-number-margin-left);
+          padding-bottom: var(--part-number-padding-bottom);
+          font-family: var(--part-number-font-family);
+          font-size: var(--part-number-font-size);
+          font-style: var(--part-number-font-style);
+          font-weight: var(--part-number-font-weight);
+          line-height: var(--part-number-line-height);
+          text-align: var(--part-number-align);
+          text-transform: var(--part-number-text-transform);
 
           &::before {
-            content: $part-number-before-content;
-            text-transform: $part-number-before-content-text-transform;
+            content: var(--part-number-before-content);
+            text-transform: var(--part-number-before-content-text-transform);
           }
 
           &::after {
-            content: $part-number-after-content;
+            content: var(--part-number-after-content);
           }
         }
       }
@@ -61,51 +61,51 @@
       [data-type='subtitle'] {
         display: block;
         margin-bottom: 0;
-        font-family: $section-subtitle-font-family;
-        font-size: if-map-get($section-subtitle-font-size, $type);
-        font-style: $section-subtitle-font-style;
-        font-weight: $section-subtitle-font-weight;
+        font-family: var(--section-subtitle-font-family);
+        font-size: var(--section-subtitle-font-size);
+        font-style: var(--section-subtitle-font-style);
+        font-weight: var(--section-subtitle-font-weight);
         hyphens: none;
-        text-align: $section-subtitle-align;
-        text-transform: $section-subtitle-text-transform;
-        letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
-        word-spacing: if-map-get($section-subtitle-word-spacing, $type);
+        text-align: var(--section-subtitle-align);
+        text-transform: var(--section-subtitle-text-transform);
+        letter-spacing: var(--section-subtitle-letter-spacing);
+        word-spacing: var(--section-subtitle-word-spacing);
         column-span: all;
       }
 
       [data-type='author'] {
         display: block;
-        margin-bottom: if-map-get($section-author-margin-bottom, $type);
-        font-family: $section-author-font-family;
-        font-size: if-map-get($section-author-font-size, $type);
-        font-style: $section-author-font-style;
-        font-weight: $section-author-font-weight;
+        margin-bottom: var(--section-author-margin-bottom);
+        font-family: var(--section-author-font-family);
+        font-size: var(--section-author-font-size);
+        font-style: var(--section-author-font-style);
+        font-weight: var(--section-author-font-weight);
         hyphens: none;
-        text-align: $section-author-align;
-        text-indent: if-map-get($section-author-text-indent, $type);
-        text-transform: $section-author-text-transform;
-        letter-spacing: if-map-get($section-author-letter-spacing, $type);
-        word-spacing: if-map-get($section-author-word-spacing, $type);
+        text-align: var(--section-author-align);
+        text-indent: var(--section-author-text-indent);
+        text-transform: var(--section-author-text-transform);
+        letter-spacing: var(--section-author-letter-spacing);
+        word-spacing: var(--section-author-word-spacing);
       }
 
       h1 + [data-type='subtitle'] {
-        margin-top: if-map-get($section-title-subtitle-spacing, $type);
+        margin-top: var(--section-title-subtitle-spacing);
       }
 
       h1 + [data-type='author'] {
-        margin-top: if-map-get($section-title-author-spacing, $type);
+        margin-top: var(--section-title-author-spacing);
       }
 
       [data-type='subtitle'] + [data-type='author']  {
-        margin-top: if-map-get($section-subtitle-author-spacing, $type);
+        margin-top: var(--section-subtitle-author-spacing);
       }
 
       h1:last-child {
-        margin-bottom: if-map-get($section-title-margin-bottom, $type);
+        margin-bottom: var(--section-title-margin-bottom);
       }
 
       [data-type='subtitle']:last-child {
-        margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+        margin-bottom: var(--section-subtitle-margin-bottom);
       }
     }
   }
@@ -113,37 +113,37 @@
   section.chapter {
     header {
       h1 {
-        display: $chapter-title-display;
-        margin: if-map-get($chapter-title-margin-top, $type) if-map-get($chapter-title-margin-right, $type) 0 if-map-get($chapter-title-margin-left, $type);
-        font-family: $chapter-title-font-family;
-        font-size: if-map-get($chapter-title-font-size, $type);
-        font-style: $chapter-title-font-style;
-        font-weight: $chapter-title-font-weight;
+        display: var(--chapter-title-display);
+        margin: var(--chapter-title-margin-top) var(--chapter-title-margin-right) 0 var(--chapter-title-margin-left);
+        font-family: var(--chapter-title-font-family);
+        font-size: var(--chapter-title-font-size);
+        font-style: var(--chapter-title-font-style);
+        font-weight: var(--chapter-title-font-weight);
         hyphens: none;
-        line-height: if-map-get($chapter-title-line-height, $type);
-        text-align: $chapter-title-align;
-        text-transform: $chapter-title-text-transform;
+        line-height: var(--chapter-title-line-height);
+        text-align: var(--chapter-title-align);
+        text-transform: var(--chapter-title-text-transform);
 
         span.number {
-          border-bottom: $chapter-number-border-bottom-style if-map-get($chapter-number-border-bottom-width, $type) if-map-get($chapter-number-border-bottom-color, $type);
-          display: $chapter-number-display;
-          margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
-          padding-bottom: if-map-get($chapter-number-padding-bottom, $type);
-          font-family: $chapter-number-font-family;
-          font-size: if-map-get($chapter-number-font-size, $type);
-          font-style: $chapter-number-font-style;
-          font-weight: $chapter-number-font-weight;
-          line-height: if-map-get($chapter-number-line-height, $type);
-          text-align: $chapter-number-align;
-          text-transform: $chapter-number-text-transform;
+          border-bottom: var(--chapter-number-border-bottom-style) var(--chapter-number-border-bottom-width) var(--chapter-number-border-bottom-color);
+          display: var(--chapter-number-display);
+          margin: var(--chapter-number-margin-top) var(--chapter-number-margin-right) var(--chapter-number-margin-bottom) var(--chapter-number-margin-left);
+          padding-bottom: var(--chapter-number-padding-bottom);
+          font-family: var(--chapter-number-font-family);
+          font-size: var(--chapter-number-font-size);
+          font-style: var(--chapter-number-font-style);
+          font-weight: var(--chapter-number-font-weight);
+          line-height: var(--chapter-number-line-height);
+          text-align: var(--chapter-number-align);
+          text-transform: var(--chapter-number-text-transform);
 
           &::before {
-            content: $chapter-number-before-content;
-            text-transform: $chapter-number-before-content-text-transform;
+            content: var(--chapter-number-before-content);
+            text-transform: var(--chapter-number-before-content-text-transform);
           }
 
           &::after {
-            content: $chapter-number-after-content;
+            content: var(--chapter-number-after-content);
           }
         }
       }
@@ -160,16 +160,16 @@
   section.front-matter {
     header {
       h1 {
-        display: $front-matter-title-display;
-        margin: if-map-get($front-matter-title-margin-top, $type) if-map-get($front-matter-title-margin-right, $type) 0 if-map-get($front-matter-title-margin-left, $type);
-        font-family: $front-matter-title-font-family;
-        font-size: if-map-get($front-matter-title-font-size, $type);
-        font-style: $front-matter-title-font-style;
-        font-weight: $front-matter-title-font-weight;
+        display: var(--front-matter-title-display);
+        margin: var(--front-matter-title-margin-top) var(--front-matter-title-margin-right) 0 var(--front-matter-title-margin-left);
+        font-family: var(--front-matter-title-font-family);
+        font-size: var(--front-matter-title-font-size);
+        font-style: var(--front-matter-title-font-style);
+        font-weight: var(--front-matter-title-font-weight);
         hyphens: none;
-        line-height: if-map-get($front-matter-title-line-height, $type);
-        text-align: $front-matter-title-align;
-        text-transform: $front-matter-title-text-transform;
+        line-height: var(--front-matter-title-line-height);
+        text-align: var(--front-matter-title-align);
+        text-transform: var(--front-matter-title-text-transform);
       }
     }
   }
@@ -177,16 +177,16 @@
   section.back-matter {
     header {
       h1 {
-        display: $back-matter-title-display;
-        margin: if-map-get($back-matter-title-margin-top, $type) if-map-get($back-matter-title-margin-right, $type) 0 if-map-get($back-matter-title-margin-left, $type);
-        font-family: $back-matter-title-font-family;
-        font-size: if-map-get($back-matter-title-font-size, $type);
-        font-style: $back-matter-title-font-style;
-        font-weight: $back-matter-title-font-weight;
+        display: var(--back-matter-title-display);
+        margin: var(--back-matter-title-margin-top) var(--back-matter-title-margin-right) 0 var(--back-matter-title-margin-left);
+        font-family: var(--back-matter-title-font-family);
+        font-size: var(--back-matter-title-font-size);
+        font-style: var(--back-matter-title-font-style);
+        font-weight: var(--back-matter-title-font-weight);
         hyphens: none;
-        line-height: if-map-get($back-matter-title-line-height, $type);
-        text-align: $back-matter-title-align;
-        text-transform: $back-matter-title-text-transform;
+        line-height: var(--back-matter-title-line-height);
+        text-align: var(--back-matter-title-align);
+        text-transform: var(--back-matter-title-text-transform);
       }
     }
   }

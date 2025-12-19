@@ -1,11 +1,37 @@
 # Step 2 Progress: Update SCSS Files to Use CSS Variables
 
-## Completed
-✅ **Phase 1:** Created comprehensive CSS custom properties file (1,078 variables)
-✅ **Step 2 Started:** Begin updating component SCSS files to use CSS custom properties
+# Step 2 Progress: Update SCSS Files to Use CSS Variables
 
-### Files Updated
-1. ✅ `components/elements/_body.scss` - Converted to use `var(--property-name)` syntax
+## ✅ Completed
+
+### Phase 1: CSS Custom Properties Creation (100%)
+✅ Created comprehensive CSS custom properties file (1,078 variables)
+✅ File: `assets/styles/buckram-variables.css` (1,887 lines)
+
+### Phase 2a: Format-Specific :root Declarations (100%)
+✅ **Created:** `assets/styles/_css-variables.scss`
+
+This SCSS file:
+- Imports utility functions (`components/utilities`)
+- Generates `:root` block with CSS custom properties
+- Uses `if-map-get($variable, $type)` to resolve format-specific values (epub/prince/web)
+- Compiles to different values based on `$type` variable
+
+**Integration into Build:**
+- Added `@import "../../../assets/styles/css-variables";` to all test SCSS files
+- Imported AFTER SCSS variables are loaded (so `$type` and variables are available)
+- Imported BEFORE components that use CSS custom properties
+
+**Verification:**
+- ✅ All test files compile successfully (`composer test` passes)
+- ✅ Web format generates: `--body-font-size: 14pt`
+- ✅ Prince format generates: `--body-font-size: 11pt`
+- ✅ EPUB format generates: `--body-font-size: 11pt`
+- ✅ Body component correctly uses `var(--body-font-family)`, `var(--body-font-size)`, etc. in all formats
+- ✅ All three output formats (epub.css, prince.css, web.css) include :root declarations
+
+### Phase 2b: First Component Conversion (100%)
+✅ **File:** `components/elements/_body.scss`
 
 ## Approach
 

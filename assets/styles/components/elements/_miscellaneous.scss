@@ -10,63 +10,63 @@
 @if $type != 'web' {
   // Cite
   cite {
-    font-size: if-map-get($cite-font-size, $type);
-    font-style: $cite-font-style;
-    font-variant: $cite-font-variant;
-    font-weight: $cite-font-weight;
-    letter-spacing: if-map-get($cite-letter-spacing, $type);
-    text-transform: $cite-text-transform;
-    word-spacing: if-map-get($cite-word-spacing, $type);
+    font-size: var(--cite-font-size);
+    font-style: var(--cite-font-style);
+    font-variant: var(--cite-font-variant);
+    font-weight: var(--cite-font-weight);
+    letter-spacing: var(--cite-letter-spacing);
+    text-transform: var(--cite-text-transform);
+    word-spacing: var(--cite-word-spacing);
   }
 
   // Code & Pre
   code {
-    background: $code-background;
-    border: $code-border;
-    border-radius: if-map-get($code-border-radius, $type);
-    font-family: $code-font-family;
-    font-size: if-map-get($code-font-size, $type);
+    background: var(--code-background);
+    border: var(--code-border);
+    border-radius: var(--code-border-radius);
+    font-family: var(--code-font-family);
+    font-size: var(--code-font-size);
     @if $type == 'prince' {
-      line-height: if-map-get($code-line-height, $type);
+      line-height: var(--code-line-height);
     }
 
-    margin: if-map-get($code-margin-top, $type) if-map-get($code-margin-right, $type) if-map-get($code-margin-bottom, $type) if-map-get($code-margin-left, $type);
-    padding: if-map-get($code-padding-top, $type) if-map-get($code-padding-right, $type) if-map-get($code-padding-bottom, $type) if-map-get($code-padding-left, $type);
+    margin: var(--code-margin-top) var(--code-margin-right) var(--code-margin-bottom) var(--code-margin-left);
+    padding: var(--code-padding-top) var(--code-padding-right) var(--code-padding-bottom) var(--code-padding-left);
   }
 
   pre {
-    background: $pre-background;
-    border: $pre-border;
-    border-radius: if-map-get($pre-border-radius, $type);
-    font-family: $pre-font-family;
-    font-size: if-map-get($pre-font-size, $type);
+    background: var(--pre-background);
+    border: var(--pre-border);
+    border-radius: var(--pre-border-radius);
+    font-family: var(--pre-font-family);
+    font-size: var(--pre-font-size);
     @if $type == 'prince' {
-      line-height: if-map-get($pre-line-height, $type);
+      line-height: var(--pre-line-height);
     }
 
-    margin: if-map-get($pre-margin-top, $type) if-map-get($pre-margin-right, $type) if-map-get($pre-margin-bottom, $type) if-map-get($pre-margin-left, $type);
-    padding: if-map-get($pre-padding-top, $type) if-map-get($pre-padding-right, $type) if-map-get($pre-padding-bottom, $type) if-map-get($pre-padding-left, $type);
+    margin: var(--pre-margin-top) var(--pre-margin-right) var(--pre-margin-bottom) var(--pre-margin-left);
+    padding: var(--pre-padding-top) var(--pre-padding-right) var(--pre-padding-bottom) var(--pre-padding-left);
 }
 
   // Superscript & Subscript
   sub {
-    font-size: if-map-get($sub-font-size, $type);
-    font-style: $sub-font-style;
+    font-size: var(--sub-font-size);
+    font-style: var(--sub-font-style);
     @if $type == 'prince' {
-      line-height: if-map-get($sub-line-height, $type);
+      line-height: var(--sub-line-height);
     }
 
-    text-transform: $sub-text-transform;
+    text-transform: var(--sub-text-transform);
   }
 
   sup {
-    font-size: if-map-get($sup-font-size, $type);
-    font-style: $sup-font-style;
+    font-size: var(--sup-font-size);
+    font-style: var(--sup-font-style);
     @if $type == 'prince' {
-      line-height: if-map-get($sup-line-height, $type);
+      line-height: var(--sup-line-height);
     }
 
-    text-transform: $sup-text-transform;
+    text-transform: var(--sup-text-transform);
   }
 } @else {
   .front-matter,
@@ -76,51 +76,51 @@
   body#tinymce.wp-editor {
     // Cite
     cite {
-      font-size: if-map-get($cite-font-size, $type);
-      font-style: $cite-font-style;
-      font-variant: $cite-font-variant;
-      font-weight: $cite-font-weight;
-      letter-spacing: if-map-get($cite-letter-spacing, $type);
-      text-transform: $cite-text-transform;
-      word-spacing: if-map-get($cite-word-spacing, $type);
+      font-size: var(--cite-font-size);
+      font-style: var(--cite-font-style);
+      font-variant: var(--cite-font-variant);
+      font-weight: var(--cite-font-weight);
+      letter-spacing: var(--cite-letter-spacing);
+      text-transform: var(--cite-text-transform);
+      word-spacing: var(--cite-word-spacing);
     }
 
     // Code & Pre
     code {
-      background: $code-background;
-      border: $code-border;
-      border-radius: if-map-get($code-border-radius, $type);
-      font-family: $code-font-family;
-      font-size: if-map-get($code-font-size, $type);
-      line-height: if-map-get($code-line-height, $type);
-      margin: if-map-get($code-margin-top, $type) if-map-get($code-margin-right, $type) if-map-get($code-margin-bottom, $type) if-map-get($code-margin-left, $type);
-      padding: if-map-get($code-padding-top, $type) if-map-get($code-padding-right, $type) if-map-get($code-padding-bottom, $type) if-map-get($code-padding-left, $type);
+      background: var(--code-background);
+      border: var(--code-border);
+      border-radius: var(--code-border-radius);
+      font-family: var(--code-font-family);
+      font-size: var(--code-font-size);
+      line-height: var(--code-line-height);
+      margin: var(--code-margin-top) var(--code-margin-right) var(--code-margin-bottom) var(--code-margin-left);
+      padding: var(--code-padding-top) var(--code-padding-right) var(--code-padding-bottom) var(--code-padding-left);
     }
 
     pre {
-      background: $pre-background;
-      border: $pre-border;
-      border-radius: if-map-get($pre-border-radius, $type);
-      font-family: $pre-font-family;
-      font-size: if-map-get($pre-font-size, $type);
-      line-height: if-map-get($pre-line-height, $type);
-      margin: if-map-get($pre-margin-top, $type) if-map-get($pre-margin-right, $type) if-map-get($pre-margin-bottom, $type) if-map-get($pre-margin-left, $type);
-      padding: if-map-get($pre-padding-top, $type) if-map-get($pre-padding-right, $type) if-map-get($pre-padding-bottom, $type) if-map-get($pre-padding-left, $type);
+      background: var(--pre-background);
+      border: var(--pre-border);
+      border-radius: var(--pre-border-radius);
+      font-family: var(--pre-font-family);
+      font-size: var(--pre-font-size);
+      line-height: var(--pre-line-height);
+      margin: var(--pre-margin-top) var(--pre-margin-right) var(--pre-margin-bottom) var(--pre-margin-left);
+      padding: var(--pre-padding-top) var(--pre-padding-right) var(--pre-padding-bottom) var(--pre-padding-left);
     }
 
     // Superscript & Subscript
     sub {
-      font-size: if-map-get($sub-font-size, $type);
-      font-style: $sub-font-style;
-      line-height: if-map-get($sub-line-height, $type);
-      text-transform: $sub-text-transform;
+      font-size: var(--sub-font-size);
+      font-style: var(--sub-font-style);
+      line-height: var(--sub-line-height);
+      text-transform: var(--sub-text-transform);
     }
 
     sup {
-      font-size: if-map-get($sup-font-size, $type);
-      font-style: $sup-font-style;
-      line-height: if-map-get($sup-line-height, $type);
-      text-transform: $sup-text-transform;
+      font-size: var(--sup-font-size);
+      font-style: var(--sup-font-style);
+      line-height: var(--sup-line-height);
+      text-transform: var(--sup-text-transform);
     }
   }
 }

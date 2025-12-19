@@ -7,203 +7,203 @@
 // STANDARD TEXT COLORS
 @if $type == 'prince' {
   a {
-    color: if-map-get($link-color, $type);
+    color: var(--link-color);
   }
 
   .print a {
-    color: $link-color-print;
+    color: var(--link-color-print);
   }
 }
 
 @if $type != 'web' {
   body,
   .entry-content {
-    color: if-map-get($body-color, $type);
+    color: var(--body-color);
   }
 
   blockquote {
-    color: if-map-get($blockquote-color, $type);
+    color: var(--blockquote-color);
   }
 
   // BODY HEADER COLOR
 
   h1 {
-    color: if-map-get($h1-color, $type);
+    color: var(--h1-color);
   }
 
   h2 {
-    color: if-map-get($h2-color, $type);
+    color: var(--h2-color);
   }
 
   h3 {
-    color: if-map-get($h3-color, $type);
+    color: var(--h3-color);
   }
 
   h4 {
-    color: if-map-get($h4-color, $type);
+    color: var(--h4-color);
   }
 
   h5 {
-    color: if-map-get($h5-color, $type);
+    color: var(--h5-color);
   }
 
   h6 {
-    color: if-map-get($h6-color, $type);
+    color: var(--h6-color);
   }
 
   // TABLE COLOR
   table {
-    color: if-map-get($table-color, $type);
+    color: var(--table-color);
   }
 
   table p {
-    color: if-map-get($table-para-color, $type);
+    color: var(--table-para-color);
   }
 } @else {
 .front-matter,
 .part,
 .chapter,
 .back-matter {
-  color: if-map-get($body-color, $type);
+  color: var(--body-color);
 
   a {
-    color: if-map-get($link-color, $type);
+    color: var(--link-color);
   }
 
   blockquote {
-    color: if-map-get($blockquote-color, $type);
+    color: var(--blockquote-color);
   }
 
   // BODY HEADER COLOR
 
   h1 {
-    color: if-map-get($h1-color, $type);
+    color: var(--h1-color);
   }
 
   h2 {
-    color: if-map-get($h2-color, $type);
+    color: var(--h2-color);
   }
 
   h3 {
-    color: if-map-get($h3-color, $type);
+    color: var(--h3-color);
   }
 
   h4 {
-    color: if-map-get($h4-color, $type);
+    color: var(--h4-color);
   }
 
   h5 {
-    color: if-map-get($h5-color, $type);
+    color: var(--h5-color);
   }
 
   h6 {
-    color: if-map-get($h6-color, $type);
+    color: var(--h6-color);
   }
 
   // TABLE COLOR
   table {
-    color: if-map-get($table-color, $type);
+    color: var(--table-color);
   }
 
   table p {
-    color: if-map-get($table-para-color, $type);
+    color: var(--table-para-color);
   }
 }
 }
 
 // IMAGE CAPTIONS COLOR
 p.wp-caption-text {
-  color: if-map-get($image-caption-text-color, $type);
+  color: var(--image-caption-text-color);
 }
 
 // INDEX COLOR
 .index .ugc,
 .index .ugc p {
-  color: if-map-get($index-para-color, $type);
+  color: var(--index-para-color);
 }
 
 // TITLE PAGE(S) COLOR
 #half-title-page > .title {
-  color: if-map-get($half-title-title-color, $type);
+  color: var(--half-title-title-color);
 }
 
 #title-page > .title {
-  color: if-map-get($title-page-title-color, $type);
+  color: var(--title-page-title-color);
 }
 
 #title-page > .subtitle {
-  color: if-map-get($title-page-subtitle-color, $type);
+  color: var(--title-page-subtitle-color);
 }
 
 #title-page > .author {
-  color: if-map-get($title-page-author-color, $type);
+  color: var(--title-page-author-color);
 }
 
 #title-page > .publisher {
-  color: if-map-get($title-page-publisher-color, $type);
+  color: var(--title-page-publisher-color);
 }
 
 #title-page > .publisher-city {
-  color: if-map-get($title-page-publisher-city-color, $type);
+  color: var(--title-page-publisher-city-color);
 }
 
 // FRONT MATTER COLOR
 .front-matter-title {
-  color: if-map-get($front-matter-title-color, $type);
+  color: var(--front-matter-title-color);
 }
 
 #copyright-page .ugc p {
-  color: if-map-get($copyright-para-color, $type);
+  color: var(--copyright-para-color);
 }
 
 .dedication p {
-  color: if-map-get($dedication-para-color, $type);
+  color: var(--dedication-para-color);
 }
 
 .epigraph p {
-  color: if-map-get($epigraph-para-color, $type);
+  color: var(--epigraph-para-color);
 }
 
 // PART TITLE COLOR
 .part-number {
-  color: if-map-get($part-number-color, $type);
+  color: var(--part-number-color);
 }
 
 .part-title {
-  color: if-map-get($part-title-color, $type);
+  color: var(--part-title-color);
 }
 
 // CHAPTER TITLE COLOR
 .chapter-number,
 .entry-title span.number {
-  color: if-map-get($chapter-number-color, $type);
+  color: var(--chapter-number-color);
 }
 
 .chapter-title {
-  color: if-map-get($chapter-title-color, $type);
+  color: var(--chapter-title-color);
 }
 
 .chapter-subtitle {
-  color: if-map-get($chapter-subtitle-color, $type);
+  color: var(--chapter-subtitle-color);
 }
 
 .chapter-author {
-  color: if-map-get($chapter-author-color, $type);
+  color: var(--chapter-author-color);
 }
 
 .aphorism {
-  color: if-map-get($chapter-aphorism-color, $type);
+  color: var(--chapter-aphorism-color);
 }
 
 // BACK MATTER TITLE COLOR
 .back-matter-title {
-  color: if-map-get($back-matter-title-color, $type);
+  color: var(--back-matter-title-color);
 }
 
 // DROPCAPS COLOR
 .firstcharacter,
 .first-character {
-  color: if-map-get($first-character-color, $type);
+  color: var(--first-character-color);
 }
 
 // PULLQUOTES COLOR
@@ -216,26 +216,26 @@ p.wp-caption-text {
 .pullquote--outside,
 .pullquote-inside,
 .pullquote--inside {
-  color: if-map-get($pullquote-color, $type);
+  color: var(--pullquote-color);
 }
 
 // SIDEBARS, TEXTBOXES COLOR
 div.sidebar {
-  background-color: if-map-get($sidebar-color, $type);
+  background-color: var(--sidebar-color);
 }
 
 .textbox,
 .bcc-box {
-  background-color: if-map-get($textbox-background-color, $type);
-  border-color: if-map-get($textbox-border-color, $type);
+  background-color: var(--textbox-background-color);
+  border-color: var(--textbox-border-color);
 }
 
 .textbox.shaded,
 .bcc-box.shaded {
-  background-color: if-map-get($textbox-shaded-background-color, $type);
+  background-color: var(--textbox-shaded-background-color);
 }
 
 // SHADED COLOR
 .shaded {
-  background-color: if-map-get($shaded-color, $type);
+  background-color: var(--shaded-color);
 }

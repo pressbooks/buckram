@@ -24,26 +24,26 @@
 
   .footnote {
     display: prince-footnote;
-    padding-left: $footnote-padding-left;
+    padding-left: var(--footnote-padding-left);
     margin-left: 0;
-    font-family: if-map-get($footnote-font-family, $type);
-    font-size: if-map-get($footnote-font-size, $type);
-    font-weight: if-map-get($footnote-font-weight, $type);
-    font-style: $footnote-font-style;
-    letter-spacing: if-map-get($footnote-letter-spacing, $type);
-    word-spacing: if-map-get($footnote-word-spacing, $type);
-    color: if-map-get($footnote-color, $type);
-    line-height: $footnote-line-height;
-    text-align: if-map-get($footnote-align, $type);
-    text-indent: $footnote-indent;
-    text-transform: if-map-get($footnote-text-transform, $type);
+    font-family: var(--footnote-font-family);
+    font-size: var(--footnote-font-size);
+    font-weight: var(--footnote-font-weight);
+    font-style: var(--footnote-font-style);
+    letter-spacing: var(--footnote-letter-spacing);
+    word-spacing: var(--footnote-word-spacing);
+    color: var(--footnote-color);
+    line-height: var(--footnote-line-height);
+    text-align: var(--footnote-align);
+    text-indent: var(--footnote-indent);
+    text-transform: var(--footnote-text-transform);
     counter-increment: footnote;
     footnote-style-position: outside;
   }
 
   .footnotes {
     .mathjax {
-      padding-bottom: $footnote-mathjax-padding-bottom;
+      padding-bottom: var(--footnote-mathjax-padding-bottom);
     }
   }
 
@@ -51,8 +51,8 @@
 
   .endnote::footnote-call,
   .footnote::footnote-call {
-    font-size: $footnote-number-marker-font-size;
-    line-height: $footnote-number-marker-line-height;
+    font-size: var(--footnote-number-marker-font-size);
+    line-height: var(--footnote-number-marker-line-height);
     vertical-align: top;
   }
 
@@ -62,8 +62,8 @@
 
   @page {
     @footnotes {
-      margin-top: $footnote-block-margin-top;
-      border-top: $footnote-block-border-top;
+      margin-top: var(--footnote-block-margin-top);
+      border-top: var(--footnote-block-border-top);
     }
   }
 }
@@ -73,15 +73,15 @@
 
   .endnote,
   .footnote {
-    font-size: $footnote-number-marker-font-size;
+    font-size: var(--footnote-number-marker-font-size);
     vertical-align: top;
   }
 
   .footnotes {
-    font-size: if-map-get($footnote-font-size, $type);
+    font-size: var(--footnote-font-size);
 
     .mathjax {
-      padding-bottom: $footnote-mathjax-padding-bottom;
+      padding-bottom: var(--footnote-mathjax-padding-bottom);
     }
   }
 }
@@ -99,49 +99,49 @@
 .fn_p // Deprecated; only included for backwards-compatibility.
 {
   display: block;
-  text-indent: $para-indent;
+  text-indent: var(--para-indent);
 }
 
 .fn-blockquote,
 .fn_blockquote // Deprecated; only included for backwards-compatibility.
 {
   display: block;
-  margin-top: $footnote-blockquote-margin-top;
-  margin-bottom: $footnote-blockquote-margin-bottom;
-  margin-left: $footnote-blockquote-margin-left;
-  font-size: $footnote-blockquote-font-size;
+  margin-top: var(--footnote-blockquote-margin-top);
+  margin-bottom: var(--footnote-blockquote-margin-bottom);
+  margin-left: var(--footnote-blockquote-margin-left);
+  font-size: var(--footnote-blockquote-font-size);
 }
 
 // Endnotes
 
 .endnotes {
-  margin-left: $endnote-margin-left;
+  margin-left: var(--endnote-margin-left);
   @if $type != 'epub' {
-    line-height: $endnote-line-height;
+    line-height: var(--endnote-line-height);
   }
 
   h3 {
-    padding-bottom: $endnote-header-padding-bottom;
-    margin-bottom: $endnote-header-margin-bottom;
-    margin-left: $endnote-header-margin-left;
+    padding-bottom: var(--endnote-header-padding-bottom);
+    margin-bottom: var(--endnote-header-margin-bottom);
+    margin-left: var(--endnote-header-margin-left);
   }
 
   hr {
-    margin-top: $endnote-hr-margin-top;
-    border: $endnote-hr-border;
+    margin-top: var(--endnote-hr-margin-top);
+    border: var(--endnote-hr-border);
   }
 
   ol {
-    margin-top: $endnote-ol-margin-top;
-    margin-left: $endnote-ol-margin-left;
-    font-size: $endnote-ol-font-size;
+    margin-top: var(--endnote-ol-margin-top);
+    margin-left: var(--endnote-ol-margin-left);
+    font-size: var(--endnote-ol-font-size);
     list-style-position: outside;
   }
 
   li {
-    padding-left: $endnote-li-padding-left;
-    margin-top: $endnote-li-margin-top;
-    text-indent: $endnote-li-indent;
+    padding-left: var(--endnote-li-padding-left);
+    margin-top: var(--endnote-li-margin-top);
+    text-indent: var(--endnote-li-indent);
   }
 
   p + p {

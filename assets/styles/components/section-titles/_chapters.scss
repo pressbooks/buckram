@@ -6,69 +6,69 @@
 
 @if $type != 'web' {
   .chapter-title-wrap {
-    margin: if-map-get($section-header-margin-top, $type) if-map-get($section-header-margin-right, $type) if-map-get($section-header-margin-bottom, $type) if-map-get($section-header-margin-left, $type);
+    margin: var(--section-header-margin-top) var(--section-header-margin-right) var(--section-header-margin-bottom) var(--section-header-margin-left);
 
     .chapter-title {
-      border-bottom: if-map-get($chapter-title-border-bottom-width, $type) $chapter-title-border-bottom-style;
-      border-bottom-color: if-map-get($chapter-title-border-bottom-color, $type);
-      padding-bottom: if-map-get($chapter-title-padding-bottom, $type);
-      display: $chapter-title-display;
-      margin: if-map-get($chapter-title-margin-top, $type) if-map-get($chapter-title-margin-right, $type) 0 if-map-get($chapter-title-margin-left, $type);
-      font-family: $chapter-title-font-family;
-      font-size: if-map-get($section-title-font-size, $type);
-      font-style: $chapter-title-font-style;
-      font-weight: $chapter-title-font-weight;
+      border-bottom: var(--chapter-title-border-bottom-width) var(--chapter-title-border-bottom-style);
+      border-bottom-color: var(--chapter-title-border-bottom-color);
+      padding-bottom: var(--chapter-title-padding-bottom);
+      display: var(--chapter-title-display);
+      margin: var(--chapter-title-margin-top) var(--chapter-title-margin-right) 0 var(--chapter-title-margin-left);
+      font-family: var(--chapter-title-font-family);
+      font-size: var(--section-title-font-size);
+      font-style: var(--chapter-title-font-style);
+      font-weight: var(--chapter-title-font-weight);
       hyphens: none;
       @if $type != 'epub' {
-        line-height: if-map-get($chapter-title-line-height, $type);
+        line-height: var(--chapter-title-line-height);
       }
 
-      text-align: $chapter-title-align;
-      text-transform: $chapter-title-text-transform;
-      letter-spacing: if-map-get($chapter-title-letter-spacing, $type);
-      word-spacing: if-map-get($chapter-title-word-spacing, $type);
+      text-align: var(--chapter-title-align);
+      text-transform: var(--chapter-title-text-transform);
+      letter-spacing: var(--chapter-title-letter-spacing);
+      word-spacing: var(--chapter-title-word-spacing);
 
       @if  $chapter-title-decoration-content != "" or $chapter-title-decoration-display != none {
         &::after {
-          font-family: $chapter-title-decoration-font-family;
-          content: $chapter-title-decoration-content;
-          display: $chapter-title-decoration-display;
+          font-family: var(--chapter-title-decoration-font-family);
+          content: var(--chapter-title-decoration-content);
+          display: var(--chapter-title-decoration-display);
           white-space: pre;
-          font-size: if-map-get($chapter-title-decoration-font-size, $type);
-          font-weight: $chapter-title-decoration-font-weight;
-          margin-bottom: if-map-get($chapter-title-decoration-margin-bottom, $type);
-          margin-top: if-map-get($chapter-title-decoration-margin-top, $type);
-          color: if-map-get($chapter-title-decoration-color, $type);
+          font-size: var(--chapter-title-decoration-font-size);
+          font-weight: var(--chapter-title-decoration-font-weight);
+          margin-bottom: var(--chapter-title-decoration-margin-bottom);
+          margin-top: var(--chapter-title-decoration-margin-top);
+          color: var(--chapter-title-decoration-color);
         }
       }
     }
 
     .chapter-number {
-      border-bottom: if-map-get($chapter-number-border-bottom-width, $type) $chapter-number-border-bottom-style;
-      border-bottom-color: if-map-get($chapter-number-border-bottom-color, $type);
-      display: $chapter-number-display;
-      margin: if-map-get($chapter-number-margin-top, $type) if-map-get($chapter-number-margin-right, $type) if-map-get($chapter-number-margin-bottom, $type) if-map-get($chapter-number-margin-left, $type);
-      padding-bottom: if-map-get($chapter-number-padding-bottom, $type);
-      font-family: $chapter-number-font-family;
-      font-size: if-map-get($chapter-number-font-size, $type);
-      font-style: $chapter-number-font-style;
-      font-weight: $chapter-number-font-weight;
+      border-bottom: var(--chapter-number-border-bottom-width) var(--chapter-number-border-bottom-style);
+      border-bottom-color: var(--chapter-number-border-bottom-color);
+      display: var(--chapter-number-display);
+      margin: var(--chapter-number-margin-top) var(--chapter-number-margin-right) var(--chapter-number-margin-bottom) var(--chapter-number-margin-left);
+      padding-bottom: var(--chapter-number-padding-bottom);
+      font-family: var(--chapter-number-font-family);
+      font-size: var(--chapter-number-font-size);
+      font-style: var(--chapter-number-font-style);
+      font-weight: var(--chapter-number-font-weight);
       @if $type != 'epub' {
-        line-height: if-map-get($chapter-number-line-height, $type);
+        line-height: var(--chapter-number-line-height);
       }
 
-      text-align: $chapter-number-align;
-      text-transform: $chapter-number-text-transform;
-      letter-spacing: if-map-get($chapter-number-letter-spacing, $type);
-      word-spacing: if-map-get($chapter-number-word-spacing, $type);
+      text-align: var(--chapter-number-align);
+      text-transform: var(--chapter-number-text-transform);
+      letter-spacing: var(--chapter-number-letter-spacing);
+      word-spacing: var(--chapter-number-word-spacing);
 
       &::before {
-        content: $chapter-number-before-content;
-        text-transform: $chapter-number-before-content-text-transform;
+        content: var(--chapter-number-before-content);
+        text-transform: var(--chapter-number-before-content-text-transform);
       }
 
       &::after {
-        content: $chapter-number-after-content;
+        content: var(--chapter-number-after-content);
       }
     }
 
@@ -91,56 +91,56 @@
     .chapter-subtitle {
       display: block;
       margin-bottom: 0;
-      font-family: $section-subtitle-font-family;
-      font-size: if-map-get($section-subtitle-font-size, $type);
-      font-style: $section-subtitle-font-style;
-      font-weight: $section-subtitle-font-weight;
+      font-family: var(--section-subtitle-font-family);
+      font-size: var(--section-subtitle-font-size);
+      font-style: var(--section-subtitle-font-style);
+      font-weight: var(--section-subtitle-font-weight);
       hyphens: none;
-      text-align: $section-subtitle-align;
-      text-transform: $section-subtitle-text-transform;
+      text-align: var(--section-subtitle-align);
+      text-transform: var(--section-subtitle-text-transform);
       @if $type != 'epub' {
         column-span: all;
       }
 
-      letter-spacing: if-map-get($section-subtitle-letter-spacing, $type);
-      word-spacing: if-map-get($section-subtitle-word-spacing, $type);
+      letter-spacing: var(--section-subtitle-letter-spacing);
+      word-spacing: var(--section-subtitle-word-spacing);
     }
 
     .chapter-author {
       display: block;
-      margin-bottom: if-map-get($section-author-margin-bottom, $type);
-      font-family: $section-author-font-family;
-      font-size: if-map-get($section-author-font-size, $type);
-      font-style: $section-author-font-style;
-      font-weight: $section-author-font-weight;
+      margin-bottom: var(--section-author-margin-bottom);
+      font-family: var(--section-author-font-family);
+      font-size: var(--section-author-font-size);
+      font-style: var(--section-author-font-style);
+      font-weight: var(--section-author-font-weight);
       hyphens: none;
-      text-align: $section-author-align;
-      text-indent: if-map-get($section-author-text-indent, $type);
-      text-transform: $section-author-text-transform;
-      letter-spacing: if-map-get($section-author-letter-spacing, $type);
-      word-spacing: if-map-get($section-author-word-spacing, $type);
+      text-align: var(--section-author-align);
+      text-indent: var(--section-author-text-indent);
+      text-transform: var(--section-author-text-transform);
+      letter-spacing: var(--section-author-letter-spacing);
+      word-spacing: var(--section-author-word-spacing);
     }
 
     .chapter-title + .chapter-subtitle,
     .short-title + .chapter-subtitle {
-      margin-top: if-map-get($section-title-subtitle-spacing, $type);
+      margin-top: var(--section-title-subtitle-spacing);
     }
 
     .chapter-title + .chapter-author,
     .short-title + .chapter-author {
-      margin-top: if-map-get($section-title-author-spacing, $type);
+      margin-top: var(--section-title-author-spacing);
     }
 
     .chapter-subtitle + .chapter-author {
-      margin-top: if-map-get($section-subtitle-author-spacing, $type);
+      margin-top: var(--section-subtitle-author-spacing);
     }
 
     .chapter-title:last-child {
-      margin-bottom: if-map-get($section-title-margin-bottom, $type);
+      margin-bottom: var(--section-title-margin-bottom);
     }
 
     .chapter-subtitle:last-child {
-      margin-bottom: if-map-get($section-subtitle-margin-bottom, $type);
+      margin-bottom: var(--section-subtitle-margin-bottom);
     }
   }
 
@@ -153,33 +153,33 @@
 
 .aphorism,
 blockquote.aphorism {
-  width: if-map-get($aphorism-block-width, $type);
-  margin: if-map-get($aphorism-margin-top, $type) if-map-get($aphorism-margin-right, $type) if-map-get($aphorism-margin-bottom, $type) if-map-get($aphorism-margin-left, $type);
-  padding-bottom: if-map-get($aphorism-padding-bottom, $type);
-  font-family: $aphorism-font-family;
-  font-size: if-map-get($aphorism-font-size, $type);
-  font-style: $aphorism-font-style;
-  font-weight: $aphorism-font-weight;
+  width: var(--aphorism-block-width);
+  margin: var(--aphorism-margin-top) var(--aphorism-margin-right) var(--aphorism-margin-bottom) var(--aphorism-margin-left);
+  padding-bottom: var(--aphorism-padding-bottom);
+  font-family: var(--aphorism-font-family);
+  font-size: var(--aphorism-font-size);
+  font-style: var(--aphorism-font-style);
+  font-weight: var(--aphorism-font-weight);
   @if $type != 'epub' {
-    line-height: if-map-get($aphorism-line-height, $type);
+    line-height: var(--aphorism-line-height);
   }
 
-  text-align: $aphorism-align;
-  text-indent: if-map-get($aphorism-indent, $type);
+  text-align: var(--aphorism-align);
+  text-indent: var(--aphorism-indent);
 
   cite {
     display: block;
-    margin-right: if-map-get($aphorism-cite-margin-right, $type);
-    margin-left: if-map-get($aphorism-cite-margin-left, $type);
-    font-size: if-map-get($aphorism-cite-font-size, $type);
-    font-style: $aphorism-cite-font-style;
-    font-variant: $aphorism-cite-font-variant;
-    font-weight: $aphorism-cite-font-weight;
-    text-transform: $aphorism-cite-text-transform;
-    text-align: $aphorism-cite-align;
+    margin-right: var(--aphorism-cite-margin-right);
+    margin-left: var(--aphorism-cite-margin-left);
+    font-size: var(--aphorism-cite-font-size);
+    font-style: var(--aphorism-cite-font-style);
+    font-variant: var(--aphorism-cite-font-variant);
+    font-weight: var(--aphorism-cite-font-weight);
+    text-transform: var(--aphorism-cite-text-transform);
+    text-align: var(--aphorism-cite-align);
 
     &::before {
-      content: $aphorism-cite-before-content;
+      content: var(--aphorism-cite-before-content);
     }
   }
 }
