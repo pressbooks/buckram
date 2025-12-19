@@ -584,5 +584,61 @@
   --textbox-line-height: var(--custom-textbox-line-height, 1.2em);
   --textbox-text-align: var(--custom-textbox-align, left);
   --textbox-text-indent: var(--custom-textbox-text-indent, var(--para-indent));
+
+  /* ============================================================================
+   * Phase 4: Section Titles & Subtitles
+   * Added: December 18, 2024
+   * Count: 28 variables
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Section Title Display & Layout
+   * Source: variables/_section-titles.scss
+   * -------------------------------------------------------------------------- */
+  
+  --section-title-display: var(--custom-section-title-display, block);
+  --section-title-align: var(--custom-section-title-align, center);
+  
+  /* Section Title Typography */
+  --section-title-font-family: var(--custom-section-title-font-family, var(--font-2));
+  --section-title-font-size: var(--custom-section-title-font-size, 2em); /* web: 2em, epub: 1.5em, prince: 2em */
+  --section-title-font-style: var(--custom-section-title-font-style, normal);
+  --section-title-font-weight: var(--custom-section-title-font-weight, normal);
+  --section-title-text-transform: var(--custom-section-title-text-transform, none);
+  --section-title-line-height: var(--custom-section-title-line-height, var(--h1-line-height));
+  --section-title-letter-spacing: var(--custom-section-title-letter-spacing, normal); /* web: normal, context-mapped */
+  --section-title-word-spacing: var(--custom-section-title-word-spacing, normal); /* web: normal, context-mapped */
+  
+  /* Section Title Spacing */
+  --section-title-margin-top: var(--custom-section-title-margin-top, 0); /* web: 0, context: epub/prince vary */
+  --section-title-margin-bottom: var(--custom-section-title-margin-bottom, 2em); /* web: 2em, prince: 1.5cm */
+  --section-title-margin-left: var(--custom-section-title-margin-left, 0); /* web: 0, consistent across contexts */
+  --section-title-margin-right: var(--custom-section-title-margin-right, 0); /* web: 0, consistent across contexts */
+  --section-title-padding-bottom: var(--custom-section-title-padding-bottom, 0); /* web: 0, consistent across contexts */
+  
+  /* Section Title Borders */
+  --section-title-border-bottom-width: var(--custom-section-title-border-bottom-width, 0); /* web: 0, consistent */
+  --section-title-border-bottom-style: var(--custom-section-title-border-bottom-style, none);
+  --section-title-border-bottom-color: var(--custom-section-title-border-bottom-color, var(--color-3));
+  
+  /* Section Title Decoration (for ornamental elements) */
+  --section-title-decoration-font-family: var(--custom-section-title-decoration-font-family, var(--font-3));
+  --section-title-decoration-content: var(--custom-section-title-decoration-content, "");
+  --section-title-decoration-display: var(--custom-section-title-decoration-display, none);
+  --section-title-decoration-font-size: var(--custom-section-title-decoration-font-size, 0); /* web: 0 */
+  --section-title-decoration-font-weight: var(--custom-section-title-decoration-font-weight, normal);
+  --section-title-decoration-margin-top: var(--custom-section-title-decoration-margin-top, 0); /* web: 0 */
+  --section-title-decoration-margin-bottom: var(--custom-section-title-decoration-margin-bottom, 0); /* web: 0 */
+
+  /* ----------------------------------------------------------------------------
+   * Section Subtitle
+   * Source: variables/_section-titles.scss
+   * -------------------------------------------------------------------------- */
+  
+  /* Section Subtitle Typography */
+  --section-subtitle-font-family: var(--custom-section-subtitle-font-family, var(--font-2));
+  --section-subtitle-font-size: var(--custom-section-subtitle-font-size, 1em); /* web: 1em, epub: medium */
+  --section-subtitle-font-style: var(--custom-section-subtitle-font-style, normal);
 }
+
 

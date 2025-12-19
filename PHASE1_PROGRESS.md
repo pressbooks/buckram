@@ -1,4 +1,4 @@
-# Phase 1, 2, & 3 Implementation Progress
+# Phase 1, 2, 3, & 4 Implementation Progress
 
 **Branch:** `feat/migrate-to-css-properties`  
 **Phase 1 Started:** December 18, 2024  
@@ -6,9 +6,11 @@
 **Phase 2 Started:** December 18, 2024  
 **Phase 2 Completed:** December 18, 2024  
 **Phase 3 Started:** December 18, 2024  
-**Status:** 🔄 **Phase 3 In Progress** (242 variables total - 269% of original 90 target)
+**Phase 3 Completed:** December 18, 2024  
+**Phase 4 Started:** December 18, 2024  
+**Status:** 🔄 **Phase 4 In Progress** (270 variables total)
 
-## Variables Converted (242/90 target) ✅ Phase 1 Complete! Phase 2 Complete! Phase 3 Started!
+## Variables Converted (270 total) ✅ Phase 1 Complete! Phase 2 Complete! Phase 3 Complete! Phase 4 Started!
 
 ### ✅ Colors (13 variables)
 Source: `variables/_colors.scss`
@@ -567,3 +569,69 @@ Textbox typography:
 - [x] `$textbox-text-indent` → `--textbox-text-indent`
 
 - ✅ **Component Conversion COMPLETE!** 8 web components using CSS custom properties
+- **Dec 18, 2024 (Evening):** Phase 4 started - Section titles & subtitles → **270 total**
+  - Section title display & layout (2 variables)
+  - Section title typography (8 variables)
+  - Section title spacing (5 variables)
+  - Section title borders (3 variables)
+  - Section title decoration (6 variables)
+  - Section subtitle typography (3 variables)
+- **Dec 18, 2024 (Evening):** Live testing validation started
+  - Updated mu-plugin to load all 270 variables
+  - Visual tests: H1 red, H2 blue, body text 16pt
+  - No breaking issues observed
+
+## Phase 4: Section Titles & Subtitles (28 variables)
+
+### ✅ Section Title Display & Layout (2 variables)
+Source: `variables/_section-titles.scss`
+
+- [x] `$section-title-display` → `--section-title-display`
+- [x] `$section-title-align` → `--section-title-align`
+
+### ✅ Section Title Typography (8 variables)
+Source: `variables/_section-titles.scss`
+
+- [x] `$section-title-font-family` → `--section-title-font-family`
+- [x] `$section-title-font-size` → `--section-title-font-size` (web: 2em, epub: 1.5em)
+- [x] `$section-title-font-style` → `--section-title-font-style`
+- [x] `$section-title-font-weight` → `--section-title-font-weight`
+- [x] `$section-title-text-transform` → `--section-title-text-transform`
+- [x] `$section-title-line-height` → `--section-title-line-height`
+- [x] `$section-title-letter-spacing` → `--section-title-letter-spacing` (context: normal across formats)
+- [x] `$section-title-word-spacing` → `--section-title-word-spacing` (context: normal across formats)
+
+### ✅ Section Title Spacing (5 variables)
+Source: `variables/_section-titles.scss`
+
+- [x] `$section-title-margin-top` → `--section-title-margin-top` (web: 0)
+- [x] `$section-title-margin-bottom` → `--section-title-margin-bottom` (web: 2em, prince: 1.5cm)
+- [x] `$section-title-margin-left` → `--section-title-margin-left` (web: 0)
+- [x] `$section-title-margin-right` → `--section-title-margin-right` (web: 0)
+- [x] `$section-title-padding-bottom` → `--section-title-padding-bottom` (web: 0)
+
+### ✅ Section Title Borders (3 variables)
+Source: `variables/_section-titles.scss`
+
+- [x] `$section-title-border-bottom-width` → `--section-title-border-bottom-width` (web: 0)
+- [x] `$section-title-border-bottom-style` → `--section-title-border-bottom-style`
+- [x] `$section-title-border-bottom-color` → `--section-title-border-bottom-color`
+
+### ✅ Section Title Decoration (6 variables)
+Source: `variables/_section-titles.scss`
+
+- [x] `$section-title-decoration-font-family` → `--section-title-decoration-font-family`
+- [x] `$section-title-decoration-content` → `--section-title-decoration-content`
+- [x] `$section-title-decoration-display` → `--section-title-decoration-display`
+- [x] `$section-title-decoration-font-size` → `--section-title-decoration-font-size` (web: 0)
+- [x] `$section-title-decoration-font-weight` → `--section-title-decoration-font-weight`
+- [x] `$section-title-decoration-margin-top` → `--section-title-decoration-margin-top` (web: 0)
+- [x] `$section-title-decoration-margin-bottom` → `--section-title-decoration-margin-bottom` (web: 0)
+
+### ✅ Section Subtitle Typography (3 variables)
+Source: `variables/_section-titles.scss`
+
+- [x] `$section-subtitle-font-family` → `--section-subtitle-font-family`
+- [x] `$section-subtitle-font-size` → `--section-subtitle-font-size` (web: 1em, epub: medium)
+- [x] `$section-subtitle-font-style` → `--section-subtitle-font-style`
+
