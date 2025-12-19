@@ -8,6 +8,32 @@ Opinionated SCSS components for books (web, EPUB and PDF).
 
 [Read the docs.](https://buckram.pressbooks.org/)
 
+## Architecture
+
+Buckram uses **CSS custom properties (CSS variables)** for styling, enabling format-specific customization and runtime theming capabilities.
+
+### CSS Custom Properties
+- **1,078 CSS custom properties** define all styling values
+- Format-specific values generated at compile time (epub, prince, web)
+- Properties organized in `assets/styles/_css-variables.scss`
+- Full documentation in `assets/styles/buckram-variables.css`
+
+### How It Works
+```scss
+// CSS custom properties are defined per format
+:root {
+  --body-font-size: 11pt;  /* prince/epub */
+  --body-font-size: 14pt;  /* web */
+}
+
+// Components use var() to reference properties
+body {
+  font-size: var(--body-font-size);
+}
+```
+
+For migration details, see [MIGRATION-SUMMARY.md](MIGRATION-SUMMARY.md).
+
 ## Testing
 
 Install dependencies:
