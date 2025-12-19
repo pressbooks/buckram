@@ -11,6 +11,9 @@ tests/output/images/*/*.png
 tests/screenshots/baseline/*.png
 tests/screenshots/comparison/*.png
 tests/screenshots/diff/*.png
+test-results/
+playwright-report/
+.last-run.json
 
 # Runtime data
 pids

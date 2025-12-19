@@ -2,7 +2,7 @@ name: Visual Regression Tests
 
 on:
   push:
-    branches: [dev, production, feat/migrate-to-css-properties]
+    branches: [dev, production]
   pull_request:
     branches: [dev, production]
 
