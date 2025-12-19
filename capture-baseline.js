@@ -20,7 +20,7 @@ const path = require('path');
 // Configuration
 const CONFIG = {
   baseUrl: 'https://pressbooks.test',
-  bookSlug: 'test-book', // Change to your test book slug
+  bookSlug: 'testreference',
   screenshotDir: './tests/screenshots',
   viewport: { width: 1280, height: 1024 },
   

@@ -39,6 +39,10 @@
   /* Caption Colors */
   --image-caption-text-color: var(--custom-image-caption-text-color, #373d3f);
   
+  /* Link Colors */
+  --link-color: var(--custom-link-color, var(--primary, #b01109)); /* web: var(--primary, #b01109), prince: normal */
+  --link-color-print: var(--custom-link-color-print, initial);
+  
   /* ============================================================================
    * Typography - Heading Text Transforms
    * Source: variables/_elements.scss
@@ -102,6 +106,14 @@
   
   --blockquote-font-style: var(--custom-blockquote-font-style, italic);
   --blockquote-font-weight: var(--custom-blockquote-font-weight, normal);
+  
+  /* ============================================================================
+   * Typography - Link Element
+   * Source: variables/_elements.scss
+   * ========================================================================== */
+  
+  --link-text-decoration: var(--custom-link-text-decoration, underline); /* web: underline, epub: none, prince: underline */
+  --link-text-decoration-print: var(--custom-link-text-decoration-print, none);
   
   /* ============================================================================
    * Layout - Heading Border Styles
@@ -639,6 +651,52 @@
   --section-subtitle-font-family: var(--custom-section-subtitle-font-family, var(--font-2));
   --section-subtitle-font-size: var(--custom-section-subtitle-font-size, 1em); /* web: 1em, epub: medium */
   --section-subtitle-font-style: var(--custom-section-subtitle-font-style, normal);
-}
 
+  /* ============================================================================
+   * Phase 5: Footnotes & Endnotes
+   * Added: December 18, 2024
+   * Count: 21 variables
+   * ========================================================================== */
+
+  /* ----------------------------------------------------------------------------
+   * Footnote Block Layout (Prince PDF)
+   * Source: variables/_specials.scss
+   * -------------------------------------------------------------------------- */
+  
+  --footnote-block-margin-top: var(--custom-footnote-block-margin-top, 0.5em);
+  --footnote-block-border-top: var(--custom-footnote-block-border-top, 0);
+  
+  /* Footnote Display */
+  --footnote-padding-top: var(--custom-footnote-padding-top, 1em);
+  --footnote-padding-left: var(--custom-footnote-padding-left, 0);
+  --footnote-indent: var(--custom-footnote-indent, 0);
+  
+  /* Footnote Typography */
+  --footnote-font-family: var(--custom-footnote-font-family, var(--body-font-family));
+  --footnote-font-size: var(--custom-footnote-font-size, 0.9em); /* web: 0.9em, epub: 0.9em, prince: 0.8rem */
+  --footnote-font-weight: var(--custom-footnote-font-weight, var(--body-font-weight));
+  --footnote-font-style: var(--custom-footnote-font-style, normal);
+  --footnote-line-height: var(--custom-footnote-line-height, 1.15em);
+  --footnote-align: var(--custom-footnote-align, left); /* web/epub/prince: left */
+  --footnote-text-transform: var(--custom-footnote-text-transform, none); /* web/epub/prince: none */
+  --footnote-letter-spacing: var(--custom-footnote-letter-spacing, normal); /* web/epub/prince: normal */
+  --footnote-word-spacing: var(--custom-footnote-word-spacing, normal); /* web/epub/prince: normal */
+  
+  /* Footnote Number Markers */
+  --footnote-number-marker-font-size: var(--custom-footnote-number-marker-font-size, 0.8em);
+  --footnote-number-marker-line-height: var(--custom-footnote-number-marker-line-height, 0.5em);
+  
+  /* Footnote Blockquotes */
+  --footnote-blockquote-margin-top: var(--custom-footnote-blockquote-margin-top, 0.5em);
+  --footnote-blockquote-margin-bottom: var(--custom-footnote-blockquote-margin-bottom, 0.5em);
+  --footnote-blockquote-margin-left: var(--custom-footnote-blockquote-margin-left, 1.5em);
+  --footnote-blockquote-font-size: var(--custom-footnote-blockquote-font-size, 0.95em);
+  
+  /* Footnote Special Elements */
+  --footnote-mathjax-padding-bottom: var(--custom-footnote-mathjax-padding-bottom, 0.4em);
+  
+  /* Endnotes */
+  --endnote-margin-left: var(--custom-endnote-margin-left, 1.5em);
+  --endnote-line-height: var(--custom-endnote-line-height, 1.1em);
+}
 

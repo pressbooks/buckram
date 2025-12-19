@@ -1,0 +1,145 @@
+/**
+ * Images Component (CSS Custom Properties Version)
+ * 
+ * Converted from: components/media/_images.scss
+ * Uses: buckram-variables.css
+ * 
+ * @since 2.0.0
+ */
+
+/* ============================================================================
+ * Image Captions - Web Context
+ * Applies to WordPress-generated figure captions
+ * ========================================================================== */
+
+.front-matter .wp-caption figcaption,
+.front-matter .wp-caption .wp-caption-text,
+.part .wp-caption figcaption,
+.part .wp-caption .wp-caption-text,
+.chapter .wp-caption figcaption,
+.chapter .wp-caption .wp-caption-text,
+.back-matter .wp-caption figcaption,
+.back-matter .wp-caption .wp-caption-text,
+body#tinymce.wp-editor figcaption,
+body#tinymce.wp-editor .wp-caption-text {
+  margin-top: var(--image-caption-margin-top, 0);
+  padding-bottom: var(--image-caption-padding-bottom, 0.5em);
+  font-family: var(--image-caption-font-family, inherit);
+  font-size: var(--image-caption-font-size, 0.8em);
+  font-style: var(--image-caption-font-style, normal);
+  font-weight: var(--image-caption-font-weight, normal);
+  line-height: var(--image-caption-line-height, 1.2em);
+  text-align: var(--image-caption-text-align, left);
+  text-transform: var(--image-caption-text-transform, none);
+  text-indent: var(--image-caption-text-indent, 0);
+  color: var(--image-caption-text-color, #373d3f);
+  hyphens: none;
+}
+
+/* ============================================================================
+ * Image Wrappers - Web Context
+ * Basic margin control for images
+ * ========================================================================== */
+
+.front-matter img,
+.part img,
+.chapter img,
+.back-matter img,
+body#tinymce.wp-editor img {
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  page-break-inside: avoid !important;
+}
+
+.front-matter .wp-caption,
+.front-matter .wp-nocaption,
+.part .wp-caption,
+.part .wp-nocaption,
+.chapter .wp-caption,
+.chapter .wp-nocaption,
+.back-matter .wp-caption,
+.back-matter .wp-nocaption,
+body#tinymce.wp-editor .wp-caption,
+body#tinymce.wp-editor .wp-nocaption {
+  height: auto;
+  max-width: 100%;
+  page-break-inside: avoid;
+  text-align: center;
+}
+
+/* Alignment: None */
+.front-matter .wp-caption.alignnone,
+.front-matter .wp-nocaption.alignnone,
+.part .wp-caption.alignnone,
+.part .wp-nocaption.alignnone,
+.chapter .wp-caption.alignnone,
+.chapter .wp-nocaption.alignnone,
+.back-matter .wp-caption.alignnone,
+.back-matter .wp-nocaption.alignnone,
+body#tinymce.wp-editor .wp-caption.alignnone,
+body#tinymce.wp-editor .wp-nocaption.alignnone {
+  margin: var(--image-wrapper-margin-top, 0.5em) 0 var(--image-wrapper-margin-bottom, 0.5em);
+  text-align: left;
+}
+
+/* Alignment: Center */
+.front-matter .wp-caption.aligncenter,
+.front-matter .wp-nocaption.aligncenter,
+.part .wp-caption.aligncenter,
+.part .wp-nocaption.aligncenter,
+.chapter .wp-caption.aligncenter,
+.chapter .wp-nocaption.aligncenter,
+.back-matter .wp-caption.aligncenter,
+.back-matter .wp-nocaption.aligncenter,
+body#tinymce.wp-editor .wp-caption.aligncenter,
+body#tinymce.wp-editor .wp-nocaption.aligncenter {
+  margin: var(--image-wrapper-margin-top, 0.5em) auto var(--image-wrapper-margin-bottom, 0.5em);
+  text-align: center;
+}
+
+/* Alignment: Left */
+.front-matter .wp-caption.alignleft,
+.front-matter .wp-nocaption.alignleft,
+.part .wp-caption.alignleft,
+.part .wp-nocaption.alignleft,
+.chapter .wp-caption.alignleft,
+.chapter .wp-nocaption.alignleft,
+.back-matter .wp-caption.alignleft,
+.back-matter .wp-nocaption.alignleft,
+body#tinymce.wp-editor .wp-caption.alignleft,
+body#tinymce.wp-editor .wp-nocaption.alignleft {
+  float: left;
+  margin: var(--image-wrapper-margin-top, 0.5em) var(--image-alignleft-margin-right, 1em) 0 0;
+  max-width: 50%;
+}
+
+/* Alignment: Right */
+.front-matter .wp-caption.alignright,
+.front-matter .wp-nocaption.alignright,
+.part .wp-caption.alignright,
+.part .wp-nocaption.alignright,
+.chapter .wp-caption.alignright,
+.chapter .wp-nocaption.alignright,
+.back-matter .wp-caption.alignright,
+.back-matter .wp-nocaption.alignright,
+body#tinymce.wp-editor .wp-caption.alignright,
+body#tinymce.wp-editor .wp-nocaption.alignright {
+  float: right;
+  margin: var(--image-wrapper-margin-top, 0.5em) 0 0 var(--image-alignright-margin-left, 1em);
+  max-width: 50%;
+  padding-right: 0;
+}
+
+/* MathJax Images */
+.front-matter img.mathjax,
+.part img.mathjax,
+.chapter img.mathjax,
+.back-matter img.mathjax,
+body#tinymce.wp-editor img.mathjax {
+  vertical-align: middle;
+  border: none;
+  background: none;
+}

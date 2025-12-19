@@ -1,4 +1,4 @@
-# Phase 1, 2, 3, & 4 Implementation Progress
+# Phase 1, 2, 3, 4, & 5 Implementation Progress
 
 **Branch:** `feat/migrate-to-css-properties`  
 **Phase 1 Started:** December 18, 2024  
@@ -8,11 +8,13 @@
 **Phase 3 Started:** December 18, 2024  
 **Phase 3 Completed:** December 18, 2024  
 **Phase 4 Started:** December 18, 2024  
-**Status:** 🔄 **Phase 4 In Progress** (270 variables total)
+**Phase 4 Completed:** December 18, 2024  
+**Phase 5 Started:** December 18, 2024  
+**Status:** 🔄 **Phase 5 In Progress** (295 variables total)
 
-## Variables Converted (270 total) ✅ Phase 1 Complete! Phase 2 Complete! Phase 3 Complete! Phase 4 Started!
+## Variables Converted (295 total) ✅ Phase 1-4 Complete! Phase 5 Started!
 
-### ✅ Colors (13 variables)
+### ✅ Colors (15 variables)
 Source: `variables/_colors.scss`
 
 - [x] `$h1-color` → `--h1-color`
@@ -28,6 +30,8 @@ Source: `variables/_colors.scss`
 - [x] `$shade-color-1` → `--shade-color-1`
 - [x] `$line-color-1` → `--line-color-1`
 - [x] `$image-caption-text-color` → `--image-caption-text-color`
+- [x] `$link-color` → `--link-color` (Phase 5)
+- [x] `$link-color-print` → `--link-color-print` (Phase 5)
 
 ### ✅ Typography - Text Transform (6 variables)
 Source: `variables/_elements.scss`
@@ -221,6 +225,12 @@ Source: `variables/_elements.scss` - Context-specific
 - [x] `$body-font-size` → `--body-font-size` (Web: 14pt, Prince: 11pt, EPUB: medium)
 - [x] `$body-line-height` → `--body-line-height` (Web: 1.8em, EPUB/Prince: 1.4em)
 
+### ✅ Typography - Link Element (2 variables)
+Source: `variables/_elements.scss` - Phase 5
+
+- [x] `$link-text-decoration` → `--link-text-decoration` (Web: underline, EPUB: none, Prince: underline)
+- [x] `$link-text-decoration-print` → `--link-text-decoration-print`
+
 ### ✅ Typography - Paragraph Properties (18 variables)
 Source: `variables/_elements.scss`
 
@@ -293,7 +303,7 @@ Source: `variables/_elements.scss` - Identical across contexts
 ## Files Created
 
 ### Core Files
-- ✅ `assets/styles/buckram-variables.css` - CSS custom properties (168 variables)
+- ✅ `assets/styles/buckram-variables.css` - CSS custom properties (295 variables)
 - ✅ `assets/styles/components/headings.css` - Converted headings component
 - ✅ `assets/styles/components/body.css` - Converted body component (web)
 - ✅ `assets/styles/components/blockquotes.css` - Converted blockquote component (web)
@@ -301,6 +311,8 @@ Source: `variables/_elements.scss` - Identical across contexts
 - ✅ `assets/styles/components/lists.css` - Converted lists component (web)
 - ✅ `assets/styles/components/tables.css` - Converted tables component (web)
 - ✅ `assets/styles/components/miscellaneous.css` - Converted misc elements (cite, code, sub/sup)
+- ✅ `assets/styles/components/links.css` - Converted links component (web) - Phase 5
+- ✅ `assets/styles/components/images.css` - Converted images/captions component (web) - Phase 5
 - ✅ `assets/styles/test.html` - Visual test page
 
 ### Documentation Updates
@@ -635,3 +647,42 @@ Source: `variables/_section-titles.scss`
 - [x] `$section-subtitle-font-size` → `--section-subtitle-font-size` (web: 1em, epub: medium)
 - [x] `$section-subtitle-font-style` → `--section-subtitle-font-style`
 
+### ✅ Phase 5: Footnotes & Endnotes (21 variables)
+Source: `variables/_specials.scss`
+
+**Footnote Block Layout (Prince PDF):**
+- [x] `$footnote-block-margin-top` → `--footnote-block-margin-top`
+- [x] `$footnote-block-border-top` → `--footnote-block-border-top`
+
+**Footnote Display:**
+- [x] `$footnote-padding-top` → `--footnote-padding-top`
+- [x] `$footnote-padding-left` → `--footnote-padding-left`
+- [x] `$footnote-indent` → `--footnote-indent`
+
+**Footnote Typography:**
+- [x] `$footnote-font-family` → `--footnote-font-family`
+- [x] `$footnote-font-size` → `--footnote-font-size` (web: 0.9em, epub: 0.9em, prince: 0.8rem)
+- [x] `$footnote-font-weight` → `--footnote-font-weight`
+- [x] `$footnote-font-style` → `--footnote-font-style`
+- [x] `$footnote-line-height` → `--footnote-line-height`
+- [x] `$footnote-align` → `--footnote-align` (web/epub/prince: left)
+- [x] `$footnote-text-transform` → `--footnote-text-transform` (web/epub/prince: none)
+- [x] `$footnote-letter-spacing` → `--footnote-letter-spacing` (web/epub/prince: normal)
+- [x] `$footnote-word-spacing` → `--footnote-word-spacing` (web/epub/prince: normal)
+
+**Footnote Number Markers:**
+- [x] `$footnote-number-marker-font-size` → `--footnote-number-marker-font-size`
+- [x] `$footnote-number-marker-line-height` → `--footnote-number-marker-line-height`
+
+**Footnote Blockquotes:**
+- [x] `$footnote-blockquote-margin-top` → `--footnote-blockquote-margin-top`
+- [x] `$footnote-blockquote-margin-bottom` → `--footnote-blockquote-margin-bottom`
+- [x] `$footnote-blockquote-margin-left` → `--footnote-blockquote-margin-left`
+- [x] `$footnote-blockquote-font-size` → `--footnote-blockquote-font-size`
+
+**Footnote Special Elements:**
+- [x] `$footnote-mathjax-padding-bottom` → `--footnote-mathjax-padding-bottom`
+
+**Endnotes:**
+- [x] `$endnote-margin-left` → `--endnote-margin-left`
+- [x] `$endnote-line-height` → `--endnote-line-height`

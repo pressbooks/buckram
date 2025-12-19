@@ -1,0 +1,32 @@
+/**
+ * Links Component (CSS Custom Properties Version)
+ * 
+ * Converted from: components/elements/_links.scss
+ * Uses: buckram-variables.css
+ * 
+ * @since 2.0.0
+ */
+
+/* ============================================================================
+ * Links - Web Context
+ * Applies to all book content sections
+ * ========================================================================== */
+
+.front-matter a,
+.part a,
+.chapter a,
+.back-matter a,
+body#tinymce.wp-editor a {
+  text-decoration: var(--link-text-decoration, underline);
+  color: var(--link-color, var(--primary, #b01109));
+}
+
+/* ============================================================================
+ * Links - Print Context
+ * For Prince PDF generation with .print class
+ * ========================================================================== */
+
+.print a {
+  text-decoration: var(--link-text-decoration-print, none);
+  color: var(--link-color-print, initial);
+}
