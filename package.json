@@ -8,7 +8,11 @@
     "docs": "cross-env NODE_ENV=development node_modules/sassdoc/bin/sassdoc assets/styles --config sassdoc.json",
     "lint": "npm run -s lint:styles",
     "lint:styles": "stylelint 'assets/styles/**/*.scss'",
-    "test": "npm run -s lint && npm run -s build"
+    "test": "npm run -s lint && npm run -s build",
+    "capture:baseline": "node capture-baseline.js",
+    "capture:comparison": "node capture-baseline.js comparison",
+    "capture:components": "node capture-baseline.js components",
+    "capture:devtools": "node capture-baseline.js devtools"
   },
   "repository": {
     "type": "git",
@@ -24,9 +28,11 @@
     "node": ">= 22"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "chai": "^4.1.2",
     "mocha": "^10.0.0",
     "pixelmatch": "^5.2.1",
+    "playwright": "^1.57.0",
     "polyserve": "^0.27.15",
     "pressbooks-build-tools": "^4.0.0",
     "puppeteer": "^23.6.0",

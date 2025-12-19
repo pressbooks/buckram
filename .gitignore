@@ -8,6 +8,9 @@ yarn-error.log*
 # Tests
 tests/output/css/*.css
 tests/output/images/*/*.png
+tests/screenshots/baseline/*.png
+tests/screenshots/comparison/*.png
+tests/screenshots/diff/*.png
 
 # Runtime data
 pids

@@ -23,6 +23,20 @@ Run tests:
 npm test
 ```
 
+### Visual Regression Testing
+
+For CSS custom properties migration, capture baseline screenshots:
+
+```bash
+# Capture baseline (SCSS only)
+npm run capture:baseline
+
+# Capture comparison (CSS variables)
+npm run capture:comparison
+```
+
+See [VISUAL_TESTING_QUICKSTART.md](VISUAL_TESTING_QUICKSTART.md) for setup instructions.
+
 ## Releasing
 
 Buckram uses [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), enforced with [commitlint](https://commitlint.js.org/).
