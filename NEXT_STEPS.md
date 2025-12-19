@@ -1,85 +1,149 @@
-# Next Steps: Additional Variables & Testing
+# Next Steps: CSS Migration Testing & Completion
 
-## Current Status
+## ✅ Phase 1 Complete: All Variables Migrated
 
-✅ **Phase 1 Complete:** 107 simple variables (119% of 90 target)  
-✅ **Phase 2 Complete:** 61 context-aware variables  
-✅ **Phase 3 Complete:** 74 special elements variables  
-✅ **Component Conversion:** 8 component CSS files  
-✅ **Testing Resources:** TEST_COMPONENTS.html + TESTING_GUIDE.md
+**Status:** 🎉 **1,078 CSS custom properties created (100% complete)** 🎉
 
-**Total Converted:** 242 variables (269% of original target)
+All SCSS variables have been converted to CSS custom properties in [buckram-variables.css](assets/styles/buckram-variables.css).
 
-## Remaining Convertible Variables
+## ✅ Playwright Test Suite Complete
 
-Based on scan of variables/ directory, these files contain additional simple variables that can be converted:
+**Status:** 🎉 **Comprehensive visual regression test suite created** 🎉
 
-### High Priority (Web-Focused)
+See [PLAYWRIGHT_SUITE.md](PLAYWRIGHT_SUITE.md) for complete details.
 
-#### 1. Section Titles (~30-40 variables)
-File: `variables/_section-titles.scss`
+## 📋 Immediate Next Steps
 
-Simple variables:
-- `$section-title-display`
-- `$section-title-border-bottom-style`
-- `$section-title-border-bottom-color`
-- `$section-title-font-family`
-- `$section-title-font-style`
-- `$section-title-font-weight`
-- `$section-title-align`
-- `$section-title-text-transform`
+### 1. Initialize Test Environment
+```bash
+# Install new dependencies
+npm install
+
+# Install Playwright browsers
+npm run playwright:install
+
+# Generate HTML fixtures
+npm run playwright:fixtures
+```
 - `$section-title-decoration-*` (7 variables)
 - Subtitle/author spacing variables
+### 2. Verify Fixture Generation
+```bash
+# Should create 7 HTML files in tests/visual-regression/fixtures/html/
+ls tests/visual-regression/fixtures/html/
 
-Context-mapped (use web defaults):
-- `$section-title-margin-*` (top, bottom, left, right)
-- `$section-title-block-margin-*`
-- `$section-title-font-size`
-- `$section-title-letter-spacing`
-- `$section-title-word-spacing`
+# Expected files:
+# - complete-chapter.html
+# - part-opener.html
+# - front-matter.html
+# - back-matter.html
+# - typography-specimen.html
+# - table-of-contents.html
+# - prince-page.html
+```
 
-**Impact:** Controls chapter/section title appearance in webbooks
+### 3. Build Baseline Version
+```bash
+# Build SCSS baseline (original variables)
+composer build
 
-#### 2. TOC (Table of Contents) (~25-30 variables)
-File: `variables/_toc.scss`
+# Verify output exists
+ls assets/dist/styles/buckram.css
+```
 
-Simple variables:
-- `$toc-display`
-- `$toc-left-margin-left`
-- `$toc-subsection-margin-top`
-- `$toc-block-margin-top`
-- `$toc-*-width` variables
+### 4. Build CSS Variables Version
+```bash
+# Build version with CSS custom properties
+npm run build
 
-Context-mapped:
-- `$toc-*-margin-top` for different section types
-- `$toc-left-*-width` variables
+# Or manually compile if needed
+```
 
-**Impact:** Web TOC display (mostly EPUB/Prince focused, but some web use)
+### 5. Run Initial Tests
+```bash
+# Run in UI mode (recommended for first run)
+npm run playwright:test:ui
 
-#### 3. Running Content (~15-20 variables)
-File: `variables/_pages.scss`
+# Or run headless
+npm run playwright:test
+```
 
-Context-mapped (Prince-specific but documentable):
-- `$running-content-*` variables for headers/footers
-- Page margin variables
+### 6. Review Test Results
+- Check console output for pass/fail
+- Review screenshots in `screenshots/` directory
+- Check diffs in `test-results/` if tests fail
+- View HTML report: `npm run playwright:report`
 
-**Impact:** Print/PDF only (low priority for web POC)
+### 7. Continue SCSS Conversions
 
-### Medium Priority
+Convert remaining component files (~29 files) from `$variable` to `var(--property)`:
 
-#### 4. Structure (~10-15 variables)
-File: `variables/_structure.scss`
+**Priority order:**
+1. `_headings.scss` - Core typography
+2. `_paragraphs.scss` - Text blocks
+3. `_colors.scss` - Color applications
+4. `_tables.scss` - Table styling
+5. `_lists.scss` - List styling
+6. ... (see [STEP2_PROGRESS.md](STEP2_PROGRESS.md) for full list)
 
-Variables for:
-- Page breaks
-- Column spans
-- Widows/orphans (already have some)
-- Display properties
+**Process for each file:**
+```bash
+# 1. Convert SCSS file
+# Replace: $variable with var(--property)
+# Replace: if-map-get() with var(--property)
 
-**Impact:** Layout control, some web-relevant
+# 2. Test the conversion
+npm run playwright:test:ui
 
-#### 5. Accessibility (~5-10 variables)
-File: `variables/_accessibility.scss`
+# 3. Review any visual differences
+
+# 4. Update STEP2_PROGRESS.md
+
+# 5. Commit changes
+git add .
+git commit -m "feat: convert [filename] to CSS variables"
+```
+
+## 🎯 Immediate Next Command
+
+```bash
+# Start by generating fixtures and running tests
+npm install && npm run playwright:install && npm run playwright:fixtures
+```
+
+Then:
+```bash
+# Run tests in UI mode to see current state
+npm run playwright:test:ui
+```
+
+## 📚 Reference Documentation
+
+- [TESTING.md](TESTING.md) - Comprehensive testing guide
+- [PLAYWRIGHT_SUITE.md](PLAYWRIGHT_SUITE.md) - Test suite overview
+- [tests/visual-regression/README.md](tests/visual-regression/README.md) - Detailed test docs
+- [STEP2_PROGRESS.md](STEP2_PROGRESS.md) - SCSS conversion tracker
+- [PHASE1_PROGRESS.md](PHASE1_PROGRESS.md) - CSS variables completed ✅
+
+## 🎉 What Success Looks Like
+
+When migration is complete:
+- ✅ All 1,078 CSS custom properties defined
+- ✅ All ~30 SCSS component files converted
+- ✅ All Playwright tests passing
+- ✅ Visual output identical to baseline
+- ✅ Theme overrides working correctly
+- ✅ CI/CD passing on all branches
+- ✅ Documentation complete
+- ✅ Ready for production release
+
+---
+
+## 📝 Old Content (Reference)
+
+The sections below are from the previous iteration and kept for reference:
+
+### Remaining Convertible Variables (Historical)
 
 Variables for:
 - Screen reader text

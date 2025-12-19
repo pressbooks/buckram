@@ -1,0 +1,82 @@
+name: Visual Regression Tests
+
+on:
+  push:
+    branches: [dev, production, feat/migrate-to-css-properties]
+  pull_request:
+    branches: [dev, production]
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: dom, curl, libxml, mbstring, zip
+          tools: composer:v2
+          
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist
+        
+      - name: Install Node dependencies
+        run: npm ci
+        
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+        
+      - name: Build SCSS baseline
+        run: |
+          # Compile SCSS baseline version (using original variables)
+          composer build
+        
+      - name: Build CSS variables version
+        run: |
+          # Build version with CSS custom properties
+          # This step may need adjustment based on your build process
+          npm run build
+        
+      - name: Run Playwright tests
+        run: npm run playwright:test
+        
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-results
+          path: test-results/
+          retention-days: 30
+          
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-screenshots
+          path: screenshots/
+          retention-days: 30
+          
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+          
+      - name: Comment PR with results
+        uses: daun/playwright-report-comment@v3
+        if: always() && github.event_name == 'pull_request'
+        with:
+          report-path: playwright-report/

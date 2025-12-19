@@ -12,7 +12,16 @@
     "capture:baseline": "node capture-baseline.js",
     "capture:comparison": "node capture-baseline.js comparison",
     "capture:components": "node capture-baseline.js components",
-    "capture:devtools": "node capture-baseline.js devtools"
+    "capture:devtools": "node capture-baseline.js devtools",
+    "playwright:install": "playwright install --with-deps chromium",
+    "playwright:fixtures": "ts-node tests/visual-regression/fixtures/generate-fixtures.ts",
+    "playwright:test": "playwright test",
+    "playwright:test:ui": "playwright test --ui",
+    "playwright:test:debug": "playwright test --debug",
+    "playwright:baseline": "playwright test --project=baseline-scss --update-snapshots",
+    "playwright:css": "playwright test --project=css-variables",
+    "playwright:overrides": "playwright test --project=theme-overrides",
+    "playwright:report": "playwright show-report"
   },
   "repository": {
     "type": "git",
@@ -29,6 +38,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",
+    "@types/node": "^22.0.0",
     "chai": "^4.1.2",
     "mocha": "^10.0.0",
     "pixelmatch": "^5.2.1",
@@ -37,7 +47,9 @@
     "pressbooks-build-tools": "^4.0.0",
     "puppeteer": "^23.6.0",
     "sassdoc": "^2.7.1",
-    "type-detect": "^4.0.8"
+    "ts-node": "^10.9.2",
+    "type-detect": "^4.0.8",
+    "typescript": "^5.7.2"
   },
   "eslintConfig": {
     "extends": "./node_modules/pressbooks-build-tools/config/eslint.js"

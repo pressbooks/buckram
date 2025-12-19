@@ -21,13 +21,29 @@ This test suite ensures that the migrated CSS custom properties produce visually
 
 ```bash
 npm install
-npx playwright install
+npm run playwright:install
+```
+
+### Generate HTML Fixtures
+
+```bash
+npm run playwright:fixtures
+```
+
+### Build Baseline and CSS Versions
+
+```bash
+# Build SCSS baseline
+composer build
+
+# Build CSS variables version
+npm run build
 ```
 
 ### Run All Tests
 
 ```bash
-npm run test:visual
+npm run playwright:test
 ```
 
 ### Run Specific Test Suite
