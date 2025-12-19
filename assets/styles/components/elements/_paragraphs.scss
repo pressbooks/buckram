@@ -11,20 +11,20 @@
 @if $type != 'web' {
   p {
     font-weight: normal;
-    margin-bottom: $para-margin-bottom;
-    text-align: if-map-get($para-align, $type);
-    widows: $widows;
-    orphans: $orphans;
+    margin-bottom: var(--para-margin-bottom);
+    text-align: var(--para-align);
+    widows: var(--widows);
+    orphans: var(--orphans);
   }
 
   p + p,
   .indent {
-    margin-top: $para-margin-top;
-    text-indent: $para-indent;
+    margin-top: var(--para-margin-top);
+    text-indent: var(--para-indent);
   }
 
   .no-indent {
-    margin-top: $para-no-indent-margin-top;
+    margin-top: var(--para-no-indent-margin-top);
     text-indent: 0;
   }
 
@@ -32,10 +32,10 @@
 
   body,
   p {
-    hyphens: $para-hyphens;
-    hyphenate-before: $para-hyphenate-before;
-    hyphenate-after: $para-hyphenate-after;
-    hyphenate-lines: $para-hyphenate-lines;
+    hyphens: var(--para-hyphens);
+    hyphenate-before: var(--para-hyphenate-before);
+    hyphenate-after: var(--para-hyphenate-after);
+    hyphenate-lines: var(--para-hyphenate-lines);
   }
 
   #copyright-page p,
@@ -64,37 +64,37 @@
   .pullquote--inside + p,
   .sidebar + p,
   .textbox--sidebar + p {
-    margin-top: $para-margin-top;
-    text-indent: $para-indent;
+    margin-top: var(--para-margin-top);
+    text-indent: var(--para-indent);
   }
 
   // Hanging Indents
   .hanging-indent {
-    padding-left: $para-hanging-indent-padding-left;
-    text-indent: $para-hanging-indent-text-indent;
+    padding-left: var(--para-hanging-indent-padding-left);
+    text-indent: var(--para-hanging-indent-text-indent);
   }
 }
 
 @if $type == 'prince' {
   // Paragraph tracking (for Prince only)
   .tight {
-    letter-spacing: $para-tight-letter-spacing;
-    word-spacing: $para-tight-word-spacing;
+    letter-spacing: var(--para-tight-letter-spacing);
+    word-spacing: var(--para-tight-word-spacing);
   }
 
   .very-tight {
-    letter-spacing: $para-very-tight-letter-spacing;
-    word-spacing: $para-very-tight-word-spacing;
+    letter-spacing: var(--para-very-tight-letter-spacing);
+    word-spacing: var(--para-very-tight-word-spacing);
   }
 
   .loose {
-    letter-spacing: $para-loose-letter-spacing;
-    word-spacing: $para-loose-word-spacing;
+    letter-spacing: var(--para-loose-letter-spacing);
+    word-spacing: var(--para-loose-word-spacing);
   }
 
   .very-loose {
-    letter-spacing: $para-very-loose-letter-spacing;
-    word-spacing: $para-very-loose-word-spacing;
+    letter-spacing: var(--para-very-loose-letter-spacing);
+    word-spacing: var(--para-very-loose-word-spacing);
   }
 }
 
@@ -167,33 +167,33 @@
   body#tinymce.wp-editor {
     p {
       font-weight: normal;
-      margin-bottom: $para-margin-bottom;
-      text-align: if-map-get($para-align, $type);
-      widows: $widows;
-      orphans: $orphans;
-      hyphens: $para-hyphens;
-      hyphenate-before: $para-hyphenate-before;
-      hyphenate-after: $para-hyphenate-after;
-      hyphenate-lines: $para-hyphenate-lines;
+      margin-bottom: var(--para-margin-bottom);
+      text-align: var(--para-align);
+      widows: var(--widows);
+      orphans: var(--orphans);
+      hyphens: var(--para-hyphens);
+      hyphenate-before: var(--para-hyphenate-before);
+      hyphenate-after: var(--para-hyphenate-after);
+      hyphenate-lines: var(--para-hyphenate-lines);
     }
 
     p + p,
     .indent {
-      margin-top: $para-margin-top;
-      text-indent: $para-indent;
+      margin-top: var(--para-margin-top);
+      text-indent: var(--para-indent);
     }
 
     .no-indent {
-      margin-top: $para-no-indent-margin-top;
+      margin-top: var(--para-no-indent-margin-top);
       text-indent: 0;
     }
 
     // Hyphenation
 
-    hyphens: $para-hyphens;
-    hyphenate-before: $para-hyphenate-before;
-    hyphenate-after: $para-hyphenate-after;
-    hyphenate-lines: $para-hyphenate-lines;
+    hyphens: var(--para-hyphens);
+    hyphenate-before: var(--para-hyphenate-before);
+    hyphenate-after: var(--para-hyphenate-after);
+    hyphenate-lines: var(--para-hyphenate-lines);
 
     .dedication p,
     .epigraph p {
@@ -203,8 +203,8 @@
 
     // Hanging Indents
     .hanging-indent {
-      padding-left: $para-hanging-indent-padding-left;
-      text-indent: $para-hanging-indent-text-indent;
+      padding-left: var(--para-hanging-indent-padding-left);
+      text-indent: var(--para-hanging-indent-text-indent);
     }
   }
 }

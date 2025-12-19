@@ -23,15 +23,15 @@ export default defineConfig({
   
   /* Reporter to use. */
   reporter: [
-    ['html', { outputFolder: 'test-results/html' }],
+    ['html', { outputFolder: 'playwright-report' }],
     ['json', { outputFile: 'test-results/results.json' }],
     ['list']
   ],
   
   /* Shared settings for all the projects below. */
   use: {
-    /* Base URL for test pages */
-    baseURL: 'http://localhost:3000',
+    /* Base URL for test pages - use file:// protocol for local HTML files */
+    baseURL: 'file://' + process.cwd() + '/tests/visual-regression/fixtures/html',
     
     /* Collect trace when retrying the failed test. */
     trace: 'on-first-retry',
@@ -89,14 +89,6 @@ export default defineConfig({
     },
   ],
 
-  /* Web server for test HTML files */
-  webServer: {
-    command: 'npm run serve:test',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120000,
-  },
-  
   /* Visual regression specific settings */
   expect: {
     toHaveScreenshot: {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="prince">
+<head>
+  <meta charset="UTF-8">
+  <title>Prince PDF Page</title>
+  <link rel="stylesheet" href="../../assets/dist/styles/buckram.css">
+  <style>
+    @page {
+      size: 6in 9in;
+      margin-top: 1in;
+      margin-bottom: 1in;
+      
+      @top-left {
+        content: string(book-title);
+      }
+      
+      @top-right {
+        content: string(section-title);
+      }
+      
+      @bottom-center {
+        content: counter(page);
+      }
+    }
+  </style>
+</head>
+<body class="chapter prince">
+  <div id="post-1" class="chapter type-chapter">
+    <div class="chapter-title-wrap">
+      <h2 class="chapter-number">Chapter 1</h2>
+      <h1 class="chapter-title">The Beginning of the Journey</h1>
+    </div>
+    <div class="chapter-content">
+      <p class="first-para">This is a chapter in Prince PDF format with running headers and page numbers.</p>
+      <p>The page should display running headers at the top and page numbers at the bottom.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -102,22 +102,22 @@
 }
 
 @mixin front-matter-page-number {
-  font-family: $front-matter-page-number-font-family;
-  font-size: $front-matter-page-number-font-size;
-  font-style: $front-matter-page-number-font-style;
-  font-weight: $front-matter-page-number-font-weight;
+  font-family: var(--front-matter-page-number-font-family);
+  font-size: var(--front-matter-page-number-font-size);
+  font-style: var(--front-matter-page-number-font-style);
+  font-weight: var(--front-matter-page-number-font-weight);
   hyphens: none;
-  color: if-map-get($page-number-color, $type);
-  text-transform: $front-matter-page-number-text-transform;
+  color: var(--page-number-color);
+  text-transform: var(--front-matter-page-number-text-transform);
 }
 
 @mixin page-number {
-  font-family: $page-number-font-family;
-  font-size: $page-number-font-size;
-  font-style: $page-number-font-style;
-  font-weight: $page-number-font-weight;
+  font-family: var(--page-number-font-family);
+  font-size: var(--page-number-font-size);
+  font-style: var(--page-number-font-style);
+  font-weight: var(--page-number-font-weight);
   hyphens: none;
-  color: if-map-get($page-number-color, $type);
+  color: var(--page-number-color);
 }
 
 @mixin position($position) {
@@ -220,57 +220,57 @@
       @if $page-position == 'first:left' {
         @if if-map-get($content-position, left) {
           @include position(if-map-get($content-position, left)) {
-            padding-top: $runninghead-padding-top;
-            font-family: $runninghead-left-font-family;
-            font-size: $runninghead-left-font-size;
-            font-style: $runninghead-left-font-style;
-            font-weight: $runninghead-left-font-weight;
+            padding-top: var(--runninghead-padding-top);
+            font-family: var(--runninghead-left-font-family);
+            font-size: var(--runninghead-left-font-size);
+            font-style: var(--runninghead-left-font-style);
+            font-weight: var(--runninghead-left-font-weight);
             hyphens: none;
-            letter-spacing: $runninghead-left-letter-spacing;
-            word-spacing: $runninghead-left-word-spacing;
-            color: if-map-get($runninghead-color, $type);
-            text-transform: $runninghead-left-text-transform;
+            letter-spacing: var(--runninghead-left-letter-spacing);
+            word-spacing: var(--runninghead-left-word-spacing);
+            color: var(--runninghead-color);
+            text-transform: var(--runninghead-left-text-transform);
           }
         }
       } @else if $page-position == 'first:right' {
         @if if-map-get($content-position, right) {
           @include position(if-map-get($content-position, right)) {
-            padding-top: $runninghead-padding-top;
-            font-family: $runninghead-right-font-family;
-            font-size: $runninghead-right-font-size;
-            font-style: $runninghead-right-font-style;
-            font-weight: $runninghead-right-font-weight;
+            padding-top: var(--runninghead-padding-top);
+            font-family: var(--runninghead-right-font-family);
+            font-size: var(--runninghead-right-font-size);
+            font-style: var(--runninghead-right-font-style);
+            font-weight: var(--runninghead-right-font-weight);
             hyphens: none;
-            letter-spacing: $runninghead-right-letter-spacing;
-            word-spacing: $runninghead-right-word-spacing;
-            color: if-map-get($runninghead-color, $type);
-            text-transform: $runninghead-right-text-transform;
+            letter-spacing: var(--runninghead-right-letter-spacing);
+            word-spacing: var(--runninghead-right-word-spacing);
+            color: var(--runninghead-color);
+            text-transform: var(--runninghead-right-text-transform);
           }
         }
       } @else {
         @include position($content-position) {
-          padding-top: $runninghead-padding-top;
+          padding-top: var(--runninghead-padding-top);
 
           @if $page-position == 'left' {
-            font-family: $runninghead-left-font-family;
-            font-size: $runninghead-left-font-size;
-            font-style: $runninghead-left-font-style;
-            font-weight: $runninghead-left-font-weight;
+            font-family: var(--runninghead-left-font-family);
+            font-size: var(--runninghead-left-font-size);
+            font-style: var(--runninghead-left-font-style);
+            font-weight: var(--runninghead-left-font-weight);
             hyphens: none;
-            letter-spacing: $runninghead-left-letter-spacing;
-            word-spacing: $runninghead-left-word-spacing;
-            color: if-map-get($runninghead-color, $type);
-            text-transform: $runninghead-left-text-transform;
+            letter-spacing: var(--runninghead-left-letter-spacing);
+            word-spacing: var(--runninghead-left-word-spacing);
+            color: var(--runninghead-color);
+            text-transform: var(--runninghead-left-text-transform);
           } @else if $page-position == 'right' {
-            font-family: $runninghead-right-font-family;
-            font-size: $runninghead-right-font-size;
-            font-style: $runninghead-right-font-style;
-            font-weight: $runninghead-right-font-weight;
+            font-family: var(--runninghead-right-font-family);
+            font-size: var(--runninghead-right-font-size);
+            font-style: var(--runninghead-right-font-style);
+            font-weight: var(--runninghead-right-font-weight);
             hyphens: none;
-            letter-spacing: $runninghead-right-letter-spacing;
-            word-spacing: $runninghead-right-word-spacing;
-            color: if-map-get($runninghead-color, $type);
-            text-transform: $runninghead-right-text-transform;
+            letter-spacing: var(--runninghead-right-letter-spacing);
+            word-spacing: var(--runninghead-right-word-spacing);
+            color: var(--runninghead-color);
+            text-transform: var(--runninghead-right-text-transform);
           }
         }
       }
@@ -293,57 +293,57 @@
       @if $page-position == 'first:left' {
         @if if-map-get($content-position, left) {
           @include position(if-map-get($content-position, left)) {
-            padding-bottom: $runningfoot-padding-bottom;
-            font-family: $runningfoot-left-font-family;
-            font-size: $runningfoot-left-font-size;
-            font-style: $runningfoot-left-font-style;
-            font-weight: $runningfoot-left-font-weight;
+            padding-bottom: var(--runningfoot-padding-bottom);
+            font-family: var(--runningfoot-left-font-family);
+            font-size: var(--runningfoot-left-font-size);
+            font-style: var(--runningfoot-left-font-style);
+            font-weight: var(--runningfoot-left-font-weight);
             hyphens: none;
-            letter-spacing: $runningfoot-left-letter-spacing;
-            word-spacing: $runningfoot-left-word-spacing;
-            color: if-map-get($runningfoot-color, $type);
-            text-transform: $runningfoot-left-text-transform;
+            letter-spacing: var(--runningfoot-left-letter-spacing);
+            word-spacing: var(--runningfoot-left-word-spacing);
+            color: var(--runningfoot-color);
+            text-transform: var(--runningfoot-left-text-transform);
           }
         }
       } @else if $page-position == 'first:right' {
         @if if-map-get($content-position, right) {
           @include position(if-map-get($content-position, right)) {
-            padding-bottom: $runningfoot-padding-bottom;
-            font-family: $runningfoot-right-font-family;
-            font-size: $runningfoot-right-font-size;
-            font-style: $runningfoot-right-font-style;
-            font-weight: $runningfoot-right-font-weight;
+            padding-bottom: var(--runningfoot-padding-bottom);
+            font-family: var(--runningfoot-right-font-family);
+            font-size: var(--runningfoot-right-font-size);
+            font-style: var(--runningfoot-right-font-style);
+            font-weight: var(--runningfoot-right-font-weight);
             hyphens: none;
-            letter-spacing: $runningfoot-right-letter-spacing;
-            word-spacing: $runningfoot-right-word-spacing;
-            color: if-map-get($runningfoot-color, $type);
-            text-transform: $runningfoot-right-text-transform;
+            letter-spacing: var(--runningfoot-right-letter-spacing);
+            word-spacing: var(--runningfoot-right-word-spacing);
+            color: var(--runningfoot-color);
+            text-transform: var(--runningfoot-right-text-transform);
           }
         }
       } @else {
         @include position($content-position) {
-          padding-bottom: $runningfoot-padding-bottom;
+          padding-bottom: var(--runningfoot-padding-bottom);
 
           @if $page-position == 'left' {
-            font-family: $runningfoot-left-font-family;
-            font-size: $runningfoot-left-font-size;
-            font-style: $runningfoot-left-font-style;
-            font-weight: $runningfoot-left-font-weight;
+            font-family: var(--runningfoot-left-font-family);
+            font-size: var(--runningfoot-left-font-size);
+            font-style: var(--runningfoot-left-font-style);
+            font-weight: var(--runningfoot-left-font-weight);
             hyphens: none;
-            letter-spacing: $runningfoot-left-letter-spacing;
-            word-spacing: $runningfoot-left-word-spacing;
-            color: if-map-get($runningfoot-color, $type);
-            text-transform: $runningfoot-left-text-transform;
+            letter-spacing: var(--runningfoot-left-letter-spacing);
+            word-spacing: var(--runningfoot-left-word-spacing);
+            color: var(--runningfoot-color);
+            text-transform: var(--runningfoot-left-text-transform);
           } @else if $page-position == 'right' {
-            font-family: $runningfoot-right-font-family;
-            font-size: $runningfoot-right-font-size;
-            font-style: $runningfoot-right-font-style;
-            font-weight: $runningfoot-right-font-weight;
+            font-family: var(--runningfoot-right-font-family);
+            font-size: var(--runningfoot-right-font-size);
+            font-style: var(--runningfoot-right-font-style);
+            font-weight: var(--runningfoot-right-font-weight);
             hyphens: none;
-            letter-spacing: $runningfoot-right-letter-spacing;
-            word-spacing: $runningfoot-right-word-spacing;
-            color: if-map-get($runningfoot-color, $type);
-            text-transform: $runningfoot-right-text-transform;
+            letter-spacing: var(--runningfoot-right-letter-spacing);
+            word-spacing: var(--runningfoot-right-word-spacing);
+            color: var(--runningfoot-color);
+            text-transform: var(--runningfoot-right-text-transform);
           }
         }
       }

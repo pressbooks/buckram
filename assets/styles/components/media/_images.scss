@@ -81,7 +81,7 @@ p {
     page-break-inside: avoid !important;
 
     &.alignnone {
-      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($image-wrapper-margin-bottom, $type);
+      margin: var(--image-wrapper-margin-top) 0 var(--image-wrapper-margin-bottom);
       text-align: left;
       width: auto;
 
@@ -89,7 +89,7 @@ p {
     }
 
     &.aligncenter {
-      margin: if-map-get($image-wrapper-margin-top, $type) auto if-map-get($image-wrapper-margin-bottom, $type);
+      margin: var(--image-wrapper-margin-top) auto var(--image-wrapper-margin-bottom);
       text-align: center;
       width: auto;
 
@@ -104,7 +104,7 @@ p {
 
     &.alignright {
       float: right;
-      margin: if-map-get($image-wrapper-margin-top, $type) 0 if-map-get($floated-image-wrapper-margin-bottom, $type) if-map-get($image-alignright-margin-left, $type);
+      margin: var(--image-wrapper-margin-top) 0 var(--floated-image-wrapper-margin-bottom) var(--image-alignright-margin-left);
       max-width: 50%;
       padding-left: 0;
       width: 50% !important;
@@ -118,7 +118,7 @@ p {
 
     &.alignleft {
       float: left;
-      margin: if-map-get($image-wrapper-margin-top, $type) if-map-get($image-alignleft-margin-right, $type) if-map-get($floated-image-wrapper-margin-bottom, $type) 0;
+      margin: var(--image-wrapper-margin-top) var(--image-alignleft-margin-right) var(--floated-image-wrapper-margin-bottom) 0;
       max-width: 50%;
       padding-right: 0;
       width: 50% !important;
@@ -176,7 +176,7 @@ p {
     max-width: 100%;
     padding: 0;
     page-break-inside: avoid !important;
-    prince-image-resolution: $prince-image-resolution;
+    prince-image-resolution: var(--prince-image-resolution);
   }
 
   img.mathjax {
