@@ -18,9 +18,9 @@
           @if if-map-get($content-position, left) {
             @include position(if-map-get($content-position, left)) {
               @if head-or-foot(if-map-get($content-position, left)) == 'head' {
-                padding-top: $runninghead-padding-top;
+                padding-top: var(--runninghead-padding-top);
               } @else if head-or-foot(if-map-get($content-position, left)) == 'foot' {
-                padding-bottom: $runningfoot-padding-bottom;
+                padding-bottom: var(--runningfoot-padding-bottom);
               }
 
               @include front-matter-page-number;
@@ -30,9 +30,9 @@
           @if if-map-get($content-position, right) {
             @include position(if-map-get($content-position, right)) {
               @if head-or-foot(if-map-get($content-position, right)) == 'head' {
-                padding-top: $runninghead-padding-top;
+                padding-top: var(--runninghead-padding-top);
               } @else if head-or-foot(if-map-get($content-position, right)) == 'foot' {
-                padding-bottom: $runningfoot-padding-bottom;
+                padding-bottom: var(--runningfoot-padding-bottom);
               }
 
               @include front-matter-page-number;
@@ -41,9 +41,9 @@
         } @else {
             @include position($content-position) {
               @if head-or-foot($content-position) == 'head' {
-                padding-top: $runninghead-padding-top;
+                padding-top: var(--runninghead-padding-top);
               } @else if head-or-foot($content-position) == 'foot' {
-                padding-bottom: $runningfoot-padding-bottom;
+                padding-bottom: var(--runningfoot-padding-bottom);
               }
 
               @include front-matter-page-number;
@@ -63,9 +63,9 @@
           @if if-map-get($content-position, left) {
             @include position(if-map-get($content-position, left)) {
               @if head-or-foot(if-map-get($content-position, left)) == 'head' {
-                padding-top: $runninghead-padding-top;
+                padding-top: var(--runninghead-padding-top);
               } @else if head-or-foot(if-map-get($content-position, left)) == 'foot' {
-                padding-bottom: $runningfoot-padding-bottom;
+                padding-bottom: var(--runningfoot-padding-bottom);
               }
 
               @include page-number;
@@ -75,9 +75,9 @@
           @if if-map-get($content-position, right) {
             @include position(if-map-get($content-position, right)) {
               @if head-or-foot(if-map-get($content-position, right)) == 'head' {
-                padding-top: $runninghead-padding-top;
+                padding-top: var(--runninghead-padding-top);
               } @else if head-or-foot(if-map-get($content-position, right)) == 'foot' {
-                padding-bottom: $runningfoot-padding-bottom;
+                padding-bottom: var(--runningfoot-padding-bottom);
               }
 
               @include page-number;
@@ -87,9 +87,9 @@
           @if $content-position {
             @include position($content-position) {
               @if head-or-foot($content-position) == 'head' {
-                padding-top: $runninghead-padding-top;
+                padding-top: var(--runninghead-padding-top);
               } @else if head-or-foot($content-position) == 'foot' {
-                padding-bottom: $runningfoot-padding-bottom;
+                padding-bottom: var(--runningfoot-padding-bottom);
               }
 
               @include page-number;

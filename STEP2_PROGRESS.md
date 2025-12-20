@@ -46,6 +46,54 @@ This SCSS file:
 
 **All component SCSS files have been successfully converted to use CSS custom properties!**
 
+### Intentionally Unconverted Variables
+
+The following SCSS patterns were **intentionally NOT converted** as they serve different purposes:
+
+#### 1. Loop Variables
+**File:** `components/elements/_lists.scss`
+**Pattern:** `$list-style-type` in `@each` loop
+```scss
+@each $list-style-type in upper-alpha, lower-alpha, upper-roman, lower-roman {
+  ol.#{$list-style-type} {
+    list-style-type: $list-style-type;  // ← Loop variable, not a config variable
+  }
+}
+```
+**Reason:** This is an iteration variable from `@each`, not a user-configurable setting.
+
+#### 2. Mixin Parameters (Function Arguments)
+**File:** `components/specials/_textboxes.scss`
+**Pattern:** `$color`, `$background`, `$header-color`, `$header-background`
+```scss
+@mixin educational-textbox($header-color: #fff, $header-background: #444, $color: #000, $background: #fff) {
+  color: $color;              // ← Mixin parameter, not a config variable
+  background: $background;    // ← Mixin parameter
+}
+```
+**Reason:** These are function parameters that accept values from callers. The calling code passes format-specific colors, and these parameters forward those values to CSS properties.
+
+#### 3. SASS Compile-Time Logic
+**File:** `components/structure/_mixins.scss`
+**Pattern:** `if-map-get()` calls used in conditionals
+```scss
+@if if-map-get($content-position, left) {
+  @include position(if-map-get($content-position, left)) {
+    // Mixin logic...
+  }
+}
+```
+**Reason:** These `if-map-get()` calls are SASS compile-time operations that determine which mixin code to generate based on map values. They're part of the mixin's internal logic, not user-configurable CSS properties. The actual CSS properties output by these mixins already use `var()` syntax.
+
+#### 4. SASS Magic Variables
+**Pattern:** `$type` variable used throughout
+```scss
+@if $type == 'prince' {
+  // Prince-specific code
+}
+```
+**Reason:** `$type` is a SASS compile-time variable set during the build process to generate different CSS outputs for different formats (epub, prince, web). It controls which code blocks are included in each format's output.
+
 ## Approach
 
 ### Architecture Decision

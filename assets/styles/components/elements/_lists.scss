@@ -155,7 +155,7 @@
     content: counter(level-1, upper-roman) ".\A0";
     display: inline-block;
     text-align: right;
-    width: if-map-get($ol-padding-left, $type);
+    width: var(--ol-padding-left);
   }
 
   ol {
@@ -166,7 +166,7 @@
   ol li::before {
     counter-increment: level-2;
     content: counter(level-2, upper-alpha) ".\A0";
-    min-width: if-map-get($ol-padding-left, $type);
+    min-width: var(--ol-padding-left);
     width: auto;
   }
 
@@ -221,7 +221,7 @@
     content: counter(level-1) ".\A0";
     display: inline-block;
     text-align: right;
-    width: if-map-get($ol-padding-left, $type);
+    width: var(--ol-padding-left);
   }
 
   ol {
@@ -232,7 +232,7 @@
   ol li::before {
     counter-increment: level-2;
     content: counter(level-1) "."counter(level-2) ".\A0";
-    min-width: if-map-get($ol-padding-left, $type);
+    min-width: var(--ol-padding-left);
     width: auto;
   }
 
@@ -280,28 +280,28 @@
 %dt {
   display: block;
   margin:
-    if-map-get($dt-margin-top, $type)
-    if-map-get($dt-margin-right, $type)
-    if-map-get($dt-margin-bottom, $type)
-    if-map-get($dt-margin-left, $type);
-  font-style: $dt-font-style;
-  font-weight: $dt-font-weight;
-  color: if-map-get($dt-color, $type);
+    var(--dt-margin-top)
+    var(--dt-margin-right)
+    var(--dt-margin-bottom)
+    var(--dt-margin-left);
+  font-style: var(--dt-font-style);
+  font-weight: var(--dt-font-weight);
+  color: var(--dt-color);
 }
 
 %dfn {
-  font-style: $dt-font-style;
-  font-weight: $dt-font-weight;
+  font-style: var(--dt-font-style);
+  font-weight: var(--dt-font-weight);
 }
 
 %dd {
   margin:
-    if-map-get($dd-margin-top, $type)
-    if-map-get($dd-margin-right, $type)
-    if-map-get($dd-margin-bottom, $type)
-    if-map-get($dd-margin-left, $type);
-  font-style: $dd-font-style;
-  font-weight: $dd-font-weight;
+    var(--dd-margin-top)
+    var(--dd-margin-right)
+    var(--dd-margin-bottom)
+    var(--dd-margin-left);
+  font-style: var(--dd-font-style);
+  font-weight: var(--dd-font-weight);
 }
 
 @mixin generic-ordered-lists() {
@@ -323,7 +323,7 @@
   }
 
   li + li {
-    margin-top: if-map-get($li-li-margin-top, $type);
+    margin-top: var(--li-li-margin-top);
   }
 
   @include generic-ordered-lists;
@@ -341,7 +341,7 @@
   }
 
   dd + dt {
-    margin-top: $dd-dt-spacing;
+    margin-top: var(--dd-dt-spacing);
   }
 }
 
@@ -388,7 +388,7 @@
     }
 
     li + li {
-      margin-top: if-map-get($li-li-margin-top, $type);
+      margin-top: var(--li-li-margin-top);
     }
 
     ol.legal {
@@ -419,6 +419,6 @@
   }
 
   dd + dt {
-    margin-top: $dd-dt-spacing;
+    margin-top: var(--dd-dt-spacing);
   }
 }
