@@ -36,6 +36,14 @@
 
 @if $type == 'prince' {
   #toc {
+    ul {
+      -prince-pdf-tag-type: TOC;
+    }
+
+    li {
+      -prince-pdf-tag-type: TOCI;
+    }
+
     a::after {
       display: $toc-center-page-number-display;
     }

@@ -252,10 +252,12 @@
     }
 
     ul {
+      -prince-pdf-tag-type: TOC;
       counter-reset: chapter;
     }
 
     li {
+      -prince-pdf-tag-type: TOCI;
       page-break-inside: avoid;
       position: relative;
     }
