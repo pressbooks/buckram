@@ -35,9 +35,6 @@
     "sassdoc": "^2.7.1",
     "type-detect": "^4.0.8"
   },
-  "eslintConfig": {
-    "extends": "pressbooks-build-tools/eslint"
-  },
   "stylelint": {
     "extends": "pressbooks-build-tools/stylelint",
     "rules": {
