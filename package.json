@@ -41,7 +41,10 @@
     "rules": {
       "no-descending-specificity": null,
       "no-duplicate-at-import-rules": null,
-      "scss/no-global-function-names": null
+      "scss/no-global-function-names": null,
+      "selector-pseudo-class-no-unknown": [true, {
+        "ignorePseudoClasses": ["first-of-group"]
+      }]
     }
   }
 }
