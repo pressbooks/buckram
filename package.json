@@ -45,7 +45,8 @@
         true,
         {
           "ignorePseudoClasses": [
-            "first-of-group"
+            "first-of-group",
+            "first"
           ]
         }
       ]
