@@ -10,6 +10,7 @@
 
 @if $type != 'web' {
   a {
+    hyphens: none;
     text-decoration: if-map-get($link-text-decoration, $type);
   }
 }
