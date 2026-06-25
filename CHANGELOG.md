@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.2](https://github.com/pressbooks/buckram/compare/v1.10.1...v1.10.2) (2026-06-25)
+
+
+### Bug Fixes
+
+* keep wrapped links clickable and single-tagged in PDF export ([#425](https://github.com/pressbooks/buckram/issues/425)) ([b5fd4cc](https://github.com/pressbooks/buckram/commit/b5fd4cc38be3583069efaeea462832298712bb46))
+
 ## [1.10.1](https://github.com/pressbooks/buckram/compare/v1.10.0...v1.10.1) (2026-06-16)
 
 
