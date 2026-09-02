@@ -8,9 +8,13 @@
 
 @import "../utilities";
 
+// Links never hyphenate, in exports or the webbook (see pressbooks/pressbooks#2512)
+a {
+  hyphens: none;
+}
+
 @if $type != 'web' {
   a {
-    hyphens: none;
     text-decoration: if-map-get($link-text-decoration, $type);
   }
 }
