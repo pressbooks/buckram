@@ -16,11 +16,9 @@
 }
 
 @if $type == 'prince' {
+  // Links wrap naturally; long URLs break mid-word without hyphens (see pressbooks/pressbooks#4552)
   a {
-    display: inline-block;
     overflow-wrap: break-word;
-    text-indent: 0;
-    max-width: 100%;
   }
 
   .print a {
