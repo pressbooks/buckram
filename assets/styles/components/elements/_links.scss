@@ -8,7 +8,7 @@
 
 @import "../utilities";
 
-// Links never hyphenate, in exports or the webbook (see pressbooks/pressbooks#2512)
+// Links never hyphenate, in exports or the webbook
 a {
   hyphens: none;
 }
@@ -20,7 +20,7 @@ a {
 }
 
 @if $type == 'prince' {
-  // Links wrap naturally; long URLs break mid-word without hyphens (see pressbooks/pressbooks#4552)
+  // Links wrap naturally; long URLs break mid-word without hyphens
   a {
     overflow-wrap: break-word;
   }
